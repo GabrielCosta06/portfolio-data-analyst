@@ -69,11 +69,14 @@
             </select>
           </div>
         </div>
+
+        <div class="nav__resume-group">
+          <a class="button button--primary nav__resume" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadResumeEn">Resume EN (PDF)</a>
+          <a class="button button--secondary nav__resume" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadResumePt">Resume PT (PDF)</a>
+        </div>
       </div>
 
       <div class="nav__cta">
-        <a class="button button--primary nav__resume" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadResumeEn">Resume EN (PDF)</a>
-        <a class="button button--secondary nav__resume" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadResumePt">Resume PT (PDF)</a>
         <button class="nav__toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
           <span class="nav__toggle-box" aria-hidden="true">
             <span class="nav__toggle-bar"></span>
@@ -97,7 +100,8 @@
             I turn messy data into clear, actionable insights with dashboards, automation, and clean pipelines.
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="#resume" data-i18n="resume.download">Resume (Coming soon)</a>
+            <a class="button button--primary" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadEn">Resume EN (PDF)</a>
+            <a class="button button--secondary" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadPt">Resume PT (PDF)</a>
             <a class="button button--secondary" href="#contact" data-i18n="nav.contact">Contact</a>
           </div>
           <div class="hero__links">
@@ -162,7 +166,14 @@
               <span class="tag" data-i18n="projects.featuredTag">In progress</span>
               <h3 class="project-card__title" data-i18n="project.featured.title">Retail Performance & Customer Insights (Power BI)</h3>
             </div>
-            <div class="project-card__results">
+              <p class="project-card__summary" data-i18n="project.featured.summary">Capstone-style Power BI project that models retail performance end-to-end.</p>
+              <div class="chip-list chip-list--compact project-card__chips" aria-label="Tools">
+                <span class="chip">Power BI</span>
+                <span class="chip">Power Query</span>
+                <span class="chip">DAX</span>
+                <span class="chip">Data Modeling</span>
+              </div>
+              <div class="project-card__results">
               <p class="project-card__results-title" data-i18n="project.featured.resultsTitle">What it covers</p>
               <ul class="list list--results">
                 <li class="list__item" data-i18n="project.featured.highlight1">Power Query cleanup and modeling from raw sales data</li>
@@ -170,7 +181,15 @@
                 <li class="list__item" data-i18n="project.featured.highlight3">Executive dashboard with drill-downs by region and category</li>
               </ul>
             </div>
-            <div class="project-card__actions">
+              <div class="project-card__metrics">
+                <p class="project-card__metrics-title" data-i18n="project.featured.metricsTitle">Data &amp; metrics</p>
+                <ul class="metrics">
+                  <li class="metrics__item" data-i18n="project.featured.metric1">Revenue, margin %, and return rate</li>
+                  <li class="metrics__item" data-i18n="project.featured.metric2">Average order value and repeat purchase rate</li>
+                  <li class="metrics__item" data-i18n="project.featured.metric3">Region, category, and customer segment views</li>
+                </ul>
+              </div>
+              <div class="project-card__actions">
               <a class="button button--ghost" href="#contact" data-i18n="project.featured.contactCta">Request walkthrough</a>
               <button class="button button--primary" type="button" data-modal-open aria-haspopup="dialog" data-i18n="project.featured.readCaseStudy">Read Case Study</button>
             </div>
@@ -238,7 +257,7 @@
       <div class="container">
         <div class="section__header">
           <h2 class="section__title" data-i18n="resume.title">Resume</h2>
-          <p class="section__subtitle" data-i18n="resume.subtitle">Download my resume in English or Portuguese.</p>
+          <p class="section__subtitle" data-i18n="resume.subtitle">Choose English or Portuguese and get a clear, recruiter-friendly overview.</p>
         </div>
 
         <div class="resume__actions">
@@ -246,26 +265,9 @@
             <a class="button button--primary" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadEn">Resume EN (PDF)</a>
             <a class="button button--secondary" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadPt">Resume PT (PDF)</a>
           </div>
-          <p class="u-text-muted" data-i18n="resume.note">If you need a custom version, just email me.</p>
+          <p class="u-text-muted" data-i18n="resume.note">Need a tailored version for a role? Just email me.</p>
         </div>
 
-        <details class="accordion">
-          <summary class="accordion__summary" data-i18n="resume.snapshotTitle">Resume highlights</summary>
-          <div class="accordion__content">
-            <div class="accordion__item">
-              <h4 class="accordion__item-title" data-i18n="resume.snapshotExperience">Experience</h4>
-              <p data-i18n="resume.snapshotExperienceBody">Internship projects focused on KPI automation and dashboarding.</p>
-            </div>
-            <div class="accordion__item">
-              <h4 class="accordion__item-title" data-i18n="resume.snapshotEducation">Education</h4>
-              <p data-i18n="resume.snapshotEducationBody">Bachelor's studies with emphasis on analytics and statistics.</p>
-            </div>
-            <div class="accordion__item">
-              <h4 class="accordion__item-title" data-i18n="resume.snapshotSkills">Skills</h4>
-              <p data-i18n="resume.snapshotSkillsBody">Power BI, SQL, Python, DAX, Excel, automation.</p>
-            </div>
-          </div>
-        </details>
       </div>
     </section>
 
@@ -317,7 +319,7 @@
     <div class="modal__overlay" data-modal-close></div>
     <div class="modal__content" role="document">
       <div class="modal__header">
-        <h3 id="case-study-title" data-i18n="project.caseStudy.title">Case Study</h3>
+        <h3 id="case-study-title" data-i18n="project.caseStudy.title">Case Study: Retail Performance &amp; Customer Insights</h3>
         <button class="modal__close" type="button" data-modal-close data-i18n-attr="aria-label:project.caseStudy.closeLabel">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -325,31 +327,35 @@
       <div class="modal__body">
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.problemTitle">Problem</h4>
-          <p data-i18n="project.caseStudy.problemBody">Retail teams need a clear view of revenue, margin, and returns across regions and categories.</p>
+          <p data-i18n="project.caseStudy.problemBody">Retail teams lacked a consistent view of revenue, margin, and returns by region and category, and weekly reporting was manual.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.approachTitle">Approach</h4>
-          <p data-i18n="project.caseStudy.approachBody">Using a public retail dataset, I cleaned data in Power Query, modeled a star schema, and built DAX measures.</p>
+          <p data-i18n="project.caseStudy.approachBody">Used a public retail dataset, cleaned and shaped it in Power Query, modeled a star schema, and standardized KPIs in DAX.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.dataModelTitle">Data Model</h4>
-          <p data-i18n="project.caseStudy.dataModelBody">Star schema with fact tables for sales and returns plus product, customer, store, and date dimensions.</p>
+          <p data-i18n="project.caseStudy.dataModelBody">FactSales + FactReturns linked to Date, Product, Store, and Customer dimensions for clean drill-downs.</p>
+        </section>
+        <section class="modal__section">
+          <h4 class="modal__section-title" data-i18n="project.caseStudy.metricsTitle">Data &amp; Metrics</h4>
+          <p data-i18n="project.caseStudy.metricsBody">Dataset includes orders, products, customers, stores, and dates. Key metrics include revenue, margin %, return rate, average order value, and repeat purchase rate.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.dashboardTitle">Dashboard Highlights</h4>
-          <p data-i18n="project.caseStudy.dashboardBody">Executive KPIs, category and region drill-downs, and customer segmentation views.</p>
+          <p data-i18n="project.caseStudy.dashboardBody">Executive KPIs (revenue, margin %, return rate), trends, region/category drill-downs, and customer segments.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.automationTitle">Automation</h4>
-          <p data-i18n="project.caseStudy.automationBody">Optional Power Automate alerts for margin drops and return spikes.</p>
+          <p data-i18n="project.caseStudy.automationBody">Planned Power BI Service refresh with optional Power Automate alerts for margin drops and return spikes.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.resultsTitle">Outcome</h4>
-          <p data-i18n="project.caseStudy.resultsBody">Creates a single view of performance with clear drivers and actionable drill-downs.</p>
+          <p data-i18n="project.caseStudy.resultsBody">Single source of truth with clear KPI definitions and faster weekly reporting for stakeholders.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.improvementsTitle">Improvements</h4>
-          <p data-i18n="project.caseStudy.improvementsBody">Next steps include publishing to Power BI Service, adding RLS, and documenting a data dictionary.</p>
+          <p data-i18n="project.caseStudy.improvementsBody">Next steps: publish to Power BI Service, add RLS, incremental refresh, and a data dictionary.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.architectureTitle">Project Architecture</h4>
@@ -390,6 +396,34 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
+  <script>
+    (function () {
+      const modal = document.getElementById("case-study-modal");
+      if (!modal) return;
+
+      const openButtons = document.querySelectorAll("[data-modal-open]");
+      const closeButtons = modal.querySelectorAll("[data-modal-close]");
+
+      const openModal = () => {
+        modal.classList.add("modal--open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("is-modal-open");
+      };
+
+      const closeModal = () => {
+        modal.classList.remove("modal--open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("is-modal-open");
+      };
+
+      openButtons.forEach((button) => button.addEventListener("click", openModal));
+      closeButtons.forEach((button) => button.addEventListener("click", closeModal));
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeModal();
+      });
+    })();
+  </script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

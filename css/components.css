@@ -237,6 +237,10 @@
   font-size: var(--font-size-md);
 }
 
+.project-card__chips {
+  margin-top: var(--space-2);
+}
+
 .project-card__results {
   background: linear-gradient(145deg, rgba(15, 118, 110, 0.06), rgba(255, 255, 255, 0.9));
   border-radius: var(--radius-md);
@@ -251,6 +255,43 @@
   letter-spacing: 0.16em;
   color: var(--color-muted);
   margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-bold);
+}
+
+.project-card__metrics {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  border: var(--border-width) solid var(--color-border);
+}
+
+.project-card__metrics-title {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-bold);
+}
+
+.metrics {
+  display: grid;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+}
+
+.metrics__item {
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.metrics__item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary);
   font-weight: var(--font-weight-bold);
 }
 
