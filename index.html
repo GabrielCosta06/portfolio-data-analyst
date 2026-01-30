@@ -16,7 +16,7 @@
   <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23f8fafc'/><text x='32' y='40' font-size='28' text-anchor='middle' fill='%230f172a' font-family='Arial'>GC</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -27,7 +27,7 @@
   <!--
     How to customize:
     - Update the name, role, and location text directly in this HTML (header + hero).
-    - Replace placeholders: [LINKEDIN_URL], [GITHUB_URL], [EMAIL], [PROJECT_REPO_URL], [PROJECT_DASHBOARD_URL], [PL900_URL], [DATACAMP_URL], [TOEIC_URL].
+    - Certificate PDFs: add cert-pl900.pdf, cert-datacamp.pdf, cert-toeic.pdf to the repo root.
     - Edit translations in js/i18n.js.
     - Update certificate data in js/data.js (certData) and add matching i18n keys.
     - UI logic lives in js/ui.js and app setup in js/main.js.
@@ -55,7 +55,7 @@
         </div>
 
         <div class="nav__tools">
-          <a class="icon-link" href="[LINKEDIN_URL]" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:nav.linkedinLabel">
+          <a class="icon-link" href="https://www.linkedin.com/in/josegabriel-costa/" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:nav.linkedinLabel">
             <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
               <path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 23.5h4V7.98h-4V23.5zM8 7.98h3.84v2.12h.06c.54-1.02 1.86-2.1 3.84-2.1 4.1 0 4.86 2.7 4.86 6.2v7.3h-4v-6.48c0-1.55-.02-3.54-2.16-3.54-2.16 0-2.5 1.68-2.5 3.42v6.6h-4V7.98z" fill="currentColor"/>
             </svg>
@@ -72,7 +72,8 @@
       </div>
 
       <div class="nav__cta">
-        <a class="button button--primary nav__resume" href="./resume.pdf" download data-i18n="nav.downloadResume">Download Resume (PDF)</a>
+        <a class="button button--primary nav__resume" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadResumeEn">Resume EN (PDF)</a>
+        <a class="button button--secondary nav__resume" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadResumePt">Resume PT (PDF)</a>
         <button class="nav__toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
           <span class="nav__toggle-box" aria-hidden="true">
             <span class="nav__toggle-bar"></span>
@@ -96,7 +97,7 @@
             I turn messy data into clear, actionable insights with dashboards, automation, and clean pipelines.
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="./resume.pdf" download data-i18n="resume.download">Download Resume (PDF)</a>
+            <a class="button button--primary" href="#resume" data-i18n="resume.download">Resume (Coming soon)</a>
             <a class="button button--secondary" href="#contact" data-i18n="nav.contact">Contact</a>
           </div>
           <div class="hero__links">
@@ -106,7 +107,7 @@
           <div class="hero__meta">
             <span data-i18n="hero.meta1">Location: Brazil</span>
             <span class="hero__dot" aria-hidden="true">&middot;</span>
-            <span data-i18n="hero.meta2">Open to internships and junior roles</span>
+            <span data-i18n="hero.meta2">Open to mid-level roles and contract work</span>
           </div>
         </div>
         <div class="card card--matrix hero__panel">
@@ -124,13 +125,13 @@
       <div class="container">
         <div class="section__header">
           <h2 class="section__title" data-i18n="about.title">About</h2>
-          <p class="section__subtitle" data-i18n="about.subtitle">Junior analyst focused on reliable reporting, clean data models, and stakeholder-friendly insights.</p>
+          <p class="section__subtitle" data-i18n="about.subtitle">Detail-driven junior analyst focused on clear insights, reliable data models, and stakeholder-ready storytelling.</p>
         </div>
         <div class="about__grid">
           <ul class="list list--bullets">
-            <li class="list__item" data-i18n="about.bullet1">Automated reporting and reduced manual work</li>
-            <li class="list__item" data-i18n="about.bullet2">Built KPI dashboards and data pipelines</li>
-            <li class="list__item" data-i18n="about.bullet3">Comfortable with cross-functional data</li>
+            <li class="list__item" data-i18n="about.bullet1">Translate business questions into clear metrics, KPIs, and aligned definitions</li>
+            <li class="list__item" data-i18n="about.bullet2">Build Power BI dashboards with thoughtful UX, filters, and drill-downs</li>
+            <li class="list__item" data-i18n="about.bullet3">Prioritize data quality, documentation, and trusted handoffs to teams</li>
           </ul>
           <div class="about__stack">
             <h3 class="about__stack-title" data-i18n="about.stackTitle">Tech stack</h3>
@@ -152,52 +153,26 @@
       <div class="container">
         <div class="section__header">
           <h2 class="section__title" data-i18n="projects.title">Projects</h2>
-          <p class="section__subtitle" data-i18n="projects.subtitle">Selected work focused on business performance visibility and automation.</p>
+          <p class="section__subtitle" data-i18n="projects.subtitle">Capstone-style project in progress focused on Power BI analytics and business visibility.</p>
         </div>
 
         <div class="projects__grid">
           <article class="card project-card project-card--featured">
             <div class="project-card__header">
-              <span class="tag" data-i18n="projects.featuredTag">Featured</span>
-              <h3 class="project-card__title" data-i18n="project.featured.title">End-to-End Business Performance Monitoring System</h3>
+              <span class="tag" data-i18n="projects.featuredTag">In progress</span>
+              <h3 class="project-card__title" data-i18n="project.featured.title">Retail Performance & Customer Insights (Power BI)</h3>
             </div>
             <div class="project-card__results">
-              <p class="project-card__results-title" data-i18n="project.caseStudy.resultsTitle">Results</p>
+              <p class="project-card__results-title" data-i18n="project.featured.resultsTitle">What it covers</p>
               <ul class="list list--results">
-                <li class="list__item" data-i18n="project.featured.highlight1">ETL pipeline consolidating multi-source data</li>
-                <li class="list__item" data-i18n="project.featured.highlight2">Power BI dashboard with KPI drill-downs</li>
-                <li class="list__item" data-i18n="project.featured.highlight3">Alert automation for anomalies and SLA risks</li>
+                <li class="list__item" data-i18n="project.featured.highlight1">Power Query cleanup and modeling from raw sales data</li>
+                <li class="list__item" data-i18n="project.featured.highlight2">DAX measures for revenue, margin, and retention</li>
+                <li class="list__item" data-i18n="project.featured.highlight3">Executive dashboard with drill-downs by region and category</li>
               </ul>
             </div>
             <div class="project-card__actions">
-              <a class="button button--ghost" href="[PROJECT_REPO_URL]" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewRepo">View Repo</a>
-              <a class="button button--ghost" href="[PROJECT_DASHBOARD_URL]" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewDashboard">View Dashboard</a>
+              <a class="button button--ghost" href="#contact" data-i18n="project.featured.contactCta">Request walkthrough</a>
               <button class="button button--primary" type="button" data-modal-open aria-haspopup="dialog" data-i18n="project.featured.readCaseStudy">Read Case Study</button>
-            </div>
-            <div class="project-card__media">
-              <div class="project-card__shot project-card__shot--skeleton" role="img" data-i18n-attr="aria-label:project.screenshot1"></div>
-              <div class="project-card__shot project-card__shot--skeleton" role="img" data-i18n-attr="aria-label:project.screenshot2"></div>
-              <div class="project-card__shot project-card__shot--skeleton" role="img" data-i18n-attr="aria-label:project.screenshot3"></div>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <h3 class="project-card__title" data-i18n="project.placeholder1.title">Sales Forecasting Pipeline</h3>
-            <p class="project-card__summary" data-i18n="project.placeholder1.desc">Baseline forecasting with time-series features and monthly performance checks.</p>
-            <div class="chip-list chip-list--compact">
-              <span class="chip">Python</span>
-              <span class="chip">SQL</span>
-              <span class="chip">Forecasting</span>
-            </div>
-          </article>
-
-          <article class="card project-card">
-            <h3 class="project-card__title" data-i18n="project.placeholder2.title">Customer Retention Dashboard</h3>
-            <p class="project-card__summary" data-i18n="project.placeholder2.desc">Cohort analysis with churn indicators and actionable segments.</p>
-            <div class="chip-list chip-list--compact">
-              <span class="chip">Power BI</span>
-              <span class="chip">DAX</span>
-              <span class="chip">Analytics</span>
             </div>
           </article>
         </div>
@@ -231,7 +206,7 @@
             <p class="cert-card__meta">Microsoft - 2025</p>
             <p class="cert-card__desc">Core Power Platform concepts and capabilities.</p>
             <div class="cert-card__actions">
-              <a class="button button--ghost" href="[PL900_URL]" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">View credential</a>
+              <a class="button button--ghost" href="./cert-pl900.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
               <button class="button button--secondary" type="button" data-copy-link="cert-pl900" data-i18n="cert.card.copyLink">Copy link</button>
             </div>
           </article>
@@ -241,7 +216,7 @@
             <p class="cert-card__meta">DataCamp - Sep 2025</p>
             <p class="cert-card__desc">Assessment-driven credential for analytics skills.</p>
             <div class="cert-card__actions">
-              <a class="button button--ghost" href="[DATACAMP_URL]" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">View credential</a>
+              <a class="button button--ghost" href="./cert-datacamp.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
               <button class="button button--secondary" type="button" data-copy-link="cert-datacamp" data-i18n="cert.card.copyLink">Copy link</button>
             </div>
           </article>
@@ -251,7 +226,7 @@
             <p class="cert-card__meta">ETS - Score 910/990</p>
             <p class="cert-card__desc">Score 910/990</p>
             <div class="cert-card__actions">
-              <a class="button button--ghost" href="[TOEIC_URL]" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">View credential</a>
+              <a class="button button--ghost" href="./cert-toeic.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
               <button class="button button--secondary" type="button" data-copy-link="cert-toeic" data-i18n="cert.card.copyLink">Copy link</button>
             </div>
           </article>
@@ -263,16 +238,19 @@
       <div class="container">
         <div class="section__header">
           <h2 class="section__title" data-i18n="resume.title">Resume</h2>
-          <p class="section__subtitle" data-i18n="resume.subtitle">Download the PDF for the full version.</p>
+          <p class="section__subtitle" data-i18n="resume.subtitle">Download my resume in English or Portuguese.</p>
         </div>
 
         <div class="resume__actions">
-          <a class="button button--primary" href="./resume.pdf" download data-i18n="resume.download">Download Resume (PDF)</a>
-          <p class="u-text-muted" data-i18n="resume.note">For full details, download the PDF.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadEn">Resume EN (PDF)</a>
+            <a class="button button--secondary" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadPt">Resume PT (PDF)</a>
+          </div>
+          <p class="u-text-muted" data-i18n="resume.note">If you need a custom version, just email me.</p>
         </div>
 
         <details class="accordion">
-          <summary class="accordion__summary" data-i18n="resume.snapshotTitle">Resume snapshot</summary>
+          <summary class="accordion__summary" data-i18n="resume.snapshotTitle">Resume highlights</summary>
           <div class="accordion__content">
             <div class="accordion__item">
               <h4 class="accordion__item-title" data-i18n="resume.snapshotExperience">Experience</h4>
@@ -305,8 +283,8 @@
                 <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 4 8 5 8-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <a href="mailto:[EMAIL]" data-i18n-attr="aria-label:contact.emailLabel">[EMAIL]</a>
-            <button class="button button--ghost button--small" type="button" data-copy-email data-email="[EMAIL]" data-i18n="contact.copyEmail">Copy email</button>
+            <a href="mailto:josetropilo@gmail.com" data-i18n-attr="aria-label:contact.emailLabel">josetropilo@gmail.com</a>
+            <button class="button button--ghost button--small" type="button" data-copy-email data-email="josetropilo@gmail.com" data-i18n="contact.copyEmail">Copy email</button>
           </div>
           <div class="contact__item">
             <span class="contact__icon" aria-hidden="true">
@@ -314,7 +292,7 @@
                 <path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.11 1 2.5 1s2.48 1.12 2.48 2.5zM.5 23.5h4V7.98h-4V23.5zM8 7.98h3.84v2.12h.06c.54-1.02 1.86-2.1 3.84-2.1 4.1 0 4.86 2.7 4.86 6.2v7.3h-4v-6.48c0-1.55-.02-3.54-2.16-3.54-2.16 0-2.5 1.68-2.5 3.42v6.6h-4V7.98z" fill="currentColor"/>
               </svg>
             </span>
-            <a href="[LINKEDIN_URL]" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:contact.linkedinLabel">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/josegabriel-costa/" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:contact.linkedinLabel">LinkedIn</a>
           </div>
           <div class="contact__item">
             <span class="contact__icon" aria-hidden="true">
@@ -322,7 +300,7 @@
                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577v-2.18c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.762-1.605-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.81 1.096.81 2.21v3.28c0 .32.217.694.825.576C20.565 21.796 24 17.298 24 12 24 5.37 18.63 0 12 0z" fill="currentColor"/>
               </svg>
             </span>
-            <a href="[GITHUB_URL]" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:contact.githubLabel">GitHub</a>
+            <a href="https://github.com/GabrielCosta06" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:contact.githubLabel">GitHub</a>
           </div>
         </div>
       </div>
@@ -347,31 +325,31 @@
       <div class="modal__body">
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.problemTitle">Problem</h4>
-          <p data-i18n="project.caseStudy.problemBody">Leaders lacked a unified view of performance across sales, operations, and support.</p>
+          <p data-i18n="project.caseStudy.problemBody">Retail teams need a clear view of revenue, margin, and returns across regions and categories.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.approachTitle">Approach</h4>
-          <p data-i18n="project.caseStudy.approachBody">Designed a single source of truth with automated ETL, semantic models, and alerting.</p>
+          <p data-i18n="project.caseStudy.approachBody">Using a public retail dataset, I cleaned data in Power Query, modeled a star schema, and built DAX measures.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.dataModelTitle">Data Model</h4>
-          <p data-i18n="project.caseStudy.dataModelBody">Star schema with fact tables for revenue, orders, and SLAs plus shared dimensions.</p>
+          <p data-i18n="project.caseStudy.dataModelBody">Star schema with fact tables for sales and returns plus product, customer, store, and date dimensions.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.dashboardTitle">Dashboard Highlights</h4>
-          <p data-i18n="project.caseStudy.dashboardBody">Executive overview, regional drill-downs, and alert tiles for anomalies.</p>
+          <p data-i18n="project.caseStudy.dashboardBody">Executive KPIs, category and region drill-downs, and customer segmentation views.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.automationTitle">Automation</h4>
-          <p data-i18n="project.caseStudy.automationBody">Power Automate triggers notifications when KPIs breach thresholds.</p>
+          <p data-i18n="project.caseStudy.automationBody">Optional Power Automate alerts for margin drops and return spikes.</p>
         </section>
         <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.resultsTitle">Results</h4>
-          <p data-i18n="project.caseStudy.resultsBody">Reduced manual reporting time and improved SLA visibility.</p>
+          <h4 class="modal__section-title" data-i18n="project.caseStudy.resultsTitle">Outcome</h4>
+          <p data-i18n="project.caseStudy.resultsBody">Creates a single view of performance with clear drivers and actionable drill-downs.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.improvementsTitle">Improvements</h4>
-          <p data-i18n="project.caseStudy.improvementsBody">Next steps include predictive alerts and self-serve exploration layers.</p>
+          <p data-i18n="project.caseStudy.improvementsBody">Next steps include publishing to Power BI Service, adding RLS, and documenting a data dictionary.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.architectureTitle">Project Architecture</h4>
@@ -412,6 +390,6 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
-  <script src="js/main.legacy.js" defer></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

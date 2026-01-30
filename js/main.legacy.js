@@ -279,7 +279,7 @@ const certData = [
     issuerKey: "cert.pl900.issuer",
     shortDescKey: "cert.pl900.shortDesc",
     dateKey: "cert.pl900.date",
-    url: "[PL900_URL]",
+    url: "./cert-pl900.pdf",
     tags: ["microsoft"],
   },
   {
@@ -288,7 +288,7 @@ const certData = [
     issuerKey: "cert.datacamp.issuer",
     shortDescKey: "cert.datacamp.shortDesc",
     dateKey: "cert.datacamp.date",
-    url: "[DATACAMP_URL]",
+    url: "./cert-datacamp.pdf",
     tags: ["data"],
   },
   {
@@ -297,7 +297,7 @@ const certData = [
     issuerKey: "cert.toeic.issuer",
     shortDescKey: "cert.toeic.shortDesc",
     dateKey: "cert.toeic.date",
-    url: "[TOEIC_URL]",
+    url: "./cert-toeic.pdf",
     tags: ["english"],
   },
 ];
