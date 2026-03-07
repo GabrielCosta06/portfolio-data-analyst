@@ -5,14 +5,13 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
   const navMenu = document.getElementById("nav-menu");
   const navOverlay = document.querySelector(".nav__overlay");
   const navLinks = Array.from(document.querySelectorAll(".nav__link[data-nav]"));
+  const navAnchors = Array.from(document.querySelectorAll(".nav__menu a[href^='#']"));
   const langSelect = document.getElementById("lang-select");
   const certList = document.getElementById("cert-list");
   const certSearch = document.getElementById("cert-search");
   const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
   const toast = document.getElementById("toast");
-  const modal = document.getElementById("case-study-modal");
-  const modalOpenButton = document.querySelector("[data-modal-open]");
-  const modalCloseButtons = Array.from(document.querySelectorAll("[data-modal-close]"));
+  const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
 
   const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const mobileQuery = window.matchMedia && window.matchMedia("(max-width: 900px)");
@@ -33,33 +32,9 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
     if (!navMenu) return;
     if (mobileQuery && mobileQuery.matches) {
       navMenu.setAttribute("aria-hidden", isNavOpen() ? "false" : "true");
-    } else {
-      navMenu.setAttribute("aria-hidden", "false");
+      return;
     }
-  }
-
-  function openNav() {
-    if (!navMenu) return;
-    navMenu.classList.add("nav__menu--open");
-    document.body.classList.add("is-nav-open");
-    if (navToggle) navToggle.setAttribute("aria-expanded", "true");
-    setNavToggleLabel(true);
-    setNavAria();
-    lastFocusedElement = document.activeElement;
-    activateFocusTrap(navMenu, navMenu.querySelector("a, button, select"));
-  }
-
-  function closeNav() {
-    if (!navMenu) return;
-    navMenu.classList.remove("nav__menu--open");
-    document.body.classList.remove("is-nav-open");
-    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
-    setNavToggleLabel(false);
-    setNavAria();
-    deactivateFocusTrap();
-    if (lastFocusedElement) {
-      lastFocusedElement.focus();
-    }
+    navMenu.setAttribute("aria-hidden", "false");
   }
 
   function getFocusable(container) {
@@ -74,6 +49,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
     deactivateFocusTrap();
     const focusable = getFocusable(container);
     if (!focusable.length) return;
+
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
 
@@ -94,31 +70,29 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
   }
 
   function deactivateFocusTrap() {
-    if (focusTrapCleanup) {
-      focusTrapCleanup();
-      focusTrapCleanup = null;
-    }
+    if (!focusTrapCleanup) return;
+    focusTrapCleanup();
+    focusTrapCleanup = null;
   }
 
-  function isModalOpen() {
-    return modal && modal.classList.contains("modal--open");
-  }
-
-  function openModal() {
-    if (!modal) return;
-    modal.classList.add("modal--open");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("is-modal-open");
+  function openNav() {
+    if (!navMenu) return;
+    navMenu.classList.add("nav__menu--open");
+    document.body.classList.add("is-nav-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "true");
+    setNavToggleLabel(true);
+    setNavAria();
     lastFocusedElement = document.activeElement;
-    const closeButton = modal.querySelector("[data-modal-close]");
-    activateFocusTrap(modal, closeButton);
+    activateFocusTrap(navMenu, navMenu.querySelector("a, button, select"));
   }
 
-  function closeModal() {
-    if (!modal) return;
-    modal.classList.remove("modal--open");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("is-modal-open");
+  function closeNav() {
+    if (!navMenu) return;
+    navMenu.classList.remove("nav__menu--open");
+    document.body.classList.remove("is-nav-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+    setNavToggleLabel(false);
+    setNavAria();
     deactivateFocusTrap();
     if (lastFocusedElement) {
       lastFocusedElement.focus();
@@ -160,7 +134,6 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
 
     actions.append(view, copy);
     article.append(title, meta, desc, actions);
-
     return article;
   }
 
@@ -200,7 +173,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
       try {
         await navigator.clipboard.writeText(text);
         return true;
-      } catch (err) {
+      } catch {
         return false;
       }
     }
@@ -217,7 +190,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
       const success = document.execCommand("copy");
       textarea.remove();
       return success;
-    } catch (err) {
+    } catch {
       textarea.remove();
       return false;
     }
@@ -255,7 +228,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
 
   function initNavObserver() {
     const sections = Array.from(document.querySelectorAll("main section[id]"));
-    if (!sections.length || !navLinks.length) return;
+    if (!sections.length || !navLinks.length || !("IntersectionObserver" in window)) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -274,12 +247,41 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
         });
       },
       {
-        rootMargin: "-45% 0px -45% 0px",
-        threshold: 0.01,
+        rootMargin: "-40% 0px -40% 0px",
+        threshold: 0.02,
       }
     );
 
     sections.forEach((section) => observer.observe(section));
+  }
+
+  function initRevealObserver() {
+    if (!revealItems.length) return;
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+      return;
+    }
+
+    revealItems.forEach((item, index) => {
+      item.style.setProperty("--reveal-delay", `${Math.min(index * 40, 200)}ms`);
+    });
+
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          currentObserver.unobserve(entry.target);
+        });
+      },
+      {
+        rootMargin: "0px 0px -12% 0px",
+        threshold: 0.12,
+      }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
   }
 
   if (langSelect) {
@@ -302,7 +304,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
     navOverlay.addEventListener("click", closeNav);
   }
 
-  navLinks.forEach((link) => {
+  navAnchors.forEach((link) => {
     link.addEventListener("click", () => {
       if (isNavOpen()) closeNav();
     });
@@ -349,27 +351,25 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
     });
   }
 
-  if (modalOpenButton) {
-    modalOpenButton.addEventListener("click", openModal);
-  }
-
-  modalCloseButtons.forEach((button) => {
-    button.addEventListener("click", closeModal);
-  });
-
   document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape") return;
-    if (isModalOpen()) {
-      closeModal();
-      return;
-    }
-    if (isNavOpen()) {
+    if (event.key === "Escape" && isNavOpen()) {
       closeNav();
     }
   });
 
-  if (mobileQuery && mobileQuery.addEventListener) {
-    mobileQuery.addEventListener("change", setNavAria);
+  if (mobileQuery) {
+    const handleMediaChange = () => {
+      setNavAria();
+      if (!mobileQuery.matches && isNavOpen()) {
+        closeNav();
+      }
+    };
+
+    if (mobileQuery.addEventListener) {
+      mobileQuery.addEventListener("change", handleMediaChange);
+    } else if (mobileQuery.addListener) {
+      mobileQuery.addListener(handleMediaChange);
+    }
   }
 
   window.addEventListener("hashchange", () => {
@@ -377,6 +377,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
   });
 
   initNavObserver();
+  initRevealObserver();
   setNavAria();
 
   return {

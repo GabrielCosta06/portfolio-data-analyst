@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gabriel Barbeta | Data Analyst Portfolio</title>
-  <meta name="description" content="Junior Data Analyst portfolio with projects, certificates, and resume.">
+  <meta name="description" content="Data Analyst portfolio featuring a factory cost control case study, certificates, and resume.">
   <meta property="og:title" content="Gabriel Barbeta | Data Analyst Portfolio">
-  <meta property="og:description" content="Junior Data Analyst portfolio with projects, certificates, and resume.">
+  <meta property="og:description" content="Data Analyst portfolio featuring a factory cost control case study, certificates, and resume.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%23f8fafc'/><text x='600' y='340' font-size='88' text-anchor='middle' fill='%230f172a' font-family='Arial'>GC</text></svg>">
+  <meta property="og:image" content="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%23f4f7f8'/><text x='600' y='340' font-size='88' text-anchor='middle' fill='%230f1720' font-family='Arial'>GB</text></svg>">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gabriel Barbeta | Data Analyst Portfolio">
-  <meta name="twitter:description" content="Junior Data Analyst portfolio with projects, certificates, and resume.">
-  <meta name="twitter:image" content="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%23f8fafc'/><text x='600' y='340' font-size='88' text-anchor='middle' fill='%230f172a' font-family='Arial'>GC</text></svg>">
-  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23f8fafc'/><text x='32' y='40' font-size='28' text-anchor='middle' fill='%230f172a' font-family='Arial'>GC</text></svg>">
+  <meta name="twitter:description" content="Data Analyst portfolio featuring a factory cost control case study, certificates, and resume.">
+  <meta name="twitter:image" content="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><rect width='1200' height='630' fill='%23f4f7f8'/><text x='600' y='340' font-size='88' text-anchor='middle' fill='%230f1720' font-family='Arial'>GB</text></svg>">
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23f4f7f8'/><text x='32' y='40' font-size='26' text-anchor='middle' fill='%230f1720' font-family='Arial'>GB</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
@@ -24,20 +24,11 @@
   <link rel="stylesheet" href="css/utilities.css">
 </head>
 <body class="page">
-  <!--
-    How to customize:
-    - Update the name, role, and location text directly in this HTML (header + hero).
-    - Certificate PDFs: add cert-pl900.pdf, cert-datacamp.pdf, cert-toeic.pdf to the repo root.
-    - Edit translations in js/i18n.js.
-    - Update certificate data in js/data.js (certData) and add matching i18n keys.
-    - UI logic lives in js/ui.js and app setup in js/main.js.
-  -->
-
   <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
 
   <noscript>
     <div class="noscript-banner" role="status" data-i18n="noscript.message">
-      JavaScript is required for language switching, filters, and the case study modal.
+      JavaScript is required for language switching, filters, and subtle section reveals.
     </div>
   </noscript>
 
@@ -66,23 +57,17 @@
               <option value="pt-BR" data-i18n="nav.langOptionPt">Português (BR)</option>
             </select>
           </div>
-        </div>
-
-        <div class="nav__resume-group">
-          <a class="button button--primary nav__resume" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadResumeEn">Resume EN (PDF)</a>
-          <a class="button button--secondary nav__resume" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="nav.downloadResumePt">Resume PT (PDF)</a>
+          <a class="button button--ghost button--small nav__resume-link" href="#resume" data-i18n="nav.resumeCta">Open Resume</a>
         </div>
       </div>
 
-      <div class="nav__cta">
-        <button class="nav__toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
-          <span class="nav__toggle-box" aria-hidden="true">
-            <span class="nav__toggle-bar"></span>
-            <span class="nav__toggle-bar"></span>
-            <span class="nav__toggle-bar"></span>
-          </span>
-        </button>
-      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+        <span class="nav__toggle-box" aria-hidden="true">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </span>
+      </button>
 
       <div class="nav__overlay" data-nav-close aria-hidden="true"></div>
     </nav>
@@ -90,235 +75,357 @@
 
   <main id="main" class="page__main">
     <section class="hero" id="hero">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <p class="hero__eyebrow" data-i18n="hero.eyebrow">Brazil - Junior Data Analyst</p>
-          <h1 class="hero__title" data-i18n="hero.title">Junior Data Analyst | Power BI | Python | SQL</h1>
+      <div class="container hero__layout">
+        <div class="hero__main" data-reveal>
+          <p class="hero__eyebrow" data-i18n="hero.eyebrow">Manufacturing analytics | Brazil</p>
+          <h1 class="hero__title" data-i18n="hero.title">I build clear operational analytics for factory, finance, and performance decisions.</h1>
           <p class="hero__subtitle" data-i18n="hero.subtitle">
-            I turn messy data into clear, actionable insights with dashboards, automation, and clean pipelines.
+            Data analyst focused on turning messy operational data into decision-ready dashboards, clean marts, and recruiter-ready business stories.
           </p>
           <div class="hero__actions">
-            <a class="button button--primary" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadEn">Resume EN (PDF)</a>
-            <a class="button button--secondary" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadPt">Resume PT (PDF)</a>
-            <a class="button button--secondary" href="#contact" data-i18n="nav.contact">Contact</a>
+            <a class="button button--primary" href="#projects" data-i18n="hero.ctaProject">View Factory Project</a>
+            <a class="button button--secondary" href="#resume" data-i18n="hero.ctaResume">Open Resume</a>
           </div>
-          <div class="hero__links">
-            <a class="hero__link" href="#projects" data-i18n="hero.ctaProjects">View Projects</a>
-            <a class="hero__link" href="#certificates" data-i18n="hero.ctaCerts">Certificates</a>
-          </div>
-          <div class="hero__meta">
-            <span data-i18n="hero.meta1">Location: Brazil</span>
-            <span class="hero__dot" aria-hidden="true">&middot;</span>
-            <span data-i18n="hero.meta2">Open to mid-level roles and contract work</span>
-          </div>
+          <p class="hero__microcopy" data-i18n="hero.microcopy">Power BI, Python, SQL, and sharp KPI design for operational teams.</p>
         </div>
-        <div class="card card--matrix hero__panel">
-          <p class="card__eyebrow" data-i18n="hero.cardTitle">What I deliver</p>
-          <ul class="matrix">
-            <li class="matrix__item" data-i18n="hero.cardItem1">Automated reporting that reduces manual work</li>
-            <li class="matrix__item" data-i18n="hero.cardItem2">KPI dashboards with clear performance tracking</li>
-            <li class="matrix__item" data-i18n="hero.cardItem3">Data stories that align teams quickly</li>
-          </ul>
-        </div>
+
+        <aside class="hero__rail card" data-reveal>
+          <p class="hero-rail__label" data-i18n="hero.railLabel">Flagship proof</p>
+          <div class="proof-strip" aria-label="Key metrics">
+            <div class="proof-strip__item">
+              <span class="proof-strip__value" data-i18n="hero.proof1.value">R$ 0.0669</span>
+              <span class="proof-strip__label" data-i18n="hero.proof1.label">Cost per good unit</span>
+            </div>
+            <div class="proof-strip__item">
+              <span class="proof-strip__value" data-i18n="hero.proof2.value">23.1 h</span>
+              <span class="proof-strip__label" data-i18n="hero.proof2.label">Downtime in sample window</span>
+            </div>
+            <div class="proof-strip__item">
+              <span class="proof-strip__value" data-i18n="hero.proof3.value">67.1%</span>
+              <span class="proof-strip__label" data-i18n="hero.proof3.label">Line efficiency</span>
+            </div>
+            <div class="proof-strip__item">
+              <span class="proof-strip__value" data-i18n="hero.proof4.value">38</span>
+              <span class="proof-strip__label" data-i18n="hero.proof4.label">Modeled batches</span>
+            </div>
+          </div>
+          <div class="hero-focus">
+            <p class="hero-focus__title" data-i18n="hero.focusTitle">Current focus</p>
+            <ul class="hero-focus__list">
+              <li class="hero-focus__item" data-i18n="hero.focus1">Factory cost and downtime analytics</li>
+              <li class="hero-focus__item" data-i18n="hero.focus2">Executive Power BI storytelling</li>
+              <li class="hero-focus__item" data-i18n="hero.focus3">Reliable marts and KPI definitions</li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="section section--tight" id="about">
       <div class="container">
-        <div class="section__header">
-          <h2 class="section__title" data-i18n="about.title">About</h2>
-          <p class="section__subtitle" data-i18n="about.subtitle">Detail-driven junior analyst focused on clear insights, reliable data models, and stakeholder-ready storytelling.</p>
-        </div>
-        <div class="about__grid">
-          <ul class="list list--bullets">
-            <li class="list__item" data-i18n="about.bullet1">Translate business questions into clear metrics, KPIs, and aligned definitions</li>
-            <li class="list__item" data-i18n="about.bullet2">Build Power BI dashboards with thoughtful UX, filters, and drill-downs</li>
-            <li class="list__item" data-i18n="about.bullet3">Prioritize data quality, documentation, and trusted handoffs to teams</li>
-          </ul>
-          <div class="about__stack">
-            <h3 class="about__stack-title" data-i18n="about.stackTitle">Tech stack</h3>
+        <div class="band band--capabilities" data-reveal>
+          <div class="section__intro">
+            <p class="section__eyebrow" data-i18n="about.eyebrow">Capabilities</p>
+            <h2 class="section__title" data-i18n="about.title">I turn operational questions into usable decision support.</h2>
+            <p class="section__subtitle" data-i18n="about.subtitle">Minimal dashboards, reliable metrics, and clean delivery for stakeholders who need answers quickly.</p>
+          </div>
+
+          <div class="capability-rail">
+            <article class="capability-card">
+              <p class="capability-card__index">01</p>
+              <h3 class="capability-card__title" data-i18n="about.capability1Title">Business framing</h3>
+              <p class="capability-card__body" data-i18n="about.capability1Body">Translate plant, service, and finance questions into clear KPIs, definitions, and analysis paths.</p>
+            </article>
+            <article class="capability-card">
+              <p class="capability-card__index">02</p>
+              <h3 class="capability-card__title" data-i18n="about.capability2Title">Analytics delivery</h3>
+              <p class="capability-card__body" data-i18n="about.capability2Body">Build concise Power BI experiences with drill-down logic, focused visuals, and executive readability.</p>
+            </article>
+            <article class="capability-card">
+              <p class="capability-card__index">03</p>
+              <h3 class="capability-card__title" data-i18n="about.capability3Title">Data reliability</h3>
+              <p class="capability-card__body" data-i18n="about.capability3Body">Prioritize structured pipelines, QA checks, and documentation so teams can trust the output.</p>
+            </article>
+          </div>
+
+          <div class="about__stack-block">
+            <p class="about__stack-label" data-i18n="about.stackTitle">Core stack</p>
             <div class="chip-list">
               <span class="chip">Python</span>
               <span class="chip">SQL</span>
+              <span class="chip">DuckDB</span>
               <span class="chip">Power BI</span>
               <span class="chip">DAX</span>
               <span class="chip">Excel</span>
-              <span class="chip">AWS</span>
-              <span class="chip">Power Automate</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <section class="section section--project" id="projects">
       <div class="container">
-        <div class="section__header">
-          <h2 class="section__title" data-i18n="projects.title">Projects</h2>
-          <p class="section__subtitle" data-i18n="projects.subtitle">Featured factory operations case study built from a real bottling-line dataset, documented cost assumptions, and Power BI-ready marts.</p>
+        <div class="section__intro section__intro--project" data-reveal>
+          <p class="section__eyebrow" data-i18n="projects.eyebrow">Flagship project</p>
+          <h2 class="section__title" data-i18n="projects.title">Factory case study</h2>
+          <p class="section__subtitle" data-i18n="projects.subtitle">Factory Cost Control Tower is a manufacturing case study built from a real bottling-line dataset, documented cost assumptions, and Power BI-ready marts.</p>
         </div>
 
-        <div class="projects__grid">
-          <article class="card project-card project-card--featured">
-            <div class="project-card__header">
-              <span class="tag" data-i18n="projects.featuredTag">Flagship project</span>
-              <h3 class="project-card__title" data-i18n="project.featured.title">Factory Cost Control Tower for a Bottling Line</h3>
+        <article class="flagship" data-reveal>
+          <div class="flagship__rail">
+            <span class="tag" data-i18n="projects.featuredTag">Flagship project</span>
+            <h3 class="flagship__title" data-i18n="project.featured.title">Factory Cost Control Tower for a Bottling Line</h3>
+            <p class="flagship__summary" data-i18n="project.featured.summary">End-to-end manufacturing analytics case study that explains which downtime causes, shifts, and SKUs drive the highest cost per good unit.</p>
+
+            <div class="chip-list chip-list--compact flagship__chips" aria-label="Tools">
+              <span class="chip">Python</span>
+              <span class="chip">DuckDB</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">Manufacturing KPIs</span>
             </div>
-              <p class="project-card__summary" data-i18n="project.featured.summary">End-to-end manufacturing analytics case study that explains which downtime causes, shifts, and SKUs drive the highest cost per good unit.</p>
-              <div class="chip-list chip-list--compact project-card__chips" aria-label="Tools">
-                <span class="chip">Python</span>
-                <span class="chip">DuckDB</span>
-                <span class="chip">Pandas</span>
-                <span class="chip">Power BI</span>
-                <span class="chip">Manufacturing KPIs</span>
+
+            <div class="fact-list">
+              <div class="fact-list__item">
+                <span class="fact-list__label" data-i18n="project.sideFact1Label">Observation window</span>
+                <span class="fact-list__value" data-i18n="project.sideFact1Value">Aug 29 to Sep 3, 2024</span>
               </div>
-              <div class="project-card__results">
-              <p class="project-card__results-title" data-i18n="project.featured.resultsTitle">What it covers</p>
-              <ul class="list list--results">
-                <li class="list__item" data-i18n="project.featured.highlight1">Workbook-to-mart pipeline with Python, DuckDB, and QA checks</li>
-                <li class="list__item" data-i18n="project.featured.highlight2">Modeled labor, downtime, and loss economics for cost per good unit</li>
-                <li class="list__item" data-i18n="project.featured.highlight3">Executive screens for shift performance, root causes, and what-if scenarios</li>
-              </ul>
+              <div class="fact-list__item">
+                <span class="fact-list__label" data-i18n="project.sideFact2Label">Scope</span>
+                <span class="fact-list__value" data-i18n="project.sideFact2Value">38 batches, 6 SKUs, 3 shifts</span>
+              </div>
+              <div class="fact-list__item">
+                <span class="fact-list__label" data-i18n="project.sideFact3Label">Output</span>
+                <span class="fact-list__value" data-i18n="project.sideFact3Value">Curated marts, QA tests, Power BI build pack</span>
+              </div>
             </div>
-              <div class="project-card__metrics">
-                <p class="project-card__metrics-title" data-i18n="project.featured.metricsTitle">Key results</p>
-                <ul class="metrics">
-                  <li class="metrics__item" data-i18n="project.featured.metric1">R$ 0.0669 cost per good unit across 38 batches</li>
-                  <li class="metrics__item" data-i18n="project.featured.metric2">23.1 downtime hours with 381 minutes in setup and calibration</li>
-                  <li class="metrics__item" data-i18n="project.featured.metric3">Swing shift runs about 20% more expensive per unit than day shift</li>
-                </ul>
-              </div>
-              <div class="project-card__media" aria-label="Dashboard screens">
-                <a class="project-shot" href="./assets/projects/factory-cost-control/executive-overview.svg" target="_blank" rel="noopener noreferrer">
-                  <img class="project-shot__image" src="./assets/projects/factory-cost-control/executive-overview.svg" alt="" data-i18n-attr="alt:project.screenshot1">
-                  <span class="project-shot__caption" data-i18n="project.screenshot1">Executive overview screen</span>
-                </a>
-                <a class="project-shot" href="./assets/projects/factory-cost-control/shift-operator-performance.svg" target="_blank" rel="noopener noreferrer">
-                  <img class="project-shot__image" src="./assets/projects/factory-cost-control/shift-operator-performance.svg" alt="" data-i18n-attr="alt:project.screenshot2">
-                  <span class="project-shot__caption" data-i18n="project.screenshot2">Shift and operator performance screen</span>
-                </a>
-                <a class="project-shot" href="./assets/projects/factory-cost-control/downtime-root-causes.svg" target="_blank" rel="noopener noreferrer">
-                  <img class="project-shot__image" src="./assets/projects/factory-cost-control/downtime-root-causes.svg" alt="" data-i18n-attr="alt:project.screenshot3">
-                  <span class="project-shot__caption" data-i18n="project.screenshot3">Downtime root-cause screen</span>
-                </a>
-                <a class="project-shot" href="./assets/projects/factory-cost-control/cost-what-if-analysis.svg" target="_blank" rel="noopener noreferrer">
-                  <img class="project-shot__image" src="./assets/projects/factory-cost-control/cost-what-if-analysis.svg" alt="" data-i18n-attr="alt:project.screenshot4">
-                  <span class="project-shot__caption" data-i18n="project.screenshot4">Cost what-if analysis screen</span>
-                </a>
-              </div>
-              <div class="project-card__actions">
+
+            <div class="flagship__actions">
               <a class="button button--ghost" href="https://github.com/GabrielCosta06/factory-cost-control-tower" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewRepo">View Repo</a>
               <a class="button button--secondary" href="./assets/projects/factory-cost-control/executive-overview.svg" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewDashboard">View Dashboard Screens</a>
-              <button class="button button--primary" type="button" data-modal-open aria-haspopup="dialog" data-i18n="project.featured.readCaseStudy">Read Case Study</button>
             </div>
-          </article>
+          </div>
+
+          <div class="flagship__content">
+            <div class="kpi-grid" aria-label="Project KPIs">
+              <article class="kpi-card">
+                <span class="kpi-card__value" data-i18n="project.metric1Value">R$ 0.0669</span>
+                <span class="kpi-card__label" data-i18n="project.metric1Label">Average cost per good unit</span>
+              </article>
+              <article class="kpi-card">
+                <span class="kpi-card__value" data-i18n="project.metric2Value">23.1 h</span>
+                <span class="kpi-card__label" data-i18n="project.metric2Label">Total downtime across the sample</span>
+              </article>
+              <article class="kpi-card">
+                <span class="kpi-card__value" data-i18n="project.metric3Value">381 min</span>
+                <span class="kpi-card__label" data-i18n="project.metric3Label">Setup and calibration loss</span>
+              </article>
+              <article class="kpi-card">
+                <span class="kpi-card__value" data-i18n="project.metric4Value">+20%</span>
+                <span class="kpi-card__label" data-i18n="project.metric4Label">Swing shift cost gap vs day shift</span>
+              </article>
+            </div>
+
+            <div class="story-grid">
+              <article class="story-card">
+                <p class="story-card__eyebrow" data-i18n="project.storyEyebrow1">Problem</p>
+                <h4 class="story-card__title" data-i18n="project.caseStudy.problemTitle">Problem</h4>
+                <p class="story-card__body" data-i18n="project.caseStudy.problemBody">Plant leadership could see output volume, but not the economic effect of downtime by shift, SKU, or work pattern. Improvement efforts risked becoming generic labor pressure instead of targeted action.</p>
+              </article>
+              <article class="story-card">
+                <p class="story-card__eyebrow" data-i18n="project.storyEyebrow2">Approach</p>
+                <h4 class="story-card__title" data-i18n="project.caseStudy.approachTitle">Approach</h4>
+                <p class="story-card__body" data-i18n="project.caseStudy.approachBody">I used the Maven bottling-line workbook, cleaned it in Python, modeled plant economics with documented reference tables, transformed the data in DuckDB, and produced Power BI-ready marts plus dashboard screens.</p>
+              </article>
+              <article class="story-card">
+                <p class="story-card__eyebrow" data-i18n="project.storyEyebrow3">Model</p>
+                <h4 class="story-card__title" data-i18n="project.caseStudy.dataModelTitle">Data Model</h4>
+                <p class="story-card__body" data-i18n="project.caseStudy.dataModelBody">The model uses fact_batch_runs at batch grain, mart_root_cause at batch-by-factor grain, and mart_action_queue for ranked opportunities, supported by product, shift, operator, and downtime dimensions.</p>
+              </article>
+              <article class="story-card">
+                <p class="story-card__eyebrow" data-i18n="project.storyEyebrow4">Outcome</p>
+                <h4 class="story-card__title" data-i18n="project.caseStudy.resultsTitle">Outcome</h4>
+                <p class="story-card__body" data-i18n="project.caseStudy.resultsBody">The modeled line averages R$ 0.0669 per good unit, setup and calibration drive the largest downtime bucket at 381 minutes, and swing shift runs at R$ 0.0726 per unit versus R$ 0.0605 on day shift.</p>
+              </article>
+            </div>
+
+            <div class="insight-panels">
+              <div class="insight-panel">
+                <p class="insight-panel__title" data-i18n="project.recommendationsTitle">Recommended next actions</p>
+                <ul class="list list--results">
+                  <li class="list__item" data-i18n="project.recommendation1">Standardize setup sheets and first-article checks on swing shift.</li>
+                  <li class="list__item" data-i18n="project.recommendation2">Prioritize preventive maintenance around machine adjustment and failure events.</li>
+                  <li class="list__item" data-i18n="project.recommendation3">Pre-stage packaging and materials one batch ahead to cut material-flow loss.</li>
+                </ul>
+              </div>
+              <div class="insight-panel insight-panel--muted">
+                <p class="insight-panel__title" data-i18n="project.caseStudy.dashboardTitle">Dashboard highlights</p>
+                <p class="insight-panel__body" data-i18n="project.caseStudy.dashboardBody">The output includes an executive overview, shift and operator benchmark, downtime root-cause analysis, and a what-if screen for wage, downtime, and loss scenarios.</p>
+              </div>
+            </div>
+
+            <div class="flagship__gallery-block">
+              <div class="gallery__header">
+                <p class="gallery__eyebrow" data-i18n="project.caseStudy.galleryTitle">Dashboard Screens</p>
+                <p class="gallery__note" data-i18n="project.galleryNote">Four clean screens focused on cost, downtime, shift performance, and scenario analysis.</p>
+              </div>
+              <div class="project-gallery" aria-label="Dashboard screens">
+                <a class="project-gallery__item" href="./assets/projects/factory-cost-control/executive-overview.svg" target="_blank" rel="noopener noreferrer">
+                  <img class="project-gallery__image" src="./assets/projects/factory-cost-control/executive-overview.svg" alt="" data-i18n-attr="alt:project.screenshot1">
+                  <span class="project-gallery__caption" data-i18n="project.screenshot1">Executive overview screen</span>
+                </a>
+                <a class="project-gallery__item" href="./assets/projects/factory-cost-control/shift-operator-performance.svg" target="_blank" rel="noopener noreferrer">
+                  <img class="project-gallery__image" src="./assets/projects/factory-cost-control/shift-operator-performance.svg" alt="" data-i18n-attr="alt:project.screenshot2">
+                  <span class="project-gallery__caption" data-i18n="project.screenshot2">Shift and operator performance screen</span>
+                </a>
+                <a class="project-gallery__item" href="./assets/projects/factory-cost-control/downtime-root-causes.svg" target="_blank" rel="noopener noreferrer">
+                  <img class="project-gallery__image" src="./assets/projects/factory-cost-control/downtime-root-causes.svg" alt="" data-i18n-attr="alt:project.screenshot3">
+                  <span class="project-gallery__caption" data-i18n="project.screenshot3">Downtime root-cause screen</span>
+                </a>
+                <a class="project-gallery__item" href="./assets/projects/factory-cost-control/cost-what-if-analysis.svg" target="_blank" rel="noopener noreferrer">
+                  <img class="project-gallery__image" src="./assets/projects/factory-cost-control/cost-what-if-analysis.svg" alt="" data-i18n-attr="alt:project.screenshot4">
+                  <span class="project-gallery__caption" data-i18n="project.screenshot4">Cost what-if analysis screen</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--credentials" aria-labelledby="credentials-title">
+      <div class="container">
+        <div class="credentials" data-reveal>
+          <div class="section__intro section__intro--credentials">
+            <p class="section__eyebrow" data-i18n="credentials.eyebrow">Credentials</p>
+            <h2 class="section__title" id="credentials-title" data-i18n="credentials.title">Verified proof, concise resume, and shareable links.</h2>
+            <p class="section__subtitle" data-i18n="credentials.subtitle">Everything a recruiter needs to validate skills quickly: public project proof, certifications, and bilingual resume access.</p>
+            <div class="credentials__stats">
+              <div class="credentials__stat">
+                <span class="credentials__stat-value" data-i18n="credentials.stat1Value">3</span>
+                <span class="credentials__stat-label" data-i18n="credentials.stat1Label">Certificates</span>
+              </div>
+              <div class="credentials__stat">
+                <span class="credentials__stat-value" data-i18n="credentials.stat2Value">2</span>
+                <span class="credentials__stat-label" data-i18n="credentials.stat2Label">Resume versions</span>
+              </div>
+              <div class="credentials__stat">
+                <span class="credentials__stat-value" data-i18n="credentials.stat3Value">910</span>
+                <span class="credentials__stat-label" data-i18n="credentials.stat3Label">TOEIC score</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="credentials__grid">
+            <div class="credentials__panel credentials__panel--certs" id="certificates">
+              <div class="credentials__panel-header">
+                <h3 class="credentials__panel-title" data-i18n="cert.title">Certificates</h3>
+                <p class="credentials__panel-copy" data-i18n="cert.subtitle">Verified credentials with shareable deep links.</p>
+              </div>
+
+              <div class="certificates__controls">
+                <div class="filters" role="group" data-i18n-attr="aria-label:cert.filterLabel">
+                  <button class="filters__button filters__button--active" type="button" data-filter="all" aria-pressed="true" data-i18n="cert.filterAll">All</button>
+                  <button class="filters__button" type="button" data-filter="microsoft" aria-pressed="false" data-i18n="cert.filterMicrosoft">Microsoft</button>
+                  <button class="filters__button" type="button" data-filter="data" aria-pressed="false" data-i18n="cert.filterData">Data</button>
+                  <button class="filters__button" type="button" data-filter="english" aria-pressed="false" data-i18n="cert.filterEnglish">English</button>
+                </div>
+
+                <div class="search">
+                  <label class="u-sr-only" for="cert-search" data-i18n="cert.searchLabel">Search certificates</label>
+                  <input class="search__input" id="cert-search" type="search" data-i18n-attr="placeholder:cert.searchPlaceholder;aria-label:cert.searchLabel" placeholder="Search by title or issuer">
+                </div>
+              </div>
+
+              <div id="cert-list" class="certificates__list">
+                <article class="card cert-card" id="cert-pl900">
+                  <h3 class="cert-card__title">PL-900: Microsoft Power Platform Fundamentals</h3>
+                  <p class="cert-card__meta">Microsoft - 2025</p>
+                  <p class="cert-card__desc">Core Power Platform concepts and capabilities.</p>
+                  <div class="cert-card__actions">
+                    <a class="button button--ghost" href="./cert-pl900.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
+                    <button class="button button--secondary" type="button" data-copy-link="cert-pl900" data-i18n="cert.card.copyLink">Copy link</button>
+                  </div>
+                </article>
+
+                <article class="card cert-card" id="cert-datacamp">
+                  <h3 class="cert-card__title">Data Analyst Associate</h3>
+                  <p class="cert-card__meta">DataCamp - Sep 2025</p>
+                  <p class="cert-card__desc">Assessment-driven credential for analytics skills.</p>
+                  <div class="cert-card__actions">
+                    <a class="button button--ghost" href="./cert-datacamp.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
+                    <button class="button button--secondary" type="button" data-copy-link="cert-datacamp" data-i18n="cert.card.copyLink">Copy link</button>
+                  </div>
+                </article>
+
+                <article class="card cert-card" id="cert-toeic">
+                  <h3 class="cert-card__title">TOEIC</h3>
+                  <p class="cert-card__meta">ETS - Score 910/990</p>
+                  <p class="cert-card__desc">Score 910/990</p>
+                  <div class="cert-card__actions">
+                    <a class="button button--ghost" href="./cert-toeic.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
+                    <button class="button button--secondary" type="button" data-copy-link="cert-toeic" data-i18n="cert.card.copyLink">Copy link</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <aside class="credentials__panel credentials__panel--resume" id="resume">
+              <div class="credentials__panel-header">
+                <h3 class="credentials__panel-title" data-i18n="resume.title">Resume</h3>
+                <p class="credentials__panel-copy" data-i18n="resume.subtitle">Choose English or Portuguese and get a clear, recruiter-friendly overview.</p>
+              </div>
+
+              <div class="resume__snapshot">
+                <article class="resume-card">
+                  <p class="resume-card__label" data-i18n="resume.snapshotExperience">Experience</p>
+                  <p class="resume-card__body" data-i18n="resume.snapshotExperienceBody">Built a factory cost control case study with Python, DuckDB, and Power BI-ready marts.</p>
+                </article>
+                <article class="resume-card">
+                  <p class="resume-card__label" data-i18n="resume.snapshotEducation">Education</p>
+                  <p class="resume-card__body" data-i18n="resume.snapshotEducationBody">Ongoing studies with emphasis on analytics and statistics.</p>
+                </article>
+                <article class="resume-card">
+                  <p class="resume-card__label" data-i18n="resume.snapshotSkills">Skills</p>
+                  <p class="resume-card__body" data-i18n="resume.snapshotSkillsBody">Power BI, SQL, Python, DuckDB, Excel, and data modeling.</p>
+                </article>
+              </div>
+
+              <div class="resume__actions">
+                <a class="button button--primary" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadEn">Resume EN (PDF)</a>
+                <a class="button button--secondary" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadPt">Resume PT (PDF)</a>
+              </div>
+              <p class="resume__note" data-i18n="resume.note">Need a tailored version for a role? Just email me.</p>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="certificates">
+    <section class="section section--contact" id="contact">
       <div class="container">
-        <div class="section__header">
-          <h2 class="section__title" data-i18n="cert.title">Certificates</h2>
-          <p class="section__subtitle" data-i18n="cert.subtitle">Verified credentials with shareable deep links.</p>
-        </div>
-
-        <div class="certificates__controls">
-          <div class="filters" role="group" data-i18n-attr="aria-label:cert.filterLabel">
-            <button class="filters__button filters__button--active" type="button" data-filter="all" aria-pressed="true" data-i18n="cert.filterAll">All</button>
-            <button class="filters__button" type="button" data-filter="microsoft" aria-pressed="false" data-i18n="cert.filterMicrosoft">Microsoft</button>
-            <button class="filters__button" type="button" data-filter="data" aria-pressed="false" data-i18n="cert.filterData">Data</button>
-            <button class="filters__button" type="button" data-filter="english" aria-pressed="false" data-i18n="cert.filterEnglish">English</button>
+        <div class="contact-shell" data-reveal>
+          <div class="contact-shell__main">
+            <p class="section__eyebrow" data-i18n="contact.eyebrow">Contact</p>
+            <h2 class="section__title" data-i18n="contact.title">Open to operations, BI, and analytics opportunities.</h2>
+            <p class="section__subtitle" data-i18n="contact.subtitle">If you want someone who can structure messy data, define KPIs clearly, and present results with restraint, let’s talk.</p>
+            <a class="button button--primary" href="mailto:josetropilo@gmail.com" data-i18n="contact.primaryCta">Start a conversation</a>
           </div>
 
-          <div class="search">
-            <label class="u-sr-only" for="cert-search" data-i18n="cert.searchLabel">Search certificates</label>
-            <input class="search__input" id="cert-search" type="search" data-i18n-attr="placeholder:cert.searchPlaceholder;aria-label:cert.searchLabel" placeholder="Search by title or issuer">
-          </div>
-        </div>
-
-        <div id="cert-list" class="certificates__list">
-          <article class="card cert-card" id="cert-pl900">
-            <h3 class="cert-card__title">PL-900: Microsoft Power Platform Fundamentals</h3>
-            <p class="cert-card__meta">Microsoft - 2025</p>
-            <p class="cert-card__desc">Core Power Platform concepts and capabilities.</p>
-            <div class="cert-card__actions">
-              <a class="button button--ghost" href="./cert-pl900.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
-              <button class="button button--secondary" type="button" data-copy-link="cert-pl900" data-i18n="cert.card.copyLink">Copy link</button>
+          <div class="contact-shell__list">
+            <div class="contact-line">
+              <span class="contact-line__label" data-i18n="contact.emailTitle">Email</span>
+              <a class="contact-line__value" href="mailto:josetropilo@gmail.com" data-i18n-attr="aria-label:contact.emailLabel">josetropilo@gmail.com</a>
+              <button class="button button--ghost button--small" type="button" data-copy-email data-email="josetropilo@gmail.com" data-i18n="contact.copyEmail">Copy email</button>
             </div>
-          </article>
-
-          <article class="card cert-card" id="cert-datacamp">
-            <h3 class="cert-card__title">Data Analyst Associate</h3>
-            <p class="cert-card__meta">DataCamp - Sep 2025</p>
-            <p class="cert-card__desc">Assessment-driven credential for analytics skills.</p>
-            <div class="cert-card__actions">
-              <a class="button button--ghost" href="./cert-datacamp.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
-              <button class="button button--secondary" type="button" data-copy-link="cert-datacamp" data-i18n="cert.card.copyLink">Copy link</button>
+            <div class="contact-line">
+              <span class="contact-line__label" data-i18n="contact.linkedinTitle">LinkedIn</span>
+              <a class="contact-line__value" href="https://www.linkedin.com/in/josegabriel-costa/" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:contact.linkedinLabel">linkedin.com/in/josegabriel-costa</a>
             </div>
-          </article>
-
-          <article class="card cert-card" id="cert-toeic">
-            <h3 class="cert-card__title">TOEIC</h3>
-            <p class="cert-card__meta">ETS - Score 910/990</p>
-            <p class="cert-card__desc">Score 910/990</p>
-            <div class="cert-card__actions">
-              <a class="button button--ghost" href="./cert-toeic.pdf" target="_blank" rel="noopener noreferrer" data-i18n="cert.card.viewCredential">Open PDF</a>
-              <button class="button button--secondary" type="button" data-copy-link="cert-toeic" data-i18n="cert.card.copyLink">Copy link</button>
+            <div class="contact-line">
+              <span class="contact-line__label" data-i18n="contact.githubTitle">GitHub</span>
+              <a class="contact-line__value" href="https://github.com/GabrielCosta06" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:contact.githubLabel">github.com/GabrielCosta06</a>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="resume">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title" data-i18n="resume.title">Resume</h2>
-          <p class="section__subtitle" data-i18n="resume.subtitle">Choose English or Portuguese and get a clear, recruiter-friendly overview.</p>
-        </div>
-
-        <div class="resume__actions">
-          <div class="hero__actions">
-            <a class="button button--primary" href="./resume-en.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadEn">Resume EN (PDF)</a>
-            <a class="button button--secondary" href="./resume-pt.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.downloadPt">Resume PT (PDF)</a>
-          </div>
-          <p class="u-text-muted" data-i18n="resume.note">Need a tailored version for a role? Just email me.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title" data-i18n="contact.title">Contact</h2>
-          <p class="section__subtitle" data-i18n="contact.subtitle">Let's connect for roles, projects, or collaboration.</p>
-        </div>
-
-        <div class="contact__card card">
-          <div class="contact__item">
-            <span class="contact__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 4 8 5 8-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <a href="mailto:josetropilo@gmail.com" data-i18n-attr="aria-label:contact.emailLabel">josetropilo@gmail.com</a>
-            <button class="button button--ghost button--small" type="button" data-copy-email data-email="josetropilo@gmail.com" data-i18n="contact.copyEmail">Copy email</button>
-          </div>
-          <div class="contact__item">
-            <span class="contact__icon" aria-hidden="true">
-              <img class="icon-image icon-image--linkedin" src="./linkedin.svg" alt="" aria-hidden="true">
-            </span>
-            <a href="https://www.linkedin.com/in/josegabriel-costa/" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:contact.linkedinLabel">LinkedIn</a>
-          </div>
-          <div class="contact__item">
-            <span class="contact__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577v-2.18c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.762-1.605-2.665-.304-5.467-1.333-5.467-5.932 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.81 1.096.81 2.21v3.28c0 .32.217.694.825.576C20.565 21.796 24 17.298 24 12 24 5.37 18.63 0 12 0z" fill="currentColor"/>
-              </svg>
-            </span>
-            <a href="https://github.com/GabrielCosta06" target="_blank" rel="noopener noreferrer" data-i18n-attr="aria-label:contact.githubLabel">GitHub</a>
           </div>
         </div>
       </div>
@@ -330,106 +437,6 @@
       <p class="site-footer__text" data-i18n="footer.note">Built with HTML, CSS, and vanilla JavaScript.</p>
     </div>
   </footer>
-
-  <div class="modal" id="case-study-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="case-study-title">
-    <div class="modal__overlay" data-modal-close></div>
-    <div class="modal__content" role="document">
-      <div class="modal__header">
-        <h3 id="case-study-title" data-i18n="project.caseStudy.title">Case Study: Factory Cost Control Tower for a Bottling Line</h3>
-        <button class="modal__close" type="button" data-modal-close data-i18n-attr="aria-label:project.caseStudy.closeLabel">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal__body">
-        <div class="modal__actions">
-          <a class="button button--ghost" href="https://github.com/GabrielCosta06/factory-cost-control-tower" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewRepo">View Repo</a>
-          <a class="button button--secondary" href="./assets/projects/factory-cost-control/executive-overview.svg" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewDashboard">View Dashboard Screens</a>
-        </div>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.problemTitle">Problem</h4>
-          <p data-i18n="project.caseStudy.problemBody">Plant leadership could see output volume, but not the economic effect of downtime by shift, SKU, or work pattern. Improvement efforts risked becoming generic labor pressure instead of targeted action.</p>
-        </section>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.approachTitle">Approach</h4>
-          <p data-i18n="project.caseStudy.approachBody">I used the Maven bottling-line workbook, cleaned it in Python, modeled plant economics with documented reference tables, transformed the data in DuckDB, and produced Power BI-ready marts plus dashboard screens.</p>
-        </section>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.dataModelTitle">Data Model</h4>
-          <p data-i18n="project.caseStudy.dataModelBody">The model uses fact_batch_runs at batch grain, mart_root_cause at batch-by-factor grain, and mart_action_queue for ranked opportunities, supported by product, shift, operator, and downtime dimensions.</p>
-        </section>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.metricsTitle">Data &amp; Metrics</h4>
-          <p data-i18n="project.caseStudy.metricsBody">The case study covers 38 batches from August 29 to September 3, 2024, across six SKUs, three shifts, and 12 downtime factors. Core KPIs include cost per good unit, labor cost per good unit, line efficiency, downtime hours, changeover loss, and machine-failure loss.</p>
-        </section>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.dashboardTitle">Dashboard Highlights</h4>
-          <p data-i18n="project.caseStudy.dashboardBody">The output includes an executive overview, shift and operator benchmark, downtime root-cause analysis, and a what-if screen for wage, downtime, and loss scenarios.</p>
-        </section>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.galleryTitle">Dashboard Screens</h4>
-          <div class="project-gallery">
-            <figure class="project-gallery__item">
-              <img class="project-gallery__image" src="./assets/projects/factory-cost-control/executive-overview.svg" alt="" data-i18n-attr="alt:project.screenshot1">
-              <figcaption class="project-gallery__caption" data-i18n="project.screenshot1">Executive overview screen</figcaption>
-            </figure>
-            <figure class="project-gallery__item">
-              <img class="project-gallery__image" src="./assets/projects/factory-cost-control/shift-operator-performance.svg" alt="" data-i18n-attr="alt:project.screenshot2">
-              <figcaption class="project-gallery__caption" data-i18n="project.screenshot2">Shift and operator performance screen</figcaption>
-            </figure>
-            <figure class="project-gallery__item">
-              <img class="project-gallery__image" src="./assets/projects/factory-cost-control/downtime-root-causes.svg" alt="" data-i18n-attr="alt:project.screenshot3">
-              <figcaption class="project-gallery__caption" data-i18n="project.screenshot3">Downtime root-cause screen</figcaption>
-            </figure>
-            <figure class="project-gallery__item">
-              <img class="project-gallery__image" src="./assets/projects/factory-cost-control/cost-what-if-analysis.svg" alt="" data-i18n-attr="alt:project.screenshot4">
-              <figcaption class="project-gallery__caption" data-i18n="project.screenshot4">Cost what-if analysis screen</figcaption>
-            </figure>
-          </div>
-        </section>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.resultsTitle">Outcome</h4>
-          <p data-i18n="project.caseStudy.resultsBody">The modeled line averages R$ 0.0669 per good unit, setup and calibration drive the largest downtime bucket at 381 minutes, and swing shift runs at R$ 0.0726 per unit versus R$ 0.0605 on day shift.</p>
-        </section>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.improvementsTitle">Improvements</h4>
-          <p data-i18n="project.caseStudy.improvementsBody">Next steps are to rebuild the report in Power BI Desktop, connect maintenance work-order history, and replace modeled quality loss with actual ERP scrap values.</p>
-        </section>
-        <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.architectureTitle">Project Architecture</h4>
-          <div class="architecture" role="img" aria-labelledby="architecture-title architecture-desc">
-            <svg viewBox="0 0 600 220" role="img" aria-labelledby="architecture-title architecture-desc">
-              <title id="architecture-title" data-i18n="project.caseStudy.architectureTitle">Project Architecture</title>
-              <desc id="architecture-desc" data-i18n="project.caseStudy.architectureDesc">Workbook data and modeled cost tables flow into Python and DuckDB, then into marts, dashboard screens, and an action queue.</desc>
-              <defs>
-                <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
-                  <path d="M0,0 L10,5 L0,10" fill="none" stroke="var(--color-text)" stroke-width="1.5" />
-                </marker>
-              </defs>
-              <rect x="20" y="40" width="150" height="50" rx="10" fill="var(--color-surface-alt)" stroke="var(--color-border)" />
-              <text x="95" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureSource">Workbook + Cost Tables</text>
-
-              <rect x="215" y="40" width="150" height="50" rx="10" fill="var(--color-accent-blue)" stroke="var(--color-accent-blue-strong)" />
-              <text x="290" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureEtl">Python + DuckDB</text>
-
-              <rect x="410" y="40" width="170" height="50" rx="10" fill="var(--color-accent-green)" stroke="var(--color-accent-green-strong)" />
-              <text x="495" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureWarehouse">Batch &amp; Root-Cause Marts</text>
-
-              <rect x="140" y="140" width="150" height="50" rx="10" fill="var(--color-accent-rose)" stroke="var(--color-accent-rose-strong)" />
-              <text x="215" y="172" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureDashboard">Dashboard Screens</text>
-
-              <rect x="330" y="140" width="150" height="50" rx="10" fill="var(--color-accent-amber)" stroke="var(--color-accent-amber-strong)" />
-              <text x="405" y="172" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureAlerts">Action Queue</text>
-
-              <line x1="170" y1="65" x2="215" y2="65" stroke="var(--color-text)" stroke-width="1.5" marker-end="url(#arrow)" />
-              <line x1="365" y1="65" x2="410" y2="65" stroke="var(--color-text)" stroke-width="1.5" marker-end="url(#arrow)" />
-              <line x1="495" y1="90" x2="405" y2="140" stroke="var(--color-text)" stroke-width="1.5" marker-end="url(#arrow)" />
-              <line x1="410" y1="90" x2="215" y2="140" stroke="var(--color-text)" stroke-width="1.5" marker-end="url(#arrow)" />
-            </svg>
-          </div>
-        </section>
-      </div>
-    </div>
-  </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
   <script type="module" src="js/main.js"></script>

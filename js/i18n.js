@@ -4,17 +4,17 @@ export const i18n = {
     "pt-BR": "Gabriel Barbeta | Portfólio de Analista de Dados",
   },
   "meta.description": {
-    en: "Data Analyst portfolio featuring a factory cost control case study, certificates, and resume.",
-    "pt-BR": "Portfólio de Analista de Dados com estudo de caso de controle de custos fabris, certificados e currículo.",
+    en: "Data Analyst portfolio centered on a factory cost control case study, verified certificates, and a bilingual resume.",
+    "pt-BR": "Portfólio de Analista de Dados centrado em um estudo de caso de controle de custos fabris, certificados verificados e currículo bilíngue.",
   },
+
   "nav.skip": { en: "Skip to content", "pt-BR": "Pular para o conteúdo" },
   "nav.about": { en: "About", "pt-BR": "Sobre" },
   "nav.projects": { en: "Projects", "pt-BR": "Projetos" },
   "nav.certificates": { en: "Certificates", "pt-BR": "Certificados" },
   "nav.resume": { en: "Resume", "pt-BR": "Currículo" },
   "nav.contact": { en: "Contact", "pt-BR": "Contato" },
-  "nav.downloadResumeEn": { en: "Resume EN (PDF)", "pt-BR": "Currículo EN (PDF)" },
-  "nav.downloadResumePt": { en: "Resume PT (PDF)", "pt-BR": "Currículo PT (PDF)" },
+  "nav.resumeCta": { en: "Open Resume", "pt-BR": "Abrir Currículo" },
   "nav.linkedinLabel": { en: "LinkedIn profile", "pt-BR": "Perfil no LinkedIn" },
   "nav.langLabel": { en: "Language", "pt-BR": "Idioma" },
   "nav.langToggle": { en: "EN / PT", "pt-BR": "EN / PT" },
@@ -22,47 +22,85 @@ export const i18n = {
   "nav.langOptionPt": { en: "Português (BR)", "pt-BR": "Português (BR)" },
   "nav.menuOpen": { en: "Open navigation menu", "pt-BR": "Abrir menu de navegação" },
   "nav.menuClose": { en: "Close navigation menu", "pt-BR": "Fechar menu de navegação" },
-  "hero.eyebrow": { en: "Brazil - Junior Data Analyst", "pt-BR": "Brasil - Analista de Dados Júnior" },
+
+  "hero.eyebrow": {
+    en: "Manufacturing analytics | Brazil",
+    "pt-BR": "Analytics industrial | Brasil",
+  },
   "hero.title": {
-    en: "Junior Data Analyst | Power BI | Python | SQL",
-    "pt-BR": "Analista de Dados Júnior | Power BI | Python | SQL",
+    en: "I build clear operational analytics for factory, finance, and performance decisions.",
+    "pt-BR": "Eu construo analytics operacionais claros para decisões de fábrica, finanças e performance.",
   },
   "hero.subtitle": {
-    en: "I turn messy data into clear, actionable insights with dashboards, automation, and clean pipelines.",
-    "pt-BR": "Transformo dados confusos em insights claros e acionáveis com dashboards, automação e pipelines limpos.",
+    en: "Data analyst focused on turning messy operational data into decision-ready dashboards, clean marts, and recruiter-ready business stories.",
+    "pt-BR": "Analista de dados focado em transformar dados operacionais bagunçados em dashboards prontos para decisão, marts limpos e histórias de negócio prontas para recrutadores.",
   },
-  "hero.ctaProjects": { en: "View Projects", "pt-BR": "Ver Projetos" },
-  "hero.ctaCerts": { en: "Certificates", "pt-BR": "Certificados" },
-  "hero.meta1": { en: "Location: Brazil", "pt-BR": "Localização: Brasil" },
-  "hero.meta2": { en: "Open to mid-level roles and contract work", "pt-BR": "Aberto a posições de nível pleno e contrato" },
-  "hero.cardTitle": { en: "What I deliver", "pt-BR": "O que eu entrego" },
-  "hero.cardItem1": { en: "Automated reporting that reduces manual work", "pt-BR": "Relatórios automatizados que reduzem trabalho manual" },
-  "hero.cardItem2": { en: "KPI dashboards with clear performance tracking", "pt-BR": "Dashboards de KPIs com acompanhamento claro de desempenho" },
-  "hero.cardItem3": { en: "Data stories that align teams quickly", "pt-BR": "Narrativas de dados que alinham times rapidamente" },
-  "about.title": { en: "About", "pt-BR": "Sobre" },
+  "hero.ctaProject": { en: "View Factory Project", "pt-BR": "Ver Projeto da Fábrica" },
+  "hero.ctaResume": { en: "Open Resume", "pt-BR": "Abrir Currículo" },
+  "hero.microcopy": {
+    en: "Power BI, Python, SQL, and sharp KPI design for operational teams.",
+    "pt-BR": "Power BI, Python, SQL e desenho de KPI com clareza para times operacionais.",
+  },
+  "hero.railLabel": { en: "Flagship proof", "pt-BR": "Prova principal" },
+  "hero.proof1.value": { en: "R$ 0.0669", "pt-BR": "R$ 0,0669" },
+  "hero.proof1.label": { en: "Cost per good unit", "pt-BR": "Custo por unidade boa" },
+  "hero.proof2.value": { en: "23.1 h", "pt-BR": "23,1 h" },
+  "hero.proof2.label": { en: "Downtime in sample window", "pt-BR": "Paradas na janela analisada" },
+  "hero.proof3.value": { en: "67.1%", "pt-BR": "67,1%" },
+  "hero.proof3.label": { en: "Line efficiency", "pt-BR": "Eficiência da linha" },
+  "hero.proof4.value": { en: "38", "pt-BR": "38" },
+  "hero.proof4.label": { en: "Modeled batches", "pt-BR": "Lotes modelados" },
+  "hero.focusTitle": { en: "Current focus", "pt-BR": "Foco atual" },
+  "hero.focus1": {
+    en: "Factory cost and downtime analytics",
+    "pt-BR": "Analytics de custo fabril e paradas",
+  },
+  "hero.focus2": {
+    en: "Executive Power BI storytelling",
+    "pt-BR": "Storytelling executivo no Power BI",
+  },
+  "hero.focus3": {
+    en: "Reliable marts and KPI definitions",
+    "pt-BR": "Marts confiáveis e definições claras de KPI",
+  },
+
+  "about.eyebrow": { en: "Capabilities", "pt-BR": "Capacidades" },
+  "about.title": {
+    en: "I turn operational questions into usable decision support.",
+    "pt-BR": "Eu transformo perguntas operacionais em suporte real à decisão.",
+  },
   "about.subtitle": {
-    en: "Detail-driven junior analyst focused on clear insights, reliable data models, and stakeholder-ready storytelling.",
-    "pt-BR": "Analista júnior detalhista, focado em insights claros, modelos confiáveis e storytelling para stakeholders.",
+    en: "Minimal dashboards, reliable metrics, and clean delivery for stakeholders who need answers quickly.",
+    "pt-BR": "Dashboards minimalistas, métricas confiáveis e entrega limpa para stakeholders que precisam de respostas rápidas.",
   },
-  "about.bullet1": {
-    en: "Translate business questions into clear metrics, KPIs, and aligned definitions",
-    "pt-BR": "Transformo perguntas de negócio em métricas claras, KPIs e definições alinhadas",
+  "about.capability1Title": { en: "Business framing", "pt-BR": "Enquadramento de negócio" },
+  "about.capability1Body": {
+    en: "Translate plant, service, and finance questions into clear KPIs, definitions, and analysis paths.",
+    "pt-BR": "Traduzo perguntas de fábrica, serviço e finanças em KPIs claros, definições alinhadas e caminhos de análise.",
   },
-  "about.bullet2": {
-    en: "Build Power BI dashboards with thoughtful UX, filters, and drill-downs",
-    "pt-BR": "Crio dashboards no Power BI com UX pensada, filtros e drill-downs",
+  "about.capability2Title": { en: "Analytics delivery", "pt-BR": "Entrega analítica" },
+  "about.capability2Body": {
+    en: "Build concise Power BI experiences with drill-down logic, focused visuals, and executive readability.",
+    "pt-BR": "Construo experiências concisas no Power BI com drill-down, visuais focados e leitura executiva.",
   },
-  "about.bullet3": {
-    en: "Prioritize data quality, documentation, and trusted handoffs to teams",
-    "pt-BR": "Priorizo qualidade de dados, documentação e entregas confiáveis para o time",
+  "about.capability3Title": { en: "Data reliability", "pt-BR": "Confiabilidade dos dados" },
+  "about.capability3Body": {
+    en: "Prioritize structured pipelines, QA checks, and documentation so teams can trust the output.",
+    "pt-BR": "Priorizo pipelines estruturados, checagens de qualidade e documentação para que o time confie na entrega.",
   },
-  "about.stackTitle": { en: "Tech stack", "pt-BR": "Stack de tecnologia" },
-  "projects.title": { en: "Projects", "pt-BR": "Projetos" },
+  "about.stackTitle": { en: "Core stack", "pt-BR": "Stack principal" },
+
+  "projects.eyebrow": { en: "Flagship project", "pt-BR": "Projeto principal" },
+  "projects.title": {
+    en: "Factory case study",
+    "pt-BR": "Estudo de caso fabril",
+  },
   "projects.subtitle": {
-    en: "Featured factory operations case study built from a real bottling-line dataset, documented cost assumptions, and Power BI-ready marts.",
-    "pt-BR": "Estudo de caso de operações fabris construído com um dataset real de linha de envase, premissas de custo documentadas e marts prontos para Power BI.",
+    en: "Factory Cost Control Tower is a manufacturing case study built from a real bottling-line dataset, documented cost assumptions, and Power BI-ready marts.",
+    "pt-BR": "Factory Cost Control Tower é um estudo de caso industrial construído com um dataset real de linha de envase, premissas de custo documentadas e marts prontos para Power BI.",
   },
   "projects.featuredTag": { en: "Flagship project", "pt-BR": "Projeto principal" },
+
   "project.featured.title": {
     en: "Factory Cost Control Tower for a Bottling Line",
     "pt-BR": "Torre de Controle de Custos para uma Linha de Envase",
@@ -71,55 +109,51 @@ export const i18n = {
     en: "End-to-end manufacturing analytics case study that explains which downtime causes, shifts, and SKUs drive the highest cost per good unit.",
     "pt-BR": "Estudo de caso de analytics industrial de ponta a ponta que mostra quais causas de parada, turnos e SKUs elevam mais o custo por unidade boa.",
   },
-  "project.featured.resultsTitle": { en: "What it covers", "pt-BR": "O que cobre" },
-  "project.featured.metricsTitle": { en: "Key results", "pt-BR": "Principais resultados" },
-  "project.featured.metric1": {
-    en: "R$ 0.0669 cost per good unit across 38 batches",
-    "pt-BR": "R$ 0,0669 de custo por unidade boa em 38 lotes",
-  },
-  "project.featured.metric2": {
-    en: "23.1 downtime hours with 381 minutes in setup and calibration",
-    "pt-BR": "23,1 horas de parada, com 381 minutos em setup e calibração",
-  },
-  "project.featured.metric3": {
-    en: "Swing shift runs about 20% more expensive per unit than day shift",
-    "pt-BR": "O turno da tarde roda cerca de 20% mais caro por unidade que o turno do dia",
-  },
-  "project.featured.highlight1": {
-    en: "Workbook-to-mart pipeline with Python, DuckDB, and QA checks",
-    "pt-BR": "Pipeline do workbook até os marts com Python, DuckDB e checagens de qualidade",
-  },
-  "project.featured.highlight2": {
-    en: "Modeled labor, downtime, and loss economics for cost per good unit",
-    "pt-BR": "Modelagem de custos de mão de obra, paradas e perdas para custo por unidade boa",
-  },
-  "project.featured.highlight3": {
-    en: "Executive screens for shift performance, root causes, and what-if scenarios",
-    "pt-BR": "Telas executivas para performance por turno, causas raiz e cenários hipotéticos",
-  },
   "project.featured.viewRepo": { en: "View Repo", "pt-BR": "Ver Repositório" },
   "project.featured.viewDashboard": { en: "View Dashboard Screens", "pt-BR": "Ver Telas do Dashboard" },
-  "project.featured.contactCta": { en: "Request walkthrough", "pt-BR": "Solicitar apresentação" },
-  "project.featured.readCaseStudy": { en: "Read Case Study", "pt-BR": "Ler Estudo de Caso" },
-  "project.placeholder1.title": { en: "Sales Forecasting Pipeline", "pt-BR": "Pipeline de Previsão de Vendas" },
-  "project.placeholder1.desc": {
-    en: "Baseline forecasting with time-series features and monthly performance checks.",
-    "pt-BR": "Previsão base com séries temporais e checagens mensais de performance.",
+
+  "project.sideFact1Label": { en: "Observation window", "pt-BR": "Janela observada" },
+  "project.sideFact1Value": {
+    en: "Aug 29 to Sep 3, 2024",
+    "pt-BR": "29 de ago a 3 de set de 2024",
   },
-  "project.placeholder2.title": { en: "Customer Retention Dashboard", "pt-BR": "Dashboard de Retenção de Clientes" },
-  "project.placeholder2.desc": {
-    en: "Cohort analysis with churn indicators and actionable segments.",
-    "pt-BR": "Análise de coortes com indicadores de churn e segmentos acionáveis.",
+  "project.sideFact2Label": { en: "Scope", "pt-BR": "Escopo" },
+  "project.sideFact2Value": {
+    en: "38 batches, 6 SKUs, 3 shifts",
+    "pt-BR": "38 lotes, 6 SKUs, 3 turnos",
   },
-  "project.screenshot1": { en: "Executive overview screen", "pt-BR": "Tela de visão executiva" },
-  "project.screenshot2": { en: "Shift and operator performance screen", "pt-BR": "Tela de performance por turno e operador" },
-  "project.screenshot3": { en: "Downtime root-cause screen", "pt-BR": "Tela de causas raiz das paradas" },
-  "project.screenshot4": { en: "Cost what-if analysis screen", "pt-BR": "Tela de análise de cenários de custo" },
-  "project.caseStudy.title": {
-    en: "Case Study: Factory Cost Control Tower for a Bottling Line",
-    "pt-BR": "Estudo de Caso: Torre de Controle de Custos para uma Linha de Envase",
+  "project.sideFact3Label": { en: "Output", "pt-BR": "Entrega" },
+  "project.sideFact3Value": {
+    en: "Curated marts, QA tests, Power BI build pack",
+    "pt-BR": "Marts curados, testes de QA e pacote de build para Power BI",
   },
-  "project.caseStudy.closeLabel": { en: "Close case study", "pt-BR": "Fechar estudo de caso" },
+
+  "project.metric1Value": { en: "R$ 0.0669", "pt-BR": "R$ 0,0669" },
+  "project.metric1Label": {
+    en: "Average cost per good unit",
+    "pt-BR": "Custo médio por unidade boa",
+  },
+  "project.metric2Value": { en: "23.1 h", "pt-BR": "23,1 h" },
+  "project.metric2Label": {
+    en: "Total downtime across the sample",
+    "pt-BR": "Parada total na amostra",
+  },
+  "project.metric3Value": { en: "381 min", "pt-BR": "381 min" },
+  "project.metric3Label": {
+    en: "Setup and calibration loss",
+    "pt-BR": "Perda com setup e calibração",
+  },
+  "project.metric4Value": { en: "+20%", "pt-BR": "+20%" },
+  "project.metric4Label": {
+    en: "Swing shift cost gap vs day shift",
+    "pt-BR": "Gap de custo do turno da tarde vs dia",
+  },
+
+  "project.storyEyebrow1": { en: "Problem", "pt-BR": "Problema" },
+  "project.storyEyebrow2": { en: "Approach", "pt-BR": "Abordagem" },
+  "project.storyEyebrow3": { en: "Model", "pt-BR": "Modelo" },
+  "project.storyEyebrow4": { en: "Outcome", "pt-BR": "Resultado" },
+
   "project.caseStudy.problemTitle": { en: "Problem", "pt-BR": "Problema" },
   "project.caseStudy.problemBody": {
     en: "Plant leadership could see output volume, but not the economic effect of downtime by shift, SKU, or work pattern. Improvement efforts risked becoming generic labor pressure instead of targeted action.",
@@ -130,49 +164,66 @@ export const i18n = {
     en: "I used the Maven bottling-line workbook, cleaned it in Python, modeled plant economics with documented reference tables, transformed the data in DuckDB, and produced Power BI-ready marts plus dashboard screens.",
     "pt-BR": "Usei o workbook da linha de envase da Maven, tratei os dados em Python, modelei a economia da planta com tabelas de referência documentadas, transformei tudo em DuckDB e gerei marts prontos para Power BI e telas de dashboard.",
   },
-  "project.caseStudy.dataModelTitle": { en: "Data Model", "pt-BR": "Modelo de Dados" },
+  "project.caseStudy.dataModelTitle": { en: "Data model", "pt-BR": "Modelo de dados" },
   "project.caseStudy.dataModelBody": {
     en: "The model uses fact_batch_runs at batch grain, mart_root_cause at batch-by-factor grain, and mart_action_queue for ranked opportunities, supported by product, shift, operator, and downtime dimensions.",
     "pt-BR": "O modelo usa fact_batch_runs na granularidade de lote, mart_root_cause na granularidade lote por fator e mart_action_queue para oportunidades ranqueadas, apoiados por dimensões de produto, turno, operador e motivo de parada.",
   },
-  "project.caseStudy.metricsTitle": { en: "Data & Metrics", "pt-BR": "Dados & Métricas" },
-  "project.caseStudy.metricsBody": {
-    en: "The case study covers 38 batches from August 29 to September 3, 2024, across six SKUs, three shifts, and 12 downtime factors. Core KPIs include cost per good unit, labor cost per good unit, line efficiency, downtime hours, changeover loss, and machine-failure loss.",
-    "pt-BR": "O estudo cobre 38 lotes entre 29 de agosto e 3 de setembro de 2024, com seis SKUs, três turnos e 12 fatores de parada. Os KPIs principais incluem custo por unidade boa, custo de mão de obra por unidade boa, eficiência da linha, horas de parada, perda de setup e perda por falha de máquina.",
-  },
-  "project.caseStudy.dashboardTitle": { en: "Dashboard Highlights", "pt-BR": "Destaques do Dashboard" },
-  "project.caseStudy.dashboardBody": {
-    en: "The output includes an executive overview, shift and operator benchmark, downtime root-cause analysis, and a what-if screen for wage, downtime, and loss scenarios.",
-    "pt-BR": "A entrega inclui uma visão executiva, benchmark por turno e operador, análise de causas raiz das paradas e uma tela de cenários para salário, paradas e perdas.",
-  },
-  "project.caseStudy.automationTitle": { en: "Modeling & QA", "pt-BR": "Modelagem & QA" },
-  "project.caseStudy.automationBody": {
-    en: "The build script writes curated marts, scenario summaries, and SVG dashboard screens from the same data model. Pytest checks uniqueness, timestamps, downtime rollups, and cost-per-unit formulas.",
-    "pt-BR": "O script de build grava marts curados, resumos de cenários e telas SVG de dashboard a partir do mesmo modelo. O Pytest valida unicidade, timestamps, rollups de parada e fórmulas de custo por unidade.",
-  },
-  "project.caseStudy.galleryTitle": { en: "Dashboard Screens", "pt-BR": "Telas do Dashboard" },
   "project.caseStudy.resultsTitle": { en: "Outcome", "pt-BR": "Resultado" },
   "project.caseStudy.resultsBody": {
     en: "The modeled line averages R$ 0.0669 per good unit, setup and calibration drive the largest downtime bucket at 381 minutes, and swing shift runs at R$ 0.0726 per unit versus R$ 0.0605 on day shift.",
     "pt-BR": "A linha modelada tem média de R$ 0,0669 por unidade boa, setup e calibração formam o maior bloco de parada com 381 minutos, e o turno da tarde roda a R$ 0,0726 por unidade contra R$ 0,0605 no turno do dia.",
   },
-  "project.caseStudy.improvementsTitle": { en: "Improvements", "pt-BR": "Melhorias" },
-  "project.caseStudy.improvementsBody": {
-    en: "Next steps are to rebuild the report in Power BI Desktop, connect maintenance work-order history, and replace modeled quality loss with actual ERP scrap values.",
-    "pt-BR": "Os próximos passos são reconstruir o relatório no Power BI Desktop, conectar histórico de ordens de manutenção e substituir a perda de qualidade modelada por valores reais de sucata do ERP.",
+  "project.caseStudy.dashboardTitle": { en: "Dashboard highlights", "pt-BR": "Destaques do dashboard" },
+  "project.caseStudy.dashboardBody": {
+    en: "The output includes an executive overview, shift and operator benchmark, downtime root-cause analysis, and a what-if screen for wage, downtime, and loss scenarios.",
+    "pt-BR": "A entrega inclui uma visão executiva, benchmark por turno e operador, análise de causas raiz das paradas e uma tela de cenários para salário, paradas e perdas.",
   },
-  "project.caseStudy.architectureTitle": { en: "Project Architecture", "pt-BR": "Arquitetura do Projeto" },
-  "project.caseStudy.architectureDesc": {
-    en: "Workbook data and modeled cost tables flow into Python and DuckDB, then into marts, dashboard screens, and an action queue.",
-    "pt-BR": "Os dados do workbook e as tabelas modeladas de custo passam por Python e DuckDB, depois viram marts, telas de dashboard e uma fila de ações.",
+  "project.caseStudy.galleryTitle": { en: "Dashboard screens", "pt-BR": "Telas do dashboard" },
+  "project.galleryNote": {
+    en: "Four clean screens focused on cost, downtime, shift performance, and scenario analysis.",
+    "pt-BR": "Quatro telas limpas focadas em custo, paradas, desempenho por turno e análise de cenários.",
   },
-  "project.caseStudy.architectureSource": { en: "Workbook + Cost Tables", "pt-BR": "Workbook + Tabelas de Custo" },
-  "project.caseStudy.architectureEtl": { en: "Python + DuckDB", "pt-BR": "Python + DuckDB" },
-  "project.caseStudy.architectureWarehouse": { en: "Batch & Root-Cause Marts", "pt-BR": "Marts de Lotes & Causas Raiz" },
-  "project.caseStudy.architectureDashboard": { en: "Dashboard Screens", "pt-BR": "Telas de Dashboard" },
-  "project.caseStudy.architectureAlerts": { en: "Action Queue", "pt-BR": "Fila de Ações" },
+  "project.recommendationsTitle": { en: "Recommended next actions", "pt-BR": "Próximas ações recomendadas" },
+  "project.recommendation1": {
+    en: "Standardize setup sheets and first-article checks on swing shift.",
+    "pt-BR": "Padronizar fichas de setup e first-article checks no turno da tarde.",
+  },
+  "project.recommendation2": {
+    en: "Prioritize preventive maintenance around machine adjustment and failure events.",
+    "pt-BR": "Priorizar manutenção preventiva em eventos de ajuste e falha de máquina.",
+  },
+  "project.recommendation3": {
+    en: "Pre-stage packaging and materials one batch ahead to cut material-flow loss.",
+    "pt-BR": "Pré-posicionar embalagem e materiais um lote antes para reduzir perda por fluxo de material.",
+  },
+
+  "project.screenshot1": { en: "Executive overview screen", "pt-BR": "Tela de visão executiva" },
+  "project.screenshot2": { en: "Shift and operator performance screen", "pt-BR": "Tela de performance por turno e operador" },
+  "project.screenshot3": { en: "Downtime root-cause screen", "pt-BR": "Tela de causas raiz das paradas" },
+  "project.screenshot4": { en: "Cost what-if analysis screen", "pt-BR": "Tela de análise de cenários de custo" },
+
+  "credentials.eyebrow": { en: "Credentials", "pt-BR": "Credenciais" },
+  "credentials.title": {
+    en: "Verified proof, concise resume, and shareable links.",
+    "pt-BR": "Prova verificada, currículo conciso e links compartilháveis.",
+  },
+  "credentials.subtitle": {
+    en: "Everything a recruiter needs to validate skills quickly: public project proof, certifications, and bilingual resume access.",
+    "pt-BR": "Tudo o que um recrutador precisa para validar habilidades rapidamente: prova pública de projeto, certificações e acesso ao currículo bilíngue.",
+  },
+  "credentials.stat1Value": { en: "3", "pt-BR": "3" },
+  "credentials.stat1Label": { en: "Certificates", "pt-BR": "Certificados" },
+  "credentials.stat2Value": { en: "2", "pt-BR": "2" },
+  "credentials.stat2Label": { en: "Resume versions", "pt-BR": "Versões de currículo" },
+  "credentials.stat3Value": { en: "910", "pt-BR": "910" },
+  "credentials.stat3Label": { en: "TOEIC score", "pt-BR": "Pontuação TOEIC" },
+
   "cert.title": { en: "Certificates", "pt-BR": "Certificados" },
-  "cert.subtitle": { en: "Verified credentials with shareable deep links.", "pt-BR": "Credenciais verificadas com links compartilháveis." },
+  "cert.subtitle": {
+    en: "Verified credentials with shareable deep links.",
+    "pt-BR": "Credenciais verificadas com links compartilháveis.",
+  },
   "cert.filterLabel": { en: "Certificate filters", "pt-BR": "Filtros de certificados" },
   "cert.filterAll": { en: "All", "pt-BR": "Todos" },
   "cert.filterMicrosoft": { en: "Microsoft", "pt-BR": "Microsoft" },
@@ -196,14 +247,14 @@ export const i18n = {
   "cert.toeic.issuer": { en: "ETS", "pt-BR": "ETS" },
   "cert.toeic.shortDesc": { en: "Score 910/990", "pt-BR": "Pontuação 910/990" },
   "cert.toeic.date": { en: "Score 910/990", "pt-BR": "Pontuação 910/990" },
+
   "resume.title": { en: "Resume", "pt-BR": "Currículo" },
   "resume.subtitle": {
     en: "Choose English or Portuguese and get a clear, recruiter-friendly overview.",
-    "pt-BR": "Escolha inglês ou português e tenha uma visão clara e objetiva.",
+    "pt-BR": "Escolha inglês ou português e tenha uma visão clara e objetiva para recrutadores.",
   },
   "resume.downloadEn": { en: "Resume EN (PDF)", "pt-BR": "Currículo EN (PDF)" },
   "resume.downloadPt": { en: "Resume PT (PDF)", "pt-BR": "Currículo PT (PDF)" },
-  "resume.snapshotTitle": { en: "Resume highlights", "pt-BR": "Destaques do currículo" },
   "resume.snapshotExperience": { en: "Experience", "pt-BR": "Experiência" },
   "resume.snapshotExperienceBody": {
     en: "Built a factory cost control case study with Python, DuckDB, and Power BI-ready marts.",
@@ -219,18 +270,37 @@ export const i18n = {
     en: "Power BI, SQL, Python, DuckDB, Excel, and data modeling.",
     "pt-BR": "Power BI, SQL, Python, DuckDB, Excel e modelagem de dados.",
   },
-  "resume.note": { en: "Need a tailored version for a role? Just email me.", "pt-BR": "Precisa de uma versão personalizada para a vaga? É só me enviar um e-mail." },
-  "contact.title": { en: "Contact", "pt-BR": "Contato" },
-  "contact.subtitle": { en: "Let's connect for roles, projects, or collaboration.", "pt-BR": "Vamos conversar sobre vagas, projetos ou colaboração." },
+  "resume.note": {
+    en: "Need a tailored version for a role? Just email me.",
+    "pt-BR": "Precisa de uma versão personalizada para a vaga? É só me enviar um e-mail.",
+  },
+
+  "contact.eyebrow": { en: "Contact", "pt-BR": "Contato" },
+  "contact.title": {
+    en: "Open to operations, BI, and analytics opportunities.",
+    "pt-BR": "Aberto a oportunidades em operações, BI e analytics.",
+  },
+  "contact.subtitle": {
+    en: "If you want someone who can structure messy data, define KPIs clearly, and present results with restraint, let’s talk.",
+    "pt-BR": "Se você procura alguém que consiga estruturar dados bagunçados, definir KPIs com clareza e apresentar resultados com objetividade, vamos conversar.",
+  },
+  "contact.primaryCta": { en: "Start a conversation", "pt-BR": "Iniciar conversa" },
+  "contact.emailTitle": { en: "Email", "pt-BR": "E-mail" },
+  "contact.linkedinTitle": { en: "LinkedIn", "pt-BR": "LinkedIn" },
+  "contact.githubTitle": { en: "GitHub", "pt-BR": "GitHub" },
   "contact.copyEmail": { en: "Copy email", "pt-BR": "Copiar e-mail" },
   "contact.copied": { en: "Email copied", "pt-BR": "E-mail copiado" },
   "contact.emailLabel": { en: "Email address", "pt-BR": "Endereço de e-mail" },
   "contact.linkedinLabel": { en: "LinkedIn profile", "pt-BR": "Perfil no LinkedIn" },
   "contact.githubLabel": { en: "GitHub profile", "pt-BR": "Perfil no GitHub" },
-  "footer.note": { en: "Built with HTML, CSS, and vanilla JavaScript.", "pt-BR": "Feito com HTML, CSS e JavaScript puro." },
+
+  "footer.note": {
+    en: "Built with HTML, CSS, and vanilla JavaScript.",
+    "pt-BR": "Feito com HTML, CSS e JavaScript puro.",
+  },
   "noscript.message": {
-    en: "JavaScript is required for language switching, filters, and the case study modal.",
-    "pt-BR": "JavaScript é necessário para o seletor de idioma, filtros e o modal do estudo de caso.",
+    en: "JavaScript is required for language switching, filters, and subtle section reveals.",
+    "pt-BR": "JavaScript é necessário para o seletor de idioma, filtros e revelação suave das seções.",
   },
 };
 
