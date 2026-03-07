@@ -155,40 +155,60 @@
       <div class="container">
         <div class="section__header">
           <h2 class="section__title" data-i18n="projects.title">Projects</h2>
-          <p class="section__subtitle" data-i18n="projects.subtitle">Capstone-style project in progress focused on Power BI analytics and business visibility.</p>
+          <p class="section__subtitle" data-i18n="projects.subtitle">Featured factory operations case study built from a real bottling-line dataset, documented cost assumptions, and Power BI-ready marts.</p>
         </div>
 
         <div class="projects__grid">
           <article class="card project-card project-card--featured">
             <div class="project-card__header">
-              <span class="tag" data-i18n="projects.featuredTag">In progress</span>
-              <h3 class="project-card__title" data-i18n="project.featured.title">Retail Performance & Customer Insights (Power BI)</h3>
+              <span class="tag" data-i18n="projects.featuredTag">Flagship project</span>
+              <h3 class="project-card__title" data-i18n="project.featured.title">Factory Cost Control Tower for a Bottling Line</h3>
             </div>
-              <p class="project-card__summary" data-i18n="project.featured.summary">Capstone-style Power BI project that models retail performance end-to-end.</p>
+              <p class="project-card__summary" data-i18n="project.featured.summary">End-to-end manufacturing analytics case study that explains which downtime causes, shifts, and SKUs drive the highest cost per good unit.</p>
               <div class="chip-list chip-list--compact project-card__chips" aria-label="Tools">
+                <span class="chip">Python</span>
+                <span class="chip">DuckDB</span>
+                <span class="chip">Pandas</span>
                 <span class="chip">Power BI</span>
-                <span class="chip">Power Query</span>
-                <span class="chip">DAX</span>
-                <span class="chip">Data Modeling</span>
+                <span class="chip">Manufacturing KPIs</span>
               </div>
               <div class="project-card__results">
               <p class="project-card__results-title" data-i18n="project.featured.resultsTitle">What it covers</p>
               <ul class="list list--results">
-                <li class="list__item" data-i18n="project.featured.highlight1">Power Query cleanup and modeling from raw sales data</li>
-                <li class="list__item" data-i18n="project.featured.highlight2">DAX measures for revenue, margin, and retention</li>
-                <li class="list__item" data-i18n="project.featured.highlight3">Executive dashboard with drill-downs by region and category</li>
+                <li class="list__item" data-i18n="project.featured.highlight1">Workbook-to-mart pipeline with Python, DuckDB, and QA checks</li>
+                <li class="list__item" data-i18n="project.featured.highlight2">Modeled labor, downtime, and loss economics for cost per good unit</li>
+                <li class="list__item" data-i18n="project.featured.highlight3">Executive screens for shift performance, root causes, and what-if scenarios</li>
               </ul>
             </div>
               <div class="project-card__metrics">
-                <p class="project-card__metrics-title" data-i18n="project.featured.metricsTitle">Data &amp; metrics</p>
+                <p class="project-card__metrics-title" data-i18n="project.featured.metricsTitle">Key results</p>
                 <ul class="metrics">
-                  <li class="metrics__item" data-i18n="project.featured.metric1">Revenue, margin %, and return rate</li>
-                  <li class="metrics__item" data-i18n="project.featured.metric2">Average order value and repeat purchase rate</li>
-                  <li class="metrics__item" data-i18n="project.featured.metric3">Region, category, and customer segment views</li>
+                  <li class="metrics__item" data-i18n="project.featured.metric1">R$ 0.0669 cost per good unit across 38 batches</li>
+                  <li class="metrics__item" data-i18n="project.featured.metric2">23.1 downtime hours with 381 minutes in setup and calibration</li>
+                  <li class="metrics__item" data-i18n="project.featured.metric3">Swing shift runs about 20% more expensive per unit than day shift</li>
                 </ul>
               </div>
+              <div class="project-card__media" aria-label="Dashboard screens">
+                <a class="project-shot" href="./assets/projects/factory-cost-control/executive-overview.svg" target="_blank" rel="noopener noreferrer">
+                  <img class="project-shot__image" src="./assets/projects/factory-cost-control/executive-overview.svg" alt="" data-i18n-attr="alt:project.screenshot1">
+                  <span class="project-shot__caption" data-i18n="project.screenshot1">Executive overview screen</span>
+                </a>
+                <a class="project-shot" href="./assets/projects/factory-cost-control/shift-operator-performance.svg" target="_blank" rel="noopener noreferrer">
+                  <img class="project-shot__image" src="./assets/projects/factory-cost-control/shift-operator-performance.svg" alt="" data-i18n-attr="alt:project.screenshot2">
+                  <span class="project-shot__caption" data-i18n="project.screenshot2">Shift and operator performance screen</span>
+                </a>
+                <a class="project-shot" href="./assets/projects/factory-cost-control/downtime-root-causes.svg" target="_blank" rel="noopener noreferrer">
+                  <img class="project-shot__image" src="./assets/projects/factory-cost-control/downtime-root-causes.svg" alt="" data-i18n-attr="alt:project.screenshot3">
+                  <span class="project-shot__caption" data-i18n="project.screenshot3">Downtime root-cause screen</span>
+                </a>
+                <a class="project-shot" href="./assets/projects/factory-cost-control/cost-what-if-analysis.svg" target="_blank" rel="noopener noreferrer">
+                  <img class="project-shot__image" src="./assets/projects/factory-cost-control/cost-what-if-analysis.svg" alt="" data-i18n-attr="alt:project.screenshot4">
+                  <span class="project-shot__caption" data-i18n="project.screenshot4">Cost what-if analysis screen</span>
+                </a>
+              </div>
               <div class="project-card__actions">
-              <a class="button button--ghost" href="#contact" data-i18n="project.featured.contactCta">Request walkthrough</a>
+              <a class="button button--ghost" href="https://github.com/GabrielCosta06/factory-cost-control-tower" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewRepo">View Repo</a>
+              <a class="button button--secondary" href="./assets/projects/factory-cost-control/executive-overview.svg" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewDashboard">View Dashboard Screens</a>
               <button class="button button--primary" type="button" data-modal-open aria-haspopup="dialog" data-i18n="project.featured.readCaseStudy">Read Case Study</button>
             </div>
           </article>
@@ -315,69 +335,90 @@
     <div class="modal__overlay" data-modal-close></div>
     <div class="modal__content" role="document">
       <div class="modal__header">
-        <h3 id="case-study-title" data-i18n="project.caseStudy.title">Case Study: Retail Performance &amp; Customer Insights</h3>
+        <h3 id="case-study-title" data-i18n="project.caseStudy.title">Case Study: Factory Cost Control Tower for a Bottling Line</h3>
         <button class="modal__close" type="button" data-modal-close data-i18n-attr="aria-label:project.caseStudy.closeLabel">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal__body">
+        <div class="modal__actions">
+          <a class="button button--ghost" href="https://github.com/GabrielCosta06/factory-cost-control-tower" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewRepo">View Repo</a>
+          <a class="button button--secondary" href="./assets/projects/factory-cost-control/executive-overview.svg" target="_blank" rel="noopener noreferrer" data-i18n="project.featured.viewDashboard">View Dashboard Screens</a>
+        </div>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.problemTitle">Problem</h4>
-          <p data-i18n="project.caseStudy.problemBody">Retail teams lacked a consistent view of revenue, margin, and returns by region and category, and weekly reporting was manual.</p>
+          <p data-i18n="project.caseStudy.problemBody">Plant leadership could see output volume, but not the economic effect of downtime by shift, SKU, or work pattern. Improvement efforts risked becoming generic labor pressure instead of targeted action.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.approachTitle">Approach</h4>
-          <p data-i18n="project.caseStudy.approachBody">Used a public retail dataset, cleaned and shaped it in Power Query, modeled a star schema, and standardized KPIs in DAX.</p>
+          <p data-i18n="project.caseStudy.approachBody">I used the Maven bottling-line workbook, cleaned it in Python, modeled plant economics with documented reference tables, transformed the data in DuckDB, and produced Power BI-ready marts plus dashboard screens.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.dataModelTitle">Data Model</h4>
-          <p data-i18n="project.caseStudy.dataModelBody">FactSales + FactReturns linked to Date, Product, Store, and Customer dimensions for clean drill-downs.</p>
+          <p data-i18n="project.caseStudy.dataModelBody">The model uses fact_batch_runs at batch grain, mart_root_cause at batch-by-factor grain, and mart_action_queue for ranked opportunities, supported by product, shift, operator, and downtime dimensions.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.metricsTitle">Data &amp; Metrics</h4>
-          <p data-i18n="project.caseStudy.metricsBody">Dataset includes orders, products, customers, stores, and dates. Key metrics include revenue, margin %, return rate, average order value, and repeat purchase rate.</p>
+          <p data-i18n="project.caseStudy.metricsBody">The case study covers 38 batches from August 29 to September 3, 2024, across six SKUs, three shifts, and 12 downtime factors. Core KPIs include cost per good unit, labor cost per good unit, line efficiency, downtime hours, changeover loss, and machine-failure loss.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.dashboardTitle">Dashboard Highlights</h4>
-          <p data-i18n="project.caseStudy.dashboardBody">Executive KPIs (revenue, margin %, return rate), trends, region/category drill-downs, and customer segments.</p>
+          <p data-i18n="project.caseStudy.dashboardBody">The output includes an executive overview, shift and operator benchmark, downtime root-cause analysis, and a what-if screen for wage, downtime, and loss scenarios.</p>
         </section>
         <section class="modal__section">
-          <h4 class="modal__section-title" data-i18n="project.caseStudy.automationTitle">Automation</h4>
-          <p data-i18n="project.caseStudy.automationBody">Planned Power BI Service refresh with optional Power Automate alerts for margin drops and return spikes.</p>
+          <h4 class="modal__section-title" data-i18n="project.caseStudy.galleryTitle">Dashboard Screens</h4>
+          <div class="project-gallery">
+            <figure class="project-gallery__item">
+              <img class="project-gallery__image" src="./assets/projects/factory-cost-control/executive-overview.svg" alt="" data-i18n-attr="alt:project.screenshot1">
+              <figcaption class="project-gallery__caption" data-i18n="project.screenshot1">Executive overview screen</figcaption>
+            </figure>
+            <figure class="project-gallery__item">
+              <img class="project-gallery__image" src="./assets/projects/factory-cost-control/shift-operator-performance.svg" alt="" data-i18n-attr="alt:project.screenshot2">
+              <figcaption class="project-gallery__caption" data-i18n="project.screenshot2">Shift and operator performance screen</figcaption>
+            </figure>
+            <figure class="project-gallery__item">
+              <img class="project-gallery__image" src="./assets/projects/factory-cost-control/downtime-root-causes.svg" alt="" data-i18n-attr="alt:project.screenshot3">
+              <figcaption class="project-gallery__caption" data-i18n="project.screenshot3">Downtime root-cause screen</figcaption>
+            </figure>
+            <figure class="project-gallery__item">
+              <img class="project-gallery__image" src="./assets/projects/factory-cost-control/cost-what-if-analysis.svg" alt="" data-i18n-attr="alt:project.screenshot4">
+              <figcaption class="project-gallery__caption" data-i18n="project.screenshot4">Cost what-if analysis screen</figcaption>
+            </figure>
+          </div>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.resultsTitle">Outcome</h4>
-          <p data-i18n="project.caseStudy.resultsBody">Single source of truth with clear KPI definitions and faster weekly reporting for stakeholders.</p>
+          <p data-i18n="project.caseStudy.resultsBody">The modeled line averages R$ 0.0669 per good unit, setup and calibration drive the largest downtime bucket at 381 minutes, and swing shift runs at R$ 0.0726 per unit versus R$ 0.0605 on day shift.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.improvementsTitle">Improvements</h4>
-          <p data-i18n="project.caseStudy.improvementsBody">Next steps: publish to Power BI Service, add RLS, incremental refresh, and a data dictionary.</p>
+          <p data-i18n="project.caseStudy.improvementsBody">Next steps are to rebuild the report in Power BI Desktop, connect maintenance work-order history, and replace modeled quality loss with actual ERP scrap values.</p>
         </section>
         <section class="modal__section">
           <h4 class="modal__section-title" data-i18n="project.caseStudy.architectureTitle">Project Architecture</h4>
           <div class="architecture" role="img" aria-labelledby="architecture-title architecture-desc">
             <svg viewBox="0 0 600 220" role="img" aria-labelledby="architecture-title architecture-desc">
               <title id="architecture-title" data-i18n="project.caseStudy.architectureTitle">Project Architecture</title>
-              <desc id="architecture-desc" data-i18n="project.caseStudy.architectureDesc">Data sources feed ETL, then a warehouse, then dashboards and alerts.</desc>
+              <desc id="architecture-desc" data-i18n="project.caseStudy.architectureDesc">Workbook data and modeled cost tables flow into Python and DuckDB, then into marts, dashboard screens, and an action queue.</desc>
               <defs>
                 <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
                   <path d="M0,0 L10,5 L0,10" fill="none" stroke="var(--color-text)" stroke-width="1.5" />
                 </marker>
               </defs>
               <rect x="20" y="40" width="150" height="50" rx="10" fill="var(--color-surface-alt)" stroke="var(--color-border)" />
-              <text x="95" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureSource">Data Sources</text>
+              <text x="95" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureSource">Workbook + Cost Tables</text>
 
               <rect x="215" y="40" width="150" height="50" rx="10" fill="var(--color-accent-blue)" stroke="var(--color-accent-blue-strong)" />
-              <text x="290" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureEtl">ETL + Validation</text>
+              <text x="290" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureEtl">Python + DuckDB</text>
 
               <rect x="410" y="40" width="170" height="50" rx="10" fill="var(--color-accent-green)" stroke="var(--color-accent-green-strong)" />
-              <text x="495" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureWarehouse">Data Warehouse</text>
+              <text x="495" y="72" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureWarehouse">Batch &amp; Root-Cause Marts</text>
 
               <rect x="140" y="140" width="150" height="50" rx="10" fill="var(--color-accent-rose)" stroke="var(--color-accent-rose-strong)" />
-              <text x="215" y="172" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureDashboard">Power BI Dashboards</text>
+              <text x="215" y="172" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureDashboard">Dashboard Screens</text>
 
               <rect x="330" y="140" width="150" height="50" rx="10" fill="var(--color-accent-amber)" stroke="var(--color-accent-amber-strong)" />
-              <text x="405" y="172" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureAlerts">Alert Automation</text>
+              <text x="405" y="172" text-anchor="middle" font-size="12" fill="var(--color-text)" data-i18n="project.caseStudy.architectureAlerts">Action Queue</text>
 
               <line x1="170" y1="65" x2="215" y2="65" stroke="var(--color-text)" stroke-width="1.5" marker-end="url(#arrow)" />
               <line x1="365" y1="65" x2="410" y2="65" stroke="var(--color-text)" stroke-width="1.5" marker-end="url(#arrow)" />
@@ -391,35 +432,6 @@
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-
-  <script>
-    (function () {
-      const modal = document.getElementById("case-study-modal");
-      if (!modal) return;
-
-      const openButtons = document.querySelectorAll("[data-modal-open]");
-      const closeButtons = modal.querySelectorAll("[data-modal-close]");
-
-      const openModal = () => {
-        modal.classList.add("modal--open");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.classList.add("is-modal-open");
-      };
-
-      const closeModal = () => {
-        modal.classList.remove("modal--open");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("is-modal-open");
-      };
-
-      openButtons.forEach((button) => button.addEventListener("click", openModal));
-      closeButtons.forEach((button) => button.addEventListener("click", closeModal));
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") closeModal();
-      });
-    })();
-  </script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
