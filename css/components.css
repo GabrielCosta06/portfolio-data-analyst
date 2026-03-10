@@ -777,7 +777,7 @@
   transform: translateY(0);
 }
 
-[data-reveal] {
+.has-js [data-reveal] {
   opacity: 0;
   transform: translateY(var(--motion-rise));
   transition:
@@ -785,13 +785,13 @@
     transform var(--transition-medium) var(--reveal-delay, 0ms);
 }
 
-[data-reveal].is-visible {
+.has-js [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
+  .has-js [data-reveal] {
     opacity: 1;
     transform: none;
     transition: none;
