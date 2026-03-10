@@ -8,13 +8,16 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
   const navAnchors = Array.from(document.querySelectorAll(".nav__menu a[href^='#']"));
   const langSelect = document.getElementById("lang-select");
   const certList = document.getElementById("cert-list");
-  const certSearch = document.getElementById("cert-search");
-  const filterButtons = Array.from(document.querySelectorAll("[data-filter]"));
   const toast = document.getElementById("toast");
   const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
+  const resumeDownloads = Array.from(document.querySelectorAll("[data-resume-download]"));
 
   const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const mobileQuery = window.matchMedia && window.matchMedia("(max-width: 900px)");
+  const resumeUrls = {
+    en: "./resume-en.pdf",
+    "pt-BR": "./resume-pt.pdf",
+  };
 
   let focusTrapCleanup = null;
   let lastFocusedElement = null;
@@ -30,11 +33,23 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
 
   function setNavAria() {
     if (!navMenu) return;
-    if (mobileQuery && mobileQuery.matches) {
-      navMenu.setAttribute("aria-hidden", isNavOpen() ? "false" : "true");
+    const shouldHide = Boolean(mobileQuery && mobileQuery.matches && !isNavOpen());
+    navMenu.setAttribute("aria-hidden", shouldHide ? "true" : "false");
+
+    if (shouldHide) {
+      navMenu.setAttribute("inert", "");
       return;
     }
-    navMenu.setAttribute("aria-hidden", "false");
+
+    navMenu.removeAttribute("inert");
+  }
+
+  function updateResumeDownloads(lang) {
+    const href = resumeUrls[lang] || resumeUrls.en;
+    resumeDownloads.forEach((link) => {
+      link.setAttribute("href", href);
+      link.setAttribute("hreflang", lang);
+    });
   }
 
   function getFocusable(container) {
@@ -141,14 +156,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
     if (!certList) return;
     certList.innerHTML = "";
 
-    const searchTerm = state.search.trim().toLowerCase();
-    const filtered = certificates.filter((cert) => {
-      const matchesFilter = state.filter === "all" || cert.tags.includes(state.filter);
-      const matchesSearch = !searchTerm || cert.searchIndex.includes(searchTerm);
-      return matchesFilter && matchesSearch;
-    });
-
-    if (!filtered.length) {
+    if (!certificates.length) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
       empty.textContent = t("cert.empty");
@@ -157,7 +165,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
     }
 
     const fragment = document.createDocumentFragment();
-    filtered.forEach((cert) => fragment.append(createCertCard(cert)));
+    certificates.forEach((cert) => fragment.append(createCertCard(cert)));
     certList.append(fragment);
   }
 
@@ -310,26 +318,6 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
     });
   });
 
-  if (certSearch) {
-    certSearch.addEventListener("input", (event) => {
-      state.search = event.target.value;
-      renderCertificates();
-    });
-  }
-
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const filter = button.getAttribute("data-filter");
-      state.filter = filter || "all";
-      filterButtons.forEach((btn) => {
-        const isActive = btn === button;
-        btn.classList.toggle("filters__button--active", isActive);
-        btn.setAttribute("aria-pressed", isActive ? "true" : "false");
-      });
-      renderCertificates();
-    });
-  });
-
   if (certList) {
     certList.addEventListener("click", async (event) => {
       const button = event.target.closest("[data-copy-link]");
@@ -385,6 +373,7 @@ export function initUI({ state, certificates, t, onLanguageChange }) {
     setNavAria,
     renderCertificates,
     highlightFromHash,
+    updateResumeDownloads,
     updateLangSelect: (lang) => {
       if (langSelect) {
         langSelect.value = lang;

@@ -256,10 +256,12 @@ section[id] {
 
 .hero__main {
   max-width: var(--hero-content-max);
+  display: grid;
+  gap: var(--space-4);
 }
 
 .hero__eyebrow {
-  margin-bottom: var(--space-4);
+  margin-bottom: 0;
 }
 
 .hero__title {
@@ -268,21 +270,32 @@ section[id] {
   line-height: var(--line-height-tight);
   letter-spacing: -0.05em;
   max-width: 11ch;
-  margin-bottom: var(--space-4);
+  margin-bottom: 0;
 }
 
 .hero__subtitle {
   color: var(--color-muted-strong);
   font-size: clamp(1.05rem, 1.7vw, 1.28rem);
   max-width: 56ch;
-  margin-bottom: var(--space-5);
+  margin-bottom: 0;
+}
+
+.hero__signal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-  margin-bottom: var(--space-4);
+}
+
+.hero__quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
 }
 
 .hero__microcopy {
@@ -385,16 +398,16 @@ section[id] {
   gap: var(--space-4);
 }
 
-.certificates__controls {
+.certificates__summary {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
-  justify-content: space-between;
   align-items: center;
 }
 
 .certificates__list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-4);
 }
 
@@ -418,10 +431,18 @@ section[id] {
 
 .contact-shell__main {
   max-width: 52ch;
+  display: grid;
+  gap: var(--space-4);
 }
 
 .contact-shell__list {
   display: grid;
+  gap: var(--space-3);
+}
+
+.contact-shell__actions {
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-3);
 }
 
@@ -469,6 +490,8 @@ section[id] {
     padding: calc(var(--nav-height) + var(--space-4)) var(--space-4) var(--space-4);
     gap: var(--space-5);
     transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
     transition: transform var(--transition-medium);
     z-index: var(--z-overlay);
     backdrop-filter: blur(var(--blur-md));
@@ -476,6 +499,8 @@ section[id] {
 
   .has-js .nav__menu.nav__menu--open {
     transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav__links,
@@ -499,6 +524,7 @@ section[id] {
 
   .hero__layout,
   .capability-rail,
+  .hero__signal-grid,
   .kpi-grid,
   .story-grid,
   .insight-panels,
@@ -517,22 +543,15 @@ section[id] {
   }
 
   .hero__actions,
+  .contact-shell__actions,
   .resume__actions {
     flex-direction: column;
     align-items: stretch;
   }
 
   .hero__actions .button,
+  .contact-shell__actions .button,
   .resume__actions .button {
-    width: 100%;
-  }
-
-  .certificates__controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .search {
     width: 100%;
   }
 

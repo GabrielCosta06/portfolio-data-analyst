@@ -1,7 +1,7 @@
 export const i18n = {
   "meta.title": {
-    en: "Gabriel Barbeta | Data Analyst Portfolio",
-    "pt-BR": "Gabriel Barbeta | Portfólio de Analista de Dados",
+    en: "Jose Gabriel Costa | Data Analyst Portfolio",
+    "pt-BR": "Jose Gabriel Costa | Portfólio de Analista de Dados",
   },
   "meta.description": {
     en: "Data Analyst portfolio centered on a factory cost control case study, verified certificates, and a bilingual resume.",
@@ -14,7 +14,7 @@ export const i18n = {
   "nav.certificates": { en: "Certificates", "pt-BR": "Certificados" },
   "nav.resume": { en: "Resume", "pt-BR": "Currículo" },
   "nav.contact": { en: "Contact", "pt-BR": "Contato" },
-  "nav.resumeCta": { en: "Open Resume", "pt-BR": "Abrir Currículo" },
+  "nav.resumeCta": { en: "Download Resume", "pt-BR": "Baixar Currículo" },
   "nav.linkedinLabel": { en: "LinkedIn profile", "pt-BR": "Perfil no LinkedIn" },
   "nav.langLabel": { en: "Language", "pt-BR": "Idioma" },
   "nav.langToggle": { en: "EN / PT", "pt-BR": "EN / PT" },
@@ -24,22 +24,44 @@ export const i18n = {
   "nav.menuClose": { en: "Close navigation menu", "pt-BR": "Fechar menu de navegação" },
 
   "hero.eyebrow": {
-    en: "Manufacturing analytics | Brazil",
-    "pt-BR": "Analytics industrial | Brasil",
+    en: "Junior Data Analyst | BI and operations analytics",
+    "pt-BR": "Analista de Dados Júnior | BI e analytics operacional",
   },
   "hero.title": {
-    en: "I build clear operational analytics for factory, finance, and performance decisions.",
-    "pt-BR": "Eu construo analytics operacionais claros para decisões de fábrica, finanças e performance.",
+    en: "Junior data analyst ready for BI, operations, and reporting roles.",
+    "pt-BR": "Analista de dados júnior pronto para vagas de BI, operações e reporting.",
   },
   "hero.subtitle": {
-    en: "Data analyst focused on turning messy operational data into decision-ready dashboards, clean marts, and recruiter-ready business stories.",
-    "pt-BR": "Analista de dados focado em transformar dados operacionais bagunçados em dashboards prontos para decisão, marts limpos e histórias de negócio prontas para recrutadores.",
+    en: "I build Power BI, SQL, and Python workflows that turn messy operational data into dashboards, KPI definitions, and decision-ready analysis. This portfolio gives you a public manufacturing case study, verified credentials, and bilingual resume access in one place.",
+    "pt-BR": "Construo fluxos em Power BI, SQL e Python que transformam dados operacionais bagunçados em dashboards, definições de KPI e análises prontas para decisão. Este portfólio reúne um estudo de caso industrial público, credenciais verificadas e currículo bilíngue em um só lugar.",
   },
-  "hero.ctaProject": { en: "View Factory Project", "pt-BR": "Ver Projeto da Fábrica" },
-  "hero.ctaResume": { en: "Open Resume", "pt-BR": "Abrir Currículo" },
+  "hero.signal1Label": { en: "Target roles", "pt-BR": "Vagas alvo" },
+  "hero.signal1Value": {
+    en: "Data Analyst, BI Analyst, Operations Analyst",
+    "pt-BR": "Analista de Dados, Analista de BI e Analista de Operações",
+  },
+  "hero.signal2Label": { en: "Location", "pt-BR": "Localização" },
+  "hero.signal2Value": {
+    en: "Brazil | open to remote, hybrid, or on-site roles",
+    "pt-BR": "Brasil | aberto a vagas remotas, híbridas ou presenciais",
+  },
+  "hero.signal3Label": { en: "Languages", "pt-BR": "Idiomas" },
+  "hero.signal3Value": {
+    en: "Portuguese and English | TOEIC 910",
+    "pt-BR": "Português e inglês | TOEIC 910",
+  },
+  "hero.signal4Label": { en: "Review package", "pt-BR": "Pacote para avaliação" },
+  "hero.signal4Value": {
+    en: "Resume, case study, certificates, and GitHub",
+    "pt-BR": "Currículo, estudo de caso, certificados e GitHub",
+  },
+  "hero.quickLinksLabel": { en: "Quick contact links", "pt-BR": "Links rápidos de contato" },
+  "hero.ctaProject": { en: "View Flagship Project", "pt-BR": "Ver Projeto Principal" },
+  "hero.ctaResume": { en: "Download Resume", "pt-BR": "Baixar Currículo" },
+  "hero.ctaEmail": { en: "Email Jose", "pt-BR": "Enviar e-mail" },
   "hero.microcopy": {
-    en: "Power BI, Python, SQL, and sharp KPI design for operational teams.",
-    "pt-BR": "Power BI, Python, SQL e desenho de KPI com clareza para times operacionais.",
+    en: "Available for junior and early-career roles in BI, data analysis, and reporting automation.",
+    "pt-BR": "Disponível para vagas júnior e início de carreira em BI, análise de dados e automação de reporting.",
   },
   "hero.railLabel": { en: "Flagship proof", "pt-BR": "Prova principal" },
   "hero.proof1.value": { en: "R$ 0.0669", "pt-BR": "R$ 0,0669" },
@@ -148,6 +170,7 @@ export const i18n = {
     en: "Swing shift cost gap vs day shift",
     "pt-BR": "Gap de custo do turno da tarde vs dia",
   },
+  "project.kpisTitle": { en: "Project KPIs", "pt-BR": "KPIs do projeto" },
 
   "project.storyEyebrow1": { en: "Problem", "pt-BR": "Problema" },
   "project.storyEyebrow2": { en: "Approach", "pt-BR": "Abordagem" },
@@ -224,6 +247,10 @@ export const i18n = {
     en: "Verified credentials with shareable deep links.",
     "pt-BR": "Credenciais verificadas com links compartilháveis.",
   },
+  "cert.summary": {
+    en: "Three concise credentials. Open the PDF for full proof or copy a direct link to any card below.",
+    "pt-BR": "Três credenciais objetivas. Abra o PDF para ver a comprovação completa ou copie um link direto para qualquer cartão abaixo.",
+  },
   "cert.filterLabel": { en: "Certificate filters", "pt-BR": "Filtros de certificados" },
   "cert.filterAll": { en: "All", "pt-BR": "Todos" },
   "cert.filterMicrosoft": { en: "Microsoft", "pt-BR": "Microsoft" },
@@ -277,19 +304,50 @@ export const i18n = {
 
   "contact.eyebrow": { en: "Contact", "pt-BR": "Contato" },
   "contact.title": {
-    en: "Open to operations, BI, and analytics opportunities.",
-    "pt-BR": "Aberto a oportunidades em operações, BI e analytics.",
+    en: "Hiring for a junior data, BI, or operations analytics role?",
+    "pt-BR": "Contratando para uma vaga júnior em dados, BI ou analytics de operações?",
   },
   "contact.subtitle": {
-    en: "If you want someone who can structure messy data, define KPIs clearly, and present results with restraint, let’s talk.",
-    "pt-BR": "Se você procura alguém que consiga estruturar dados bagunçados, definir KPIs com clareza e apresentar resultados com objetividade, vamos conversar.",
+    en: "Email is best for interview coordination and role details. LinkedIn is best for a quick intro. The resume is ready in English and Portuguese.",
+    "pt-BR": "E-mail é a melhor opção para coordenação de entrevistas e detalhes da vaga. LinkedIn funciona melhor para uma apresentação rápida. O currículo está pronto em inglês e português.",
   },
-  "contact.primaryCta": { en: "Start a conversation", "pt-BR": "Iniciar conversa" },
+  "contact.primaryCta": { en: "Email Jose", "pt-BR": "Enviar e-mail" },
+  "contact.secondaryCta": { en: "Open LinkedIn", "pt-BR": "Abrir LinkedIn" },
+  "contact.resumeCta": { en: "Download Resume", "pt-BR": "Baixar Currículo" },
+  "contact.availability": {
+    en: "Based in Brazil and available for remote, hybrid, or on-site conversations.",
+    "pt-BR": "Com base no Brasil e disponível para conversas remotas, híbridas ou presenciais.",
+  },
+  "contact.proofTitle": { en: "What you can review today", "pt-BR": "O que você pode avaliar hoje" },
+  "contact.proof1": {
+    en: "Bilingual resume in English and Portuguese.",
+    "pt-BR": "Currículo bilíngue em inglês e português.",
+  },
+  "contact.proof2": {
+    en: "Public manufacturing case study with KPIs, dashboards, and recommendations.",
+    "pt-BR": "Estudo de caso industrial público com KPIs, dashboards e recomendações.",
+  },
+  "contact.proof3": {
+    en: "Certificates plus GitHub links for deeper validation.",
+    "pt-BR": "Certificados e links do GitHub para validação mais profunda.",
+  },
   "contact.emailTitle": { en: "Email", "pt-BR": "E-mail" },
   "contact.linkedinTitle": { en: "LinkedIn", "pt-BR": "LinkedIn" },
   "contact.githubTitle": { en: "GitHub", "pt-BR": "GitHub" },
   "contact.copyEmail": { en: "Copy email", "pt-BR": "Copiar e-mail" },
   "contact.copied": { en: "Email copied", "pt-BR": "E-mail copiado" },
+  "contact.emailMeta": {
+    en: "Best for interviews, job descriptions, and tailored resume requests.",
+    "pt-BR": "Melhor para entrevistas, descrições de vaga e pedidos de currículo personalizado.",
+  },
+  "contact.linkedinMeta": {
+    en: "Best for recruiter outreach or a quick introduction.",
+    "pt-BR": "Melhor para contato de recrutadores ou uma apresentação rápida.",
+  },
+  "contact.githubMeta": {
+    en: "Best for repository review and project detail.",
+    "pt-BR": "Melhor para revisar repositórios e detalhes dos projetos.",
+  },
   "contact.emailLabel": { en: "Email address", "pt-BR": "Endereço de e-mail" },
   "contact.linkedinLabel": { en: "LinkedIn profile", "pt-BR": "Perfil no LinkedIn" },
   "contact.githubLabel": { en: "GitHub profile", "pt-BR": "Perfil no GitHub" },

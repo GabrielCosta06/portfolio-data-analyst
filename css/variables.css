@@ -63,6 +63,7 @@
   --shadow-sm: 0 18px 44px -34px var(--color-shadow-strong);
   --shadow-md: 0 28px 70px -42px var(--color-shadow-strong);
   --shadow-focus: 0 0 0 4px rgba(12, 143, 164, 0.14);
+  --outline-offset: 2px;
 
   --border-width: 1px;
   --border-width-strong: 2px;

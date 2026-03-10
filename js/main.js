@@ -4,8 +4,6 @@ import { initUI } from "./ui.js";
 
 const state = {
   lang: "en",
-  filter: "all",
-  search: "",
 };
 
 const t = (key) => translate(key, state.lang);
@@ -26,6 +24,7 @@ function setLanguage(lang, options = {}) {
   }
   if (uiApi) {
     uiApi.updateLangSelect(lang);
+    uiApi.updateResumeDownloads(lang);
   }
 
   applyTranslations(lang);
