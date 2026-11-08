@@ -1,0 +1,9 @@
+DEMONSTRAÇÃO — CERCA DE DOIS MINUTOS
+
+0:00–0:20 — Apresente o problema: inconsistências nos dados podem distorcer o dashboard. Identifique este projeto como estudo com dados sintéticos.
+0:20–0:50 — Mostre Bronze, Silver, quarentena e Gold. Explique uma regra e o motivo de preservar rejeições.
+0:50–1:20 — Mostre as contagens (670/600/70), a conciliação e o teste de reexecução. Cite exatamente o ambiente executado: CI Spark/Delta; depois de validar no Databricks, registre também a execução real do workspace.
+1:20–1:50 — Mostre receita, lucro e margem no dashboard. Filtre Serviços/junho e explique a margem ponderada.
+1:50–2:00 — Termine no repositório com as instruções e indique uma evolução: incremental, observabilidade ou recuperação de falhas.
+
+Você precisa gravar sua voz e tela. O roteiro é preparação, não comprova que você já apresentou ou executou no Databricks/Power BI.

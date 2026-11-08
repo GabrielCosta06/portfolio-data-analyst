@@ -1,0 +1,19 @@
+PROJETO POWER BI — GABRIEL
+
+Estado: modelo e visuais pré-configurados em PBIP/PBIR. Abertura e renderização no Power BI Desktop ainda pendentes.
+
+1. Instale o Power BI Desktop pela página oficial que deixei aberta. O download direto foi bloqueado pelo Edge; conclua essa etapa manualmente pelo canal oficial.
+2. Abra Vendas.pbip nesta pasta. Mantenha as pastas Vendas.Report e Vendas.SemanticModel ao lado do arquivo.
+3. Clique Atualizar (Refresh). Os dados sintéticos estão embutidos nas consultas M: não há conexão externa, caminho a configurar ou credencial de dados.
+4. Sem filtros: confira receita R$ 728.800,00; lucro bruto R$ 308.500,00; margem 42,33%; pedidos 600.
+5. Selecione mês 2026-06 e categoria Servicos: confira receita R$ 43.290,00; lucro R$ 24.290,00; pedidos 34.
+6. Limpe os filtros e salve uma cópia como Vendas-Gabriel.pbix. Se o Desktop apresentar erro, copie a mensagem e me avise; continuo a configuração.
+
+Há quatro cartões, quatro filtros, um gráfico mensal e uma tabela por categoria. O modelo tem duas tabelas, uma relação muitos-para-um e oito medidas DAX. A renderização e o motor DAX/M não foram executados nesta preparação.
+
+Dados sintéticos, janeiro a junho de 2026. Sem impostos, frete, descontos ou devoluções. Lucro bruto = receita menos custo direto. Projetos preparados com assistência de IA. Nenhum dado de empregador.
+
+Referências oficiais:
+https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-overview
+https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-report
+https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-dataset

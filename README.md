@@ -4,6 +4,8 @@
 
 Three inspectable case studies: a Python/SQL pipeline, a sales analysis with a web dashboard and Power BI companion, and data-quality controls. Developed with AI assistance. All sample data is synthetic; no Baumer, TOTVS, client or employee data is included.
 
+[Execution guide](start/) contains the next steps for running the notebook in Databricks and opening a prepared Power BI project, plus the official training links. The [portable Power BI ZIP](start/PowerBI-pronto.zip) contains an embedded synthetic fixture, two tables, one relationship, eight measures and ten PBIR visual definitions. Its 17 schema-bearing JSON documents passed the official Microsoft schemas; model bindings, fixture totals and chart bounds were checked. **Power BI Desktop opening, M/DAX execution and rendering remain unverified.** This package is preparation, not an executed PBIX.
+
 ## Reproduce
 
 Python 3.10+; local pipeline uses only the standard library.
