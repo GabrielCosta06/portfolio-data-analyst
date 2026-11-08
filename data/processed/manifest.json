@@ -1,0 +1,86 @@
+{
+  "dataset": "Synthetic sales demo; NOT Baumer/TOTVS data",
+  "source_sha256": "a027981e4eb9ab83eaa76fcdae31ffc98eaf8bf22faf9f9c65b6f0bfa8c0a28e",
+  "input_rows": 670,
+  "accepted_rows": 600,
+  "quarantined_rows": 70,
+  "rule_failures": {
+    "duplicate_order_id": 20,
+    "invalid_quantity": 10,
+    "invalid_unit_price": 10,
+    "invalid_category": 10,
+    "invalid_date": 10,
+    "invalid_unit_cost": 10
+  },
+  "revenue_cents": 72880000,
+  "cost_cents": 42030000,
+  "profit_cents": 30850000,
+  "margin_pct": 42.33,
+  "monthly": [
+    {
+      "month": "2026-01",
+      "orders": 100,
+      "revenue_cents": 11959500,
+      "cost_cents": 6917600,
+      "profit_cents": 5041900,
+      "margin_pct": 42.16
+    },
+    {
+      "month": "2026-02",
+      "orders": 100,
+      "revenue_cents": 12271000,
+      "cost_cents": 7072600,
+      "profit_cents": 5198400,
+      "margin_pct": 42.36
+    },
+    {
+      "month": "2026-03",
+      "orders": 100,
+      "revenue_cents": 11938000,
+      "cost_cents": 6860000,
+      "profit_cents": 5078000,
+      "margin_pct": 42.54
+    },
+    {
+      "month": "2026-04",
+      "orders": 100,
+      "revenue_cents": 12481500,
+      "cost_cents": 7220800,
+      "profit_cents": 5260700,
+      "margin_pct": 42.15
+    },
+    {
+      "month": "2026-05",
+      "orders": 100,
+      "revenue_cents": 11875500,
+      "cost_cents": 6863800,
+      "profit_cents": 5011700,
+      "margin_pct": 42.2
+    },
+    {
+      "month": "2026-06",
+      "orders": 100,
+      "revenue_cents": 12354500,
+      "cost_cents": 7095200,
+      "profit_cents": 5259300,
+      "margin_pct": 42.57
+    }
+  ],
+  "categories": [
+    {
+      "category": "Equipamentos",
+      "revenue_cents": 39142000,
+      "profit_cents": 12952000
+    },
+    {
+      "category": "Servicos",
+      "revenue_cents": 24749500,
+      "profit_cents": 13859500
+    },
+    {
+      "category": "Consumiveis",
+      "revenue_cents": 8988500,
+      "profit_cents": 4038500
+    }
+  ]
+}

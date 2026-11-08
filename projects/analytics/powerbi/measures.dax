@@ -1,0 +1,10 @@
+// Table names after import: FactSales and DimDate.
+// Create each measure separately in Power BI Desktop.
+Revenue = SUM(FactSales[Revenue])
+Cost = SUM(FactSales[Cost])
+Gross Profit = [Revenue] - [Cost]
+Gross Margin % = DIVIDE([Gross Profit], [Revenue])
+Orders = DISTINCTCOUNT(FactSales[OrderId])
+Average Order Value = DIVIDE([Revenue], [Orders])
+Revenue Previous Month = CALCULATE([Revenue], DATEADD(DimDate[Date], -1, MONTH))
+Revenue MoM % = DIVIDE([Revenue] - [Revenue Previous Month], [Revenue Previous Month])
