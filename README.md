@@ -24,7 +24,9 @@ Open http://localhost:8080. The CLI replaces only demonstration outputs in `data
 | [Sales analysis](projects/analytics/) | SQL window functions, filterable web dashboard, CSV export, Power Query M and DAX | SQL and web dashboard verified; Power BI Desktop not executed |
 | [Data quality](projects/quality/) | Row-level quarantine with reasons, uniqueness/domain/financial checks | 670 input rows; 600 accepted; 70 quarantined |
 
-[Databricks companion](projects/pipeline/databricks/sales_lakehouse.py) demonstrates Bronze/Silver/Gold with PySpark and Delta. It has not been executed in Databricks. Requires an existing Unity Catalog Volume. AWS/Azure resources were not provisioned.
+[Databricks notebook](projects/pipeline/databricks/sales_lakehouse.ipynb) is self-contained: synthetic fixture, Bronze/Silver/Gold, quarantine, Delta writes/readback, financial reconciliation and an idempotent rerun. It requires no uploaded CSV or Volume. The complete notebook passed in [GitHub Actions with PySpark 4.0.1 and Delta Lake 4.0.1](https://github.com/GabrielCosta06/portfolio-data-analyst/actions/runs/42510152023). See the [executed notebook](evidence/sales_lakehouse.executed.ipynb), [validation JSON](evidence/spark-validation.json) and [run instructions](projects/pipeline/databricks/README.md).
+
+Execution **inside a Databricks workspace is pending**. CI uses local Spark on a GitHub-hosted runner. In Databricks, the notebook creates/replaces four demonstration Delta tables in `portfolio_gabriel_demo_20261108` in the current catalog; schema/table creation permission is required. AWS/Azure resources were not provisioned.
 
 ## Results and grain
 
@@ -47,10 +49,10 @@ flowchart LR
 
 ## Limits
 
-Local in-memory full refresh. No CDC, incremental state, scheduler, cloud infrastructure or cross-file transaction recovery. A syntactically valid row can still be wrong in business terms. Source freshness/completeness and master-data integrity need additional contracts. The Databricks companion has documented rounding/deduplication differences for inputs other than the bundled fixture.
+Small full-refresh demonstration. No CDC, incremental state, scheduler, cloud infrastructure or cross-layer transaction recovery. A syntactically valid row can still be wrong in business terms. Source freshness/completeness and master-data integrity need additional contracts. Python/SQL and Spark results are reconciled against the bundled synthetic fixture; arbitrary production inputs have not been validated.
 
 ## Publish and validate
 
-GitHub Pages serves the repository root. The workflow runs unit tests and regenerates evidence to detect drift. `.nojekyll` prevents Jekyll processing. No runtime secrets, account forms or analytics trackers.
+GitHub Pages serves the repository root. The workflow runs unit tests, regenerates evidence to detect drift, and executes every notebook code cell with Spark/Delta. The checked-in `evidence/` snapshot records run 42510152023; newer executions are downloadable as workflow artifacts. `.nojekyll` prevents Jekyll processing. No runtime secrets, account forms or analytics trackers.
 
 License: MIT for code and generated synthetic fixtures. Public professional summary reflects information supplied by Gabriel.

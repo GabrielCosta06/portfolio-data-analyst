@@ -1,0 +1,17 @@
+{
+  "environment": "GitHub Actions / local Spark + Delta",
+  "input_rows": 670,
+  "accepted_rows": 600,
+  "quarantined_rows": 70,
+  "revenue": "728800.00",
+  "direct_cost": "420300.00",
+  "gross_profit": "308500.00",
+  "rule_counts": {
+    "invalid_quantity": 10,
+    "invalid_unit_price": 10,
+    "invalid_category": 10,
+    "invalid_date": 10,
+    "invalid_unit_cost": 10,
+    "duplicate_order_id": 20
+  }
+}
