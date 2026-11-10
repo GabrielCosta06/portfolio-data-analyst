@@ -6,6 +6,17 @@ Three inspectable case studies: a Python/SQL pipeline, a sales analysis with a w
 
 [Execution guide](start/) contains the next steps for running the notebook in Databricks and opening a prepared Power BI project, plus the official training links. The [portable Power BI ZIP](start/PowerBI-pronto.zip) contains an embedded synthetic fixture, two tables, one relationship, eight measures and ten PBIR visual definitions. Its 17 schema-bearing JSON documents passed the official Microsoft schemas; model bindings, fixture totals and chart bounds were checked. **Power BI Desktop opening, M/DAX execution and rendering remain unverified.** This package is preparation, not an executed PBIX.
 
+## Résumé downloads
+
+The homepage includes a dedicated recruiter section at `#curriculo`, linked from the navigation and the primary “Baixar currículo” action. Both Portuguese and English unified résumés are available as PDF and editable Word downloads. Each document has one page.
+
+Files use the requested stable basename `jose_gabriel_cv` in separate language directories:
+
+- `assets/cv/pt/jose_gabriel_cv.pdf` and `assets/cv/pt/jose_gabriel_cv.docx`
+- `assets/cv/en/jose_gabriel_cv.pdf` and `assets/cv/en/jose_gabriel_cv.docx`
+
+Each link uses the corresponding HTML `download` filename. To update the résumé, replace the matching files while keeping these paths and filenames stable. The documents contain the professional contact details supplied for recruitment.
+
 ## Reproduce
 
 Python 3.10+; local pipeline uses only the standard library.
