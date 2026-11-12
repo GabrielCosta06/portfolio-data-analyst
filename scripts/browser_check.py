@@ -38,7 +38,10 @@ with sync_playwright() as p:
     def capture(name):
         page.screenshot(path=str(args.screenshots/f'{name}.png'),full_page=True)
     def no_overflow():
-        assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'),page.url
+        if page.evaluate('document.documentElement.scrollWidth > innerWidth'):
+            capture('overflow-failure')
+            offenders=page.evaluate("Array.from(document.querySelectorAll('main *')).filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,20).map(e=>({tag:e.tagName,cls:e.className,width:e.getBoundingClientRect().width,text:e.textContent.slice(0,80)}))")
+            raise AssertionError(f'{page.url}: {offenders}')
     def ready():
         expect(page.locator('#analysis')).to_be_visible()
         expect(page.locator('#revenue')).not_to_have_text('—')

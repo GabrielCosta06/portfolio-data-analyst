@@ -32,7 +32,7 @@ def build():
         inspect(json.loads(path.read_text(encoding='utf-8-sig')))
     output=ROOT/'start/PowerBI-pronto.zip'
     with zipfile.ZipFile(output,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as archive:
-        for path in sorted(PROJECT.rglob('*')):
+        for path in sorted(PROJECT.rglob('*'),key=lambda p:p.relative_to(PROJECT).as_posix()):
             if path.is_file() and '.pbi' not in path.parts:
                 name='PowerBI/'+path.relative_to(PROJECT).as_posix()
                 info=zipfile.ZipInfo(name,date_time=(2026,11,12,0,0,0))

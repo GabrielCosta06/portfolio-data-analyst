@@ -58,3 +58,4 @@
 
 .text-link>svg{width:19px;height:19px;fill:currentColor;flex-shrink:0}
 .hero .actions .button{flex:1;gap:12px;padding-inline:14px}.hero .actions .button.outline{background:var(--pine);color:var(--paper)}.hero .actions .button.outline:hover{background:#245344}
+.method>div,.lab>div,.case-top>div{min-width:0}.walkthrough{max-width:100%;height:auto}pre{max-width:100%}
