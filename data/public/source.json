@@ -1,0 +1,14 @@
+{
+  "publisher": "Our World in Data",
+  "dataset": "CO2 and Greenhouse Gas Emissions",
+  "repository": "https://github.com/owid/co2-data",
+  "commit": "22d9a01321ddec951b36f2bfc66e05dc6ad50ad8",
+  "url": "https://raw.githubusercontent.com/owid/co2-data/22d9a01321ddec951b36f2bfc66e05dc6ad50ad8/owid-co2-data.csv",
+  "codebook": "https://github.com/owid/co2-data/blob/22d9a01321ddec951b36f2bfc66e05dc6ad50ad8/owid-co2-codebook.csv",
+  "retrieved_at": "2026-11-12T16:08:49.013319+00:00",
+  "upstream_sha256": "300fb68fe6b0d514ed7f5cf773df77d7e24a495438d84b76e2f39eba1584a0f7",
+  "extract_sha256": "553d329708233a3270fe3a4a47b30e675c9e8cc190ccbc84660546bc510ac475",
+  "selection": "country=Brazil; 2000<=year<=2024; six named columns; source values preserved",
+  "attribution": "Our World in Data; underlying emissions: Global Carbon Budget; population: OWID population sources. See the pinned codebook for original-source attribution and licenses.",
+  "license": "OWID-produced data: CC BY 4.0; third-party data retain original-source terms. See the upstream README and codebook."
+}

@@ -1,0 +1,31 @@
+{
+  "validated_at": "2026-11-12",
+  "scope": "Original Jan–Jun 2026 synthetic 600-order Power BI companion; separate from Commercial Intelligence",
+  "method": "Opened corrected PBIP in installed Power BI Desktop; invoked Refresh for embedded M queries; queried its local Analysis Services engine through ADOMD",
+  "fix": "Renamed Revenue and Cost measures to Total Revenue and Total Cost to avoid collision with columns; updated dependent DAX and PBIR references",
+  "full": {
+    "revenue_brl": 728800.0,
+    "cost_brl": 420300.0,
+    "gross_profit_brl": 308500.0,
+    "gross_margin": 0.4232985729967069,
+    "orders": 600
+  },
+  "filtered": {
+    "category": "Servicos",
+    "month": "2026-06",
+    "revenue_brl": 43290.0,
+    "gross_profit_brl": 24290.0,
+    "orders": 34
+  },
+  "checks": {
+    "desktop_open": true,
+    "power_query_refresh": true,
+    "dax_full_reconciled": true,
+    "dax_filter_relationship_reconciled": true
+  },
+  "visual_verification": "Pending: OS session was locked; capture returned lock screen or blank. These images were rejected. No visual rendering claim.",
+  "dax_queries": [
+    "EVALUATE ROW(\"Revenue\",[Total Revenue],\"Profit\",[Gross Profit],\"Margin\",[Gross Margin %],\"Orders\",[Orders],\"Cost\",[Total Cost])",
+    "EVALUATE CALCULATETABLE(ROW(\"Revenue\",[Total Revenue],\"Profit\",[Gross Profit],\"Orders\",[Orders]),FactSales[Category]=\"Servicos\",DimDate[MonthLabel]=\"2026-06\")"
+  ]
+}

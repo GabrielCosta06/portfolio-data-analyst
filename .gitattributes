@@ -1,5 +1,19 @@
-* text=auto
-*.csv text eol=lf
-*.json text eol=lf
+* text=auto eol=lf
 *.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.sql text eol=lf
+*.vtt text eol=lf
 *.yml text eol=lf
+*.svg text eol=lf
+*.zip binary
+*.webm binary
+*.woff2 binary
+*.ttf binary
+*.png binary
+*.pdf binary
+*.docx binary
