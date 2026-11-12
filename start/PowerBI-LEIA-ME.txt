@@ -1,19 +1,22 @@
-PROJETO POWER BI — GABRIEL
+POWER BI — GABRIEL COSTA
 
-Estado: modelo e visuais pré-configurados em PBIP/PBIR. Abertura e renderização no Power BI Desktop ainda pendentes.
+Estudo complementar original: 600 pedidos sintéticos, janeiro a junho de 2026.
+Este modelo é independente do novo Commercial Intelligence (jan–out); os totais são diferentes.
 
-1. Instale o Power BI Desktop pela página oficial que deixei aberta. O download direto foi bloqueado pelo Edge; conclua essa etapa manualmente pelo canal oficial.
-2. Abra Vendas.pbip nesta pasta. Mantenha as pastas Vendas.Report e Vendas.SemanticModel ao lado do arquivo.
-3. Clique Atualizar (Refresh). Os dados sintéticos estão embutidos nas consultas M: não há conexão externa, caminho a configurar ou credencial de dados.
-4. Sem filtros: confira receita R$ 728.800,00; lucro bruto R$ 308.500,00; margem 42,33%; pedidos 600.
-5. Selecione mês 2026-06 e categoria Servicos: confira receita R$ 43.290,00; lucro R$ 24.290,00; pedidos 34.
-6. Limpe os filtros e salve uma cópia como Vendas-Gabriel.pbix. Se o Desktop apresentar erro, copie a mensagem e me avise; continuo a configuração.
+VALIDADO EM 12/11/2026
+O projeto corrigido abriu no Power BI Desktop. As consultas M embutidas foram atualizadas e o motor local executou DAX com e sem filtros. Os totais abaixo foram conciliados. Medidas Total Revenue e Total Cost evitam conflito com as colunas Revenue e Cost.
+A verificação visual dos dez gráficos/cartões/filtros permanece pendente: a sessão do Windows estava bloqueada e as capturas foram rejeitadas. Não há alegação de renderização visual verificada.
 
-Há quatro cartões, quatro filtros, um gráfico mensal e uma tabela por categoria. O modelo tem duas tabelas, uma relação muitos-para-um e oito medidas DAX. A renderização e o motor DAX/M não foram executados nesta preparação.
+1. Extraia este ZIP mantendo as pastas lado a lado. Abra Vendas.pbip.
+2. Clique Refresh / Atualizar. Dados sintéticos estão embutidos no Power Query: sem conexão externa, credencial ou caminho a configurar.
+3. Confira: receita R$ 728.800,00; custo R$ 420.300,00; lucro bruto R$ 308.500,00; margem 42,3298573%; pedidos 600.
+4. Mês 2026-06 + categoria Servicos: receita R$ 43.290,00; lucro R$ 24.290,00; pedidos 34.
+5. Limpe os filtros e salve uma cópia local. O formato entregue é PBIP/PBIR; não é um PBIX exportado.
 
-Dados sintéticos, janeiro a junho de 2026. Sem impostos, frete, descontos ou devoluções. Lucro bruto = receita menos custo direto. Projetos preparados com assistência de IA. Nenhum dado de empregador.
+Modelo: FactSales, DimDate, uma relação, oito medidas, dez definições de visuais.
+Fonte e evidência: projects/analytics/powerbi/project e evidence/powerbi-validation.json no repositório.
+Este estudo não inclui descontos, devoluções, frete ou impostos. Lucro bruto = receita − custo direto.
+Dados sintéticos; nenhuma informação de empregador. Projeto desenvolvido com assistência de IA.
 
-Referências oficiais:
 https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-overview
 https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-report
-https://learn.microsoft.com/en-us/power-bi/developer/projects/projects-dataset

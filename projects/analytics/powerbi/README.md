@@ -1,13 +1,22 @@
-# Power BI companion
+# Power BI companion — original sales case
 
-This bundle contains real CSV exports, Power Query M and DAX definitions. It is not a PBIX file. Power BI Desktop rendering has not been validated in this delivery.
+[Download the corrected portable project](../../../start/PowerBI-pronto.zip). [Desktop execution evidence](../../../evidence/powerbi-validation.json). Editable [PBIP/PBIR source](project/).
 
-1. Run `python src/pipeline.py --generate` at repository root.
-2. In Power BI Desktop, import `data/processed/fact_sales.csv` as **FactSales** and `dim_date.csv` as **DimDate**, or use the two separate queries in `queries.pq` with a Text parameter **DataFolder**.
-3. FactSales types: text dimensions, Date as date, Quantity as whole number, Revenue/Cost/Profit as fixed decimal. Use English (United States) locale when parsing decimal numbers.
-4. Create the one-to-many relationship **DimDate[Date] → FactSales[Date]**, single direction. Mark DimDate as the date table and sort MonthLabel by its YYYY-MM value.
-5. Add each measure from `measures.dax` separately. Format currencies as BRL and margin/growth as percentages.
-6. Add slicers for Category, Region, Channel, and DimDate[MonthLabel]. Use cards for revenue, gross profit, margin, and orders; a monthly revenue column chart and category revenue/margin table.
-7. Reconcile unfiltered revenue/profit/order counts with `data/processed/manifest.json`. Never sum row margins; use the weighted DIVIDE measure.
+This is the original 600-order January–June 2026 synthetic fixture, separate from the new Commercial Intelligence mart. Its totals are intentionally different. Delivered as PBIP/PBIR, not an exported PBIX.
 
-Grain: one synthetic order line per OrderId. There are no taxes, returns, freight or discounts. Gross profit is revenue minus direct product/service cost only. MoM must be interpreted for complete months; arbitrary day filters can create partial-period comparisons. Synthetic categories do not represent an employer's business.
+On 2026-11-12 the corrected project opened in the installed Power BI Desktop, embedded Power Query M queries refreshed, and DAX queries executed against its local Analysis Services engine. Full and filtered results reconciled. `Total Revenue` and `Total Cost` replace measures that previously collided with the `Revenue` and `Cost` columns. Dependent DAX and PBIR bindings were updated.
+
+**Visual layout verification remains pending.** The Windows session was locked; OS captures showed the lock screen or blank content and were rejected. Desktop opening, refresh and DAX execution do not establish that every visual renders correctly. No screenshot or PBIX rendering claim is made.
+
+## Open and reconcile
+
+1. Extract the ZIP and open `PowerBI/Vendas.pbip`, preserving the adjacent report/model directories.
+2. Click **Refresh**. Data is embedded in M; no credentials, uploads or paths are required.
+3. Check unfiltered revenue **728,800**, direct cost **420,300**, gross profit **308,500**, weighted gross margin **42.3298573%**, orders **600** (BRL).
+4. Filter `Category=Servicos`, `MonthLabel=2026-06`: revenue **43,290**, gross profit **24,290**, orders **34**.
+
+`DimDate[Date] → FactSales[Date]` is a single-direction one-to-many relationship. Money imports as fixed decimal, dates as dates, with en-US parsing. Margin uses `DIVIDE`, never sums row percentages. The full fixture is also available as [CSV](../../../data/processed/fact_sales.csv).
+
+For manual authoring, [queries.pq](queries.pq) accepts a `DataFolder` parameter and [measures.dax](measures.dax) provides the corrected measures. The portable project uses embedded queries instead. [Build script](../../../src/build_powerbi.py) verifies model-name uniqueness and report bindings before creating a deterministic ZIP.
+
+Grain: one order line per OrderId. No taxes, returns, freight or discounts in this original study. No employer data. Generated with AI assistance.

@@ -3,3 +3,11 @@ __pycache__/
 data/processed/*.sqlite
 .venv/
 .DS_Store
+data/commercial/runs/*/*.sqlite
+data/commercial/.staging-*/
+data/commercial/.current-*.json
+node_modules/
+test-results/
+.local/
+data/commercial/.writer.lock
+**/.pbi/

@@ -1,0 +1,224 @@
+{
+  "source": {
+    "publisher": "Our World in Data",
+    "dataset": "CO2 and Greenhouse Gas Emissions",
+    "repository": "https://github.com/owid/co2-data",
+    "commit": "22d9a01321ddec951b36f2bfc66e05dc6ad50ad8",
+    "url": "https://raw.githubusercontent.com/owid/co2-data/22d9a01321ddec951b36f2bfc66e05dc6ad50ad8/owid-co2-data.csv",
+    "codebook": "https://github.com/owid/co2-data/blob/22d9a01321ddec951b36f2bfc66e05dc6ad50ad8/owid-co2-codebook.csv",
+    "retrieved_at": "2026-11-12T16:08:49.013319+00:00",
+    "upstream_sha256": "300fb68fe6b0d514ed7f5cf773df77d7e24a495438d84b76e2f39eba1584a0f7",
+    "extract_sha256": "553d329708233a3270fe3a4a47b30e675c9e8cc190ccbc84660546bc510ac475",
+    "selection": "country=Brazil; 2000<=year<=2024; six named columns; source values preserved",
+    "attribution": "Our World in Data; underlying emissions: Global Carbon Budget; population: OWID population sources. See the pinned codebook for original-source attribution and licenses.",
+    "license": "OWID-produced data: CC BY 4.0; third-party data retain original-source terms. See the upstream README and codebook."
+  },
+  "rows": [
+    {
+      "year": 2000,
+      "population": 174018278,
+      "co2": 340.183,
+      "co2_per_capita": 1.955,
+      "co2_including_luc": 2239.437,
+      "co2_including_luc_per_capita": 12.869
+    },
+    {
+      "year": 2001,
+      "population": 176301201,
+      "co2": 346.166,
+      "co2_per_capita": 1.963,
+      "co2_including_luc": 2181.038,
+      "co2_including_luc_per_capita": 12.371
+    },
+    {
+      "year": 2002,
+      "population": 178503485,
+      "co2": 347.765,
+      "co2_per_capita": 1.948,
+      "co2_including_luc": 2362.369,
+      "co2_including_luc_per_capita": 13.234
+    },
+    {
+      "year": 2003,
+      "population": 180622688,
+      "co2": 344.645,
+      "co2_per_capita": 1.908,
+      "co2_including_luc": 3138.204,
+      "co2_including_luc_per_capita": 17.374
+    },
+    {
+      "year": 2004,
+      "population": 182675144,
+      "co2": 361.434,
+      "co2_per_capita": 1.979,
+      "co2_including_luc": 2609.533,
+      "co2_including_luc_per_capita": 14.285
+    },
+    {
+      "year": 2005,
+      "population": 184688101,
+      "co2": 364.371,
+      "co2_per_capita": 1.973,
+      "co2_including_luc": 2366.856,
+      "co2_including_luc_per_capita": 12.815
+    },
+    {
+      "year": 2006,
+      "population": 186653099,
+      "co2": 368.871,
+      "co2_per_capita": 1.976,
+      "co2_including_luc": 2132.784,
+      "co2_including_luc_per_capita": 11.426
+    },
+    {
+      "year": 2007,
+      "population": 188552311,
+      "co2": 390.573,
+      "co2_per_capita": 2.071,
+      "co2_including_luc": 2064.826,
+      "co2_including_luc_per_capita": 10.951
+    },
+    {
+      "year": 2008,
+      "population": 190367297,
+      "co2": 412.638,
+      "co2_per_capita": 2.168,
+      "co2_including_luc": 1948.634,
+      "co2_including_luc_per_capita": 10.236
+    },
+    {
+      "year": 2009,
+      "population": 192079958,
+      "co2": 389.775,
+      "co2_per_capita": 2.029,
+      "co2_including_luc": 1762.03,
+      "co2_including_luc_per_capita": 9.173
+    },
+    {
+      "year": 2010,
+      "population": 193701931,
+      "co2": 440.269,
+      "co2_per_capita": 2.273,
+      "co2_including_luc": 1691.455,
+      "co2_including_luc_per_capita": 8.732
+    },
+    {
+      "year": 2011,
+      "population": 195284736,
+      "co2": 461.911,
+      "co2_per_capita": 2.365,
+      "co2_including_luc": 1717.271,
+      "co2_including_luc_per_capita": 8.794
+    },
+    {
+      "year": 2012,
+      "population": 196876113,
+      "co2": 497.468,
+      "co2_per_capita": 2.527,
+      "co2_including_luc": 1823.253,
+      "co2_including_luc_per_capita": 9.261
+    },
+    {
+      "year": 2013,
+      "population": 198478290,
+      "co2": 531.569,
+      "co2_per_capita": 2.678,
+      "co2_including_luc": 1872.953,
+      "co2_including_luc_per_capita": 9.437
+    },
+    {
+      "year": 2014,
+      "population": 200085126,
+      "co2": 556.526,
+      "co2_per_capita": 2.781,
+      "co2_including_luc": 1916.846,
+      "co2_including_luc_per_capita": 9.58
+    },
+    {
+      "year": 2015,
+      "population": 201675534,
+      "co2": 528.174,
+      "co2_per_capita": 2.619,
+      "co2_including_luc": 1891.054,
+      "co2_including_luc_per_capita": 9.377
+    },
+    {
+      "year": 2016,
+      "population": 203218108,
+      "co2": 491.745,
+      "co2_per_capita": 2.42,
+      "co2_including_luc": 1805.469,
+      "co2_including_luc_per_capita": 8.884
+    },
+    {
+      "year": 2017,
+      "population": 204703440,
+      "co2": 497.152,
+      "co2_per_capita": 2.429,
+      "co2_including_luc": 1717.504,
+      "co2_including_luc_per_capita": 8.39
+    },
+    {
+      "year": 2018,
+      "population": 206107265,
+      "co2": 476.437,
+      "co2_per_capita": 2.312,
+      "co2_including_luc": 1742.659,
+      "co2_including_luc_per_capita": 8.455
+    },
+    {
+      "year": 2019,
+      "population": 207455459,
+      "co2": 476.73,
+      "co2_per_capita": 2.298,
+      "co2_including_luc": 1785.207,
+      "co2_including_luc_per_capita": 8.605
+    },
+    {
+      "year": 2020,
+      "population": 208660845,
+      "co2": 445.645,
+      "co2_per_capita": 2.136,
+      "co2_including_luc": 1831.931,
+      "co2_including_luc_per_capita": 8.779
+    },
+    {
+      "year": 2021,
+      "population": 209550291,
+      "co2": 496.151,
+      "co2_per_capita": 2.368,
+      "co2_including_luc": 1965.823,
+      "co2_including_luc_per_capita": 9.381
+    },
+    {
+      "year": 2022,
+      "population": 210306411,
+      "co2": 480.648,
+      "co2_per_capita": 2.285,
+      "co2_including_luc": 1968.914,
+      "co2_including_luc_per_capita": 9.362
+    },
+    {
+      "year": 2023,
+      "population": 211140731,
+      "co2": 485.673,
+      "co2_per_capita": 2.3,
+      "co2_including_luc": 1953.079,
+      "co2_including_luc_per_capita": 9.25
+    },
+    {
+      "year": 2024,
+      "population": 211998565,
+      "co2": 490.744,
+      "co2_per_capita": 2.315,
+      "co2_including_luc": 1824.731,
+      "co2_including_luc_per_capita": 8.607
+    }
+  ],
+  "checks": {
+    "unique_years": true,
+    "annual_coverage": true,
+    "per_capita_units": true,
+    "missing_values": 0
+  }
+}
