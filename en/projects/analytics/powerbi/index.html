@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Power BI package | Gabriel Costa</title>
+<link rel="icon" type="image/svg+xml" href="../../../../assets/favicon.svg">
+<link rel="stylesheet" href="../../../../assets/style.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/analytics/powerbi/">  <link rel="alternate" hreflang="pt-BR" href="../../../../projects/analytics/powerbi/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../../projects/analytics/powerbi/">  <script src="../../../../assets/language.js" defer>
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Skip to content</a>
+<div class="wrap">
+<header class="site-header">
+<a class="brand" href="../../../">
+<span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+<div class="language-switch" role="group" aria-label="Language">  <a href="../../../../projects/analytics/powerbi/?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>  <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
+</div>
+<nav aria-label="Project navigation">
+<a href="../">Back to analysis</a>
+</nav>
+</header>
+<main class="case reading" id="conteudo" tabindex="-1">
+<h1>Power BI package</h1>
+<p class="notice">Includes CSV, Power Query M queries, DAX measures and a model specification. Validation in Power BI Desktop is pending.</p>
+<h2>Model and files</h2>
+<p>One-to-many relationship from <strong>DimDate[Date] → FactSales[Date]</strong>, with a single filter direction. Mark DimDate as the date table. Use the en-US locale on import to parse decimal points.</p>
+<ul>
+<li>
+<a href="../../../../data/processed/fact_sales.csv" download>FactSales (600 synthetic orders)</a>
+</li>
+<li>
+<a href="../../../../data/processed/dim_date.csv" download>DimDate (continuous calendar)</a>
+</li>
+<li>
+<a href="../../../../projects/analytics/powerbi/queries.pq">Power Query M queries</a>
+</li>
+<li>
+<a href="../../../../projects/analytics/powerbi/measures.dax">DAX measures</a>
+</li>
+<li>
+<a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/analytics/powerbi">Full instructions on GitHub</a>
+</li>
+</ul>
+<h2>Expected totals with all filters cleared</h2>
+<p>Revenue is R$728,800.00, direct cost is R$420,300.00 and gross profit is R$308,500.00. Overall margin is 42.33% for all 600 orders.</p>
+<p>Compare these totals against the <a href="../../../../data/processed/manifest.json">run manifest</a>. Calculate the overall margin from the revenue and gross profit totals.</p>
+</main>
+</div>
+</body>
+</html>

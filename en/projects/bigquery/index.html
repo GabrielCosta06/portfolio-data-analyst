@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales with Google BigQuery | Gabriel Costa</title>
+  <meta name="description" content="GoogleSQL sales analysis with a partitioned table, weighted gross margin and month-over-month revenue growth.">
+  <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/bigquery/">
+  <link rel="alternate" hreflang="pt-BR" href="../../../projects/bigquery/">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="alternate" hreflang="x-default" href="../../../projects/bigquery/">
+  <script src="../../../assets/language.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+      <div class="language-switch" role="group" aria-label="Language">
+        <a href="../../../projects/bigquery/?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>
+        <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
+      </div>
+      <nav aria-label="Project navigation">
+        <a href="../../#projetos">Projects</a>
+        <a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/bigquery">Code</a>
+      </nav>
+    </header>
+    <main class="case" id="conteudo" tabindex="-1">
+      <h1>Sales with Google BigQuery</h1>
+      <p class="lede">How did revenue and margin change over six months? This study uses GoogleSQL and the dataset validated by the lakehouse pipeline.</p>
+      <div class="actions">
+        <a class="button" href="../../../projects/bigquery/analysis.sql" download>Download GoogleSQL query</a>
+        <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/projects/bigquery/README.en.md">Run guide <span class="arrow-up-right" aria-hidden="true"></span></a>
+      </div>
+      <p class="notice">Synthetic data. I checked the expected totals below locally against the CSV and manifest. The BigQuery run is pending.</p>
+
+      <section class="section" aria-labelledby="expected-title">
+        <h2 id="expected-title">Expected results</h2>
+        <div class="metrics">
+          <div class="metric"><span>Orders</span><strong>600</strong></div>
+          <div class="metric"><span>Revenue</span><strong>R$728,800</strong></div>
+          <div class="metric"><span>Gross profit</span><strong>R$308,500</strong></div>
+          <div class="metric"><span>Weighted margin</span><strong>42.33%</strong></div>
+        </div>
+      </section>
+
+      <section class="section reading" aria-labelledby="model-title">
+        <h2 id="model-title">Load, model and query</h2>
+        <ol>
+          <li>Load the <a href="../../../data/processed/fact_sales.csv" download>sales CSV</a> with the <a href="../../../projects/bigquery/schema.json" download>table schema</a>. Each row represents one order. Monetary values use <code>NUMERIC</code>.</li>
+          <li>Use monthly partitions by order date and cluster by category and region. The query filters the period on the partition column.</li>
+          <li>Calculate margin by dividing total gross profit by total revenue. Use <code>LAG</code> to compare revenue with the previous month.</li>
+        </ol>
+        <p>Verify the totals and monthly aggregates in the <a href="../../../data/processed/manifest.json">pipeline manifest</a>.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Gabriel Costa</span>
+      <a href="../../#projetos">Back to projects <span aria-hidden="true">↑</span></a>
+    </footer>
+  </div>
+</body>
+</html>

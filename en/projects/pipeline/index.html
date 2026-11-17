@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lakehouse pipeline | Gabriel Costa</title>
+<meta property="og:title" content="Lakehouse PySpark + Delta | Gabriel Costa">
+<meta property="og:description" content="670 synthetic records, validation, quarantine and an analytics layer. Code and reproducible evidence.">
+<meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/pipeline.png">
+<link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+<link rel="stylesheet" href="../../../assets/style.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/pipeline/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/pipeline/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/pipeline/">  <script src="../../../assets/language.js" defer>
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Skip to content</a>
+<div class="wrap">
+<header class="site-header">
+<a class="brand" href="../../">
+<span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+<div class="language-switch" role="group" aria-label="Language">  <a href="../../../projects/pipeline/?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>  <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
+</div>
+<nav aria-label="Project navigation">
+<a href="../../#projetos">Projects</a>
+<a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/pipeline">Code</a>
+</nav>
+</header>
+<main class="case" id="conteudo" tabindex="-1">
+<h1>Lakehouse pipeline</h1>
+<p class="lede">A CSV pipeline that validates the input contract, handles duplicates, quarantines invalid records and publishes a SQL analytics layer.</p>
+<p class="notice">This study uses synthetic data. I ran and tested the Python/SQLite pipeline locally and executed the full PySpark/Delta notebook in GitHub Actions. The Databricks workspace run is pending.</p>
+<div class="metrics">
+<div class="metric">
+<span>Input rows</span>
+<strong>670</strong>
+</div>
+<div class="metric">
+<span>Valid orders</span>
+<strong>600</strong>
+</div>
+<div class="metric">
+<span>Quarantined rows</span>
+<strong>70</strong>
+</div>
+<div class="metric">
+<span>Automated tests</span>
+<strong>4</strong>
+</div>
+</div>
+<section class="section reading">
+<h2>Problem and solution</h2>
+<p>Sales files can contain duplicates, invalid dates and inconsistent values that distort KPIs. The pipeline validates each row before publishing it for analysis and records why each row was rejected.</p>
+<pre>
+<code>Synthetic CSV → schema contract → validation and deduplication&#10;├── quarantine.csv with reasons&#10;└── fact_sales (SQLite)&#10;    ├── monthly SQL aggregation&#10;    ├── CSV for Power BI&#10;    └── JSON for the dashboard</code>
+</pre>
+<h2>Reproduce the results</h2>
+<pre>
+<code>git clone https://github.com/GabrielCosta06/portfolio-data-analyst.git&#10;cd portfolio-data-analyst&#10;python src/pipeline.py --generate&#10;python -m unittest discover -s tests -v&#10;python -m http.server 8080</code>
+</pre>
+<p>Open <code>http://localhost:8080</code>. The local pipeline requires Python 3.10+ and uses the standard library. Each run replaces the demonstration analytics layer to avoid duplicate orders.</p>
+<h2>Technical decisions</h2>
+<ul>
+<li>Each row represents one order. Deduplication keeps the first valid record. Production systems need an update rule for conflicting records.</li>
+<li>The pipeline calculates financial values with Decimal and stores them as integer cents.</li>
+<li>Input schema changes stop execution before the pipeline replaces the previous output.</li>
+<li>The manifest records the input SHA-256 hash, counts, failures and aggregates for reconciliation.</li>
+<li>All exports come from the same accepted synthetic records.</li>
+</ul>
+<h2>Lakehouse with PySpark and Delta Lake</h2>
+<p>The notebook includes its own synthetic dataset. Bronze preserves 670 rows, Silver keeps 600 valid orders, quarantine records 70 rejections, and Gold summarizes six months.</p>
+<p>All seven code cells passed CI with PySpark 4.0.1 and Delta Lake 4.0.1. The run wrote and read four Delta tables, reconciled revenue and profit, checked rejection reasons and verified idempotent reruns.</p>
+<div class="actions">
+<a class="button" href="../../../projects/pipeline/databricks/sales_lakehouse.ipynb" download>Download notebook (.ipynb)</a>
+<a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/evidence/sales_lakehouse.executed.ipynb">View notebook outputs</a>
+<a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/actions/runs/42510152023">View CI run</a>
+</div>
+<p>
+<a href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/projects/pipeline/databricks/README.md">Import and run instructions for Databricks Free Edition</a>. The notebook uses the current catalog and creates or replaces four tables in the demonstration schema <code>portfolio_gabriel_demo_20261108</code>.</p>
+<h2>Scope and next steps</h2>
+<p>This is an in-memory batch pipeline. A production implementation would need to specify and validate change data capture, streaming, network retries, scheduling, authentication and transaction recovery across related outputs.</p>
+<p>The verified run uses local Spark on a GitHub runner. Verification in a Databricks workspace and deployment to AWS or Azure are outside the verified run.</p>
+<div class="actions">
+<a class="button" href="../../../src/pipeline.py">Python pipeline</a>
+<a class="button secondary" href="../../../projects/pipeline/databricks/sales_lakehouse.py">Databricks Python source</a>
+<a class="button secondary" href="../../../data/processed/manifest.json">Run manifest</a>
+</div>
+</section>
+</main>
+<footer>
+<p>Synthetic data · Verified Python/SQL and Spark/Delta runs</p>
+<a href="../../">Back to portfolio</a>
+</footer>
+</div>
+</body>
+</html>
