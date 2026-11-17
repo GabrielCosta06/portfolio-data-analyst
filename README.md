@@ -1,18 +1,18 @@
-# Gabriel Costa — Data Analytics & Data Engineering
+# Gabriel Costa | Data Analyst & Data Engineer
 
 [Live portfolio](https://gabrielcosta06.github.io/portfolio-data-analyst/) · [LinkedIn](https://www.linkedin.com/in/josegabriel-costa/)
 
-Three inspectable case studies: a Python/SQL pipeline, a sales analysis with a web dashboard and Power BI companion, and data-quality controls. Developed with AI assistance. All sample data is synthetic; no Baumer, TOTVS, client or employee data is included.
+Four case studies with synthetic data: sales analytics and BI, a Python/SQL and PySpark/Delta Lake pipeline, data quality, and a Google BigQuery example. Developed with AI assistance.
 
 [Execution guide](start/) contains the next steps for running the notebook in Databricks and opening a prepared Power BI project, plus the official training links. The [portable Power BI ZIP](start/PowerBI-pronto.zip) contains an embedded synthetic fixture, two tables, one relationship, eight measures and ten PBIR visual definitions. Its 17 schema-bearing JSON documents passed the official Microsoft schemas; model bindings, fixture totals and chart bounds were checked. **Power BI Desktop opening, M/DAX execution and rendering remain unverified.** This package is preparation, not an executed PBIX.
 
 ## Homepage and recruiter experience
 
-The homepage highlights professional work in Controlling, technical case-study evidence, a skill overview, and direct résumé access. The new homepage styles are scoped to `body.home`, keeping existing case-study pages intact. A standard-library HTML integrity test checks homepage navigation, local links and image alternatives. No third-party fonts, JavaScript bundles, visitor tracking, or external API dependencies were added.
+The responsive homepage puts projects and résumé downloads first, with a short summary of Controlling experience and a cloud section covering AWS, Microsoft Azure and Google BigQuery. Project pages share the same styles, with mobile layouts for the sales dashboard filters, metrics and charts. A standard-library HTML integrity test checks homepage navigation, local links and image alternatives.
 
 ## Résumé downloads
 
-The homepage includes a dedicated recruiter section at `#curriculo`, linked from the navigation and the primary “Baixar currículo” action. Both Portuguese and English unified résumés are available as PDF and editable Word downloads. Each document has one page.
+The homepage includes a dedicated recruiter section at `#curriculo`, linked from the navigation and the hero. Both Portuguese and English unified résumés are available as PDF and editable Word downloads. Each document has one page.
 
 Files use the requested stable basename `jose_gabriel_cv` in separate language directories:
 
@@ -40,10 +40,11 @@ Open http://localhost:8080. The CLI replaces only demonstration outputs in `data
 | [Pipeline](projects/pipeline/) | Python, CSV contract, SQLite warehouse, monthly SQL view, deterministic exports | Executed locally; rerun and schema-drift tests |
 | [Sales analysis](projects/analytics/) | SQL window functions, filterable web dashboard, CSV export, Power Query M and DAX | SQL and web dashboard verified; Power BI Desktop not executed |
 | [Data quality](projects/quality/) | Row-level quarantine with reasons, uniqueness/domain/financial checks | 670 input rows; 600 accepted; 70 quarantined |
+| [BigQuery sales analysis](projects/bigquery/) | Typed CSV schema, monthly partitions, GoogleSQL for margin and month-over-month growth | Expected totals reconciled locally; Google Cloud execution pending |
 
 [Databricks notebook](projects/pipeline/databricks/sales_lakehouse.ipynb) is self-contained: synthetic fixture, Bronze/Silver/Gold, quarantine, Delta writes/readback, financial reconciliation and an idempotent rerun. It requires no uploaded CSV or Volume. The complete notebook passed in [GitHub Actions with PySpark 4.0.1 and Delta Lake 4.0.1](https://github.com/GabrielCosta06/portfolio-data-analyst/actions/runs/42510152023). See the [executed notebook](evidence/sales_lakehouse.executed.ipynb), [validation JSON](evidence/spark-validation.json) and [run instructions](projects/pipeline/databricks/README.md).
 
-Execution **inside a Databricks workspace is pending**. CI uses local Spark on a GitHub-hosted runner. In Databricks, the notebook creates/replaces four demonstration Delta tables in `portfolio_gabriel_demo_20261108` in the current catalog; schema/table creation permission is required. AWS/Azure resources were not provisioned.
+Execution **inside a Databricks workspace is pending**. CI uses local Spark on a GitHub-hosted runner. In Databricks, the notebook creates/replaces four demonstration Delta tables in `portfolio_gabriel_demo_20261108` in the current catalog; schema/table creation permission is required. AWS and Azure are study topics. The [BigQuery guide](projects/bigquery/README.md) shows how to load the demonstration data and run the analysis in a Google Cloud project.
 
 ## Results and grain
 
@@ -66,7 +67,7 @@ flowchart LR
 
 ## Limits
 
-Small full-refresh demonstration. No CDC, incremental state, scheduler, cloud infrastructure or cross-layer transaction recovery. A syntactically valid row can still be wrong in business terms. Source freshness/completeness and master-data integrity need additional contracts. Python/SQL and Spark results are reconciled against the bundled synthetic fixture; arbitrary production inputs have not been validated.
+Small full-refresh demonstration. CDC, incremental state, scheduling, cloud deployment and cross-layer transaction recovery are outside the scope of the case studies. A syntactically valid row can still be wrong in business terms. Source freshness/completeness and master-data integrity need additional contracts. Python/SQL and Spark results are reconciled against the bundled synthetic fixture; arbitrary production inputs have not been validated.
 
 ## Publish and validate
 

@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101d31">
-  <title>Gabriel Costa | Analista de Dados & Engenharia de Dados</title>
-  <meta name="description" content="Portfólio de Gabriel Costa, analista de dados em Controladoria. Projetos de Python, SQL, Power BI, PySpark e Delta Lake com código e evidências reproduzíveis.">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>Gabriel Costa | Data Analyst &amp; Data Engineer</title>
+  <meta name="description" content="Portfólio de Gabriel Costa em análise e engenharia de dados. Projetos com Python, SQL, Power BI, PySpark, Delta Lake e Google BigQuery.">
   <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://gabrielcosta06.github.io/portfolio-data-analyst/">
-  <meta property="og:title" content="Gabriel Costa | Dados, BI e Engenharia de Dados">
-  <meta property="og:description" content="Experiência em Controladoria e três estudos de caso públicos com dados sintéticos, código e validações reproduzíveis.">
+  <meta property="og:title" content="Gabriel Costa | Data Analyst &amp; Data Engineer">
+  <meta property="og:description" content="Estudos de caso de BI, pipelines, qualidade de dados e Google BigQuery com código e dados sintéticos.">
   <meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/social.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -19,107 +19,146 @@
 </head>
 <body class="home">
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <div class="wrap">
+  <div class="wrap" id="topo">
     <header class="site-header">
-      <a class="brand" href="./" aria-label="Gabriel Costa, página inicial"><span class="brand-mark" aria-hidden="true">GC</span><span>Gabriel <strong>Costa</strong></span></a>
-      <nav class="topnav" aria-label="Navegação principal">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+      <nav aria-label="Navegação principal">
         <a href="#projetos">Projetos</a>
+        <a href="#competencias">Stack</a>
         <a href="#experiencia">Experiência</a>
-        <a href="#competencias">Competências</a>
         <a href="#curriculo">Currículo</a>
       </nav>
-      <a class="nav-contact" href="https://www.linkedin.com/in/josegabriel-costa/" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
     </header>
-    <main id="conteudo">
+
+    <main id="conteudo" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow light"><span class="status-dot" aria-hidden="true"></span> PORTFÓLIO PROFISSIONAL · DATA & ANALYTICS</p>
-          <h1 id="hero-title">Dados bem estruturados.<br><span>Decisões mais inteligentes.</span></h1>
-          <p class="hero-lead">Sou Gabriel Costa, analista de dados na área de Controladoria. Conecto dados, processos e indicadores com <strong>Python, SQL e Power BI</strong>, da preparação da informação à tomada de decisão.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#projetos">Explorar projetos <span aria-hidden="true">↗</span></a>
-            <a class="button outline" href="assets/cv/pt/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf">Baixar currículo <span aria-hidden="true">↓</span></a>
+          <h1 id="hero-title" lang="en">Data Analyst <span>&amp; Data Engineer</span></h1>
+          <p class="lede">Sou Gabriel Costa. Desenvolvo pipelines com Python e SQL e transformo dados financeiros em indicadores com Power BI.</p>
+          <div class="actions">
+            <a class="button" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="#curriculo">Currículo</a>
           </div>
-          <p class="hero-meta">Business Intelligence <span aria-hidden="true">·</span> Data Engineering <span aria-hidden="true">·</span> FP&A</p>
         </div>
-        <div class="hero-visual" aria-label="Resumo do fluxo de trabalho, da origem dos dados aos indicadores">
-          <div class="visual-top"><span>DATA WORKFLOW</span><span class="visual-pill">END-TO-END</span></div>
-          <div class="visual-heading">Da fonte ao insight<span class="visual-heading-dot">.</span></div>
-          <div class="workflow-step"><span class="step-number">01</span><div><strong>Ingestão e ETL</strong><small>Python · SQL · Automação</small></div><span class="step-check" aria-hidden="true">✓</span></div>
-          <div class="workflow-connector" aria-hidden="true"></div>
-          <div class="workflow-step"><span class="step-number">02</span><div><strong>Qualidade e modelagem</strong><small>Validação · Camadas de dados</small></div><span class="step-check" aria-hidden="true">✓</span></div>
-          <div class="workflow-connector" aria-hidden="true"></div>
-          <div class="workflow-step"><span class="step-number">03</span><div><strong>Visualização e análise</strong><small>Power BI · DAX · Indicadores</small></div><span class="step-check" aria-hidden="true">✓</span></div>
-          <div class="visual-foot"><span class="visual-live" aria-hidden="true"></span> Processos auditáveis e orientados ao negócio</div>
+
+        <div class="workflow">
+          <h2>Do dado ao indicador</h2>
+          <ul class="workflow-list">
+            <li>
+              <span class="workflow-icon database-icon" aria-hidden="true"></span>
+              <div><strong>Ingestão e ETL</strong><span>Python, SQL e automação</span></div>
+            </li>
+            <li>
+              <span class="workflow-icon layers-icon" aria-hidden="true"></span>
+              <div><strong>Modelagem e qualidade</strong><span>PySpark, Delta Lake e validações</span></div>
+            </li>
+            <li>
+              <span class="workflow-icon chart-icon" aria-hidden="true"></span>
+              <div><strong>Análise e BI</strong><span>Power BI, DAX e GoogleSQL</span></div>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="proof-strip" aria-label="Destaques do portfólio">
-        <div class="proof"><span class="proof-icon" aria-hidden="true">01</span><div><strong>Experiência em Controladoria</strong><span>Indicadores, custos, orçamento e forecast</span></div></div>
-        <div class="proof"><span class="proof-icon" aria-hidden="true">03</span><div><strong>Estudos de caso públicos</strong><span>Problema, implementação e evidências</span></div></div>
-        <div class="proof"><span class="proof-icon" aria-hidden="true">CI</span><div><strong>Projetos verificáveis</strong><span>Testes, código aberto e dados sintéticos</span></div></div>
-      </section>
+      <dl class="cloud-list" aria-label="Plataformas de nuvem">
+        <div>
+          <dt>AWS</dt>
+          <dd>Estudos em EC2, S3 e RDS</dd>
+        </div>
+        <div>
+          <dt>Microsoft Azure</dt>
+          <dd>Estudos em Azure SQL e Azure Data Lake</dd>
+        </div>
+        <div>
+          <dt><a href="projects/bigquery/">Google BigQuery <span aria-hidden="true">↗</span></a></dt>
+          <dd>Projeto com GoogleSQL e particionamento</dd>
+        </div>
+      </dl>
 
-      <section class="showcase" id="projetos" aria-labelledby="projects-title">
-        <div class="section-head"><div><p class="eyebrow">TRABALHOS SELECIONADOS</p><h2 id="projects-title">Projetos que mostram <span>como eu trabalho.</span></h2></div><p>Mais do que listar ferramentas, cada estudo apresenta o problema, a solução e o que pode ser verificado no código.</p></div>
+      <section class="project-section" id="projetos" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <h2 id="projects-title">Projetos</h2>
+          <p>Estudos de caso com dados sintéticos</p>
+        </div>
         <div class="project-grid">
-          <article class="case-card">
-            <img class="case-cover" src="assets/pipeline.png" alt="Arte de apresentação do estudo de pipeline de dados" loading="lazy" decoding="async">
-            <div class="case-card-body">
-              <span class="case-kicker">01 / ENGENHARIA DE DADOS</span>
-              <h3><a href="projects/pipeline/">Pipeline e arquitetura Lakehouse <span aria-hidden="true">↗</span></a></h3>
-              <p>Um fluxo de ingestão que valida registros, separa inconsistências e produz camadas analíticas. Inclui implementação Python/SQL e notebook PySpark/Delta executado em CI.</p>
-              <div class="case-tags"><span>Python</span><span>PySpark</span><span>Delta Lake</span><span>SQL</span></div>
-              <div class="case-evidence"><strong>670 registros de demonstração</strong><span>600 aceitos · 70 em quarentena</span></div>
-            </div>
+          <article class="project-card">
+            <p class="project-category">Business Intelligence</p>
+            <h3>Análise de vendas e margem</h3>
+            <p class="project-summary">Dashboard interativo com receita, lucro bruto e margem, consultas SQL e materiais para Power BI.</p>
+            <a class="project-link" href="projects/analytics/" aria-label="Ver dashboard de vendas e margem">Ver dashboard <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="case-card">
-            <img class="case-cover" src="assets/analytics.png" alt="Arte de apresentação do dashboard de vendas e margem" loading="lazy" decoding="async">
-            <div class="case-card-body">
-              <span class="case-kicker">02 / BUSINESS INTELLIGENCE</span>
-              <h3><a href="projects/analytics/">Análise de vendas e margem <span aria-hidden="true">↗</span></a></h3>
-              <p>Dashboard interativo para explorar receita, lucro bruto e margem ponderada por categoria, região, canal e mês, acompanhado de consultas SQL e materiais para Power BI.</p>
-              <div class="case-tags"><span>SQL</span><span>Dashboard</span><span>Power BI</span><span>DAX</span></div>
-              <div class="case-evidence"><strong>Dashboard navegável</strong><span>Filtros e exportação de dados</span></div>
-            </div>
+          <article class="project-card">
+            <p class="project-category">Engenharia de dados</p>
+            <h3>Pipeline Lakehouse</h3>
+            <p class="project-summary">Ingestão, validação e camadas Bronze, Silver e Gold com PySpark e Delta Lake. Notebook executado no CI.</p>
+            <a class="project-link" href="projects/pipeline/">Ver pipeline <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="case-card">
-            <img class="case-cover" src="assets/quality.png" alt="Arte de apresentação do estudo de qualidade de dados" loading="lazy" decoding="async">
-            <div class="case-card-body">
-              <span class="case-kicker">03 / DATA QUALITY</span>
-              <h3><a href="projects/quality/">Qualidade e confiabilidade de dados <span aria-hidden="true">↗</span></a></h3>
-              <p>Controles de unicidade, domínio, validade e conciliação, com quarentena rastreável para entender por que um registro não deve alimentar os indicadores.</p>
-              <div class="case-tags"><span>Python</span><span>SQL</span><span>Validação</span><span>Testes</span></div>
-              <div class="case-evidence"><strong>Regras e rejeições auditáveis</strong><span>CSV e manifesto disponíveis</span></div>
-            </div>
+          <article class="project-card">
+            <p class="project-category">Qualidade e validação</p>
+            <h3>Qualidade de dados</h3>
+            <p class="project-summary">Regras em Python e SQL, conciliação de indicadores e quarentena com o motivo de cada rejeição.</p>
+            <a class="project-link" href="projects/quality/">Ver validações <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card">
+            <p class="project-category">Analytics na nuvem</p>
+            <h3>Vendas com BigQuery</h3>
+            <p class="project-summary">Modelo particionado e consulta GoogleSQL para calcular margem e variação mensal de receita.</p>
+            <a class="project-link" href="projects/bigquery/">Ver estudo BigQuery <span aria-hidden="true">↗</span></a>
           </article>
         </div>
-        <p class="synthetic-note">Os três estudos usam dados sintéticos e não apresentam informações confidenciais nem resultados atribuídos ao empregador.</p>
       </section>
 
-      <section class="experience-section" id="experiencia" aria-labelledby="experience-title">
-        <div class="experience-intro"><p class="eyebrow">ALÉM DOS PROJETOS</p><h2 id="experience-title">Tecnologia com <span>contexto de negócio.</span></h2><p>Minha atuação combina engenharia analítica e entendimento financeiro. O objetivo não é apenas produzir relatórios, mas organizar informações confiáveis que ajudem diferentes áreas a decidir.</p><a class="text-link" href="assets/cv/pt/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf">Conhecer minha trajetória no currículo <span aria-hidden="true">↗</span></a></div>
-        <div class="experience-card"><span class="experience-tag">EXPERIÊNCIA PROFISSIONAL</span><h3>Analista de Dados Jr. <span>· Controladoria</span></h3><p class="experience-company">Baumer S.A. <span>· desde julho de 2025</span></p><ul><li>Integração e tratamento de dados de áreas financeiras e operacionais com Python e SQL.</li><li>Desenvolvimento de dashboards, indicadores gerenciais e análises em Power BI.</li><li>Suporte a rotinas de orçamento, fechamento, forecast e análise de custos.</li><li>Automação de relatórios e processos para melhorar a disponibilidade da informação.</li></ul><p class="experience-disclaimer">Descrição de atividades profissionais, sem dados ou métricas internos da empresa.</p></div>
-      </section>
-
-      <section class="expertise-section" id="competencias" aria-labelledby="skills-title"><div class="section-head"><div><p class="eyebrow">STACK & COMPETÊNCIAS</p><h2 id="skills-title">Ferramentas com <span>propósito.</span></h2></div><p>Uma combinação de análise, modelagem, engenharia de dados e entendimento das necessidades do negócio.</p></div>
-        <div class="skill-grid">
-          <div class="skill-card"><span class="skill-number">01</span><h3>Analytics & BI</h3><p>Power BI · DAX · Power Query · Excel · KPIs · Storytelling com dados</p></div>
-          <div class="skill-card"><span class="skill-number">02</span><h3>Data Engineering</h3><p>Python · SQL · ETL · Modelagem dimensional · PySpark · Delta Lake</p></div>
-          <div class="skill-card"><span class="skill-number">03</span><h3>Cloud & plataformas</h3><p>AWS (EC2, RDS) · Azure DevOps · Databricks · GitHub Actions</p></div>
-          <div class="skill-card"><span class="skill-number">04</span><h3>Business & FP&A</h3><p>Controladoria · Orçamento · Forecast · Custos · Indicadores gerenciais</p></div>
-        </div>
-      </section>
+      <div class="profile-grid">
+        <section id="competencias" aria-labelledby="skills-title">
+          <h2 id="skills-title">Stack</h2>
+          <dl class="skill-list">
+            <div><dt>Análise e BI</dt><dd>SQL, Power BI, DAX, Power Query, Excel</dd></div>
+            <div><dt>Engenharia</dt><dd>Python, ETL, PySpark, Delta Lake, modelagem dimensional</dd></div>
+            <div><dt>Plataformas e CI</dt><dd>Databricks, Azure DevOps, GitHub Actions</dd></div>
+          </dl>
+        </section>
+        <section id="experiencia" aria-labelledby="experience-title">
+          <h2 id="experience-title">Experiência</h2>
+          <ol class="experience-list">
+            <li>
+              <h3>Analista de Dados Jr. em Controladoria</h3>
+              <p class="experience-date">Baumer S.A. · jul/2025 até o momento</p>
+              <p>Integração com Python e SQL, dashboards em Power BI e análises de orçamento, fechamento, forecast e custos.</p>
+            </li>
+            <li>
+              <h3>Estagiário de Análise de Dados</h3>
+              <p class="experience-date">Baumer S.A. · nov/2024 a jul/2025</p>
+            </li>
+          </ol>
+        </section>
+      </div>
 
       <section class="resume" id="curriculo" aria-labelledby="resume-title">
-        <div class="resume-head"><div><p class="eyebrow">PARA RECRUTADORES</p><h2 id="resume-title">Vamos conversar sobre <span>dados?</span></h2><p class="resume-intro">Currículo unificado em português e inglês, disponível em PDF ou Word. Explore também os projetos e o código por trás de cada estudo.</p></div><a class="button primary resume-linkedin" href="https://www.linkedin.com/in/josegabriel-costa/" rel="noopener noreferrer">Meu LinkedIn <span aria-hidden="true">↗</span></a></div>
+        <div>
+          <h2 id="resume-title">Currículo e contato</h2>
+          <div class="contact-links">
+            <a href="https://github.com/GabrielCosta06">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/josegabriel-costa/">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
         <div class="resume-options">
-          <div class="resume-option" role="group" aria-labelledby="resume-pt-title"><h3 id="resume-pt-title"><span aria-hidden="true">🇧🇷</span> Português</h3><p>Currículo em português</p><div class="actions"><a class="button" href="assets/cv/pt/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf" aria-label="Baixar currículo em português em PDF">Baixar PDF ↓</a><a class="button secondary" href="assets/cv/pt/jose_gabriel_cv.docx" download="jose_gabriel_cv.docx" aria-label="Baixar currículo em português em Word">Baixar Word</a></div></div>
-          <div class="resume-option" role="group" aria-labelledby="resume-en-title" lang="en"><h3 id="resume-en-title"><span aria-hidden="true">🇺🇸</span> English</h3><p>English résumé</p><div class="actions"><a class="button" href="assets/cv/en/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf" aria-label="Download English résumé as PDF">Download PDF ↓</a><a class="button secondary" href="assets/cv/en/jose_gabriel_cv.docx" download="jose_gabriel_cv.docx" aria-label="Download English résumé as Word">Download Word</a></div></div>
+          <div class="resume-row" role="group" aria-labelledby="cv-pt">
+            <strong id="cv-pt">Português</strong>
+            <a class="button" href="assets/cv/pt/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf" aria-label="Baixar currículo em português em PDF">PDF <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="assets/cv/pt/jose_gabriel_cv.docx" download="jose_gabriel_cv.docx" aria-label="Baixar currículo em português em Word">Word</a>
+          </div>
+          <div class="resume-row" role="group" aria-labelledby="cv-en">
+            <strong id="cv-en">Inglês</strong>
+            <a class="button" href="assets/cv/en/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf" aria-label="Baixar currículo em inglês em PDF">PDF <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="assets/cv/en/jose_gabriel_cv.docx" download="jose_gabriel_cv.docx" aria-label="Baixar currículo em inglês em Word">Word</a>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div><a class="footer-brand" href="./">Gabriel Costa</a><p>Dados, engenharia analítica e decisões orientadas por evidências.</p></div><nav aria-label="Links externos"><a href="https://github.com/GabrielCosta06">GitHub ↗</a><a href="https://www.linkedin.com/in/josegabriel-costa/">LinkedIn ↗</a><a href="#conteudo">Voltar ao topo ↑</a></nav></footer>
+    <footer class="site-footer">
+      <span>Gabriel Costa</span>
+      <a href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+    </footer>
   </div>
 </body>
 </html>
