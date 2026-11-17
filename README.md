@@ -6,6 +6,10 @@ Three inspectable case studies: a Python/SQL pipeline, a sales analysis with a w
 
 [Execution guide](start/) contains the next steps for running the notebook in Databricks and opening a prepared Power BI project, plus the official training links. The [portable Power BI ZIP](start/PowerBI-pronto.zip) contains an embedded synthetic fixture, two tables, one relationship, eight measures and ten PBIR visual definitions. Its 17 schema-bearing JSON documents passed the official Microsoft schemas; model bindings, fixture totals and chart bounds were checked. **Power BI Desktop opening, M/DAX execution and rendering remain unverified.** This package is preparation, not an executed PBIX.
 
+## Homepage and recruiter experience
+
+The homepage highlights professional work in Controlling, technical case-study evidence, a skill overview, and direct résumé access. The new homepage styles are scoped to `body.home`, keeping existing case-study pages intact. A standard-library HTML integrity test checks homepage navigation, local links and image alternatives. No third-party fonts, JavaScript bundles, visitor tracking, or external API dependencies were added.
+
 ## Résumé downloads
 
 The homepage includes a dedicated recruiter section at `#curriculo`, linked from the navigation and the primary “Baixar currículo” action. Both Portuguese and English unified résumés are available as PDF and editable Word downloads. Each document has one page.
