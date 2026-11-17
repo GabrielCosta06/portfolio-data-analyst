@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data quality | Gabriel Costa</title>
+<meta property="og:title" content="Data quality with SQL and Python | Gabriel Costa">
+<meta property="og:description" content="70 synthetic rows quarantined, six validation rules triggered and KPIs reconciled.">
+<meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/quality.png">
+<link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+<link rel="stylesheet" href="../../../assets/style.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/quality/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/quality/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/quality/">  <script src="../../../assets/language.js" defer>
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Skip to content</a>
+<div class="wrap">
+<header class="site-header">
+<a class="brand" href="../../">
+<span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+<div class="language-switch" role="group" aria-label="Language">  <a href="../../../projects/quality/?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>  <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
+</div>
+<nav aria-label="Project navigation">
+<a href="../../#projetos">Projects</a>
+<a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/quality">Code</a>
+</nav>
+</header>
+<main class="case" id="conteudo" tabindex="-1">
+<h1>Data quality</h1>
+<p class="lede">Every rejected row needs a traceable reason. This study demonstrates input validation and reconciliation before data reaches analytics.</p>
+<p class="notice">The synthetic data includes deliberately introduced errors. The counts come from the pipeline run manifest.</p>
+<div class="metrics">
+<div class="metric">
+<span>Rows evaluated</span>
+<strong>670</strong>
+</div>
+<div class="metric">
+<span>Rows accepted</span>
+<strong>600</strong>
+</div>
+<div class="metric">
+<span>Rows rejected</span>
+<strong>70</strong>
+</div>
+<div class="metric">
+<span>Acceptance rate</span>
+<strong>89.55%</strong>
+</div>
+</div>
+<section class="section">
+<h2>Rules triggered in this run</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Occurrences</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duplicate order ID</td>
+<td>20</td>
+<td>Keep the first valid record and quarantine duplicates</td>
+</tr>
+<tr>
+<td>Non-positive quantity</td>
+<td>10</td>
+<td>Quarantine</td>
+</tr>
+<tr>
+<td>Invalid or non-finite price</td>
+<td>10</td>
+<td>Quarantine</td>
+</tr>
+<tr>
+<td>Category outside allowed values</td>
+<td>10</td>
+<td>Quarantine</td>
+</tr>
+<tr>
+<td>Invalid date</td>
+<td>10</td>
+<td>Quarantine</td>
+</tr>
+<tr>
+<td>Negative or invalid cost</td>
+<td>10</td>
+<td>Quarantine</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="section reading">
+<h2>Independent checks</h2>
+<p>SQL queries check uniqueness, positive values and whether profit equals revenue minus cost. Tests cover idempotent reruns, preservation of prior results after a schema change, and handling of empty datasets.</p>
+<p>Count distinct rejected rows separately from rule violations, because a single row can violate several rules. Each rejected row in this fixture triggers one rule.</p>
+<h2>Checks beyond this study</h2>
+<p>A value that passes validation can still be incorrect. ERP reconciliation, extract completeness, source freshness and referential integrity with external master data require additional sources and criteria.</p>
+<div class="actions">
+<a class="button" href="../../../data/processed/quarantine.csv" download>Download quarantined rows</a>
+<a class="button secondary" href="../../../projects/quality/checks.sql">Validation queries</a>
+<a class="button secondary" href="../../../data/processed/manifest.json">View manifest</a>
+<a class="button secondary" href="../../../tests/test_pipeline.py">View tests</a>
+</div>
+</section>
+</main>
+<footer>
+<p>Synthetic data · Inspectable rules and rejections</p>
+<a href="../../">Back to portfolio</a>
+</footer>
+</div>
+</body>
+</html>

@@ -85,6 +85,30 @@ nav a, .contact-links a, .site-footer a {
 }
 nav a:hover, .contact-links a:hover, .site-footer a:hover { text-decoration: underline; }
 
+.language-switch {
+  display: inline-flex;
+  flex: none;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+.site-header .language-switch { margin-right: auto; }
+.language-switch a {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 6px;
+  border-radius: 5px;
+  font-size: .8125rem;
+  font-weight: 740;
+  text-decoration: none;
+}
+.language-switch a:hover { background: var(--soft); }
+.language-switch a[aria-current] { background: var(--forest); color: #fff; }
+
 h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -.04em; }
 h1 { font-size: clamp(2.1rem, 5vw, 3.75rem); font-weight: 790; }
 h2 { font-size: clamp(1.9rem, 3.8vw, 2.65rem); font-weight: 770; }
@@ -465,8 +489,10 @@ pre code { padding: 0; background: transparent; font-size: inherit; }
 
 @media (max-width: 660px) {
   .wrap { width: calc(100% - 36px); }
-  .home .site-header { flex-wrap: wrap; gap: 0; padding-block: 9px 2px; }
-  .home nav { justify-content: space-between; width: 100%; gap: 0 8px; }
+  .site-header { flex-wrap: wrap; gap: 0; padding-block: 9px 2px; }
+  .site-header .language-switch { margin-right: 0; }
+  .site-header nav { flex-basis: 100%; }
+  .home .site-header nav { justify-content: space-between; gap: 0 8px; }
   nav { gap: 0 14px; }
   nav a { font-size: .875rem; }
   .hero, .project-grid, .profile-grid, .resume, .charts { grid-template-columns: 1fr; }

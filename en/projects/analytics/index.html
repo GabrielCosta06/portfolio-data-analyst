@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sales and margin | Gabriel Costa</title>
+<meta property="og:title" content="Sales and margin analysis | Gabriel Costa">
+<meta property="og:description" content="Interactive dashboard, SQL queries, and a Power BI model and measures. Synthetic data.">
+<meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/analytics.png">
+<link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+<link rel="stylesheet" href="../../../assets/style.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/analytics/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/analytics/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/analytics/">  <script src="../../../assets/language.js" defer>
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Skip to content</a>
+<div class="wrap">
+<header class="site-header">
+<a class="brand" href="../../">
+<span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+<div class="language-switch" role="group" aria-label="Language">  <a href="../../../projects/analytics/?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>  <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
+</div>
+<nav aria-label="Project navigation">
+<a href="../../#projetos">Projects</a>
+<a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/analytics">Code</a>
+</nav>
+</header>
+<main class="case" id="conteudo" tabindex="-1">
+<h1>Sales and margin analysis</h1>
+<p class="lede">Which categories generate the most revenue and which contribute most to gross profit? Explore the analytics layer built by the pipeline.</p>
+<p class="notice">Synthetic data from January to June 2026. The Power BI package includes CSV, Power Query and DAX.</p>
+<div class="filters">
+<label>Category<select id="category">
+<option value="">All</option>
+</select>
+</label>
+<label>Region<select id="region">
+<option value="">All</option>
+</select>
+</label>
+<label>Channel<select id="channel">
+<option value="">All</option>
+</select>
+</label>
+<label>Month<select id="month">
+<option value="">All</option>
+</select>
+</label>
+<button class="secondary" id="reset">Reset filters</button>
+<button id="export">Export CSV</button>
+</div>
+<p id="results-summary" role="status" aria-live="polite">Loading data…</p>
+<div class="metrics">
+<div class="metric">
+<span>Revenue</span>
+<strong id="revenue">—</strong>
+</div>
+<div class="metric">
+<span>Gross profit</span>
+<strong id="profit">—</strong>
+</div>
+<div class="metric">
+<span>Weighted gross margin</span>
+<strong id="margin">—</strong>
+</div>
+<div class="metric">
+<span>Orders</span>
+<strong id="orders">—</strong>
+</div>
+</div>
+<p id="insight">
+</p>
+<div class="charts">
+<section class="section">
+<h2>Revenue by month</h2>
+<div id="monthly-chart" aria-label="Monthly revenue">
+</div>
+</section>
+<section class="section">
+<h2>Categories</h2>
+<div class="table-wrap">
+<table>
+<caption>Revenue and margin for the selected filters</caption>
+<thead>
+<tr>
+<th>Category</th>
+<th>Revenue</th>
+<th>Margin</th>
+</tr>
+</thead>
+<tbody id="categories">
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<section class="section reading">
+<h2>Definitions and decisions</h2>
+<p>Revenue = quantity × unit price. Gross profit = revenue minus direct cost. Margin = total gross profit ÷ total revenue. The pipeline stores monetary values as integer cents.</p>
+<p>Across the full dataset, Equipment leads in revenue and Services contributes the most gross profit. Comparing both metrics helps decide which category to prioritize. The synthetic data illustrates the method.</p>
+<p>Each order has one line. The model excludes taxes, returns, shipping and discounts. Filters cover complete months. The analysis is descriptive.</p>
+<div class="actions">
+<a class="button secondary" href="powerbi/">Power BI package</a>
+<a class="button secondary" href="../../../projects/analytics/analysis.sql">SQL queries</a>
+<a class="button secondary" href="../../../data/processed/manifest.json">Verify results</a>
+</div>
+</section>
+</main>
+<footer>
+<p>Reproducible case study · Synthetic data</p>
+<a href="../../">Back to portfolio</a>
+</footer>
+</div>
+<script src="../../../projects/analytics/dashboard.js" defer>
+</script>
+</body>
+</html>
