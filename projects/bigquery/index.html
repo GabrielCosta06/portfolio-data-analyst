@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vendas com Google BigQuery | Gabriel Costa</title>
+  <meta name="description" content="Estudo de análise de vendas em GoogleSQL com tabela particionada, margem ponderada e variação mensal de receita.">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+      <nav aria-label="Navegação do projeto">
+        <a href="../../#projetos">Projetos</a>
+        <a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/bigquery">Código</a>
+      </nav>
+    </header>
+    <main class="case" id="conteudo" tabindex="-1">
+      <h1>Vendas com Google BigQuery</h1>
+      <p class="lede">Como evoluíram receita e margem ao longo de seis meses? O estudo usa GoogleSQL para responder com a mesma base validada no pipeline Lakehouse.</p>
+      <div class="actions">
+        <a class="button" href="analysis.sql" download>Baixar consulta GoogleSQL</a>
+        <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/projects/bigquery/README.md">Guia de execução <span class="arrow-up-right" aria-hidden="true"></span></a>
+      </div>
+      <p class="notice">Dados sintéticos. Os totais esperados abaixo foram conferidos localmente com o CSV e o manifesto. A execução no BigQuery está pendente.</p>
+
+      <section class="section" aria-labelledby="expected-title">
+        <h2 id="expected-title">Resultados esperados</h2>
+        <div class="metrics">
+          <div class="metric"><span>Pedidos</span><strong>600</strong></div>
+          <div class="metric"><span>Receita</span><strong>R$ 728.800</strong></div>
+          <div class="metric"><span>Lucro bruto</span><strong>R$ 308.500</strong></div>
+          <div class="metric"><span>Margem ponderada</span><strong>42,33%</strong></div>
+        </div>
+      </section>
+
+      <section class="section reading" aria-labelledby="model-title">
+        <h2 id="model-title">Carga, modelo e consulta</h2>
+        <ol>
+          <li>Carregue o <a href="../../data/processed/fact_sales.csv" download>CSV de vendas</a> com o <a href="schema.json" download>esquema da tabela</a>. Cada linha representa um pedido e os valores monetários usam <code>NUMERIC</code>.</li>
+          <li>Use partições mensais pela data do pedido e clustering por categoria e região. A consulta filtra o período na coluna de partição.</li>
+          <li>Calcule a margem pela razão entre as somas de lucro e receita. Use <code>LAG</code> para comparar a receita com a do mês anterior.</li>
+        </ol>
+        <p>Confira os totais e as agregações mensais no <a href="../../data/processed/manifest.json">manifesto do pipeline</a>.</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Gabriel Costa</span>
+      <a href="../../#projetos">Voltar aos projetos <span aria-hidden="true">↑</span></a>
+    </footer>
+  </div>
+</body>
+</html>
