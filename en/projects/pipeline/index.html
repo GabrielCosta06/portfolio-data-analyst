@@ -28,8 +28,9 @@
 <main class="case" id="conteudo" tabindex="-1">
   <header class="case-intro">
     <div>
-      <h1>Lakehouse pipeline</h1>
+      <h1>Databricks lakehouse</h1>
       <p class="lede">Follow a synthetic sales extract from raw CSV to reconciled Delta tables. Each layer keeps the grain and validation rules explicit.</p>
+      <p><a href="#databricks-notebook">Notebook and run guide</a></p>
     </div>
     <p class="case-context"><strong>Verified in GitHub Actions</strong>PySpark and Delta Lake wrote and read back all four tables.</p>
   </header>
@@ -93,12 +94,13 @@
       <p>One row per order. Keep the first valid copy of each order ID and quarantine failures with their source line and reasons. Store currency in integer cents for exact reconciliation.</p>
       <p><a href="../quality/">Explore rejected rows</a></p>
     </section>
-    <section class="case-panel" aria-labelledby="repro-title">
-      <h2 id="repro-title">Reproduce the run</h2>
-      <p>Run the standard-library Python pipeline or import the self-contained notebook. The notebook includes its own fixture and tests a second write for idempotency.</p>
+    <section id="databricks-notebook" class="case-panel" aria-labelledby="repro-title">
+      <h2 id="repro-title">Databricks notebook</h2>
+      <p>Import the notebook into Databricks to build the Bronze, Silver, quarantine and Gold tables. It includes synthetic orders and checks that a second write preserves the results.</p>
       <div class="actions">
         <a class="button" href="../../../projects/pipeline/databricks/sales_lakehouse.ipynb" download>Download notebook</a>
-        <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/evidence/sales_lakehouse.executed.ipynb">Executed notebook</a>
+        <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/projects/pipeline/databricks/README.md">Databricks run guide</a>
+        <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/evidence/sales_lakehouse.executed.ipynb">GitHub Actions notebook output</a>
       </div>
     </section>
   </div>
@@ -114,7 +116,6 @@ python -m unittest discover -s tests -v</code></pre>
     <div class="actions">
       <a class="button secondary" href="../../../src/pipeline.py">Python source</a>
       <a class="button secondary" href="../../../evidence/spark-validation.json">Spark validation JSON</a>
-      <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/projects/pipeline/databricks/README.md">Databricks run guide</a>
     </div>
   </section>
 </main>
