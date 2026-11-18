@@ -2,8 +2,9 @@
   <link rel="stylesheet" href="../../assets/case-studies.css?v=2">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/projects/pipeline/">  <link rel="alternate" hreflang="pt-BR" href="./">  <link rel="alternate" hreflang="en" href="../../en/projects/pipeline/">  <link rel="alternate" hreflang="x-default" href="./">  <script src="../../assets/language.js" defer></script></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><div class="wrap"><header class="site-header"><a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a><div class="language-switch" role="group" aria-label="Idioma">  <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>  <a href="../../en/projects/pipeline/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a></div><nav aria-label="Navegação do projeto"><a href="../../#projetos">Projetos</a><a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/pipeline">Código</a></nav></header><main class="case" id="conteudo" tabindex="-1">
   <header class="case-intro">
     <div>
-      <h1>Pipeline Lakehouse</h1>
+      <h1>Lakehouse com Databricks</h1>
       <p class="lede">Acompanhe uma extração sintética de vendas do CSV bruto às tabelas Delta conciliadas. Veja o grão e as regras de validação em cada camada.</p>
+      <p><a href="#databricks-notebook">Notebook e guia de execução</a></p>
     </div>
     <p class="case-context"><strong>Verificado no GitHub Actions</strong>O PySpark e o Delta Lake gravaram e releram as quatro tabelas.</p>
   </header>
@@ -67,12 +68,13 @@
       <p>Uma linha por pedido. A primeira ocorrência válida de cada identificador é mantida. As rejeições guardam a linha de origem e os motivos. Valores monetários são armazenados em centavos inteiros para conciliação exata.</p>
       <p><a href="../quality/">Explorar linhas rejeitadas</a></p>
     </section>
-    <section class="case-panel" aria-labelledby="repro-title">
-      <h2 id="repro-title">Reproduza a execução</h2>
-      <p>Execute o pipeline Python com a biblioteca padrão ou importe o notebook autocontido. O notebook inclui a própria amostra e testa uma segunda gravação para verificar idempotência.</p>
+    <section id="databricks-notebook" class="case-panel" aria-labelledby="repro-title">
+      <h2 id="repro-title">Notebook para Databricks</h2>
+      <p>Importe o notebook no Databricks para construir as tabelas Bronze, Silver, quarentena e Gold. Ele inclui pedidos sintéticos e verifica se a segunda gravação preserva os resultados.</p>
       <div class="actions">
         <a class="button" href="../../projects/pipeline/databricks/sales_lakehouse.ipynb" download>Baixar notebook</a>
-        <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/evidence/sales_lakehouse.executed.ipynb">Notebook executado</a>
+        <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/projects/pipeline/databricks/README.md">Guia para Databricks</a>
+        <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/evidence/sales_lakehouse.executed.ipynb">Resultados no GitHub Actions</a>
       </div>
     </section>
   </div>
@@ -88,7 +90,6 @@ python -m unittest discover -s tests -v</code></pre>
     <div class="actions">
       <a class="button secondary" href="../../src/pipeline.py">Código Python</a>
       <a class="button secondary" href="../../evidence/spark-validation.json">Evidência Spark em JSON</a>
-      <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/blob/main/projects/pipeline/databricks/README.md">Guia para Databricks</a>
     </div>
   </section>
 </main><footer><p>Dados sintéticos • Python/SQL e Spark/Delta verificados</p><a href="../../">Voltar ao portfólio</a></footer></div>  <script type="module" src="../../projects/pipeline/evidence.js"></script>
