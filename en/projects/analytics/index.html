@@ -9,7 +9,7 @@
 <meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/analytics.png">
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
 <link rel="stylesheet" href="../../../assets/style.css">
-  <link rel="stylesheet" href="../../../assets/case-studies.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/analytics/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/analytics/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/analytics/">  <script src="../../../assets/language.js" defer>
+  <link rel="stylesheet" href="../../../assets/case-studies.css?v=2">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/analytics/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/analytics/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/analytics/">  <script src="../../../assets/language.js" defer>
 </script>
 </head>
 <body>
@@ -29,7 +29,7 @@
   <header class="case-intro">
     <div>
       <h1>Sales and margin analysis</h1>
-      <p class="lede">Compare the categories that generate revenue with the categories that contribute gross profit. Filter the same order-level data used by the pipeline.</p>
+      <p class="lede">Which product category should we investigate first? Compare revenue, gross profit and margin across the same validated order data.</p>
     </div>
     <p class="case-context"><strong>Synthetic sales dashboard</strong>January to June 2026. The web dashboard and Power BI companion use the same 600 validated orders.</p>
   </header>
@@ -49,7 +49,17 @@
     <div class="metric"><span>Weighted gross margin</span><strong id="margin">–</strong></div>
     <div class="metric"><span>Orders</span><strong id="orders">–</strong></div>
   </div>
-  <div class="analysis-insight" id="insight" hidden></div>
+  <section class="case-panel" id="decision-case" aria-labelledby="decision-title">
+    <h2 id="decision-title">Which category should we investigate first?</h2>
+    <dl class="decision-leaders">
+      <div><dt>Highest revenue</dt><dd id="leader-revenue">–</dd></div>
+      <div><dt>Highest gross profit</dt><dd id="leader-profit">–</dd></div>
+      <div><dt>Highest weighted margin</dt><dd id="leader-margin">–</dd></div>
+    </dl>
+    <p class="analysis-insight" id="insight" aria-live="polite">Loading the category comparison…</p>
+    <p class="case-note">The priority is the category with the largest gap between its actual gross profit and its gross profit at the weighted margin of the selection, holding revenue fixed. This uses a synthetic benchmark.</p>
+    <button type="button" class="secondary" id="investigate-category" hidden>Investigate this category</button>
+  </section>
 
   <div class="case-grid">
     <section class="case-panel" aria-labelledby="trend-heading">
@@ -65,6 +75,13 @@
 
     <section class="case-panel" aria-labelledby="category-heading">
       <h2 id="category-heading">Category performance</h2>
+      <label class="ranking-control">Rank categories by
+        <select id="category-ranking" disabled>
+          <option value="revenue">Revenue</option>
+          <option value="profit">Gross profit</option>
+          <option value="margin">Margin</option>
+        </select>
+      </label>
       <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable category results">
         <table class="case-table">
           <caption>Revenue, gross profit and weighted margin in the current selection</caption>
@@ -92,6 +109,6 @@
 </footer>
 </div>
 
-  <script type="module" src="../../../projects/analytics/dashboard.js?v=2"></script>
+  <script type="module" src="../../../projects/analytics/dashboard.js?v=3"></script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+order_id,order_date,category,region,channel,quantity,unit_price,unit_cost,revision
+ORD-00601,2026-05-31,Servicos,Sudeste,Direto,2,260.00,115.00,1
+ORD-00001,2026-01-01,Equipamentos,Sudeste,Direto,2,420.00,285.00,2
+ORD-00602,2026-02-31,Servicos,Sul,Direto,1,100.00,60.00,1

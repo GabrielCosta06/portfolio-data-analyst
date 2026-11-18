@@ -9,7 +9,7 @@
 <meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/pipeline.png">
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
 <link rel="stylesheet" href="../../../assets/style.css">
-  <link rel="stylesheet" href="../../../assets/case-studies.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/pipeline/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/pipeline/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/pipeline/">  <script src="../../../assets/language.js" defer>
+  <link rel="stylesheet" href="../../../assets/case-studies.css?v=2">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/pipeline/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/pipeline/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/pipeline/">  <script src="../../../assets/language.js" defer>
 </script>
 </head>
 <body>
@@ -33,6 +33,42 @@
     </div>
     <p class="case-context"><strong>Verified in GitHub Actions</strong>PySpark and Delta Lake wrote and read back all four tables.</p>
   </header>
+
+
+  <section class="case-panel" id="incremental-demo" aria-labelledby="incremental-title">
+    <h2 id="incremental-title">Incremental load and replay</h2>
+    <p>Step through a synthetic Delta Lake run. Start with 600 orders, then apply a late May order, a correction to January, and a record with an invalid date.</p>
+    <div class="actions">
+      <button type="button" id="incremental-next" disabled>Load initial batch</button>
+      <button type="button" class="secondary" id="incremental-reset" disabled>Reset demo</button>
+    </div>
+    <p id="incremental-status" role="status" class="data-state">Loading demonstration data…</p>
+    <div id="incremental-result" hidden>
+      <h3 id="incremental-phase"></h3>
+      <div class="metrics">
+        <div class="metric"><span>Orders</span><strong id="incremental-orders"></strong></div>
+        <div class="metric"><span>Revenue</span><strong id="incremental-revenue"></strong></div>
+        <div class="metric"><span>Gross profit</span><strong id="incremental-profit"></strong></div>
+        <div class="metric"><span>Stored rejections</span><strong id="incremental-quarantine"></strong></div>
+      </div>
+      <div id="incremental-events" class="table-wrap" tabindex="0" role="region" aria-label="Order changes" hidden>
+        <table class="case-table">
+          <thead><tr>
+            <th scope="col">Order</th><th scope="col">Outcome</th>
+            <th scope="col">Revenue before</th><th scope="col">Revenue after</th>
+          </tr></thead>
+          <tbody id="incremental-rows"></tbody>
+        </table>
+      </div>
+      <p class="case-note incremental-proof">SHA-256 <code id="incremental-hash"></code></p>
+    </div>
+    <p class="case-note">Updates require a newer order revision. Quarantine records are keyed by batch and source line. The fingerprint covers the stored orders and quarantine rows.</p>
+    <div class="actions">
+      <a class="button secondary" href="../../../evidence/incremental-delta.json">Run evidence</a>
+      <a class="button secondary" href="../../../projects/pipeline/incremental_batch.csv" download>Change batch CSV</a>
+      <a class="button secondary" href="../../../src/incremental_lakehouse.py">Incremental source</a>
+    </div>
+  </section>
 
   <section class="evidence-deck" aria-labelledby="lineage-title">
     <h2 id="lineage-title">Explore the run</h2>
@@ -74,7 +110,7 @@ cd portfolio-data-analyst
 python src/pipeline.py --generate
 python -m unittest discover -s tests -v</code></pre>
     <p>Python 3.10+. The local run generates a SQLite warehouse, CSV exports, a manifest and browser data. A schema mismatch stops the run before it replaces the previous result.</p>
-    <p>This is a full-refresh batch demonstration using synthetic data.</p>
+    <p>The original run reloads the full synthetic dataset. To reproduce the incremental demo, install PySpark and Delta Lake as described in the run guide and use <code>python src/incremental_lakehouse.py --verify-delta --check</code>.</p>
     <div class="actions">
       <a class="button secondary" href="../../../src/pipeline.py">Python source</a>
       <a class="button secondary" href="../../../evidence/spark-validation.json">Spark validation JSON</a>
@@ -88,5 +124,6 @@ python -m unittest discover -s tests -v</code></pre>
 </footer>
 </div>
   <script type="module" src="../../../projects/pipeline/evidence.js"></script>
+  <script type="module" src="../../../projects/pipeline/incremental.js"></script>
 </body>
 </html>

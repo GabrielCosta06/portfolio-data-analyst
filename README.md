@@ -39,14 +39,26 @@ Open http://localhost:8080. The CLI replaces only demonstration outputs in `data
 
 | Study | Implementation | Verified scope |
 |---|---|---|
-| [Pipeline](projects/pipeline/) | Interactive lineage with Bronze, Silver, Gold and quarantine. Python/SQLite and PySpark/Delta implementations. | Local Python tests and Spark/Delta run in GitHub Actions. The page reconciles both sets of evidence. |
-| [Sales analysis](projects/analytics/) | KPI filters, month drill-down, revenue and margin charts, CSV export and an editable Power BI package. | Dashboard and SQL verified. |
+| [Pipeline](projects/pipeline/) | Bronze to Gold lineage, plus a Delta Lake incremental load with a late order, a correction and an invalid record. | Local Python tests and Spark/Delta run in GitHub Actions. The page reconciles both sets of evidence. |
+| [Sales analysis](projects/analytics/) | Filterable category ranking, a margin-gap investigation, month drill-down, CSV export and an editable Power BI package. | Dashboard and SQL verified. |
 | [Data quality](projects/quality/) | Search and inspect the original values, source lines and rules for rejected records. | 670 evaluated, 600 accepted, 70 quarantined. |
 | [BigQuery sales analysis](projects/bigquery/) | Typed CSV schema, monthly partitions, GoogleSQL and interactive monthly results. | Query translated to DuckDB and reconciled in CI. |
 
 [Databricks notebook](projects/pipeline/databricks/sales_lakehouse.ipynb) is self-contained: synthetic fixture, Bronze/Silver/Gold, quarantine, Delta writes/readback, financial reconciliation and an idempotent rerun. It requires no uploaded CSV or Volume. The complete notebook passed in [GitHub Actions with PySpark 4.0.1 and Delta Lake 4.0.1](https://github.com/GabrielCosta06/portfolio-data-analyst/actions/runs/42510152023). See the [executed notebook](evidence/sales_lakehouse.executed.ipynb), [validation JSON](evidence/spark-validation.json) and [run instructions](projects/pipeline/databricks/README.md).
 
 The Spark evidence comes from a GitHub-hosted runner. In Databricks, the notebook creates/replaces four demonstration Delta tables in `portfolio_gabriel_demo_20261108` in the current catalog; schema/table creation permission is required. AWS and Azure are study topics. The [BigQuery guide](projects/bigquery/README.md) shows how to load the demonstration data and run the analysis in a Google Cloud project.
+
+## Incremental replay and the sales decision
+
+The [incremental Lakehouse demo](projects/pipeline/#incremental-demo) starts from the same 600 accepted synthetic orders. It applies the [three change records](projects/pipeline/incremental_batch.csv) and rereads both Delta tables. A late order inserts, a newer revision corrects an existing order, and an invalid date is quarantined. The rerun preserves both tables' combined SHA-256 fingerprint. The fixture uses immutable batches and a single writer, with separate Delta transactions for orders and quarantine.
+
+With the Spark setup from the [run guide](projects/pipeline/databricks/README.md), reproduce the results from the repository root:
+
+```sh
+python src/incremental_lakehouse.py --verify-delta --check
+```
+
+The [sales decision case](projects/analytics/#decision-case) compares the filtered dataset's leaders by revenue, gross profit and weighted margin. A category's investigation priority measures its gross profit gap if it reached the selection's weighted margin at unchanged revenue. The dashboard recalculates when the selection changes.
 
 ## Results and grain
 
