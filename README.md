@@ -1,4 +1,4 @@
-# Gabriel Costa | Data Analyst & Data Engineer
+# Gabriel Costa | Data Engineer & Data Analyst
 
 [Live portfolio](https://gabrielcosta06.github.io/portfolio-data-analyst/) · [LinkedIn](https://www.linkedin.com/in/josegabriel-costa/)
 
@@ -8,7 +8,7 @@ Four case studies with synthetic data: sales analytics and BI, a Python/SQL and 
 
 ## Homepage and recruiter experience
 
-The responsive homepage puts projects and résumé downloads first, with a short summary of Controlling experience and a cloud section covering AWS, Microsoft Azure and Google BigQuery. Project pages share the same styles, with mobile layouts for the sales dashboard filters, metrics and charts. A standard-library HTML integrity test checks homepage navigation, local links and image alternatives.
+The responsive homepage highlights data engineering and analysis, leads with the Lakehouse pipeline and sales dashboard, and links directly to résumé downloads. Stack includes AWS and Microsoft Azure studies and the Google BigQuery case study. Experience summarizes Controlling roles at Baumer S.A. Project pages share the same styles, with mobile layouts for the sales dashboard filters, metrics and charts. A standard-library HTML integrity test checks homepage navigation, local links and image alternatives.
 
 The homepage and project pages have static Brazilian Portuguese and [English](en/) versions. On an automatic entry, the browser asks [Country.is](https://country.is/) for the approximate country of its IP address, with no credentials or referrer. Brazil opens in Portuguese and other countries open in English. If the lookup fails or times out, the browser language determines the result. The site keeps the resulting language for the tab session and saves a manual PT/EN choice across visits. Direct English routes can also be shared, and the language links work with JavaScript disabled.
 
