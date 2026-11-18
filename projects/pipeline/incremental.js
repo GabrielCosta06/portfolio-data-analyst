@@ -3,6 +3,7 @@ import {count, currency, english, loadError, node, readJSON} from '../../assets/
 const $ = id => document.getElementById(id);
 const t = (en, pt) => english ? en : pt;
 const money = cents => cents === null ? '–' : currency.format(cents / 100);
+const plural = (value, one, many) => count.format(value) + ' ' + (value === 1 ? one : many);
 const sequence = ['baseline', 'incremental', 'replay'];
 const headings = [
   t('Initial batch loaded', 'Carga inicial concluída'),
@@ -62,7 +63,7 @@ readJSON('evidence/incremental-delta.json').then(({steps, events}) => {
     $('incremental-hash').textContent = step.sha256;
     const counts = t(
       `${count.format(step.inserted)} inserted, ${step.updated} updated, ${step.quarantined} newly quarantined.`,
-      `${count.format(step.inserted)} inseridos, ${step.updated} atualizados, ${step.quarantined} novos em quarentena.`,
+      `${plural(step.inserted, 'inserção', 'inserções')}, ${plural(step.updated, 'atualização', 'atualizações')}, ${plural(step.quarantined, 'novo registro em quarentena', 'novos registros em quarentena')}.`,
     );
     const proof = replay && step.sha256 === steps.incremental.sha256
       ? t(' The SHA-256 fingerprint matches the previous step. Both tables are unchanged.', ' A assinatura SHA-256 coincide com a da etapa anterior. Ambas as tabelas permanecem iguais.')
