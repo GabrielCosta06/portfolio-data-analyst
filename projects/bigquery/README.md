@@ -33,3 +33,14 @@ O esquema segue a ordem das colunas do CSV. A carga substitui a tabela de demons
 A consulta retorna seis meses, com 100 pedidos em cada um. Os totais da base são 600 pedidos, R$ 728.800,00 de receita, R$ 420.300,00 de custo e R$ 308.500,00 de lucro bruto. A margem do período é 42,33%, calculada pela divisão dos totais de lucro e receita. O crescimento de janeiro fica nulo por falta de mês anterior no recorte.
 
 Confira as agregações no [manifesto do pipeline](../../data/processed/manifest.json). A execução em um projeto Google Cloud está pendente.
+
+## Reproduza os resultados locais
+
+A verificação traduz a consulta GoogleSQL versionada para DuckDB, executa sobre o CSV de vendas tipado e concilia os seis meses com o manifesto do pipeline. A rotina valida a ausência de período anterior no primeiro mês e as variações seguintes. Para verificar a execução e o particionamento no BigQuery, use os passos do Google Cloud acima.
+
+```sh
+python -m pip install -r projects/bigquery/requirements.txt
+python projects/bigquery/verify_locally.py --check
+```
+
+[Resultado em JSON](../../data/processed/bigquery-results.json)

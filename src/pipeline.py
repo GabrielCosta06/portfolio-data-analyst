@@ -140,6 +140,9 @@ def run(source, output):
             dates.append({'Date':f'2026-{month:02d}-{day:02d}','Year':2026,'Month':month,'MonthLabel':f'2026-{month:02d}'})
     write_csv(output / 'dim_date.csv', ['Date','Year','Month','MonthLabel'], dates)
     write_csv(output / 'quarantine.csv', FIELDS + ['source_line','reasons'], rejected)
+    (output / 'quarantine.json').write_text(
+        json.dumps(rejected, ensure_ascii=False, indent=2) + '\n', encoding='utf-8'
+    )
     manifest = {'dataset':'Synthetic sales demo; NOT Baumer/TOTVS data', 'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
         'input_rows':len(raw),'accepted_rows':count,'quarantined_rows':len(rejected),'rule_failures':rules,
         'revenue_cents':revenue or 0,'cost_cents':cost or 0,'profit_cents':profit or 0,

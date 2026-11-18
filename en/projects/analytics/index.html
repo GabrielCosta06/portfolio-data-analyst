@@ -8,7 +8,8 @@
 <meta property="og:description" content="Interactive dashboard, SQL queries, and a Power BI model and measures. Synthetic data.">
 <meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/analytics.png">
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
-<link rel="stylesheet" href="../../../assets/style.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/analytics/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/analytics/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/analytics/">  <script src="../../../assets/language.js" defer>
+<link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/case-studies.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/analytics/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/analytics/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/analytics/">  <script src="../../../assets/language.js" defer>
 </script>
 </head>
 <body>
@@ -25,92 +26,72 @@
 </nav>
 </header>
 <main class="case" id="conteudo" tabindex="-1">
-<h1>Sales and margin analysis</h1>
-<p class="lede">Which categories generate the most revenue and which contribute most to gross profit? Explore the analytics layer built by the pipeline.</p>
-<p class="notice">Synthetic data from January to June 2026. The Power BI package includes CSV, Power Query and DAX.</p>
-<div class="filters">
-<label>Category<select id="category">
-<option value="">All</option>
-</select>
-</label>
-<label>Region<select id="region">
-<option value="">All</option>
-</select>
-</label>
-<label>Channel<select id="channel">
-<option value="">All</option>
-</select>
-</label>
-<label>Month<select id="month">
-<option value="">All</option>
-</select>
-</label>
-<button class="secondary" id="reset">Reset filters</button>
-<button id="export">Export CSV</button>
-</div>
-<p id="results-summary" role="status" aria-live="polite">Loading data…</p>
-<div class="metrics">
-<div class="metric">
-<span>Revenue</span>
-<strong id="revenue">—</strong>
-</div>
-<div class="metric">
-<span>Gross profit</span>
-<strong id="profit">—</strong>
-</div>
-<div class="metric">
-<span>Weighted gross margin</span>
-<strong id="margin">—</strong>
-</div>
-<div class="metric">
-<span>Orders</span>
-<strong id="orders">—</strong>
-</div>
-</div>
-<p id="insight">
-</p>
-<div class="charts">
-<section class="section">
-<h2>Revenue by month</h2>
-<div id="monthly-chart" aria-label="Monthly revenue">
-</div>
-</section>
-<section class="section">
-<h2>Categories</h2>
-<div class="table-wrap">
-<table>
-<caption>Revenue and margin for the selected filters</caption>
-<thead>
-<tr>
-<th>Category</th>
-<th>Revenue</th>
-<th>Margin</th>
-</tr>
-</thead>
-<tbody id="categories">
-</tbody>
-</table>
-</div>
-</section>
-</div>
-<section class="section reading">
-<h2>Definitions and decisions</h2>
-<p>Revenue = quantity × unit price. Gross profit = revenue minus direct cost. Margin = total gross profit ÷ total revenue. The pipeline stores monetary values as integer cents.</p>
-<p>Across the full dataset, Equipment leads in revenue and Services contributes the most gross profit. Comparing both metrics helps decide which category to prioritize. The synthetic data illustrates the method.</p>
-<p>Each order has one line. The model excludes taxes, returns, shipping and discounts. Filters cover complete months. The analysis is descriptive.</p>
-<div class="actions">
-<a class="button secondary" href="powerbi/">Power BI package</a>
-<a class="button secondary" href="../../../projects/analytics/analysis.sql">SQL queries</a>
-<a class="button secondary" href="../../../data/processed/manifest.json">Verify results</a>
-</div>
-</section>
+  <header class="case-intro">
+    <div>
+      <h1>Sales and margin analysis</h1>
+      <p class="lede">Compare the categories that generate revenue with the categories that contribute gross profit. Filter the same order-level data used by the pipeline.</p>
+    </div>
+    <p class="case-context"><strong>Synthetic sales dashboard</strong>January to June 2026. The web dashboard and Power BI companion use the same 600 validated orders.</p>
+  </header>
+
+  <div class="filters">
+    <label>Category<select id="category" disabled><option value="">All</option></select></label>
+    <label>Region<select id="region" disabled><option value="">All</option></select></label>
+    <label>Channel<select id="channel" disabled><option value="">All</option></select></label>
+    <label>Month<select id="month" disabled><option value="">All</option></select></label>
+    <button class="secondary" id="reset" disabled>Reset filters</button>
+    <button id="export" disabled>Export selection</button>
+  </div>
+  <p id="results-summary" class="data-state" role="status">Loading demonstration data…</p>
+  <div class="metrics">
+    <div class="metric"><span>Revenue</span><strong id="revenue">–</strong></div>
+    <div class="metric"><span>Gross profit</span><strong id="profit">–</strong></div>
+    <div class="metric"><span>Weighted gross margin</span><strong id="margin">–</strong></div>
+    <div class="metric"><span>Orders</span><strong id="orders">–</strong></div>
+  </div>
+  <div class="analysis-insight" id="insight" hidden></div>
+
+  <div class="case-grid">
+    <section class="case-panel" aria-labelledby="trend-heading">
+      <h2 id="trend-heading">Monthly performance</h2>
+      <p class="case-note">Compare months for the selected category, region and channel. Select a month to filter the KPIs and category table.</p>
+      <div class="metric-switch" role="group" aria-label="Chart metric">
+        <button type="button" data-metric="revenue" aria-pressed="true" disabled>Revenue</button>
+        <button type="button" data-metric="profit" aria-pressed="false" disabled>Gross profit</button>
+        <button type="button" data-metric="margin" aria-pressed="false" disabled>Margin</button>
+      </div>
+      <div id="monthly-chart"></div>
+    </section>
+
+    <section class="case-panel" aria-labelledby="category-heading">
+      <h2 id="category-heading">Category performance</h2>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable category results">
+        <table class="case-table">
+          <caption>Revenue, gross profit and weighted margin in the current selection</caption>
+          <thead><tr><th scope="col">Category</th><th scope="col">Revenue</th><th scope="col">Gross profit</th><th scope="col">Margin</th></tr></thead>
+          <tbody id="categories"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <section class="case-section reading">
+    <h2>Definitions and source files</h2>
+    <p>Revenue is quantity × unit price. Gross profit deducts direct cost. Weighted margin divides total gross profit by total revenue for the selected orders.</p>
+    <p>Each order has one line. The fixtures exclude taxes, returns, shipping and discounts.</p>
+    <div class="actions">
+      <a class="button" href="powerbi/">Power BI project</a>
+      <a class="button secondary" href="../../../projects/analytics/analysis.sql">SQL queries</a>
+      <a class="button secondary" href="../../../data/processed/manifest.json">Run manifest</a>
+    </div>
+  </section>
 </main>
 <footer>
 <p>Reproducible case study · Synthetic data</p>
 <a href="../../">Back to portfolio</a>
 </footer>
 </div>
-<script src="../../../projects/analytics/dashboard.js" defer>
-</script>
+
+  <script type="module" src="../../../projects/analytics/dashboard.js?v=2"></script>
 </body>
 </html>

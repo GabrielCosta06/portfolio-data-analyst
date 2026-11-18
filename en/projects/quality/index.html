@@ -8,7 +8,8 @@
 <meta property="og:description" content="70 synthetic rows quarantined, six validation rules triggered and KPIs reconciled.">
 <meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/quality.png">
 <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
-<link rel="stylesheet" href="../../../assets/style.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/quality/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/quality/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/quality/">  <script src="../../../assets/language.js" defer>
+<link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/case-studies.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/quality/">  <link rel="alternate" hreflang="pt-BR" href="../../../projects/quality/">  <link rel="alternate" hreflang="en" href="./">  <link rel="alternate" hreflang="x-default" href="../../../projects/quality/">  <script src="../../../assets/language.js" defer>
 </script>
 </head>
 <body>
@@ -25,91 +26,69 @@
 </nav>
 </header>
 <main class="case" id="conteudo" tabindex="-1">
-<h1>Data quality</h1>
-<p class="lede">Every rejected row needs a traceable reason. This study demonstrates input validation and reconciliation before data reaches analytics.</p>
-<p class="notice">The synthetic data includes deliberately introduced errors. The counts come from the pipeline run manifest.</p>
-<div class="metrics">
-<div class="metric">
-<span>Rows evaluated</span>
-<strong>670</strong>
-</div>
-<div class="metric">
-<span>Rows accepted</span>
-<strong>600</strong>
-</div>
-<div class="metric">
-<span>Rows rejected</span>
-<strong>70</strong>
-</div>
-<div class="metric">
-<span>Acceptance rate</span>
-<strong>89.55%</strong>
-</div>
-</div>
-<section class="section">
-<h2>Rules triggered in this run</h2>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Rule</th>
-<th>Occurrences</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Duplicate order ID</td>
-<td>20</td>
-<td>Keep the first valid record and quarantine duplicates</td>
-</tr>
-<tr>
-<td>Non-positive quantity</td>
-<td>10</td>
-<td>Quarantine</td>
-</tr>
-<tr>
-<td>Invalid or non-finite price</td>
-<td>10</td>
-<td>Quarantine</td>
-</tr>
-<tr>
-<td>Category outside allowed values</td>
-<td>10</td>
-<td>Quarantine</td>
-</tr>
-<tr>
-<td>Invalid date</td>
-<td>10</td>
-<td>Quarantine</td>
-</tr>
-<tr>
-<td>Negative or invalid cost</td>
-<td>10</td>
-<td>Quarantine</td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section class="section reading">
-<h2>Independent checks</h2>
-<p>SQL queries check uniqueness, positive values and whether profit equals revenue minus cost. Tests cover idempotent reruns, preservation of prior results after a schema change, and handling of empty datasets.</p>
-<p>Count distinct rejected rows separately from rule violations, because a single row can violate several rules. Each rejected row in this fixture triggers one rule.</p>
-<h2>Checks beyond this study</h2>
-<p>A value that passes validation can still be incorrect. ERP reconciliation, extract completeness, source freshness and referential integrity with external master data require additional sources and criteria.</p>
-<div class="actions">
-<a class="button" href="../../../data/processed/quarantine.csv" download>Download quarantined rows</a>
-<a class="button secondary" href="../../../projects/quality/checks.sql">Validation queries</a>
-<a class="button secondary" href="../../../data/processed/manifest.json">View manifest</a>
-<a class="button secondary" href="../../../tests/test_pipeline.py">View tests</a>
-</div>
-</section>
+  <header class="case-intro">
+    <div>
+      <h1>Data quality</h1>
+      <p class="lede">Inspect the records quarantined before they reached the sales dashboard. Each rejection includes the original value, source line and validation rule.</p>
+    </div>
+    <p class="case-context"><strong>Synthetic validation fixture</strong>The source contains deliberate errors. A row can trigger more than one rule.</p>
+  </header>
+
+  <div class="metrics">
+    <div class="metric"><span>Rows evaluated</span><strong id="quality-input">670</strong></div>
+    <div class="metric"><span>Rows accepted</span><strong id="quality-accepted">600</strong></div>
+    <div class="metric"><span>Rows rejected</span><strong id="quality-rejected">70</strong></div>
+    <div class="metric"><span>Acceptance rate</span><strong id="quality-rate">89.55%</strong></div>
+  </div>
+
+  <div class="case-grid">
+    <section class="case-panel" aria-labelledby="explorer-title">
+      <h2 id="explorer-title">Quarantine explorer</h2>
+      <div class="explorer-controls">
+        <label>Validation rule
+          <select id="quality-rule" disabled><option value="">All rules</option></select>
+        </label>
+        <label>Order ID or CSV line
+          <input id="quality-search" type="search" placeholder="e.g. ORD-00001" disabled>
+        </label>
+        <label>Record to inspect
+          <select id="quality-record" disabled></select>
+        </label>
+      </div>
+      <p class="data-state" id="quality-status" role="status">Loading demonstration data…</p>
+      <div class="explorer-result" id="quality-details" hidden>
+        <h3 id="record-title"></h3>
+        <ul id="record-reasons"></ul>
+        <dl class="record-fields" id="record-fields"></dl>
+      </div>
+      <noscript><p><a href="../../../data/processed/quarantine.csv" download>Download the quarantine CSV to inspect the records.</a></p></noscript>
+    </section>
+
+    <section class="case-panel" aria-labelledby="rules-title">
+      <h2 id="rules-title">Rules triggered</h2>
+      <p class="case-note">Occurrences are counted per rule. The explorer shows individual records.</p>
+      <table class="case-table">
+        <thead><tr><th scope="col">Rule</th><th scope="col">Hits</th></tr></thead>
+        <tbody id="quality-rules"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <section class="case-section reading">
+    <h2>Independent checks</h2>
+    <p>The SQLite checks cover uniqueness, positive quantities, dates and gross profit reconciliation. Tests also cover schema drift and multiple rule failures on one record.</p>
+    <div class="actions">
+      <a class="button" href="../../../data/processed/quarantine.csv" download>Download quarantine CSV</a>
+      <a class="button secondary" href="../../../projects/quality/checks.sql">Validation SQL</a>
+      <a class="button secondary" href="../../../data/processed/manifest.json">Run manifest</a>
+    </div>
+  </section>
 </main>
 <footer>
 <p>Synthetic data · Inspectable rules and rejections</p>
 <a href="../../">Back to portfolio</a>
 </footer>
 </div>
+  <script type="module" src="../../../projects/quality/explorer.js"></script>
 </body>
 </html>

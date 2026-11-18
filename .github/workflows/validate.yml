@@ -13,6 +13,8 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: python src/pipeline.py --generate
       - run: git diff --exit-code -- data/
+      - run: pip install -r projects/bigquery/requirements.txt
+      - run: python projects/bigquery/verify_locally.py --check
   spark-delta:
     runs-on: ubuntu-latest
     timeout-minutes: 15

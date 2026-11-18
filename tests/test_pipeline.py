@@ -54,9 +54,14 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(result['accepted_rows'],0)
         self.assertEqual(result['quarantined_rows'],1)
         self.assertEqual(len(result['rule_failures']),3)
+        rejected = json.loads((self.output/'quarantine.json').read_text(encoding='utf-8'))
+        self.assertEqual(rejected[0]['source_line'], 2)
+        self.assertEqual(rejected[0]['unit_cost'], 'Infinity')
+        self.assertEqual(set(rejected[0]['reasons'].split(';')), set(result['rule_failures']))
         pipeline.write_csv(self.source,pipeline.FIELDS,[])
         result = pipeline.run(self.source,self.output)
         self.assertEqual(result['revenue_cents'],0)
+        self.assertEqual(json.loads((self.output/'quarantine.json').read_text(encoding='utf-8')), [])
 
 
 if __name__ == '__main__':

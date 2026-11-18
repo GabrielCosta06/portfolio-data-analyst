@@ -1,1 +1,33 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pacote Power BI | Gabriel Costa</title><link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg"><link rel="stylesheet" href="../../../assets/style.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/projects/analytics/powerbi/">  <link rel="alternate" hreflang="pt-BR" href="./">  <link rel="alternate" hreflang="en" href="../../../en/projects/analytics/powerbi/">  <link rel="alternate" hreflang="x-default" href="./">  <script src="../../../assets/language.js" defer></script></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><div class="wrap"><header class="site-header"><a class="brand" href="../../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a><div class="language-switch" role="group" aria-label="Idioma">  <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>  <a href="../../../en/projects/analytics/powerbi/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a></div><nav aria-label="Navegação do projeto"><a href="../">Voltar à análise</a></nav></header><main class="case reading" id="conteudo" tabindex="-1"><h1>Pacote para Power BI</h1><p class="notice">CSV, consultas Power Query M, medidas DAX e especificação de modelo. Não é um arquivo PBIX. A renderização no Power BI Desktop ainda não foi validada.</p><h2>Modelo e arquivos</h2><p>Relação de um para muitos: <strong>DimDate[Date] → FactSales[Date]</strong>, com direção única. Marque DimDate como tabela de datas. Importação com localidade en-US para interpretar os decimais com ponto.</p><ul><li><a href="../../../data/processed/fact_sales.csv" download>FactSales — 600 pedidos sintéticos</a></li><li><a href="../../../data/processed/dim_date.csv" download>DimDate — calendário contínuo</a></li><li><a href="queries.pq">Consultas Power Query M</a></li><li><a href="measures.dax">Medidas DAX</a></li><li><a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/analytics/powerbi">Instruções completas no GitHub</a></li></ul><h2>Conciliação esperada sem filtros</h2><p>Receita: R$ 728.800,00. Custo direto: R$ 420.300,00. Lucro bruto: R$ 308.500,00. Margem: 42,33%. Pedidos: 600.</p><p>Use os indicadores como totais de controle; confira o <a href="../../../data/processed/manifest.json">manifesto da execução</a>. Não calcule a margem somando percentuais por linha.</p></main></div></body></html>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pacote Power BI | Gabriel Costa</title><link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg"><link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/case-studies.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/projects/analytics/powerbi/">  <link rel="alternate" hreflang="pt-BR" href="./">  <link rel="alternate" hreflang="en" href="../../../en/projects/analytics/powerbi/">  <link rel="alternate" hreflang="x-default" href="./">  <script src="../../../assets/language.js" defer></script></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><div class="wrap"><header class="site-header"><a class="brand" href="../../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a><div class="language-switch" role="group" aria-label="Idioma">  <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>  <a href="../../../en/projects/analytics/powerbi/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a></div><nav aria-label="Navegação do projeto"><a href="../">Voltar à análise</a></nav></header><main class="case" id="conteudo" tabindex="-1">
+  <header class="case-intro">
+    <div>
+      <h1>Análise de vendas no Power BI</h1>
+      <p class="lede">Baixe um projeto PBIP editável com a base embutida, uma dimensão de datas e oito medidas DAX.</p>
+    </div>
+    <p class="case-context"><strong>Arquivos do projeto preparados</strong>O pacote e os dados foram conferidos localmente. A abertura e a renderização no Power BI Desktop seguem pendentes.</p>
+  </header>
+  <section class="case-panel" aria-labelledby="package-title">
+    <h2 id="package-title">Baixe e abra o projeto</h2>
+    <p>Extraia o ZIP e abra PowerBI/Vendas.pbip no Power BI Desktop. Atualize com todos os filtros limpos e compare com os totais abaixo. O projeto usa dados sintéticos embutidos.</p>
+    <div class="actions">
+      <a class="button" href="../../../start/PowerBI-pronto.zip" download>Baixar projeto PBIP em ZIP</a>
+      <a class="button secondary" href="../">Abrir o dashboard web</a>
+    </div>
+    <div class="metrics">
+      <div class="metric"><span>Pedidos</span><strong>600</strong></div>
+      <div class="metric"><span>Receita</span><strong>R$ 728.800</strong></div>
+      <div class="metric"><span>Lucro bruto</span><strong>R$ 308.500</strong></div>
+      <div class="metric"><span>Margem ponderada</span><strong>42,33%</strong></div>
+    </div>
+  </section>
+  <section class="case-section reading">
+    <h2>Modelo e arquivos de origem</h2>
+    <p>A DimDate filtra a FactSales por uma relação de um para muitos pela data. O pacote contém quatro cartões, quatro segmentadores, um gráfico de receita mensal e uma tabela de categorias.</p>
+    <div class="actions">
+      <a class="button secondary" href="../../../projects/analytics/powerbi/measures.dax">Medidas DAX</a>
+      <a class="button secondary" href="../../../projects/analytics/powerbi/queries.pq">Power Query M</a>
+      <a class="button secondary" href="../../../data/processed/manifest.json">Manifesto da execução</a>
+    </div>
+  </section>
+</main></div></body></html>
