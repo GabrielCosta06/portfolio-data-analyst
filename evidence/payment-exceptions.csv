@@ -1,0 +1,4 @@
+payout_id,status,due_on,expected_cents,bank_cents,difference_cents
+PAY-03,amount_mismatch,2026-01-09,39867,39042,-825
+PAY-04,missing_payout,2026-01-12,45008,0,-45008
+PAY-06,unmatched_bank,,0,1850,1850

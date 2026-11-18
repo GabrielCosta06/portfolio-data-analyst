@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CVM filing revision tracker | Gabriel Costa</title>
+  <meta name="description" content="Compare consolidated income statement disclosures from official CVM open data.">
+  <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/case-studies.css">
+  <link rel="stylesheet" href="../../../assets/finance-cases.css">
+  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/cvm-filings/">
+  <link rel="alternate" hreflang="pt-BR" href="../../../projects/cvm-filings/">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="alternate" hreflang="x-default" href="../../../projects/cvm-filings/">
+  <script src="../../../assets/language.js" defer></script>
+  <script type="module" src="../../../projects/cvm-filings/filings.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+      <div class="language-switch" role="group" aria-label="Language">
+        <a href="../../../projects/cvm-filings/?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>
+        <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
+      </div>
+      <nav aria-label="Project navigation">
+        <a href="../../#projetos">Projects</a>
+        <a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/cvm-filings">Project files</a>
+      </nav>
+    </header>
+    <main class="case" id="conteudo" tabindex="-1">
+      <header class="case-intro">
+        <div>
+          <h1>CVM filing revision tracker</h1>
+          <p class="lede">Compare two disclosures of the same fiscal year. Open a DRE line to verify its source document, account code, original amount and unit scale.</p>
+        </div>
+        <p class="case-context"><strong>Public CVM data</strong>Consolidated results for fiscal 2024. Includes original-period figures, later comparative figures and the official filing-version history.</p>
+      </header>
+
+      <section class="case-panel" aria-labelledby="filing-title">
+        <h2 id="filing-title">Compare disclosures</h2>
+        <div class="filing-controls">
+          <label>Company<select id="cvm-company" disabled></select></label>
+          <label id="pair-control" hidden>Disclosure pair<select id="cvm-pair" disabled></select></label>
+          <label>Line status
+            <select id="cvm-filter" disabled>
+              <option value="changed">Differences only</option>
+              <option value="amount">Amount changes</option>
+              <option value="structure">Added or removed</option>
+              <option value="all">All lines</option>
+            </select>
+          </label>
+          <label>Search account<input id="cvm-search" type="search" placeholder="e.g. 3.01" disabled></label>
+        </div>
+        <p id="comparison-type" class="case-note"></p>
+        <div id="filing-sources" class="filing-sources"></div>
+        <div class="metrics">
+          <div class="metric"><span>Amount changed</span><strong id="count-amount">–</strong></div>
+          <div class="metric"><span>Added or removed</span><strong id="count-structure">–</strong></div>
+          <div class="metric"><span>Label only</span><strong id="count-label">–</strong></div>
+          <div class="metric"><span>Unchanged</span><strong id="count-unchanged">–</strong></div>
+        </div>
+        <p id="filing-status" tabindex="-1" class="data-state" role="status">Loading archived filings…</p>
+        <section id="filing-account" class="explorer-result filing-account" aria-labelledby="account-detail-title" hidden>
+          <h3 id="account-detail-title" tabindex="-1" aria-live="polite"></h3>
+          <div id="account-detail-values" class="filing-sources"></div>
+          <p class="case-note" id="account-delta"></p>
+        </section>
+        <div class="table-wrap" role="region" aria-label="Income statement comparison" tabindex="0">
+          <table class="case-table filing-table">
+            <caption>Amounts in BRL. Account descriptions follow the original filing.</caption>
+            <thead><tr><th scope="col">Account</th><th scope="col" class="desktop-amount">Earlier</th><th scope="col" class="desktop-amount">Later</th><th scope="col">Change</th></tr></thead>
+            <tbody id="filing-lines"></tbody>
+          </table>
+        </div>
+        <button type="button" class="secondary" id="show-more-lines" hidden>Show more lines</button>
+        <details class="filing-history">
+          <summary>Official filing-version history</summary>
+          <p class="case-note">Submission dates and version IDs come from the CVM registry. The disclosures used for amount comparisons are labeled above.</p>
+          <ul id="filing-history"></ul>
+        </details>
+      </section>
+
+      <section class="case-section reading" aria-labelledby="method-title">
+        <h2 id="method-title">Data and comparison rules</h2>
+        <p>Match issuer, consolidated scope, reporting dates, currency and account code. Convert the published unit scale to BRL cents before comparing. The tracker distinguishes amounts, descriptions, new lines and removed lines. Earnings per share are outside the currency comparison.</p>
+        <p>Account deltas include detail and subtotal lines. Capture a new archive to preserve its selected records under the archive fingerprint and rebuild the comparisons.</p>
+        <pre><code>python src/cvm_tracker.py --check</code></pre>
+        <div class="actions">
+          <a class="button" href="https://dados.cvm.gov.br/dataset/cia_aberta-doc-dfp">CVM DFP open data</a>
+          <a class="button secondary" href="../../../evidence/cvm-filing-diffs.json">Comparison JSON</a>
+          <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/cvm-filings/data">Archived extracts</a>
+        </div>
+        <p class="case-note">Source data and derived extracts · <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL)</a></p>
+      </section>
+    </main>
+    <footer><p>Gabriel Costa</p><a href="../../#projetos">Back to projects</a></footer>
+  </div>
+</body>
+</html>

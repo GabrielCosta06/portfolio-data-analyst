@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Payments reconciliation | Gabriel Costa</title>
+  <meta name="description" content="Trace synthetic ERP sales from card settlement to the bank.">
+  <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/case-studies.css">
+  <link rel="stylesheet" href="../../../assets/finance-cases.css">
+  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/en/projects/reconciliation/">
+  <link rel="alternate" hreflang="pt-BR" href="../../../projects/reconciliation/">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="alternate" hreflang="x-default" href="../../../projects/reconciliation/">
+  <script src="../../../assets/language.js" defer></script>
+  <script type="module" src="../../../projects/reconciliation/reconciliation.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Skip to content</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+      <div class="language-switch" role="group" aria-label="Language">
+        <a href="../../../projects/reconciliation/?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>
+        <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
+      </div>
+      <nav aria-label="Project navigation">
+        <a href="../../#projetos">Projects</a>
+        <a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/reconciliation">Project files</a>
+      </nav>
+    </header>
+    <main class="case" id="conteudo" tabindex="-1">
+      <header class="case-intro">
+        <div>
+          <h1>Payments reconciliation</h1>
+          <p class="lede">Start at an unexplained bank credit or missing payout and trace it back through the card settlement to the ERP sale.</p>
+        </div>
+        <p class="case-context"><strong>Synthetic payments</strong>Sales from January 1 to 7, 2026. Bank postings through January 14.</p>
+      </header>
+      <section aria-labelledby="reconciliation-title">
+        <h2 id="reconciliation-title">Cash reconciliation</h2>
+        <div class="metrics">
+          <div class="metric"><span>Expected net payouts</span><strong id="recon-expected">–</strong></div>
+          <div class="metric"><span>Bank postings</span><strong id="recon-bank">–</strong></div>
+          <div class="metric"><span>Exceptions</span><strong id="recon-exceptions">–</strong></div>
+          <div class="metric"><span>Absolute differences</span><strong id="recon-exposure">–</strong></div>
+        </div>
+        <p class="case-note">Absolute differences add the size of each exception so a surplus cannot offset a shortfall.</p>
+      </section>
+
+      <div class="finance-workbench">
+        <section class="case-panel finance-queue" aria-labelledby="queue-title">
+          <h2 id="queue-title">Payout queue</h2>
+          <label>Payout status
+            <select id="payout-filter" disabled>
+              <option value="exceptions">Needs review</option>
+              <option value="all">All payouts</option>
+              <option value="matched">Matched</option>
+            </select>
+          </label>
+          <p id="recon-status" class="data-state" role="status">Loading payout evidence…</p>
+          <ul class="finance-items" id="payout-list" role="list"></ul>
+        </section>
+
+        <section class="case-panel finance-detail" id="payout-detail" aria-labelledby="payout-title" hidden>
+          <h2 id="payout-title" tabindex="-1" aria-live="polite"></h2>
+          <p id="payout-explanation"></p>
+          <dl class="finance-comparison">
+            <div><dt>Expected net</dt><dd id="payout-expected"></dd></div>
+            <div><dt>Bank total</dt><dd id="payout-bank"></dd></div>
+            <div><dt>Bank minus expected</dt><dd id="payout-difference"></dd></div>
+          </dl>
+          <h3>Settlement to ERP trace</h3>
+          <ol id="settlement-trace" class="finance-trace" role="list"></ol>
+          <p id="settlement-empty" class="case-note" hidden>No acquirer settlement carries this payout ID.</p>
+          <h3>Bank entries</h3>
+          <ul id="bank-trace" class="finance-bank"></ul>
+          <p id="bank-empty" class="case-note" hidden>There are no bank entries for this payout by the cutoff date.</p>
+        </section>
+      </div>
+
+      <section class="case-section reading" aria-labelledby="rules-title">
+        <h2 id="rules-title">Matching rules and source files</h2>
+        <p>Join settlement movements to ERP sales by sale ID and to bank entries by payout ID. Keep partial bank deposits on the same payout. Expected net is settled gross less fees, with chargebacks recorded as negative gross movements.</p>
+        <p>Validation checks the installment count, total captured, unique movement IDs and the settlement cutoff. The audit file stores each match and exception in exact BRL cents.</p>
+        <pre><code>python src/reconcile_payments.py --check</code></pre>
+        <div class="actions">
+          <a class="button" href="../../../evidence/payment-exceptions.csv" download>Download exceptions CSV</a>
+          <a class="button secondary" href="../../../evidence/payments.json">Audit JSON</a>
+          <a class="button secondary" href="../../../projects/reconciliation/data/sales.csv">ERP extract</a>
+          <a class="button secondary" href="../../../projects/reconciliation/data/settlements.csv">Settlement extract</a>
+          <a class="button secondary" href="../../../projects/reconciliation/data/bank.csv">Bank extract</a>
+        </div>
+      </section>
+    </main>
+    <footer><p>Gabriel Costa</p><a href="../../#projetos">Back to projects</a></footer>
+  </div>
+</body>
+</html>

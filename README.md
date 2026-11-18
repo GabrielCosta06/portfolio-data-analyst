@@ -2,7 +2,7 @@
 
 [Live portfolio](https://gabrielcosta06.github.io/portfolio-data-analyst/) · [LinkedIn](https://www.linkedin.com/in/josegabriel-costa/)
 
-Four interactive case studies use one synthetic sales fixture. Explore the verified Lakehouse run, inspect rejected rows, drill into sales and margin, and review locally executed results for the BigQuery query. Developed with AI assistance.
+Six interactive case studies explore synthetic sales and payments alongside public CVM filings. Explore the verified Lakehouse run, inspect rejected rows, drill into sales and margin, and review locally executed results for the BigQuery query. Developed with AI assistance.
 
 [Execution guide](start/) contains the next steps for running the notebook in Databricks and opening a prepared Power BI project, plus the official training links. The [portable Power BI ZIP](start/PowerBI-pronto.zip) contains an embedded synthetic fixture, two tables, one relationship, eight measures and ten PBIR visual definitions. Its 17 schema-bearing JSON documents passed the official Microsoft schemas; model bindings, fixture totals and chart bounds were checked.
 
@@ -39,6 +39,8 @@ Open http://localhost:8080. The CLI replaces only demonstration outputs in `data
 
 | Study | Implementation | Verified scope |
 |---|---|---|
+| [Payments reconciliation](projects/reconciliation/) | ERP, acquirer and bank reconciliation with row-level trace and an exception queue. | Three exceptions, full cash tie-out and integer-cent checks. |
+| [CVM filing revision tracker](projects/cvm-filings/) | Archived consolidated DRE extracts, submission timelines and account-level diffs. | Three issuers compared for fiscal 2024. Each amount links to its archive and source row. |
 | [Pipeline](projects/pipeline/) | Bronze to Gold lineage, plus a Delta Lake incremental load with a late order, a correction and an invalid record. | Local Python tests and Spark/Delta run in GitHub Actions. The page reconciles both sets of evidence. |
 | [Sales analysis](projects/analytics/) | Filterable category ranking, a margin-gap investigation, month drill-down, CSV export and an editable Power BI package. | Dashboard and SQL verified. |
 | [Data quality](projects/quality/) | Search and inspect the original values, source lines and rules for rejected records. | 670 evaluated, 600 accepted, 70 quarantined. |
@@ -87,4 +89,4 @@ Small full-refresh demonstration. CDC, incremental state, scheduling, cloud depl
 
 GitHub Pages serves the repository root. The workflow runs unit tests, regenerates pipeline data to detect drift, reconciles the translated GoogleSQL query in DuckDB, and executes every notebook code cell with Spark/Delta. The checked-in `evidence/` snapshot records run 42510152023; newer executions are downloadable as workflow artifacts. `.nojekyll` prevents Jekyll processing. No runtime secrets, account forms or analytics trackers.
 
-License: MIT for code and generated synthetic fixtures. Public professional summary reflects information supplied by Gabriel.
+License: MIT for code and generated synthetic fixtures. CVM extracts and derived comparisons use the [Open Database License 1.0](https://opendatacommons.org/licenses/odbl/1-0/). Public professional summary reflects information supplied by Gabriel.

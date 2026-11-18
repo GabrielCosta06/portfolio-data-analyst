@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Conciliação de pagamentos | Gabriel Costa</title>
+  <meta name="description" content="Rastreie vendas sintéticas do ERP até o repasse bancário.">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/case-studies.css">
+  <link rel="stylesheet" href="../../assets/finance-cases.css">
+  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/projects/reconciliation/">
+  <link rel="alternate" hreflang="pt-BR" href="./">
+  <link rel="alternate" hreflang="en" href="../../en/projects/reconciliation/">
+  <link rel="alternate" hreflang="x-default" href="./">
+  <script src="../../assets/language.js" defer></script>
+  <script type="module" src="../../projects/reconciliation/reconciliation.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+      <div class="language-switch" role="group" aria-label="Idioma">
+        <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>
+        <a href="../../en/projects/reconciliation/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a>
+      </div>
+      <nav aria-label="Navegação do projeto">
+        <a href="../../#projetos">Projetos</a>
+        <a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/reconciliation">Arquivos do projeto</a>
+      </nav>
+    </header>
+    <main class="case" id="conteudo" tabindex="-1">
+      <header class="case-intro">
+        <div>
+          <h1>Conciliação de pagamentos</h1>
+          <p class="lede">Parta de um crédito bancário sem referência ou de um repasse ausente e rastreie a liquidação do cartão até a venda no ERP.</p>
+        </div>
+        <p class="case-context"><strong>Pagamentos sintéticos</strong>Vendas de 1 a 7 de janeiro de 2026. Lançamentos bancários até 14 de janeiro.</p>
+      </header>
+      <section aria-labelledby="reconciliation-title">
+        <h2 id="reconciliation-title">Conciliação de caixa</h2>
+        <div class="metrics">
+          <div class="metric"><span>Repasse líquido previsto</span><strong id="recon-expected">–</strong></div>
+          <div class="metric"><span>Lançamentos bancários</span><strong id="recon-bank">–</strong></div>
+          <div class="metric"><span>Exceções</span><strong id="recon-exceptions">–</strong></div>
+          <div class="metric"><span>Diferenças em valor absoluto</span><strong id="recon-exposure">–</strong></div>
+        </div>
+        <p class="case-note">As diferenças em valor absoluto somam a magnitude de cada exceção para que uma sobra não compense uma falta.</p>
+      </section>
+
+      <div class="finance-workbench">
+        <section class="case-panel finance-queue" aria-labelledby="queue-title">
+          <h2 id="queue-title">Fila de repasses</h2>
+          <label>Situação do repasse
+            <select id="payout-filter" disabled>
+              <option value="exceptions">Em revisão</option>
+              <option value="all">Todos os repasses</option>
+              <option value="matched">Conciliados</option>
+            </select>
+          </label>
+          <p id="recon-status" class="data-state" role="status">Carregando evidências dos repasses…</p>
+          <ul class="finance-items" id="payout-list" role="list"></ul>
+        </section>
+
+        <section class="case-panel finance-detail" id="payout-detail" aria-labelledby="payout-title" hidden>
+          <h2 id="payout-title" tabindex="-1" aria-live="polite"></h2>
+          <p id="payout-explanation"></p>
+          <dl class="finance-comparison">
+            <div><dt>Líquido esperado</dt><dd id="payout-expected"></dd></div>
+            <div><dt>Total no banco</dt><dd id="payout-bank"></dd></div>
+            <div><dt>Banco menos esperado</dt><dd id="payout-difference"></dd></div>
+          </dl>
+          <h3>Rastreio da liquidação ao ERP</h3>
+          <ol id="settlement-trace" class="finance-trace" role="list"></ol>
+          <p id="settlement-empty" class="case-note" hidden>Nenhuma liquidação da adquirente contém este identificador de repasse.</p>
+          <h3>Lançamentos bancários</h3>
+          <ul id="bank-trace" class="finance-bank"></ul>
+          <p id="bank-empty" class="case-note" hidden>Não há lançamentos bancários para este repasse até a data de corte.</p>
+        </section>
+      </div>
+
+      <section class="case-section reading" aria-labelledby="rules-title">
+        <h2 id="rules-title">Regras de conciliação e arquivos de origem</h2>
+        <p>Associe os movimentos de liquidação às vendas do ERP pelo ID da venda e aos lançamentos bancários pelo ID do repasse. Depósitos parciais ficam no mesmo repasse. O líquido previsto é o bruto liquidado menos as taxas, com chargebacks registrados como movimentos brutos negativos.</p>
+        <p>A validação confere o número de parcelas, o total capturado, os identificadores de movimentos e a data de corte. A evidência registra conciliações e exceções em centavos inteiros.</p>
+        <pre><code>python src/reconcile_payments.py --check</code></pre>
+        <div class="actions">
+          <a class="button" href="../../evidence/payment-exceptions.csv" download>Baixar CSV de exceções</a>
+          <a class="button secondary" href="../../evidence/payments.json">Evidência JSON</a>
+          <a class="button secondary" href="../../projects/reconciliation/data/sales.csv">Extrato do ERP</a>
+          <a class="button secondary" href="../../projects/reconciliation/data/settlements.csv">Extrato de liquidação</a>
+          <a class="button secondary" href="../../projects/reconciliation/data/bank.csv">Extrato bancário</a>
+        </div>
+      </section>
+    </main>
+    <footer><p>Gabriel Costa</p><a href="../../#projetos">Voltar aos projetos</a></footer>
+  </div>
+</body>
+</html>
