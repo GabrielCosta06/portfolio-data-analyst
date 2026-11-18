@@ -32,7 +32,7 @@ O esquema segue a ordem das colunas do CSV. A carga substitui a tabela de demons
 
 A consulta retorna seis meses, com 100 pedidos em cada um. Os totais da base são 600 pedidos, R$ 728.800,00 de receita, R$ 420.300,00 de custo e R$ 308.500,00 de lucro bruto. A margem do período é 42,33%, calculada pela divisão dos totais de lucro e receita. O crescimento de janeiro fica nulo por falta de mês anterior no recorte.
 
-Confira as agregações no [manifesto do pipeline](../../data/processed/manifest.json). A execução em um projeto Google Cloud está pendente.
+Confira as agregações no [manifesto do pipeline](../../data/processed/manifest.json).
 
 ## Reproduza os resultados locais
 

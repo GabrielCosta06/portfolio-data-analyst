@@ -32,7 +32,7 @@ The schema follows the CSV column order. Each load replaces the demonstration ta
 
 The query returns six months with 100 orders per month. The dataset totals 600 orders, R$728,800.00 in revenue, R$420,300.00 in direct costs and R$308,500.00 in gross profit. Weighted margin is 42.33%. January's growth is null because there is no prior month in the selected period.
 
-Compare the monthly aggregates with the [pipeline manifest](../../data/processed/manifest.json). The Google Cloud run is pending.
+Compare the monthly aggregates with the [pipeline manifest](../../data/processed/manifest.json).
 
 ## Reproduce the local results
 

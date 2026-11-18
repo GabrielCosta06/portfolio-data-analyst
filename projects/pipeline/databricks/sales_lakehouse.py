@@ -8,7 +8,7 @@
 # MAGIC ## Objetivo
 # MAGIC Pipeline reproduzível com dados sintéticos, validação, quarentena e camadas Bronze/Silver/Gold. Nenhum dado de empregador.
 # MAGIC 
-# MAGIC **Estado:** execução no workspace Databricks pendente; o CI registra sua própria execução separadamente.
+# MAGIC **Evidência de execução:** PySpark e Delta Lake no GitHub Actions.
 # MAGIC 
 # MAGIC ## Setup
 # MAGIC No Databricks Free Edition, importe este arquivo e use Run all. A execução cria ou substitui somente quatro tabelas no schema `portfolio_gabriel_demo_20261108`, dentro do catálogo atual. Exige permissão para criar schema/tabelas. Sem conexão a AWS/Azure ou fontes externas.
