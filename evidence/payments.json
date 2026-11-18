@@ -1,0 +1,399 @@
+{
+  "currency": "BRL",
+  "synthetic": true,
+  "as_of": "2026-01-14",
+  "sales_period": [
+    "2026-01-01",
+    "2026-01-07"
+  ],
+  "summary": {
+    "sales": 14,
+    "payouts": 6,
+    "matched": 3,
+    "exceptions": 3,
+    "expected_cents": 156528,
+    "bank_cents": 112545,
+    "difference_cents": -43983,
+    "absolute_gap_cents": 47683
+  },
+  "payouts": [
+    {
+      "payout_id": "PAY-01",
+      "due_on": "2026-01-05",
+      "status": "matched",
+      "expected_cents": 21825,
+      "bank_cents": 21825,
+      "difference_cents": 0,
+      "settlements": [
+        {
+          "movement_id": "SET-001",
+          "payout_id": "PAY-01",
+          "sale_id": "SALE-001",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 10000,
+          "fee_cents": 300,
+          "due_on": "2026-01-05",
+          "sale": {
+            "sale_id": "SALE-001",
+            "sold_on": "2026-01-01",
+            "amount_cents": 10000,
+            "installments": 1
+          },
+          "net_cents": 9700
+        },
+        {
+          "movement_id": "SET-002",
+          "payout_id": "PAY-01",
+          "sale_id": "SALE-002",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 6500,
+          "fee_cents": 195,
+          "due_on": "2026-01-05",
+          "sale": {
+            "sale_id": "SALE-002",
+            "sold_on": "2026-01-01",
+            "amount_cents": 6500,
+            "installments": 1
+          },
+          "net_cents": 6305
+        },
+        {
+          "movement_id": "SET-003",
+          "payout_id": "PAY-01",
+          "sale_id": "SALE-003",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 6000,
+          "fee_cents": 180,
+          "due_on": "2026-01-05",
+          "sale": {
+            "sale_id": "SALE-003",
+            "sold_on": "2026-01-02",
+            "amount_cents": 12000,
+            "installments": 2
+          },
+          "net_cents": 5820
+        }
+      ],
+      "bank_entries": [
+        {
+          "bank_id": "BANK-001",
+          "payout_id": "PAY-01",
+          "posted_on": "2026-01-05",
+          "amount_cents": 15000
+        },
+        {
+          "bank_id": "BANK-002",
+          "payout_id": "PAY-01",
+          "posted_on": "2026-01-05",
+          "amount_cents": 6825
+        }
+      ]
+    },
+    {
+      "payout_id": "PAY-02",
+      "due_on": "2026-01-08",
+      "status": "matched",
+      "expected_cents": 26354,
+      "bank_cents": 26354,
+      "difference_cents": 0,
+      "settlements": [
+        {
+          "movement_id": "SET-004",
+          "payout_id": "PAY-02",
+          "sale_id": "SALE-003",
+          "kind": "sale",
+          "installment": 2,
+          "gross_cents": 6000,
+          "fee_cents": 180,
+          "due_on": "2026-01-08",
+          "sale": {
+            "sale_id": "SALE-003",
+            "sold_on": "2026-01-02",
+            "amount_cents": 12000,
+            "installments": 2
+          },
+          "net_cents": 5820
+        },
+        {
+          "movement_id": "SET-005",
+          "payout_id": "PAY-02",
+          "sale_id": "SALE-004",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 24000,
+          "fee_cents": 720,
+          "due_on": "2026-01-08",
+          "sale": {
+            "sale_id": "SALE-004",
+            "sold_on": "2026-01-02",
+            "amount_cents": 24000,
+            "installments": 1
+          },
+          "net_cents": 23280
+        },
+        {
+          "movement_id": "SET-006",
+          "payout_id": "PAY-02",
+          "sale_id": "SALE-005",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 3999,
+          "fee_cents": 120,
+          "due_on": "2026-01-08",
+          "sale": {
+            "sale_id": "SALE-005",
+            "sold_on": "2026-01-03",
+            "amount_cents": 3999,
+            "installments": 1
+          },
+          "net_cents": 3879
+        },
+        {
+          "movement_id": "SET-007",
+          "payout_id": "PAY-02",
+          "sale_id": "SALE-002",
+          "kind": "chargeback",
+          "installment": 0,
+          "gross_cents": -6500,
+          "fee_cents": 125,
+          "due_on": "2026-01-08",
+          "sale": {
+            "sale_id": "SALE-002",
+            "sold_on": "2026-01-01",
+            "amount_cents": 6500,
+            "installments": 1
+          },
+          "net_cents": -6625
+        }
+      ],
+      "bank_entries": [
+        {
+          "bank_id": "BANK-003",
+          "payout_id": "PAY-02",
+          "posted_on": "2026-01-08",
+          "amount_cents": 26354
+        }
+      ]
+    },
+    {
+      "payout_id": "PAY-03",
+      "due_on": "2026-01-09",
+      "status": "amount_mismatch",
+      "expected_cents": 39867,
+      "bank_cents": 39042,
+      "difference_cents": -825,
+      "settlements": [
+        {
+          "movement_id": "SET-008",
+          "payout_id": "PAY-03",
+          "sale_id": "SALE-006",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 8100,
+          "fee_cents": 243,
+          "due_on": "2026-01-09",
+          "sale": {
+            "sale_id": "SALE-006",
+            "sold_on": "2026-01-03",
+            "amount_cents": 8100,
+            "installments": 1
+          },
+          "net_cents": 7857
+        },
+        {
+          "movement_id": "SET-009",
+          "payout_id": "PAY-03",
+          "sale_id": "SALE-007",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 11000,
+          "fee_cents": 330,
+          "due_on": "2026-01-09",
+          "sale": {
+            "sale_id": "SALE-007",
+            "sold_on": "2026-01-04",
+            "amount_cents": 11000,
+            "installments": 1
+          },
+          "net_cents": 10670
+        },
+        {
+          "movement_id": "SET-010",
+          "payout_id": "PAY-03",
+          "sale_id": "SALE-008",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 22000,
+          "fee_cents": 660,
+          "due_on": "2026-01-09",
+          "sale": {
+            "sale_id": "SALE-008",
+            "sold_on": "2026-01-04",
+            "amount_cents": 22000,
+            "installments": 1
+          },
+          "net_cents": 21340
+        }
+      ],
+      "bank_entries": [
+        {
+          "bank_id": "BANK-004",
+          "payout_id": "PAY-03",
+          "posted_on": "2026-01-09",
+          "amount_cents": 39042
+        }
+      ]
+    },
+    {
+      "payout_id": "PAY-04",
+      "due_on": "2026-01-12",
+      "status": "missing_payout",
+      "expected_cents": 45008,
+      "bank_cents": 0,
+      "difference_cents": -45008,
+      "settlements": [
+        {
+          "movement_id": "SET-011",
+          "payout_id": "PAY-04",
+          "sale_id": "SALE-009",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 7000,
+          "fee_cents": 210,
+          "due_on": "2026-01-12",
+          "sale": {
+            "sale_id": "SALE-009",
+            "sold_on": "2026-01-05",
+            "amount_cents": 7000,
+            "installments": 1
+          },
+          "net_cents": 6790
+        },
+        {
+          "movement_id": "SET-012",
+          "payout_id": "PAY-04",
+          "sale_id": "SALE-010",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 8900,
+          "fee_cents": 267,
+          "due_on": "2026-01-12",
+          "sale": {
+            "sale_id": "SALE-010",
+            "sold_on": "2026-01-05",
+            "amount_cents": 8900,
+            "installments": 1
+          },
+          "net_cents": 8633
+        },
+        {
+          "movement_id": "SET-013",
+          "payout_id": "PAY-04",
+          "sale_id": "SALE-011",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 30500,
+          "fee_cents": 915,
+          "due_on": "2026-01-12",
+          "sale": {
+            "sale_id": "SALE-011",
+            "sold_on": "2026-01-06",
+            "amount_cents": 30500,
+            "installments": 1
+          },
+          "net_cents": 29585
+        }
+      ],
+      "bank_entries": []
+    },
+    {
+      "payout_id": "PAY-05",
+      "due_on": "2026-01-13",
+      "status": "matched",
+      "expected_cents": 23474,
+      "bank_cents": 23474,
+      "difference_cents": 0,
+      "settlements": [
+        {
+          "movement_id": "SET-014",
+          "payout_id": "PAY-05",
+          "sale_id": "SALE-012",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 9900,
+          "fee_cents": 297,
+          "due_on": "2026-01-13",
+          "sale": {
+            "sale_id": "SALE-012",
+            "sold_on": "2026-01-06",
+            "amount_cents": 9900,
+            "installments": 1
+          },
+          "net_cents": 9603
+        },
+        {
+          "movement_id": "SET-015",
+          "payout_id": "PAY-05",
+          "sale_id": "SALE-013",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 13300,
+          "fee_cents": 399,
+          "due_on": "2026-01-13",
+          "sale": {
+            "sale_id": "SALE-013",
+            "sold_on": "2026-01-07",
+            "amount_cents": 13300,
+            "installments": 1
+          },
+          "net_cents": 12901
+        },
+        {
+          "movement_id": "SET-016",
+          "payout_id": "PAY-05",
+          "sale_id": "SALE-014",
+          "kind": "sale",
+          "installment": 1,
+          "gross_cents": 1000,
+          "fee_cents": 30,
+          "due_on": "2026-01-13",
+          "sale": {
+            "sale_id": "SALE-014",
+            "sold_on": "2026-01-07",
+            "amount_cents": 1000,
+            "installments": 1
+          },
+          "net_cents": 970
+        }
+      ],
+      "bank_entries": [
+        {
+          "bank_id": "BANK-005",
+          "payout_id": "PAY-05",
+          "posted_on": "2026-01-13",
+          "amount_cents": 23474
+        }
+      ]
+    },
+    {
+      "payout_id": "PAY-06",
+      "due_on": null,
+      "status": "unmatched_bank",
+      "expected_cents": 0,
+      "bank_cents": 1850,
+      "difference_cents": 1850,
+      "settlements": [],
+      "bank_entries": [
+        {
+          "bank_id": "BANK-006",
+          "payout_id": "PAY-06",
+          "posted_on": "2026-01-14",
+          "amount_cents": 1850
+        }
+      ]
+    }
+  ]
+}

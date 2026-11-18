@@ -11,8 +11,10 @@ PORTFOLIO_PAGES = (
     Path("projects/analytics/index.html"),
     Path("projects/analytics/powerbi/index.html"),
     Path("projects/bigquery/index.html"),
+    Path("projects/cvm-filings/index.html"),
     Path("projects/pipeline/index.html"),
     Path("projects/quality/index.html"),
+    Path("projects/reconciliation/index.html"),
 )
 
 

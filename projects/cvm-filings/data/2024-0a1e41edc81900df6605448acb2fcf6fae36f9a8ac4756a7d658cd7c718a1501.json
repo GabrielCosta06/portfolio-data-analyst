@@ -1,0 +1,935 @@
+{
+  "source": {
+    "id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501",
+    "year": 2024,
+    "captured_on": "2026-11-18T15:30:06+00:00",
+    "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+    "statements_member": "dfp_cia_aberta_DRE_con_2024.csv",
+    "submissions_member": "dfp_cia_aberta_2024.csv"
+  },
+  "filings": [
+    {
+      "issuer": "002437",
+      "company": "AXIA ENERGIA S.A.",
+      "filing_date": "2024-12-31",
+      "version": 1,
+      "document_id": "145385",
+      "received_on": "2025-03-13",
+      "source_line": 6
+    },
+    {
+      "issuer": "002437",
+      "company": "AXIA ENERGIA S.A.",
+      "filing_date": "2024-12-31",
+      "version": 2,
+      "document_id": "145424",
+      "received_on": "2025-03-16",
+      "source_line": 7
+    },
+    {
+      "issuer": "005410",
+      "company": "WEG S.A.",
+      "filing_date": "2024-12-31",
+      "version": 1,
+      "document_id": "145023",
+      "received_on": "2025-02-26",
+      "source_line": 816
+    },
+    {
+      "issuer": "015539",
+      "company": "NEOENERGIA S.A.",
+      "filing_date": "2024-12-31",
+      "version": 1,
+      "document_id": "144837",
+      "received_on": "2025-02-17",
+      "source_line": 32
+    },
+    {
+      "issuer": "015539",
+      "company": "NEOENERGIA S.A.",
+      "filing_date": "2024-12-31",
+      "version": 2,
+      "document_id": "144935",
+      "received_on": "2025-02-21",
+      "source_line": 33
+    }
+  ],
+  "statements": [
+    {
+      "document_id": "145424",
+      "lines": [
+        {
+          "account": "3.01",
+          "label": "Receita de Venda de Bens e/ou Serviços",
+          "source_amount": "40181552.0000000000",
+          "source_scale": "MIL",
+          "source_line": 129
+        },
+        {
+          "account": "3.02",
+          "label": "Custo dos Bens e/ou Serviços Vendidos",
+          "source_amount": "-22143030.0000000000",
+          "source_scale": "MIL",
+          "source_line": 131
+        },
+        {
+          "account": "3.02.01",
+          "label": "Energia comprada para revenda",
+          "source_amount": "-5068123.0000000000",
+          "source_scale": "MIL",
+          "source_line": 133
+        },
+        {
+          "account": "3.02.02",
+          "label": "Encargos sobre uso da rede elétrica",
+          "source_amount": "-3954730.0000000000",
+          "source_scale": "MIL",
+          "source_line": 135
+        },
+        {
+          "account": "3.02.03",
+          "label": "Combustível para produção de energia elétrica",
+          "source_amount": "-1991855.0000000000",
+          "source_scale": "MIL",
+          "source_line": 137
+        },
+        {
+          "account": "3.02.04",
+          "label": "Construção",
+          "source_amount": "-4286914.0000000000",
+          "source_scale": "MIL",
+          "source_line": 139
+        },
+        {
+          "account": "3.02.05",
+          "label": "Pessoal, Material e Serviço",
+          "source_amount": "-2879221.0000000000",
+          "source_scale": "MIL",
+          "source_line": 141
+        },
+        {
+          "account": "3.02.06",
+          "label": "Depreciação",
+          "source_amount": "-1770624.0000000000",
+          "source_scale": "MIL",
+          "source_line": 143
+        },
+        {
+          "account": "3.02.07",
+          "label": "Amortização",
+          "source_amount": "-1946844.0000000000",
+          "source_scale": "MIL",
+          "source_line": 145
+        },
+        {
+          "account": "3.02.08",
+          "label": "Outros",
+          "source_amount": "-244719.0000000000",
+          "source_scale": "MIL",
+          "source_line": 147
+        },
+        {
+          "account": "3.03",
+          "label": "Resultado Bruto",
+          "source_amount": "18038522.0000000000",
+          "source_scale": "MIL",
+          "source_line": 149
+        },
+        {
+          "account": "3.04",
+          "label": "Despesas/Receitas Operacionais",
+          "source_amount": "4210382.0000000000",
+          "source_scale": "MIL",
+          "source_line": 151
+        },
+        {
+          "account": "3.04.01",
+          "label": "Despesas com Vendas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 153
+        },
+        {
+          "account": "3.04.02",
+          "label": "Despesas Gerais e Administrativas",
+          "source_amount": "-4559134.0000000000",
+          "source_scale": "MIL",
+          "source_line": 155
+        },
+        {
+          "account": "3.04.02.01",
+          "label": "Pessoal, Material, Serviço",
+          "source_amount": "-3332558.0000000000",
+          "source_scale": "MIL",
+          "source_line": 157
+        },
+        {
+          "account": "3.04.02.02",
+          "label": "Depreciação",
+          "source_amount": "-189801.0000000000",
+          "source_scale": "MIL",
+          "source_line": 159
+        },
+        {
+          "account": "3.04.02.03",
+          "label": "Amortização",
+          "source_amount": "-80506.0000000000",
+          "source_scale": "MIL",
+          "source_line": 161
+        },
+        {
+          "account": "3.04.02.04",
+          "label": "Provisões operacionais",
+          "source_amount": "180019.0000000000",
+          "source_scale": "MIL",
+          "source_line": 163
+        },
+        {
+          "account": "3.04.02.05",
+          "label": "Doações e contribuições",
+          "source_amount": "-145085.0000000000",
+          "source_scale": "MIL",
+          "source_line": 165
+        },
+        {
+          "account": "3.04.02.06",
+          "label": "Plano de demissão voluntária",
+          "source_amount": "-226815.0000000000",
+          "source_scale": "MIL",
+          "source_line": 167
+        },
+        {
+          "account": "3.04.02.07",
+          "label": "Outras",
+          "source_amount": "-764388.0000000000",
+          "source_scale": "MIL",
+          "source_line": 169
+        },
+        {
+          "account": "3.04.03",
+          "label": "Perdas pela Não Recuperabilidade de Ativos",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 171
+        },
+        {
+          "account": "3.04.04",
+          "label": "Outras Receitas Operacionais",
+          "source_amount": "6266311.0000000000",
+          "source_scale": "MIL",
+          "source_line": 173
+        },
+        {
+          "account": "3.04.04.01",
+          "label": "Outras Receitas Operacionais",
+          "source_amount": "136540.0000000000",
+          "source_scale": "MIL",
+          "source_line": 175
+        },
+        {
+          "account": "3.04.04.02",
+          "label": "Remensurações regulatórias - Contratos de Transmissão",
+          "source_amount": "6129771.0000000000",
+          "source_scale": "MIL",
+          "source_line": 177
+        },
+        {
+          "account": "3.04.05",
+          "label": "Outras Despesas Operacionais",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 179
+        },
+        {
+          "account": "3.04.06",
+          "label": "Resultado de Equivalência Patrimonial",
+          "source_amount": "2503205.0000000000",
+          "source_scale": "MIL",
+          "source_line": 181
+        },
+        {
+          "account": "3.05",
+          "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+          "source_amount": "22248904.0000000000",
+          "source_scale": "MIL",
+          "source_line": 183
+        },
+        {
+          "account": "3.06",
+          "label": "Resultado Financeiro",
+          "source_amount": "-11628121.0000000000",
+          "source_scale": "MIL",
+          "source_line": 185
+        },
+        {
+          "account": "3.06.01",
+          "label": "Receitas Financeiras",
+          "source_amount": "3987049.0000000000",
+          "source_scale": "MIL",
+          "source_line": 187
+        },
+        {
+          "account": "3.06.01.01",
+          "label": "Receitas de juros, comissões e taxas",
+          "source_amount": "138666.0000000000",
+          "source_scale": "MIL",
+          "source_line": 189
+        },
+        {
+          "account": "3.06.01.02",
+          "label": "Receitas de aplicações financeiras",
+          "source_amount": "2937517.0000000000",
+          "source_scale": "MIL",
+          "source_line": 191
+        },
+        {
+          "account": "3.06.01.03",
+          "label": "Acréscimo moratório sobre energia elétrica",
+          "source_amount": "119500.0000000000",
+          "source_scale": "MIL",
+          "source_line": 193
+        },
+        {
+          "account": "3.06.01.04",
+          "label": "Atualizações monetárias ativas",
+          "source_amount": "678396.0000000000",
+          "source_scale": "MIL",
+          "source_line": 195
+        },
+        {
+          "account": "3.06.01.05",
+          "label": "Variações cambiais ativas",
+          "source_amount": "156854.0000000000",
+          "source_scale": "MIL",
+          "source_line": 197
+        },
+        {
+          "account": "3.06.01.06",
+          "label": "Outras receitas financeiras",
+          "source_amount": "223898.0000000000",
+          "source_scale": "MIL",
+          "source_line": 199
+        },
+        {
+          "account": "3.06.01.07",
+          "label": "(-) Tributos sobre receitas financeiras",
+          "source_amount": "-267782.0000000000",
+          "source_scale": "MIL",
+          "source_line": 201
+        },
+        {
+          "account": "3.06.02",
+          "label": "Despesas Financeiras",
+          "source_amount": "-15615170.0000000000",
+          "source_scale": "MIL",
+          "source_line": 203
+        },
+        {
+          "account": "3.06.02.01",
+          "label": "Encargos de dívidas",
+          "source_amount": "-6117463.0000000000",
+          "source_scale": "MIL",
+          "source_line": 205
+        },
+        {
+          "account": "3.06.02.02",
+          "label": "Encargos - Obrigações com CDE",
+          "source_amount": "-2484198.0000000000",
+          "source_scale": "MIL",
+          "source_line": 207
+        },
+        {
+          "account": "3.06.02.03",
+          "label": "Encargos - Revitalização de bacias hidrográficas",
+          "source_amount": "-339854.0000000000",
+          "source_scale": "MIL",
+          "source_line": 209
+        },
+        {
+          "account": "3.06.02.04",
+          "label": "Atualizações monetárias passivas",
+          "source_amount": "-1456553.0000000000",
+          "source_scale": "MIL",
+          "source_line": 211
+        },
+        {
+          "account": "3.06.02.05",
+          "label": "Atualização monetária - Obrigações com CDE",
+          "source_amount": "-1604680.0000000000",
+          "source_scale": "MIL",
+          "source_line": 213
+        },
+        {
+          "account": "3.06.02.06",
+          "label": "Atualização monetária - Revitalização de bacias hidrográficas",
+          "source_amount": "-288081.0000000000",
+          "source_scale": "MIL",
+          "source_line": 215
+        },
+        {
+          "account": "3.06.02.07",
+          "label": "Variações cambiais passivas",
+          "source_amount": "-185675.0000000000",
+          "source_scale": "MIL",
+          "source_line": 217
+        },
+        {
+          "account": "3.06.02.08",
+          "label": "Variação do valor justo de dívida protegida (hedge) líquida do derivativo",
+          "source_amount": "-1566482.0000000000",
+          "source_scale": "MIL",
+          "source_line": 219
+        },
+        {
+          "account": "3.06.02.09",
+          "label": "Variação de instrumento financeiro derivativo não ligado a proteção de dívida",
+          "source_amount": "-373605.0000000000",
+          "source_scale": "MIL",
+          "source_line": 221
+        },
+        {
+          "account": "3.06.02.10",
+          "label": "Outras despesas financeiras",
+          "source_amount": "-1198579.0000000000",
+          "source_scale": "MIL",
+          "source_line": 223
+        },
+        {
+          "account": "3.07",
+          "label": "Resultado Antes dos Tributos sobre o Lucro",
+          "source_amount": "10620783.0000000000",
+          "source_scale": "MIL",
+          "source_line": 225
+        },
+        {
+          "account": "3.08",
+          "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+          "source_amount": "-240030.0000000000",
+          "source_scale": "MIL",
+          "source_line": 227
+        },
+        {
+          "account": "3.08.01",
+          "label": "Corrente",
+          "source_amount": "-717909.0000000000",
+          "source_scale": "MIL",
+          "source_line": 229
+        },
+        {
+          "account": "3.08.02",
+          "label": "Diferido",
+          "source_amount": "477879.0000000000",
+          "source_scale": "MIL",
+          "source_line": 231
+        },
+        {
+          "account": "3.09",
+          "label": "Resultado Líquido das Operações Continuadas",
+          "source_amount": "10380753.0000000000",
+          "source_scale": "MIL",
+          "source_line": 233
+        },
+        {
+          "account": "3.10",
+          "label": "Resultado Líquido de Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 235
+        },
+        {
+          "account": "3.10.01",
+          "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 237
+        },
+        {
+          "account": "3.10.02",
+          "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 239
+        },
+        {
+          "account": "3.11",
+          "label": "Lucro/Prejuízo Consolidado do Período",
+          "source_amount": "10380753.0000000000",
+          "source_scale": "MIL",
+          "source_line": 241
+        },
+        {
+          "account": "3.11.01",
+          "label": "Atribuído a Sócios da Empresa Controladora",
+          "source_amount": "10378122.0000000000",
+          "source_scale": "MIL",
+          "source_line": 243
+        },
+        {
+          "account": "3.11.02",
+          "label": "Atribuído a Sócios Não Controladores",
+          "source_amount": "2632.0000000000",
+          "source_scale": "MIL",
+          "source_line": 245
+        }
+      ]
+    },
+    {
+      "document_id": "145023",
+      "lines": [
+        {
+          "account": "3.01",
+          "label": "Receita de Venda de Bens e/ou Serviços",
+          "source_amount": "37986941.0000000000",
+          "source_scale": "MIL",
+          "source_line": 29995
+        },
+        {
+          "account": "3.02",
+          "label": "Custo dos Bens e/ou Serviços Vendidos",
+          "source_amount": "-25173096.0000000000",
+          "source_scale": "MIL",
+          "source_line": 29997
+        },
+        {
+          "account": "3.03",
+          "label": "Resultado Bruto",
+          "source_amount": "12813845.0000000000",
+          "source_scale": "MIL",
+          "source_line": 29999
+        },
+        {
+          "account": "3.04",
+          "label": "Despesas/Receitas Operacionais",
+          "source_amount": "-5123317.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30001
+        },
+        {
+          "account": "3.04.01",
+          "label": "Despesas com Vendas",
+          "source_amount": "-2987307.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30003
+        },
+        {
+          "account": "3.04.01.01",
+          "label": "(Provisão) reversão ao valor recuperável de clientes",
+          "source_amount": "-22896.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30005
+        },
+        {
+          "account": "3.04.01.02",
+          "label": "Outras Despesas de Vendas",
+          "source_amount": "-2964411.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30007
+        },
+        {
+          "account": "3.04.02",
+          "label": "Despesas Gerais e Administrativas",
+          "source_amount": "-1299421.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30009
+        },
+        {
+          "account": "3.04.02.01",
+          "label": "Honorários dos Administradores",
+          "source_amount": "-21646.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30011
+        },
+        {
+          "account": "3.04.02.02",
+          "label": "Outras",
+          "source_amount": "-1277775.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30013
+        },
+        {
+          "account": "3.04.03",
+          "label": "Perdas pela Não Recuperabilidade de Ativos",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30015
+        },
+        {
+          "account": "3.04.04",
+          "label": "Outras Receitas Operacionais",
+          "source_amount": "163792.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30017
+        },
+        {
+          "account": "3.04.05",
+          "label": "Outras Despesas Operacionais",
+          "source_amount": "-995183.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30019
+        },
+        {
+          "account": "3.04.06",
+          "label": "Resultado de Equivalência Patrimonial",
+          "source_amount": "-5198.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30021
+        },
+        {
+          "account": "3.05",
+          "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+          "source_amount": "7690528.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30023
+        },
+        {
+          "account": "3.06",
+          "label": "Resultado Financeiro",
+          "source_amount": "217980.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30025
+        },
+        {
+          "account": "3.06.01",
+          "label": "Receitas Financeiras",
+          "source_amount": "1942118.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30027
+        },
+        {
+          "account": "3.06.02",
+          "label": "Despesas Financeiras",
+          "source_amount": "-1724138.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30029
+        },
+        {
+          "account": "3.07",
+          "label": "Resultado Antes dos Tributos sobre o Lucro",
+          "source_amount": "7908508.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30031
+        },
+        {
+          "account": "3.08",
+          "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+          "source_amount": "-1589745.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30033
+        },
+        {
+          "account": "3.08.01",
+          "label": "Corrente",
+          "source_amount": "-1611654.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30035
+        },
+        {
+          "account": "3.08.02",
+          "label": "Diferido",
+          "source_amount": "21909.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30037
+        },
+        {
+          "account": "3.09",
+          "label": "Resultado Líquido das Operações Continuadas",
+          "source_amount": "6318763.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30039
+        },
+        {
+          "account": "3.10",
+          "label": "Resultado Líquido de Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30041
+        },
+        {
+          "account": "3.10.01",
+          "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30043
+        },
+        {
+          "account": "3.10.02",
+          "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30045
+        },
+        {
+          "account": "3.11",
+          "label": "Lucro/Prejuízo Consolidado do Período",
+          "source_amount": "6318763.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30047
+        },
+        {
+          "account": "3.11.01",
+          "label": "Atribuído a Sócios da Empresa Controladora",
+          "source_amount": "6042593.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30049
+        },
+        {
+          "account": "3.11.02",
+          "label": "Atribuído a Sócios Não Controladores",
+          "source_amount": "276170.0000000000",
+          "source_scale": "MIL",
+          "source_line": 30051
+        }
+      ]
+    },
+    {
+      "document_id": "144935",
+      "lines": [
+        {
+          "account": "3.01",
+          "label": "Receita de Venda de Bens e/ou Serviços",
+          "source_amount": "48993000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 991
+        },
+        {
+          "account": "3.01.01",
+          "label": "Receita bruta",
+          "source_amount": "67371000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 993
+        },
+        {
+          "account": "3.01.02",
+          "label": "(-) Deduções da receita bruta",
+          "source_amount": "-18378000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 995
+        },
+        {
+          "account": "3.02",
+          "label": "Custo dos Bens e/ou Serviços Vendidos",
+          "source_amount": "-35896000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 997
+        },
+        {
+          "account": "3.03",
+          "label": "Resultado Bruto",
+          "source_amount": "13097000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 999
+        },
+        {
+          "account": "3.04",
+          "label": "Despesas/Receitas Operacionais",
+          "source_amount": "-3396000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1001
+        },
+        {
+          "account": "3.04.01",
+          "label": "Despesas com Vendas",
+          "source_amount": "-286000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1003
+        },
+        {
+          "account": "3.04.02",
+          "label": "Despesas Gerais e Administrativas",
+          "source_amount": "-2249000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1005
+        },
+        {
+          "account": "3.04.03",
+          "label": "Perdas pela Não Recuperabilidade de Ativos",
+          "source_amount": "-552000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1007
+        },
+        {
+          "account": "3.04.04",
+          "label": "Outras Receitas Operacionais",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1009
+        },
+        {
+          "account": "3.04.05",
+          "label": "Outras Despesas Operacionais",
+          "source_amount": "-277000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1011
+        },
+        {
+          "account": "3.04.05.01",
+          "label": "Provisão para desvalorização de investimento",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1013
+        },
+        {
+          "account": "3.04.05.02",
+          "label": "Amortização de mais-valia",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1015
+        },
+        {
+          "account": "3.04.05.03",
+          "label": "Resultado de Equivalência Patrimonial",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1017
+        },
+        {
+          "account": "3.04.05.04",
+          "label": "Ajuste a valor justo/valor recuperável - Impairment",
+          "source_amount": "-277000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1019
+        },
+        {
+          "account": "3.04.06",
+          "label": "Resultado de Equivalência Patrimonial",
+          "source_amount": "-32000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1021
+        },
+        {
+          "account": "3.05",
+          "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+          "source_amount": "9701000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1023
+        },
+        {
+          "account": "3.06",
+          "label": "Resultado Financeiro",
+          "source_amount": "-4992000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1025
+        },
+        {
+          "account": "3.06.01",
+          "label": "Receitas Financeiras",
+          "source_amount": "258000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1027
+        },
+        {
+          "account": "3.06.01.01",
+          "label": "Receitas Financeiras",
+          "source_amount": "1214000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1029
+        },
+        {
+          "account": "3.06.01.02",
+          "label": "Outros resultados financeiros, líquidos",
+          "source_amount": "-956000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1031
+        },
+        {
+          "account": "3.06.02",
+          "label": "Despesas Financeiras",
+          "source_amount": "-5250000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1033
+        },
+        {
+          "account": "3.06.02.01",
+          "label": "Despesas Financeiras",
+          "source_amount": "-5250000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1035
+        },
+        {
+          "account": "3.06.02.02",
+          "label": "Outros resultados financeiros, líquidos",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1037
+        },
+        {
+          "account": "3.07",
+          "label": "Resultado Antes dos Tributos sobre o Lucro",
+          "source_amount": "4709000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1039
+        },
+        {
+          "account": "3.08",
+          "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+          "source_amount": "-1027000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1041
+        },
+        {
+          "account": "3.08.01",
+          "label": "Corrente",
+          "source_amount": "-671000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1043
+        },
+        {
+          "account": "3.08.02",
+          "label": "Diferido",
+          "source_amount": "-356000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1045
+        },
+        {
+          "account": "3.09",
+          "label": "Resultado Líquido das Operações Continuadas",
+          "source_amount": "3682000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1047
+        },
+        {
+          "account": "3.10",
+          "label": "Resultado Líquido de Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1049
+        },
+        {
+          "account": "3.10.01",
+          "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1051
+        },
+        {
+          "account": "3.10.02",
+          "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+          "source_amount": "0.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1053
+        },
+        {
+          "account": "3.11",
+          "label": "Lucro/Prejuízo Consolidado do Período",
+          "source_amount": "3682000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1055
+        },
+        {
+          "account": "3.11.01",
+          "label": "Atribuído a Sócios da Empresa Controladora",
+          "source_amount": "3635000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1057
+        },
+        {
+          "account": "3.11.02",
+          "label": "Atribuído a Sócios Não Controladores",
+          "source_amount": "47000.0000000000",
+          "source_scale": "MIL",
+          "source_line": 1059
+        }
+      ]
+    }
+  ]
+}

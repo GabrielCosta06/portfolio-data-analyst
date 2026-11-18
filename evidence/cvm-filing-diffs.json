@@ -1,0 +1,2619 @@
+{
+  "period": [
+    "2024-01-01",
+    "2024-12-31"
+  ],
+  "currency": "BRL",
+  "sources": {
+    "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501": {
+      "id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501",
+      "year": 2024,
+      "captured_on": "2026-11-18T15:30:06+00:00",
+      "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2024.zip",
+      "statements_member": "dfp_cia_aberta_DRE_con_2024.csv",
+      "submissions_member": "dfp_cia_aberta_2024.csv"
+    },
+    "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040": {
+      "id": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040",
+      "year": 2025,
+      "captured_on": "2026-11-18T15:30:06+00:00",
+      "url": "https://dados.cvm.gov.br/dados/CIA_ABERTA/DOC/DFP/DADOS/dfp_cia_aberta_2025.zip",
+      "statements_member": "dfp_cia_aberta_DRE_con_2025.csv",
+      "submissions_member": "dfp_cia_aberta_2025.csv"
+    }
+  },
+  "cases": [
+    {
+      "issuer": "002437",
+      "company": "AXIA ENERGIA S.A.",
+      "timeline": [
+        {
+          "issuer": "002437",
+          "company": "AXIA ENERGIA S.A.",
+          "filing_date": "2024-12-31",
+          "version": 1,
+          "document_id": "145385",
+          "received_on": "2025-03-13",
+          "source_line": 6,
+          "source_id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+        },
+        {
+          "issuer": "002437",
+          "company": "AXIA ENERGIA S.A.",
+          "filing_date": "2024-12-31",
+          "version": 2,
+          "document_id": "145424",
+          "received_on": "2025-03-16",
+          "source_line": 7,
+          "source_id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+        },
+        {
+          "issuer": "002437",
+          "company": "AXIA ENERGIA S.A.",
+          "filing_date": "2025-12-31",
+          "version": 1,
+          "document_id": "154939",
+          "received_on": "2026-02-26",
+          "source_line": 3,
+          "source_id": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+        }
+      ],
+      "comparisons": [
+        {
+          "before": {
+            "issuer": "002437",
+            "company": "AXIA ENERGIA S.A.",
+            "filing_date": "2024-12-31",
+            "version": 2,
+            "document_id": "145424",
+            "received_on": "2025-03-16",
+            "source_line": 7,
+            "source_id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+          },
+          "after": {
+            "issuer": "002437",
+            "company": "AXIA ENERGIA S.A.",
+            "filing_date": "2025-12-31",
+            "version": 1,
+            "document_id": "154939",
+            "received_on": "2026-02-26",
+            "source_line": 3,
+            "source_id": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+          },
+          "counts": {
+            "unchanged": 17,
+            "amount": 10,
+            "removed": 32
+          },
+          "changes": [
+            {
+              "account": "3.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.01",
+                "label": "Receita de Venda de Bens e/ou Serviços",
+                "source_amount": "40181552.0000000000",
+                "source_scale": "MIL",
+                "source_line": 129,
+                "cents": 4018155200000
+              },
+              "after": {
+                "account": "3.01",
+                "label": "Receita de Venda de Bens e/ou Serviços",
+                "source_amount": "40181552.0000000000",
+                "source_scale": "MIL",
+                "source_line": 72,
+                "cents": 4018155200000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.02",
+              "status": "amount",
+              "before": {
+                "account": "3.02",
+                "label": "Custo dos Bens e/ou Serviços Vendidos",
+                "source_amount": "-22143030.0000000000",
+                "source_scale": "MIL",
+                "source_line": 131,
+                "cents": -2214303000000
+              },
+              "after": {
+                "account": "3.02",
+                "label": "Custo dos Bens e/ou Serviços Vendidos",
+                "source_amount": "-22100083.0000000000",
+                "source_scale": "MIL",
+                "source_line": 74,
+                "cents": -2210008300000
+              },
+              "delta_cents": 4294700000
+            },
+            {
+              "account": "3.02.01",
+              "status": "removed",
+              "before": {
+                "account": "3.02.01",
+                "label": "Energia comprada para revenda",
+                "source_amount": "-5068123.0000000000",
+                "source_scale": "MIL",
+                "source_line": 133,
+                "cents": -506812300000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.02",
+              "status": "removed",
+              "before": {
+                "account": "3.02.02",
+                "label": "Encargos sobre uso da rede elétrica",
+                "source_amount": "-3954730.0000000000",
+                "source_scale": "MIL",
+                "source_line": 135,
+                "cents": -395473000000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.03",
+              "status": "removed",
+              "before": {
+                "account": "3.02.03",
+                "label": "Combustível para produção de energia elétrica",
+                "source_amount": "-1991855.0000000000",
+                "source_scale": "MIL",
+                "source_line": 137,
+                "cents": -199185500000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.04",
+              "status": "removed",
+              "before": {
+                "account": "3.02.04",
+                "label": "Construção",
+                "source_amount": "-4286914.0000000000",
+                "source_scale": "MIL",
+                "source_line": 139,
+                "cents": -428691400000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.05",
+              "status": "removed",
+              "before": {
+                "account": "3.02.05",
+                "label": "Pessoal, Material e Serviço",
+                "source_amount": "-2879221.0000000000",
+                "source_scale": "MIL",
+                "source_line": 141,
+                "cents": -287922100000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.06",
+              "status": "removed",
+              "before": {
+                "account": "3.02.06",
+                "label": "Depreciação",
+                "source_amount": "-1770624.0000000000",
+                "source_scale": "MIL",
+                "source_line": 143,
+                "cents": -177062400000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.07",
+              "status": "removed",
+              "before": {
+                "account": "3.02.07",
+                "label": "Amortização",
+                "source_amount": "-1946844.0000000000",
+                "source_scale": "MIL",
+                "source_line": 145,
+                "cents": -194684400000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.08",
+              "status": "removed",
+              "before": {
+                "account": "3.02.08",
+                "label": "Outros",
+                "source_amount": "-244719.0000000000",
+                "source_scale": "MIL",
+                "source_line": 147,
+                "cents": -24471900000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.03",
+              "status": "amount",
+              "before": {
+                "account": "3.03",
+                "label": "Resultado Bruto",
+                "source_amount": "18038522.0000000000",
+                "source_scale": "MIL",
+                "source_line": 149,
+                "cents": 1803852200000
+              },
+              "after": {
+                "account": "3.03",
+                "label": "Resultado Bruto",
+                "source_amount": "18081469.0000000000",
+                "source_scale": "MIL",
+                "source_line": 76,
+                "cents": 1808146900000
+              },
+              "delta_cents": 4294700000
+            },
+            {
+              "account": "3.04",
+              "status": "amount",
+              "before": {
+                "account": "3.04",
+                "label": "Despesas/Receitas Operacionais",
+                "source_amount": "4210382.0000000000",
+                "source_scale": "MIL",
+                "source_line": 151,
+                "cents": 421038200000
+              },
+              "after": {
+                "account": "3.04",
+                "label": "Despesas/Receitas Operacionais",
+                "source_amount": "4167434.0000000000",
+                "source_scale": "MIL",
+                "source_line": 78,
+                "cents": 416743400000
+              },
+              "delta_cents": -4294800000
+            },
+            {
+              "account": "3.04.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.01",
+                "label": "Despesas com Vendas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 153,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.04.01",
+                "label": "Despesas com Vendas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 80,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.02",
+              "status": "amount",
+              "before": {
+                "account": "3.04.02",
+                "label": "Despesas Gerais e Administrativas",
+                "source_amount": "-4559134.0000000000",
+                "source_scale": "MIL",
+                "source_line": 155,
+                "cents": -455913400000
+              },
+              "after": {
+                "account": "3.04.02",
+                "label": "Despesas Gerais e Administrativas",
+                "source_amount": "-4591743.0000000000",
+                "source_scale": "MIL",
+                "source_line": 82,
+                "cents": -459174300000
+              },
+              "delta_cents": -3260900000
+            },
+            {
+              "account": "3.04.02.01",
+              "status": "removed",
+              "before": {
+                "account": "3.04.02.01",
+                "label": "Pessoal, Material, Serviço",
+                "source_amount": "-3332558.0000000000",
+                "source_scale": "MIL",
+                "source_line": 157,
+                "cents": -333255800000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.02.02",
+              "status": "removed",
+              "before": {
+                "account": "3.04.02.02",
+                "label": "Depreciação",
+                "source_amount": "-189801.0000000000",
+                "source_scale": "MIL",
+                "source_line": 159,
+                "cents": -18980100000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.02.03",
+              "status": "removed",
+              "before": {
+                "account": "3.04.02.03",
+                "label": "Amortização",
+                "source_amount": "-80506.0000000000",
+                "source_scale": "MIL",
+                "source_line": 161,
+                "cents": -8050600000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.02.04",
+              "status": "removed",
+              "before": {
+                "account": "3.04.02.04",
+                "label": "Provisões operacionais",
+                "source_amount": "180019.0000000000",
+                "source_scale": "MIL",
+                "source_line": 163,
+                "cents": 18001900000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.02.05",
+              "status": "removed",
+              "before": {
+                "account": "3.04.02.05",
+                "label": "Doações e contribuições",
+                "source_amount": "-145085.0000000000",
+                "source_scale": "MIL",
+                "source_line": 165,
+                "cents": -14508500000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.02.06",
+              "status": "removed",
+              "before": {
+                "account": "3.04.02.06",
+                "label": "Plano de demissão voluntária",
+                "source_amount": "-226815.0000000000",
+                "source_scale": "MIL",
+                "source_line": 167,
+                "cents": -22681500000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.02.07",
+              "status": "removed",
+              "before": {
+                "account": "3.04.02.07",
+                "label": "Outras",
+                "source_amount": "-764388.0000000000",
+                "source_scale": "MIL",
+                "source_line": 169,
+                "cents": -76438800000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.03",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.03",
+                "label": "Perdas pela Não Recuperabilidade de Ativos",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 171,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.04.03",
+                "label": "Perdas pela Não Recuperabilidade de Ativos",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 84,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.04",
+              "status": "amount",
+              "before": {
+                "account": "3.04.04",
+                "label": "Outras Receitas Operacionais",
+                "source_amount": "6266311.0000000000",
+                "source_scale": "MIL",
+                "source_line": 173,
+                "cents": 626631100000
+              },
+              "after": {
+                "account": "3.04.04",
+                "label": "Outras Receitas Operacionais",
+                "source_amount": "6255972.0000000000",
+                "source_scale": "MIL",
+                "source_line": 86,
+                "cents": 625597200000
+              },
+              "delta_cents": -1033900000
+            },
+            {
+              "account": "3.04.04.01",
+              "status": "amount",
+              "before": {
+                "account": "3.04.04.01",
+                "label": "Outras Receitas Operacionais",
+                "source_amount": "136540.0000000000",
+                "source_scale": "MIL",
+                "source_line": 175,
+                "cents": 13654000000
+              },
+              "after": {
+                "account": "3.04.04.01",
+                "label": "Outras Receitas Operacionais",
+                "source_amount": "126201.0000000000",
+                "source_scale": "MIL",
+                "source_line": 88,
+                "cents": 12620100000
+              },
+              "delta_cents": -1033900000
+            },
+            {
+              "account": "3.04.04.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.04.02",
+                "label": "Remensurações regulatórias - Contratos de Transmissão",
+                "source_amount": "6129771.0000000000",
+                "source_scale": "MIL",
+                "source_line": 177,
+                "cents": 612977100000
+              },
+              "after": {
+                "account": "3.04.04.02",
+                "label": "Remensurações regulatórias - Contratos de Transmissão",
+                "source_amount": "6129771.0000000000",
+                "source_scale": "MIL",
+                "source_line": 90,
+                "cents": 612977100000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.05",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.05",
+                "label": "Outras Despesas Operacionais",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 179,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.04.05",
+                "label": "Outras Despesas Operacionais",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 92,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.06",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.06",
+                "label": "Resultado de Equivalência Patrimonial",
+                "source_amount": "2503205.0000000000",
+                "source_scale": "MIL",
+                "source_line": 181,
+                "cents": 250320500000
+              },
+              "after": {
+                "account": "3.04.06",
+                "label": "Resultado de Equivalência Patrimonial",
+                "source_amount": "2503205.0000000000",
+                "source_scale": "MIL",
+                "source_line": 94,
+                "cents": 250320500000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.05",
+              "status": "amount",
+              "before": {
+                "account": "3.05",
+                "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+                "source_amount": "22248904.0000000000",
+                "source_scale": "MIL",
+                "source_line": 183,
+                "cents": 2224890400000
+              },
+              "after": {
+                "account": "3.05",
+                "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+                "source_amount": "22248903.0000000000",
+                "source_scale": "MIL",
+                "source_line": 96,
+                "cents": 2224890300000
+              },
+              "delta_cents": -100000
+            },
+            {
+              "account": "3.06",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06",
+                "label": "Resultado Financeiro",
+                "source_amount": "-11628121.0000000000",
+                "source_scale": "MIL",
+                "source_line": 185,
+                "cents": -1162812100000
+              },
+              "after": {
+                "account": "3.06",
+                "label": "Resultado Financeiro",
+                "source_amount": "-11628121.0000000000",
+                "source_scale": "MIL",
+                "source_line": 98,
+                "cents": -1162812100000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06.01",
+                "label": "Receitas Financeiras",
+                "source_amount": "3987049.0000000000",
+                "source_scale": "MIL",
+                "source_line": 187,
+                "cents": 398704900000
+              },
+              "after": {
+                "account": "3.06.01",
+                "label": "Receitas Financeiras",
+                "source_amount": "3987049.0000000000",
+                "source_scale": "MIL",
+                "source_line": 100,
+                "cents": 398704900000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06.01.01",
+              "status": "removed",
+              "before": {
+                "account": "3.06.01.01",
+                "label": "Receitas de juros, comissões e taxas",
+                "source_amount": "138666.0000000000",
+                "source_scale": "MIL",
+                "source_line": 189,
+                "cents": 13866600000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.01.02",
+              "status": "removed",
+              "before": {
+                "account": "3.06.01.02",
+                "label": "Receitas de aplicações financeiras",
+                "source_amount": "2937517.0000000000",
+                "source_scale": "MIL",
+                "source_line": 191,
+                "cents": 293751700000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.01.03",
+              "status": "removed",
+              "before": {
+                "account": "3.06.01.03",
+                "label": "Acréscimo moratório sobre energia elétrica",
+                "source_amount": "119500.0000000000",
+                "source_scale": "MIL",
+                "source_line": 193,
+                "cents": 11950000000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.01.04",
+              "status": "removed",
+              "before": {
+                "account": "3.06.01.04",
+                "label": "Atualizações monetárias ativas",
+                "source_amount": "678396.0000000000",
+                "source_scale": "MIL",
+                "source_line": 195,
+                "cents": 67839600000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.01.05",
+              "status": "removed",
+              "before": {
+                "account": "3.06.01.05",
+                "label": "Variações cambiais ativas",
+                "source_amount": "156854.0000000000",
+                "source_scale": "MIL",
+                "source_line": 197,
+                "cents": 15685400000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.01.06",
+              "status": "removed",
+              "before": {
+                "account": "3.06.01.06",
+                "label": "Outras receitas financeiras",
+                "source_amount": "223898.0000000000",
+                "source_scale": "MIL",
+                "source_line": 199,
+                "cents": 22389800000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.01.07",
+              "status": "removed",
+              "before": {
+                "account": "3.06.01.07",
+                "label": "(-) Tributos sobre receitas financeiras",
+                "source_amount": "-267782.0000000000",
+                "source_scale": "MIL",
+                "source_line": 201,
+                "cents": -26778200000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06.02",
+                "label": "Despesas Financeiras",
+                "source_amount": "-15615170.0000000000",
+                "source_scale": "MIL",
+                "source_line": 203,
+                "cents": -1561517000000
+              },
+              "after": {
+                "account": "3.06.02",
+                "label": "Despesas Financeiras",
+                "source_amount": "-15615170.0000000000",
+                "source_scale": "MIL",
+                "source_line": 102,
+                "cents": -1561517000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06.02.01",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.01",
+                "label": "Encargos de dívidas",
+                "source_amount": "-6117463.0000000000",
+                "source_scale": "MIL",
+                "source_line": 205,
+                "cents": -611746300000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.02",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.02",
+                "label": "Encargos - Obrigações com CDE",
+                "source_amount": "-2484198.0000000000",
+                "source_scale": "MIL",
+                "source_line": 207,
+                "cents": -248419800000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.03",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.03",
+                "label": "Encargos - Revitalização de bacias hidrográficas",
+                "source_amount": "-339854.0000000000",
+                "source_scale": "MIL",
+                "source_line": 209,
+                "cents": -33985400000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.04",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.04",
+                "label": "Atualizações monetárias passivas",
+                "source_amount": "-1456553.0000000000",
+                "source_scale": "MIL",
+                "source_line": 211,
+                "cents": -145655300000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.05",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.05",
+                "label": "Atualização monetária - Obrigações com CDE",
+                "source_amount": "-1604680.0000000000",
+                "source_scale": "MIL",
+                "source_line": 213,
+                "cents": -160468000000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.06",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.06",
+                "label": "Atualização monetária - Revitalização de bacias hidrográficas",
+                "source_amount": "-288081.0000000000",
+                "source_scale": "MIL",
+                "source_line": 215,
+                "cents": -28808100000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.07",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.07",
+                "label": "Variações cambiais passivas",
+                "source_amount": "-185675.0000000000",
+                "source_scale": "MIL",
+                "source_line": 217,
+                "cents": -18567500000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.08",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.08",
+                "label": "Variação do valor justo de dívida protegida (hedge) líquida do derivativo",
+                "source_amount": "-1566482.0000000000",
+                "source_scale": "MIL",
+                "source_line": 219,
+                "cents": -156648200000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.09",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.09",
+                "label": "Variação de instrumento financeiro derivativo não ligado a proteção de dívida",
+                "source_amount": "-373605.0000000000",
+                "source_scale": "MIL",
+                "source_line": 221,
+                "cents": -37360500000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.06.02.10",
+              "status": "removed",
+              "before": {
+                "account": "3.06.02.10",
+                "label": "Outras despesas financeiras",
+                "source_amount": "-1198579.0000000000",
+                "source_scale": "MIL",
+                "source_line": 223,
+                "cents": -119857900000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.07",
+              "status": "amount",
+              "before": {
+                "account": "3.07",
+                "label": "Resultado Antes dos Tributos sobre o Lucro",
+                "source_amount": "10620783.0000000000",
+                "source_scale": "MIL",
+                "source_line": 225,
+                "cents": 1062078300000
+              },
+              "after": {
+                "account": "3.07",
+                "label": "Resultado Antes dos Tributos sobre o Lucro",
+                "source_amount": "10620782.0000000000",
+                "source_scale": "MIL",
+                "source_line": 104,
+                "cents": 1062078200000
+              },
+              "delta_cents": -100000
+            },
+            {
+              "account": "3.08",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08",
+                "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+                "source_amount": "-240030.0000000000",
+                "source_scale": "MIL",
+                "source_line": 227,
+                "cents": -24003000000
+              },
+              "after": {
+                "account": "3.08",
+                "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+                "source_amount": "-240030.0000000000",
+                "source_scale": "MIL",
+                "source_line": 106,
+                "cents": -24003000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.08.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08.01",
+                "label": "Corrente",
+                "source_amount": "-717909.0000000000",
+                "source_scale": "MIL",
+                "source_line": 229,
+                "cents": -71790900000
+              },
+              "after": {
+                "account": "3.08.01",
+                "label": "Corrente",
+                "source_amount": "-717909.0000000000",
+                "source_scale": "MIL",
+                "source_line": 108,
+                "cents": -71790900000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.08.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08.02",
+                "label": "Diferido",
+                "source_amount": "477879.0000000000",
+                "source_scale": "MIL",
+                "source_line": 231,
+                "cents": 47787900000
+              },
+              "after": {
+                "account": "3.08.02",
+                "label": "Diferido",
+                "source_amount": "477879.0000000000",
+                "source_scale": "MIL",
+                "source_line": 110,
+                "cents": 47787900000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.09",
+              "status": "amount",
+              "before": {
+                "account": "3.09",
+                "label": "Resultado Líquido das Operações Continuadas",
+                "source_amount": "10380753.0000000000",
+                "source_scale": "MIL",
+                "source_line": 233,
+                "cents": 1038075300000
+              },
+              "after": {
+                "account": "3.09",
+                "label": "Resultado Líquido das Operações Continuadas",
+                "source_amount": "10380752.0000000000",
+                "source_scale": "MIL",
+                "source_line": 112,
+                "cents": 1038075200000
+              },
+              "delta_cents": -100000
+            },
+            {
+              "account": "3.10",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10",
+                "label": "Resultado Líquido de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 235,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10",
+                "label": "Resultado Líquido de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 114,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.10.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10.01",
+                "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 237,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10.01",
+                "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 116,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.10.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10.02",
+                "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 239,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10.02",
+                "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 118,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.11",
+              "status": "amount",
+              "before": {
+                "account": "3.11",
+                "label": "Lucro/Prejuízo Consolidado do Período",
+                "source_amount": "10380753.0000000000",
+                "source_scale": "MIL",
+                "source_line": 241,
+                "cents": 1038075300000
+              },
+              "after": {
+                "account": "3.11",
+                "label": "Lucro/Prejuízo Consolidado do Período",
+                "source_amount": "10380752.0000000000",
+                "source_scale": "MIL",
+                "source_line": 120,
+                "cents": 1038075200000
+              },
+              "delta_cents": -100000
+            },
+            {
+              "account": "3.11.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.11.01",
+                "label": "Atribuído a Sócios da Empresa Controladora",
+                "source_amount": "10378122.0000000000",
+                "source_scale": "MIL",
+                "source_line": 243,
+                "cents": 1037812200000
+              },
+              "after": {
+                "account": "3.11.01",
+                "label": "Atribuído a Sócios da Empresa Controladora",
+                "source_amount": "10378122.0000000000",
+                "source_scale": "MIL",
+                "source_line": 122,
+                "cents": 1037812200000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.11.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.11.02",
+                "label": "Atribuído a Sócios Não Controladores",
+                "source_amount": "2632.0000000000",
+                "source_scale": "MIL",
+                "source_line": 245,
+                "cents": 263200000
+              },
+              "after": {
+                "account": "3.11.02",
+                "label": "Atribuído a Sócios Não Controladores",
+                "source_amount": "2632.0000000000",
+                "source_scale": "MIL",
+                "source_line": 124,
+                "cents": 263200000
+              },
+              "delta_cents": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issuer": "015539",
+      "company": "NEOENERGIA S.A.",
+      "timeline": [
+        {
+          "issuer": "015539",
+          "company": "NEOENERGIA S.A.",
+          "filing_date": "2024-12-31",
+          "version": 1,
+          "document_id": "144837",
+          "received_on": "2025-02-17",
+          "source_line": 32,
+          "source_id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+        },
+        {
+          "issuer": "015539",
+          "company": "NEOENERGIA S.A.",
+          "filing_date": "2024-12-31",
+          "version": 2,
+          "document_id": "144935",
+          "received_on": "2025-02-21",
+          "source_line": 33,
+          "source_id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+        },
+        {
+          "issuer": "015539",
+          "company": "NEOENERGIA S.A.",
+          "filing_date": "2025-12-31",
+          "version": 1,
+          "document_id": "154723",
+          "received_on": "2026-02-11",
+          "source_line": 28,
+          "source_id": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+        }
+      ],
+      "comparisons": [
+        {
+          "before": {
+            "issuer": "015539",
+            "company": "NEOENERGIA S.A.",
+            "filing_date": "2024-12-31",
+            "version": 2,
+            "document_id": "144935",
+            "received_on": "2025-02-21",
+            "source_line": 33,
+            "source_id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+          },
+          "after": {
+            "issuer": "015539",
+            "company": "NEOENERGIA S.A.",
+            "filing_date": "2025-12-31",
+            "version": 1,
+            "document_id": "154723",
+            "received_on": "2026-02-11",
+            "source_line": 28,
+            "source_id": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+          },
+          "counts": {
+            "unchanged": 27,
+            "added": 4,
+            "amount": 5,
+            "label": 1,
+            "removed": 2
+          },
+          "changes": [
+            {
+              "account": "3.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.01",
+                "label": "Receita de Venda de Bens e/ou Serviços",
+                "source_amount": "48993000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 991,
+                "cents": 4899300000000
+              },
+              "after": {
+                "account": "3.01",
+                "label": "Receita de Venda de Bens e/ou Serviços",
+                "source_amount": "48993000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 812,
+                "cents": 4899300000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.01.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.01.01",
+                "label": "Receita bruta",
+                "source_amount": "67371000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 993,
+                "cents": 6737100000000
+              },
+              "after": {
+                "account": "3.01.01",
+                "label": "Receita bruta",
+                "source_amount": "67371000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 814,
+                "cents": 6737100000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.01.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.01.02",
+                "label": "(-) Deduções da receita bruta",
+                "source_amount": "-18378000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 995,
+                "cents": -1837800000000
+              },
+              "after": {
+                "account": "3.01.02",
+                "label": "(-) Deduções da receita bruta",
+                "source_amount": "-18378000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 816,
+                "cents": -1837800000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.02",
+                "label": "Custo dos Bens e/ou Serviços Vendidos",
+                "source_amount": "-35896000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 997,
+                "cents": -3589600000000
+              },
+              "after": {
+                "account": "3.02",
+                "label": "Custo dos Bens e/ou Serviços Vendidos",
+                "source_amount": "-35896000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 818,
+                "cents": -3589600000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.02.01",
+              "status": "added",
+              "before": null,
+              "after": {
+                "account": "3.02.01",
+                "label": "Custos com energia elétrica",
+                "source_amount": "-20800000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 820,
+                "cents": -2080000000000
+              },
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.02",
+              "status": "added",
+              "before": null,
+              "after": {
+                "account": "3.02.02",
+                "label": "Custos de construção",
+                "source_amount": "-9538000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 822,
+                "cents": -953800000000
+              },
+              "delta_cents": null
+            },
+            {
+              "account": "3.02.03",
+              "status": "added",
+              "before": null,
+              "after": {
+                "account": "3.02.03",
+                "label": "Custos de operação",
+                "source_amount": "-5558000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 824,
+                "cents": -555800000000
+              },
+              "delta_cents": null
+            },
+            {
+              "account": "3.03",
+              "status": "unchanged",
+              "before": {
+                "account": "3.03",
+                "label": "Resultado Bruto",
+                "source_amount": "13097000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 999,
+                "cents": 1309700000000
+              },
+              "after": {
+                "account": "3.03",
+                "label": "Resultado Bruto",
+                "source_amount": "13097000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 826,
+                "cents": 1309700000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04",
+                "label": "Despesas/Receitas Operacionais",
+                "source_amount": "-3396000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1001,
+                "cents": -339600000000
+              },
+              "after": {
+                "account": "3.04",
+                "label": "Despesas/Receitas Operacionais",
+                "source_amount": "-3396000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 828,
+                "cents": -339600000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.01",
+                "label": "Despesas com Vendas",
+                "source_amount": "-286000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1003,
+                "cents": -28600000000
+              },
+              "after": {
+                "account": "3.04.01",
+                "label": "Despesas com Vendas",
+                "source_amount": "-286000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 830,
+                "cents": -28600000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.02",
+                "label": "Despesas Gerais e Administrativas",
+                "source_amount": "-2249000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1005,
+                "cents": -224900000000
+              },
+              "after": {
+                "account": "3.04.02",
+                "label": "Despesas Gerais e Administrativas",
+                "source_amount": "-2249000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 832,
+                "cents": -224900000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.03",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.03",
+                "label": "Perdas pela Não Recuperabilidade de Ativos",
+                "source_amount": "-552000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1007,
+                "cents": -55200000000
+              },
+              "after": {
+                "account": "3.04.03",
+                "label": "Perdas pela Não Recuperabilidade de Ativos",
+                "source_amount": "-552000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 834,
+                "cents": -55200000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.04",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.04",
+                "label": "Outras Receitas Operacionais",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1009,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.04.04",
+                "label": "Outras Receitas Operacionais",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 836,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.05",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.05",
+                "label": "Outras Despesas Operacionais",
+                "source_amount": "-277000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1011,
+                "cents": -27700000000
+              },
+              "after": {
+                "account": "3.04.05",
+                "label": "Outras Despesas Operacionais",
+                "source_amount": "-277000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 838,
+                "cents": -27700000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.05.01",
+              "status": "amount",
+              "before": {
+                "account": "3.04.05.01",
+                "label": "Provisão para desvalorização de investimento",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1013,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.04.05.01",
+                "label": "Ajuste a valor justo/valor recuperável - Impairment",
+                "source_amount": "-277000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 840,
+                "cents": -27700000000
+              },
+              "delta_cents": -27700000000
+            },
+            {
+              "account": "3.04.05.02",
+              "status": "label",
+              "before": {
+                "account": "3.04.05.02",
+                "label": "Amortização de mais-valia",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1015,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.04.05.02",
+                "label": "Equivalência Patrimonial",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 842,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.05.03",
+              "status": "removed",
+              "before": {
+                "account": "3.04.05.03",
+                "label": "Resultado de Equivalência Patrimonial",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1017,
+                "cents": 0
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.05.04",
+              "status": "removed",
+              "before": {
+                "account": "3.04.05.04",
+                "label": "Ajuste a valor justo/valor recuperável - Impairment",
+                "source_amount": "-277000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1019,
+                "cents": -27700000000
+              },
+              "after": null,
+              "delta_cents": null
+            },
+            {
+              "account": "3.04.06",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.06",
+                "label": "Resultado de Equivalência Patrimonial",
+                "source_amount": "-32000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1021,
+                "cents": -3200000000
+              },
+              "after": {
+                "account": "3.04.06",
+                "label": "Resultado de Equivalência Patrimonial",
+                "source_amount": "-32000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 844,
+                "cents": -3200000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.06.01",
+              "status": "added",
+              "before": null,
+              "after": {
+                "account": "3.04.06.01",
+                "label": "Equivalência Patrimonial",
+                "source_amount": "-32000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 846,
+                "cents": -3200000000
+              },
+              "delta_cents": null
+            },
+            {
+              "account": "3.05",
+              "status": "unchanged",
+              "before": {
+                "account": "3.05",
+                "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+                "source_amount": "9701000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1023,
+                "cents": 970100000000
+              },
+              "after": {
+                "account": "3.05",
+                "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+                "source_amount": "9701000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 848,
+                "cents": 970100000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06",
+                "label": "Resultado Financeiro",
+                "source_amount": "-4992000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1025,
+                "cents": -499200000000
+              },
+              "after": {
+                "account": "3.06",
+                "label": "Resultado Financeiro",
+                "source_amount": "-4992000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 850,
+                "cents": -499200000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06.01",
+              "status": "amount",
+              "before": {
+                "account": "3.06.01",
+                "label": "Receitas Financeiras",
+                "source_amount": "258000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1027,
+                "cents": 25800000000
+              },
+              "after": {
+                "account": "3.06.01",
+                "label": "Receitas Financeiras",
+                "source_amount": "1214000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 852,
+                "cents": 121400000000
+              },
+              "delta_cents": 95600000000
+            },
+            {
+              "account": "3.06.01.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06.01.01",
+                "label": "Receitas Financeiras",
+                "source_amount": "1214000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1029,
+                "cents": 121400000000
+              },
+              "after": {
+                "account": "3.06.01.01",
+                "label": "Receitas Financeiras",
+                "source_amount": "1214000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 854,
+                "cents": 121400000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06.01.02",
+              "status": "amount",
+              "before": {
+                "account": "3.06.01.02",
+                "label": "Outros resultados financeiros, líquidos",
+                "source_amount": "-956000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1031,
+                "cents": -95600000000
+              },
+              "after": {
+                "account": "3.06.01.02",
+                "label": "Outros resultados financeiros, líquidos",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 856,
+                "cents": 0
+              },
+              "delta_cents": 95600000000
+            },
+            {
+              "account": "3.06.02",
+              "status": "amount",
+              "before": {
+                "account": "3.06.02",
+                "label": "Despesas Financeiras",
+                "source_amount": "-5250000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1033,
+                "cents": -525000000000
+              },
+              "after": {
+                "account": "3.06.02",
+                "label": "Despesas Financeiras",
+                "source_amount": "-6206000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 858,
+                "cents": -620600000000
+              },
+              "delta_cents": -95600000000
+            },
+            {
+              "account": "3.06.02.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06.02.01",
+                "label": "Despesas Financeiras",
+                "source_amount": "-5250000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1035,
+                "cents": -525000000000
+              },
+              "after": {
+                "account": "3.06.02.01",
+                "label": "Despesas Financeiras",
+                "source_amount": "-5250000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 860,
+                "cents": -525000000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06.02.02",
+              "status": "amount",
+              "before": {
+                "account": "3.06.02.02",
+                "label": "Outros resultados financeiros, líquidos",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1037,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.06.02.02",
+                "label": "Outros resultados financeiros, líquidos",
+                "source_amount": "-956000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 862,
+                "cents": -95600000000
+              },
+              "delta_cents": -95600000000
+            },
+            {
+              "account": "3.07",
+              "status": "unchanged",
+              "before": {
+                "account": "3.07",
+                "label": "Resultado Antes dos Tributos sobre o Lucro",
+                "source_amount": "4709000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1039,
+                "cents": 470900000000
+              },
+              "after": {
+                "account": "3.07",
+                "label": "Resultado Antes dos Tributos sobre o Lucro",
+                "source_amount": "4709000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 864,
+                "cents": 470900000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.08",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08",
+                "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+                "source_amount": "-1027000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1041,
+                "cents": -102700000000
+              },
+              "after": {
+                "account": "3.08",
+                "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+                "source_amount": "-1027000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 866,
+                "cents": -102700000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.08.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08.01",
+                "label": "Corrente",
+                "source_amount": "-671000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1043,
+                "cents": -67100000000
+              },
+              "after": {
+                "account": "3.08.01",
+                "label": "Corrente",
+                "source_amount": "-671000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 868,
+                "cents": -67100000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.08.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08.02",
+                "label": "Diferido",
+                "source_amount": "-356000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1045,
+                "cents": -35600000000
+              },
+              "after": {
+                "account": "3.08.02",
+                "label": "Diferido",
+                "source_amount": "-356000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 870,
+                "cents": -35600000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.09",
+              "status": "unchanged",
+              "before": {
+                "account": "3.09",
+                "label": "Resultado Líquido das Operações Continuadas",
+                "source_amount": "3682000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1047,
+                "cents": 368200000000
+              },
+              "after": {
+                "account": "3.09",
+                "label": "Resultado Líquido das Operações Continuadas",
+                "source_amount": "3682000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 872,
+                "cents": 368200000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.10",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10",
+                "label": "Resultado Líquido de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1049,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10",
+                "label": "Resultado Líquido de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 874,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.10.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10.01",
+                "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1051,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10.01",
+                "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 876,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.10.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10.02",
+                "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1053,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10.02",
+                "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 878,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.11",
+              "status": "unchanged",
+              "before": {
+                "account": "3.11",
+                "label": "Lucro/Prejuízo Consolidado do Período",
+                "source_amount": "3682000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1055,
+                "cents": 368200000000
+              },
+              "after": {
+                "account": "3.11",
+                "label": "Lucro/Prejuízo Consolidado do Período",
+                "source_amount": "3682000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 880,
+                "cents": 368200000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.11.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.11.01",
+                "label": "Atribuído a Sócios da Empresa Controladora",
+                "source_amount": "3635000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1057,
+                "cents": 363500000000
+              },
+              "after": {
+                "account": "3.11.01",
+                "label": "Atribuído a Sócios da Empresa Controladora",
+                "source_amount": "3635000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 882,
+                "cents": 363500000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.11.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.11.02",
+                "label": "Atribuído a Sócios Não Controladores",
+                "source_amount": "47000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 1059,
+                "cents": 4700000000
+              },
+              "after": {
+                "account": "3.11.02",
+                "label": "Atribuído a Sócios Não Controladores",
+                "source_amount": "47000.0000000000",
+                "source_scale": "MIL",
+                "source_line": 884,
+                "cents": 4700000000
+              },
+              "delta_cents": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "issuer": "005410",
+      "company": "WEG S.A.",
+      "timeline": [
+        {
+          "issuer": "005410",
+          "company": "WEG S.A.",
+          "filing_date": "2024-12-31",
+          "version": 1,
+          "document_id": "145023",
+          "received_on": "2025-02-26",
+          "source_line": 816,
+          "source_id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+        },
+        {
+          "issuer": "005410",
+          "company": "WEG S.A.",
+          "filing_date": "2025-12-31",
+          "version": 1,
+          "document_id": "154872",
+          "received_on": "2026-02-25",
+          "source_line": 714,
+          "source_id": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+        }
+      ],
+      "comparisons": [
+        {
+          "before": {
+            "issuer": "005410",
+            "company": "WEG S.A.",
+            "filing_date": "2024-12-31",
+            "version": 1,
+            "document_id": "145023",
+            "received_on": "2025-02-26",
+            "source_line": 816,
+            "source_id": "0a1e41edc81900df6605448acb2fcf6fae36f9a8ac4756a7d658cd7c718a1501"
+          },
+          "after": {
+            "issuer": "005410",
+            "company": "WEG S.A.",
+            "filing_date": "2025-12-31",
+            "version": 1,
+            "document_id": "154872",
+            "received_on": "2026-02-25",
+            "source_line": 714,
+            "source_id": "6b24bc65a614605e2c1e45ae1fa237ebbe72672467e87f7761cca94f3e6bc040"
+          },
+          "counts": {
+            "unchanged": 29
+          },
+          "changes": [
+            {
+              "account": "3.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.01",
+                "label": "Receita de Venda de Bens e/ou Serviços",
+                "source_amount": "37986941.0000000000",
+                "source_scale": "MIL",
+                "source_line": 29995,
+                "cents": 3798694100000
+              },
+              "after": {
+                "account": "3.01",
+                "label": "Receita de Venda de Bens e/ou Serviços",
+                "source_amount": "37986941.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28444,
+                "cents": 3798694100000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.02",
+                "label": "Custo dos Bens e/ou Serviços Vendidos",
+                "source_amount": "-25173096.0000000000",
+                "source_scale": "MIL",
+                "source_line": 29997,
+                "cents": -2517309600000
+              },
+              "after": {
+                "account": "3.02",
+                "label": "Custo dos Bens e/ou Serviços Vendidos",
+                "source_amount": "-25173096.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28446,
+                "cents": -2517309600000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.03",
+              "status": "unchanged",
+              "before": {
+                "account": "3.03",
+                "label": "Resultado Bruto",
+                "source_amount": "12813845.0000000000",
+                "source_scale": "MIL",
+                "source_line": 29999,
+                "cents": 1281384500000
+              },
+              "after": {
+                "account": "3.03",
+                "label": "Resultado Bruto",
+                "source_amount": "12813845.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28448,
+                "cents": 1281384500000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04",
+                "label": "Despesas/Receitas Operacionais",
+                "source_amount": "-5123317.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30001,
+                "cents": -512331700000
+              },
+              "after": {
+                "account": "3.04",
+                "label": "Despesas/Receitas Operacionais",
+                "source_amount": "-5123317.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28450,
+                "cents": -512331700000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.01",
+                "label": "Despesas com Vendas",
+                "source_amount": "-2987307.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30003,
+                "cents": -298730700000
+              },
+              "after": {
+                "account": "3.04.01",
+                "label": "Despesas com Vendas",
+                "source_amount": "-2987307.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28452,
+                "cents": -298730700000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.01.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.01.01",
+                "label": "(Provisão) reversão ao valor recuperável de clientes",
+                "source_amount": "-22896.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30005,
+                "cents": -2289600000
+              },
+              "after": {
+                "account": "3.04.01.01",
+                "label": "(Provisão) reversão ao valor recuperável de clientes",
+                "source_amount": "-22896.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28454,
+                "cents": -2289600000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.01.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.01.02",
+                "label": "Outras Despesas de Vendas",
+                "source_amount": "-2964411.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30007,
+                "cents": -296441100000
+              },
+              "after": {
+                "account": "3.04.01.02",
+                "label": "Outras Despesas de Vendas",
+                "source_amount": "-2964411.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28456,
+                "cents": -296441100000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.02",
+                "label": "Despesas Gerais e Administrativas",
+                "source_amount": "-1299421.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30009,
+                "cents": -129942100000
+              },
+              "after": {
+                "account": "3.04.02",
+                "label": "Despesas Gerais e Administrativas",
+                "source_amount": "-1299421.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28458,
+                "cents": -129942100000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.02.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.02.01",
+                "label": "Honorários dos Administradores",
+                "source_amount": "-21646.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30011,
+                "cents": -2164600000
+              },
+              "after": {
+                "account": "3.04.02.01",
+                "label": "Honorários dos Administradores",
+                "source_amount": "-21646.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28460,
+                "cents": -2164600000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.02.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.02.02",
+                "label": "Outras",
+                "source_amount": "-1277775.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30013,
+                "cents": -127777500000
+              },
+              "after": {
+                "account": "3.04.02.02",
+                "label": "Outras",
+                "source_amount": "-1277775.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28462,
+                "cents": -127777500000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.03",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.03",
+                "label": "Perdas pela Não Recuperabilidade de Ativos",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30015,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.04.03",
+                "label": "Perdas pela Não Recuperabilidade de Ativos",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28464,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.04",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.04",
+                "label": "Outras Receitas Operacionais",
+                "source_amount": "163792.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30017,
+                "cents": 16379200000
+              },
+              "after": {
+                "account": "3.04.04",
+                "label": "Outras Receitas Operacionais",
+                "source_amount": "163792.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28466,
+                "cents": 16379200000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.05",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.05",
+                "label": "Outras Despesas Operacionais",
+                "source_amount": "-995183.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30019,
+                "cents": -99518300000
+              },
+              "after": {
+                "account": "3.04.05",
+                "label": "Outras Despesas Operacionais",
+                "source_amount": "-995183.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28468,
+                "cents": -99518300000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.04.06",
+              "status": "unchanged",
+              "before": {
+                "account": "3.04.06",
+                "label": "Resultado de Equivalência Patrimonial",
+                "source_amount": "-5198.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30021,
+                "cents": -519800000
+              },
+              "after": {
+                "account": "3.04.06",
+                "label": "Resultado de Equivalência Patrimonial",
+                "source_amount": "-5198.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28470,
+                "cents": -519800000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.05",
+              "status": "unchanged",
+              "before": {
+                "account": "3.05",
+                "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+                "source_amount": "7690528.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30023,
+                "cents": 769052800000
+              },
+              "after": {
+                "account": "3.05",
+                "label": "Resultado Antes do Resultado Financeiro e dos Tributos",
+                "source_amount": "7690528.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28472,
+                "cents": 769052800000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06",
+                "label": "Resultado Financeiro",
+                "source_amount": "217980.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30025,
+                "cents": 21798000000
+              },
+              "after": {
+                "account": "3.06",
+                "label": "Resultado Financeiro",
+                "source_amount": "217980.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28474,
+                "cents": 21798000000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06.01",
+                "label": "Receitas Financeiras",
+                "source_amount": "1942118.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30027,
+                "cents": 194211800000
+              },
+              "after": {
+                "account": "3.06.01",
+                "label": "Receitas Financeiras",
+                "source_amount": "1942118.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28476,
+                "cents": 194211800000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.06.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.06.02",
+                "label": "Despesas Financeiras",
+                "source_amount": "-1724138.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30029,
+                "cents": -172413800000
+              },
+              "after": {
+                "account": "3.06.02",
+                "label": "Despesas Financeiras",
+                "source_amount": "-1724138.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28478,
+                "cents": -172413800000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.07",
+              "status": "unchanged",
+              "before": {
+                "account": "3.07",
+                "label": "Resultado Antes dos Tributos sobre o Lucro",
+                "source_amount": "7908508.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30031,
+                "cents": 790850800000
+              },
+              "after": {
+                "account": "3.07",
+                "label": "Resultado Antes dos Tributos sobre o Lucro",
+                "source_amount": "7908508.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28480,
+                "cents": 790850800000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.08",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08",
+                "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+                "source_amount": "-1589745.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30033,
+                "cents": -158974500000
+              },
+              "after": {
+                "account": "3.08",
+                "label": "Imposto de Renda e Contribuição Social sobre o Lucro",
+                "source_amount": "-1589745.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28482,
+                "cents": -158974500000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.08.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08.01",
+                "label": "Corrente",
+                "source_amount": "-1611654.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30035,
+                "cents": -161165400000
+              },
+              "after": {
+                "account": "3.08.01",
+                "label": "Corrente",
+                "source_amount": "-1611654.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28484,
+                "cents": -161165400000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.08.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.08.02",
+                "label": "Diferido",
+                "source_amount": "21909.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30037,
+                "cents": 2190900000
+              },
+              "after": {
+                "account": "3.08.02",
+                "label": "Diferido",
+                "source_amount": "21909.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28486,
+                "cents": 2190900000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.09",
+              "status": "unchanged",
+              "before": {
+                "account": "3.09",
+                "label": "Resultado Líquido das Operações Continuadas",
+                "source_amount": "6318763.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30039,
+                "cents": 631876300000
+              },
+              "after": {
+                "account": "3.09",
+                "label": "Resultado Líquido das Operações Continuadas",
+                "source_amount": "6318763.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28488,
+                "cents": 631876300000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.10",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10",
+                "label": "Resultado Líquido de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30041,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10",
+                "label": "Resultado Líquido de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28490,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.10.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10.01",
+                "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30043,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10.01",
+                "label": "Lucro/Prejuízo Líquido das Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28492,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.10.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.10.02",
+                "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30045,
+                "cents": 0
+              },
+              "after": {
+                "account": "3.10.02",
+                "label": "Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas",
+                "source_amount": "0.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28494,
+                "cents": 0
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.11",
+              "status": "unchanged",
+              "before": {
+                "account": "3.11",
+                "label": "Lucro/Prejuízo Consolidado do Período",
+                "source_amount": "6318763.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30047,
+                "cents": 631876300000
+              },
+              "after": {
+                "account": "3.11",
+                "label": "Lucro/Prejuízo Consolidado do Período",
+                "source_amount": "6318763.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28496,
+                "cents": 631876300000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.11.01",
+              "status": "unchanged",
+              "before": {
+                "account": "3.11.01",
+                "label": "Atribuído a Sócios da Empresa Controladora",
+                "source_amount": "6042593.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30049,
+                "cents": 604259300000
+              },
+              "after": {
+                "account": "3.11.01",
+                "label": "Atribuído a Sócios da Empresa Controladora",
+                "source_amount": "6042593.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28498,
+                "cents": 604259300000
+              },
+              "delta_cents": 0
+            },
+            {
+              "account": "3.11.02",
+              "status": "unchanged",
+              "before": {
+                "account": "3.11.02",
+                "label": "Atribuído a Sócios Não Controladores",
+                "source_amount": "276170.0000000000",
+                "source_scale": "MIL",
+                "source_line": 30051,
+                "cents": 27617000000
+              },
+              "after": {
+                "account": "3.11.02",
+                "label": "Atribuído a Sócios Não Controladores",
+                "source_amount": "276170.0000000000",
+                "source_scale": "MIL",
+                "source_line": 28500,
+                "cents": 27617000000
+              },
+              "delta_cents": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

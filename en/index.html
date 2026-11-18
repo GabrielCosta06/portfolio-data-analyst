@@ -10,7 +10,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://gabrielcosta06.github.io/portfolio-data-analyst/en/">
   <meta property="og:title" content="Gabriel Costa | Data Engineer &amp; Data Analyst">
-  <meta property="og:description" content="Case studies in BI, pipelines, data quality and Google BigQuery with code and synthetic data.">
+  <meta property="og:description" content="Case studies in data engineering, BI, payments reconciliation and public financial filings.">
   <meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/social.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
@@ -68,9 +68,27 @@
       <section class="project-section" id="projetos" aria-labelledby="projects-title">
         <div class="section-heading">
           <h2 id="projects-title">Projects</h2>
-          <p>Case studies with synthetic data</p>
+          <p>Case studies with synthetic and public data</p>
         </div>
         <div class="project-grid">
+          <article class="project-card">
+            <a class="project-link" href="projects/reconciliation/" aria-labelledby="reconciliation-title" aria-describedby="reconciliation-summary">
+              <p class="project-category">Financial data engineering</p>
+              <h3 id="reconciliation-title">Payments reconciliation</h3>
+              <p class="project-summary" id="reconciliation-summary">Trace settlements, installment payouts and chargebacks to the bank. Inspect three reconciliation exceptions.</p>
+              <ul class="project-stack" role="list"><li>Python</li><li>CSV</li><li>Data quality</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="projects/cvm-filings/" aria-labelledby="cvm-filings-title" aria-describedby="cvm-filings-summary">
+              <p class="project-category">Public financial data</p>
+              <h3 id="cvm-filings-title">CVM filing revision tracker</h3>
+              <p class="project-summary" id="cvm-filings-summary">Compare 2024 income statement figures across official CVM disclosures and trace each change to its source.</p>
+              <ul class="project-stack" role="list"><li>Python</li><li>CVM</li><li>DFP</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
           <article class="project-card">
             <a class="project-link" href="projects/pipeline/" aria-labelledby="pipeline-title" aria-describedby="pipeline-summary">
               <p class="project-category">Data engineering</p>

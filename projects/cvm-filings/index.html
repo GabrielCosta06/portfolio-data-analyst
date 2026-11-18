@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rastreador de versões da CVM | Gabriel Costa</title>
+  <meta name="description" content="Compare divulgações da DRE consolidada nos dados abertos da CVM.">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/case-studies.css">
+  <link rel="stylesheet" href="../../assets/finance-cases.css">
+  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/projects/cvm-filings/">
+  <link rel="alternate" hreflang="pt-BR" href="./">
+  <link rel="alternate" hreflang="en" href="../../en/projects/cvm-filings/">
+  <link rel="alternate" hreflang="x-default" href="./">
+  <script src="../../assets/language.js" defer></script>
+  <script type="module" src="../../projects/cvm-filings/filings.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
+      <div class="language-switch" role="group" aria-label="Idioma">
+        <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>
+        <a href="../../en/projects/cvm-filings/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a>
+      </div>
+      <nav aria-label="Navegação do projeto">
+        <a href="../../#projetos">Projetos</a>
+        <a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/cvm-filings">Arquivos do projeto</a>
+      </nav>
+    </header>
+    <main class="case" id="conteudo" tabindex="-1">
+      <header class="case-intro">
+        <div>
+          <h1>Rastreador de versões da CVM</h1>
+          <p class="lede">Compare duas divulgações do mesmo exercício. Abra uma linha da DRE para conferir o documento de origem, a conta, o valor original e sua escala.</p>
+        </div>
+        <p class="case-context"><strong>Dados públicos da CVM</strong>Resultados consolidados do exercício de 2024. Inclui valores do exercício, os comparativos divulgados depois e o histórico oficial de versões.</p>
+      </header>
+
+      <section class="case-panel" aria-labelledby="filing-title">
+        <h2 id="filing-title">Compare as divulgações</h2>
+        <div class="filing-controls">
+          <label>Companhia<select id="cvm-company" disabled></select></label>
+          <label id="pair-control" hidden>Par de divulgações<select id="cvm-pair" disabled></select></label>
+          <label>Situação da conta
+            <select id="cvm-filter" disabled>
+              <option value="changed">Somente diferenças</option>
+              <option value="amount">Mudanças de valor</option>
+              <option value="structure">Incluídas ou removidas</option>
+              <option value="all">Todas as contas</option>
+            </select>
+          </label>
+          <label>Buscar conta<input id="cvm-search" type="search" placeholder="Ex. 3.01" disabled></label>
+        </div>
+        <p id="comparison-type" class="case-note"></p>
+        <div id="filing-sources" class="filing-sources"></div>
+        <div class="metrics">
+          <div class="metric"><span>Valor alterado</span><strong id="count-amount">–</strong></div>
+          <div class="metric"><span>Incluídas ou removidas</span><strong id="count-structure">–</strong></div>
+          <div class="metric"><span>Somente descrição</span><strong id="count-label">–</strong></div>
+          <div class="metric"><span>Sem alteração</span><strong id="count-unchanged">–</strong></div>
+        </div>
+        <p id="filing-status" tabindex="-1" class="data-state" role="status">Carregando documentos arquivados…</p>
+        <section id="filing-account" class="explorer-result filing-account" aria-labelledby="account-detail-title" hidden>
+          <h3 id="account-detail-title" tabindex="-1" aria-live="polite"></h3>
+          <div id="account-detail-values" class="filing-sources"></div>
+          <p class="case-note" id="account-delta"></p>
+        </section>
+        <div class="table-wrap" role="region" aria-label="Comparação da DRE" tabindex="0">
+          <table class="case-table filing-table">
+            <caption>Valores em reais. As descrições seguem o documento original.</caption>
+            <thead><tr><th scope="col">Conta</th><th scope="col" class="desktop-amount">Anterior</th><th scope="col" class="desktop-amount">Posterior</th><th scope="col">Variação</th></tr></thead>
+            <tbody id="filing-lines"></tbody>
+          </table>
+        </div>
+        <button type="button" class="secondary" id="show-more-lines" hidden>Mostrar mais contas</button>
+        <details class="filing-history">
+          <summary>Histórico oficial de versões</summary>
+          <p class="case-note">Datas, versões e identificadores vêm do cadastro da CVM. As divulgações usadas na comparação de valores estão identificadas acima.</p>
+          <ul id="filing-history"></ul>
+        </details>
+      </section>
+
+      <section class="case-section reading" aria-labelledby="method-title">
+        <h2 id="method-title">Dados e regras de comparação</h2>
+        <p>Cruze emissor, escopo consolidado, datas do exercício, moeda e código da conta. Converta a escala publicada para centavos antes de comparar. O rastreador distingue valores, descrições, contas novas e removidas. O lucro por ação fica fora da comparação monetária.</p>
+        <p>As variações incluem linhas de detalhe e subtotais. Capture um novo arquivo para preservar seus registros selecionados sob a assinatura do pacote e reconstruir as comparações.</p>
+        <pre><code>python src/cvm_tracker.py --check</code></pre>
+        <div class="actions">
+          <a class="button" href="https://dados.cvm.gov.br/dataset/cia_aberta-doc-dfp">Dados abertos DFP da CVM</a>
+          <a class="button secondary" href="../../evidence/cvm-filing-diffs.json">Comparação em JSON</a>
+          <a class="button secondary" href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/cvm-filings/data">Extratos arquivados</a>
+        </div>
+        <p class="case-note">Dados de origem e extratos derivados · <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL)</a></p>
+      </section>
+    </main>
+    <footer><p>Gabriel Costa</p><a href="../../#projetos">Voltar aos projetos</a></footer>
+  </div>
+</body>
+</html>

@@ -16,6 +16,8 @@ jobs:
           node-version: '22'
       - run: node --test tests/decision.test.mjs
       - run: python src/incremental_lakehouse.py --check
+      - run: python src/reconcile_payments.py --check
+      - run: python src/cvm_tracker.py --check
       - run: python src/pipeline.py --generate
       - run: git diff --exit-code -- data/
       - run: pip install -r projects/bigquery/requirements.txt
