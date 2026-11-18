@@ -1,6 +1,8 @@
 # Power BI companion
 
-This bundle contains real CSV exports, Power Query M and DAX definitions. It is not a PBIX file. Power BI Desktop rendering has not been validated in this delivery.
+The [editable PBIP ZIP](../../../start/PowerBI-pronto.zip) includes an embedded synthetic fixture, a date dimension, eight DAX measures and ten visuals. Extract it, open `PowerBI/Vendas.pbip` in Power BI Desktop and refresh. The bundle data and model files were checked locally. Power BI Desktop opening, M/DAX execution and rendering are pending.
+
+Use the steps below to rebuild the model from the same CSV exports.
 
 1. Run `python src/pipeline.py --generate` at repository root.
 2. In Power BI Desktop, import `data/processed/fact_sales.csv` as **FactSales** and `dim_date.csv` as **DimDate**, or use the two separate queries in `queries.pq` with a Text parameter **DataFolder**.

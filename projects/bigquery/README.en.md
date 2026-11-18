@@ -33,3 +33,14 @@ The schema follows the CSV column order. Each load replaces the demonstration ta
 The query returns six months with 100 orders per month. The dataset totals 600 orders, R$728,800.00 in revenue, R$420,300.00 in direct costs and R$308,500.00 in gross profit. Weighted margin is 42.33%. January's growth is null because there is no prior month in the selected period.
 
 Compare the monthly aggregates with the [pipeline manifest](../../data/processed/manifest.json). The Google Cloud run is pending.
+
+## Reproduce the local results
+
+The verifier translates the checked-in GoogleSQL to DuckDB, runs it on the typed sales CSV and reconciles all six months against the pipeline manifest. It checks the first month’s missing prior period and each later growth rate. This verifies the fixture and query logic in DuckDB. Run the Google Cloud steps above to verify BigQuery execution and partition behavior.
+
+```sh
+python -m pip install -r projects/bigquery/requirements.txt
+python projects/bigquery/verify_locally.py --check
+```
+
+[JSON output](../../data/processed/bigquery-results.json)

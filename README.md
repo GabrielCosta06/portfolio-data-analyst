@@ -2,7 +2,7 @@
 
 [Live portfolio](https://gabrielcosta06.github.io/portfolio-data-analyst/) · [LinkedIn](https://www.linkedin.com/in/josegabriel-costa/)
 
-Four case studies with synthetic data: sales analytics and BI, a Python/SQL and PySpark/Delta Lake pipeline, data quality, and a Google BigQuery example. Developed with AI assistance.
+Four interactive case studies use one synthetic sales fixture. Explore the verified Lakehouse run, inspect rejected rows, drill into sales and margin, and review locally executed results for the BigQuery query. Developed with AI assistance.
 
 [Execution guide](start/) contains the next steps for running the notebook in Databricks and opening a prepared Power BI project, plus the official training links. The [portable Power BI ZIP](start/PowerBI-pronto.zip) contains an embedded synthetic fixture, two tables, one relationship, eight measures and ten PBIR visual definitions. Its 17 schema-bearing JSON documents passed the official Microsoft schemas; model bindings, fixture totals and chart bounds were checked. **Power BI Desktop opening, M/DAX execution and rendering remain unverified.** This package is preparation, not an executed PBIX.
 
@@ -39,10 +39,10 @@ Open http://localhost:8080. The CLI replaces only demonstration outputs in `data
 
 | Study | Implementation | Verified scope |
 |---|---|---|
-| [Pipeline](projects/pipeline/) | Python, CSV contract, SQLite warehouse, monthly SQL view, deterministic exports | Executed locally; rerun and schema-drift tests |
-| [Sales analysis](projects/analytics/) | SQL window functions, filterable web dashboard, CSV export, Power Query M and DAX | SQL and web dashboard verified; Power BI Desktop not executed |
-| [Data quality](projects/quality/) | Row-level quarantine with reasons, uniqueness/domain/financial checks | 670 input rows; 600 accepted; 70 quarantined |
-| [BigQuery sales analysis](projects/bigquery/) | Typed CSV schema, monthly partitions, GoogleSQL for margin and month-over-month growth | Expected totals reconciled locally; Google Cloud execution pending |
+| [Pipeline](projects/pipeline/) | Interactive lineage with Bronze, Silver, Gold and quarantine. Python/SQLite and PySpark/Delta implementations. | Local Python tests and Spark/Delta run in GitHub Actions. The page reconciles both sets of evidence. |
+| [Sales analysis](projects/analytics/) | KPI filters, month drill-down, revenue and margin charts, CSV export and an editable Power BI package. | Dashboard and SQL verified. Power BI Desktop execution pending. |
+| [Data quality](projects/quality/) | Search and inspect the original values, source lines and rules for rejected records. | 670 evaluated, 600 accepted, 70 quarantined. |
+| [BigQuery sales analysis](projects/bigquery/) | Typed CSV schema, monthly partitions, GoogleSQL and interactive monthly results. | Query translated to DuckDB and reconciled in CI. Google BigQuery execution pending. |
 
 [Databricks notebook](projects/pipeline/databricks/sales_lakehouse.ipynb) is self-contained: synthetic fixture, Bronze/Silver/Gold, quarantine, Delta writes/readback, financial reconciliation and an idempotent rerun. It requires no uploaded CSV or Volume. The complete notebook passed in [GitHub Actions with PySpark 4.0.1 and Delta Lake 4.0.1](https://github.com/GabrielCosta06/portfolio-data-analyst/actions/runs/42510152023). See the [executed notebook](evidence/sales_lakehouse.executed.ipynb), [validation JSON](evidence/spark-validation.json) and [run instructions](projects/pipeline/databricks/README.md).
 
@@ -73,6 +73,6 @@ Small full-refresh demonstration. CDC, incremental state, scheduling, cloud depl
 
 ## Publish and validate
 
-GitHub Pages serves the repository root. The workflow runs unit tests, regenerates evidence to detect drift, and executes every notebook code cell with Spark/Delta. The checked-in `evidence/` snapshot records run 42510152023; newer executions are downloadable as workflow artifacts. `.nojekyll` prevents Jekyll processing. No runtime secrets, account forms or analytics trackers.
+GitHub Pages serves the repository root. The workflow runs unit tests, regenerates pipeline data to detect drift, reconciles the translated GoogleSQL query in DuckDB, and executes every notebook code cell with Spark/Delta. The checked-in `evidence/` snapshot records run 42510152023; newer executions are downloadable as workflow artifacts. `.nojekyll` prevents Jekyll processing. No runtime secrets, account forms or analytics trackers.
 
 License: MIT for code and generated synthetic fixtures. Public professional summary reflects information supplied by Gabriel.
