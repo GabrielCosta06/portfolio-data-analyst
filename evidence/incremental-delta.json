@@ -1,0 +1,63 @@
+{
+  "steps": {
+    "baseline": {
+      "inserted": 600,
+      "updated": 0,
+      "quarantined": 0,
+      "orders": 600,
+      "revenue_cents": 72880000,
+      "profit_cents": 30850000,
+      "stored_rejections": 0,
+      "sha256": "9651c47c512388861366847da3d36dd3cb57a8d0c1daa9618f131e814ae133aa"
+    },
+    "incremental": {
+      "inserted": 1,
+      "updated": 1,
+      "quarantined": 1,
+      "orders": 601,
+      "revenue_cents": 72974000,
+      "profit_cents": 30892500,
+      "stored_rejections": 1,
+      "sha256": "32f306492bbc7a1cab1c76b603aff1813c68e7a38a9b84c7f690f6baa4661177"
+    },
+    "replay": {
+      "inserted": 0,
+      "updated": 0,
+      "quarantined": 0,
+      "orders": 601,
+      "revenue_cents": 72974000,
+      "profit_cents": 30892500,
+      "stored_rejections": 1,
+      "sha256": "32f306492bbc7a1cab1c76b603aff1813c68e7a38a9b84c7f690f6baa4661177"
+    }
+  },
+  "events": [
+    {
+      "order_id": "ORD-00601",
+      "order_date": "2026-05-31",
+      "revision": "1",
+      "action": "inserted",
+      "before_cents": null,
+      "after_cents": 52000,
+      "reason": null
+    },
+    {
+      "order_id": "ORD-00001",
+      "order_date": "2026-01-01",
+      "revision": "2",
+      "action": "updated",
+      "before_cents": 42000,
+      "after_cents": 84000,
+      "reason": null
+    },
+    {
+      "order_id": "ORD-00602",
+      "order_date": "2026-02-31",
+      "revision": "1",
+      "action": "quarantined",
+      "before_cents": null,
+      "after_cents": null,
+      "reason": "invalid_date"
+    }
+  ]
+}

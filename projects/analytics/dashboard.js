@@ -1,4 +1,5 @@
 import {count, currency, english, loadError, node, percent, readJSON, renderBars} from '../../assets/case-data.js';
+import {compareCategories, rankCategories} from './decision.mjs';
 
 const $ = id => document.getElementById(id);
 const copy = (en, pt) => english ? en : pt;
@@ -22,11 +23,15 @@ const dimensions = [
   [$('channel'), row => row.Channel],
 ];
 const monthFilter = $('month');
+const categoryFilter = $('category');
+const ranking = $('category-ranking');
+const investigate = $('investigate-category');
 const metricButtons = [...document.querySelectorAll('[data-metric]')];
 let source = [];
 let selected = [];
 let months = [];
 let currentMetric = 'revenue';
+let priorityCategory = null;
 
 function summarize(rows) {
   let revenue = 0;
@@ -56,21 +61,34 @@ function renderCategories(groups) {
     }
     table.append(row);
   }
+}
+
+function renderDecision(groups, margin) {
+  const {leaders, priority} = compareCategories(groups, margin);
+  for (const [metric, top] of Object.entries(leaders)) {
+    const names = top.map(group => labelFor(group.name)).join(' / ');
+    $(`leader-${metric}`).textContent = top.length ? names + ' · ' + formatMetric(metric, top[0][metric]) : '–';
+  }
+  priorityCategory = priority?.name ?? null;
   const insight = $('insight');
-  insight.hidden = !groups.length;
-  insight.replaceChildren();
-  if (!groups.length) return;
-  const profitLeader = groups.reduce((best, group) => group.profit > best.profit ? group : best);
-  const revenueLeader = groups[0];
-  const revenueNote = copy(
-    `${labelFor(revenueLeader.name)} leads in revenue (${formatMetric('revenue', revenueLeader.revenue)}).`,
-    `${labelFor(revenueLeader.name)} lidera em receita (${formatMetric('revenue', revenueLeader.revenue)}).`,
-  );
-  const profitNote = copy(
-    `${labelFor(profitLeader.name)} contributes the most gross profit (${formatMetric('profit', profitLeader.profit)}).`,
-    `${labelFor(profitLeader.name)} mais contribui para o lucro bruto (${formatMetric('profit', profitLeader.profit)}).`,
-  );
-  insight.append(node('p', revenueNote), node('p', profitNote));
+  if (priority) {
+    const name = labelFor(priority.name);
+    const categoryMargin = percent.format(priority.margin);
+    const benchmark = percent.format(margin);
+    const gap = currency.format(priority.gapCents / 100);
+    insight.textContent = copy(
+      `Investigate ${name} first. Its margin is ${categoryMargin}, compared with ${benchmark} for the selection. At the same revenue and the selection’s margin, gross profit would be ${gap} higher. Check direct costs and product mix by region and channel. Confirm discounts and returns in the source system before acting.`,
+      `Investigue ${name} primeiro. A margem é de ${categoryMargin}, ante ${benchmark} no recorte. Com a mesma receita e a margem do recorte, o lucro bruto seria ${gap} maior. Confira custos diretos e mix por região e canal. Antes de agir, valide descontos e devoluções no sistema de origem.`,
+    );
+  } else {
+    insight.textContent = groups.length < 2
+      ? copy('Include at least two categories with orders to make a comparison.', 'Inclua pelo menos duas categorias com pedidos para comparar.')
+      : copy('No category has a positive profit gap against the current benchmark.', 'Nenhuma categoria tem diferença positiva de lucro em relação à referência atual.');
+  }
+  investigate.hidden = !priority && !categoryFilter.value;
+  investigate.textContent = categoryFilter.value
+    ? copy('Compare all categories', 'Comparar todas as categorias')
+    : copy('Investigate this category', 'Investigar esta categoria');
 }
 
 function render(focusMonth) {
@@ -88,9 +106,9 @@ function render(focusMonth) {
     : copy('No orders match these filters.', 'Nenhum pedido corresponde aos filtros.');
 
   const categories = [...new Set(selected.map(row => row.Category))]
-    .map(name => ({name, ...summarize(selected.filter(row => row.Category === name))}))
-    .sort((a, b) => b.revenue - a.revenue);
-  renderCategories(categories);
+    .map(name => ({name, ...summarize(selected.filter(row => row.Category === name))}));
+  renderCategories(rankCategories(categories, ranking.value));
+  renderDecision(categories, total.margin);
   const chartRows = months.map(month => {
     const orders = trendRows.filter(row => monthOf(row) === month);
     const value = orders.length ? summarize(orders)[currentMetric] : null;
@@ -150,6 +168,13 @@ readJSON('data/processed/sales.json').then(rows => {
     render();
   });
   $('export').addEventListener('click', exportSelection);
+  ranking.disabled = false;
+  ranking.addEventListener('change', () => render());
+  investigate.addEventListener('click', () => {
+    categoryFilter.value = categoryFilter.value ? '' : priorityCategory ?? '';
+    render();
+    categoryFilter.focus();
+  });
   render();
 }).catch(() => {
   $('results-summary').textContent = loadError;

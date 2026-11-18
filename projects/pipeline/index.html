@@ -1,5 +1,5 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pipeline Lakehouse | Gabriel Costa</title><meta property="og:title" content="Lakehouse PySpark + Delta | Gabriel Costa"><meta property="og:description" content="670 registros sintéticos, validação, quarentena e camada analítica. Código e evidências reproduzíveis."><meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/pipeline.png"><link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg"><link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/case-studies.css">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/projects/pipeline/">  <link rel="alternate" hreflang="pt-BR" href="./">  <link rel="alternate" hreflang="en" href="../../en/projects/pipeline/">  <link rel="alternate" hreflang="x-default" href="./">  <script src="../../assets/language.js" defer></script></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><div class="wrap"><header class="site-header"><a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a><div class="language-switch" role="group" aria-label="Idioma">  <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>  <a href="../../en/projects/pipeline/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a></div><nav aria-label="Navegação do projeto"><a href="../../#projetos">Projetos</a><a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/pipeline">Código</a></nav></header><main class="case" id="conteudo" tabindex="-1">
+  <link rel="stylesheet" href="../../assets/case-studies.css?v=2">  <link rel="canonical" href="https://gabrielcosta06.github.io/portfolio-data-analyst/projects/pipeline/">  <link rel="alternate" hreflang="pt-BR" href="./">  <link rel="alternate" hreflang="en" href="../../en/projects/pipeline/">  <link rel="alternate" hreflang="x-default" href="./">  <script src="../../assets/language.js" defer></script></head><body><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><div class="wrap"><header class="site-header"><a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a><div class="language-switch" role="group" aria-label="Idioma">  <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>  <a href="../../en/projects/pipeline/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a></div><nav aria-label="Navegação do projeto"><a href="../../#projetos">Projetos</a><a href="https://github.com/GabrielCosta06/portfolio-data-analyst/tree/main/projects/pipeline">Código</a></nav></header><main class="case" id="conteudo" tabindex="-1">
   <header class="case-intro">
     <div>
       <h1>Pipeline Lakehouse</h1>
@@ -7,6 +7,42 @@
     </div>
     <p class="case-context"><strong>Verificado no GitHub Actions</strong>O PySpark e o Delta Lake gravaram e releram as quatro tabelas.</p>
   </header>
+
+
+  <section class="case-panel" id="incremental-demo" aria-labelledby="incremental-title">
+    <h2 id="incremental-title">Carga incremental e reprocessamento</h2>
+    <p>Explore uma execução com dados sintéticos no Delta Lake. Comece com 600 pedidos e aplique um pedido atrasado de maio, uma correção de janeiro e um registro com data inválida.</p>
+    <div class="actions">
+      <button type="button" id="incremental-next" disabled>Carregar lote inicial</button>
+      <button type="button" class="secondary" id="incremental-reset" disabled>Reiniciar demonstração</button>
+    </div>
+    <p id="incremental-status" role="status" class="data-state">Carregando dados da demonstração…</p>
+    <div id="incremental-result" hidden>
+      <h3 id="incremental-phase"></h3>
+      <div class="metrics">
+        <div class="metric"><span>Pedidos</span><strong id="incremental-orders"></strong></div>
+        <div class="metric"><span>Receita</span><strong id="incremental-revenue"></strong></div>
+        <div class="metric"><span>Lucro bruto</span><strong id="incremental-profit"></strong></div>
+        <div class="metric"><span>Rejeições registradas</span><strong id="incremental-quarantine"></strong></div>
+      </div>
+      <div id="incremental-events" class="table-wrap" tabindex="0" role="region" aria-label="Alterações por pedido" hidden>
+        <table class="case-table">
+          <thead><tr>
+            <th scope="col">Pedido</th><th scope="col">Resultado</th>
+            <th scope="col">Receita anterior</th><th scope="col">Receita após</th>
+          </tr></thead>
+          <tbody id="incremental-rows"></tbody>
+        </table>
+      </div>
+      <p class="case-note incremental-proof">SHA-256 <code id="incremental-hash"></code></p>
+    </div>
+    <p class="case-note">Uma atualização exige uma revisão mais recente do pedido. A quarentena usa lote e linha de origem como chave. A assinatura cobre os pedidos gravados e os registros em quarentena.</p>
+    <div class="actions">
+      <a class="button secondary" href="../../evidence/incremental-delta.json">Evidência da execução</a>
+      <a class="button secondary" href="../../projects/pipeline/incremental_batch.csv" download>CSV do lote de alterações</a>
+      <a class="button secondary" href="../../src/incremental_lakehouse.py">Código incremental</a>
+    </div>
+  </section>
 
   <section class="evidence-deck" aria-labelledby="lineage-title">
     <h2 id="lineage-title">Explore a execução</h2>
@@ -48,7 +84,7 @@ cd portfolio-data-analyst
 python src/pipeline.py --generate
 python -m unittest discover -s tests -v</code></pre>
     <p>Python 3.10+. A execução local gera um warehouse SQLite, arquivos CSV, um manifesto e os dados para o navegador. Divergências no esquema interrompem a execução antes de substituir os resultados anteriores.</p>
-    <p>Esta demonstração em lote reprocessa toda a base sintética.</p>
+    <p>A execução original recarrega a base sintética completa. Para reproduzir a demonstração incremental, instale PySpark e Delta Lake conforme o guia e execute <code>python src/incremental_lakehouse.py --verify-delta --check</code>.</p>
     <div class="actions">
       <a class="button secondary" href="../../src/pipeline.py">Código Python</a>
       <a class="button secondary" href="../../evidence/spark-validation.json">Evidência Spark em JSON</a>
@@ -56,4 +92,5 @@ python -m unittest discover -s tests -v</code></pre>
     </div>
   </section>
 </main><footer><p>Dados sintéticos • Python/SQL e Spark/Delta verificados</p><a href="../../">Voltar ao portfólio</a></footer></div>  <script type="module" src="../../projects/pipeline/evidence.js"></script>
+  <script type="module" src="../../projects/pipeline/incremental.js"></script>
 </body></html>

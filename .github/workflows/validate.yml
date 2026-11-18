@@ -11,6 +11,11 @@ jobs:
         with:
           python-version: '3.13'
       - run: python -m unittest discover -s tests -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/decision.test.mjs
+      - run: python src/incremental_lakehouse.py --check
       - run: python src/pipeline.py --generate
       - run: git diff --exit-code -- data/
       - run: pip install -r projects/bigquery/requirements.txt
@@ -30,6 +35,7 @@ jobs:
       - run: pip install pyspark==4.0.1 delta-spark==4.0.1 nbclient nbformat ipykernel
       - run: python src/build_notebook.py
       - run: python src/execute_notebook.py
+      - run: python src/incremental_lakehouse.py --verify-delta --check
       - uses: actions/upload-artifact@v4
         with:
           name: spark-delta-evidence
