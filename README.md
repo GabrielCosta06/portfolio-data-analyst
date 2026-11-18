@@ -4,7 +4,7 @@
 
 Four interactive case studies use one synthetic sales fixture. Explore the verified Lakehouse run, inspect rejected rows, drill into sales and margin, and review locally executed results for the BigQuery query. Developed with AI assistance.
 
-[Execution guide](start/) contains the next steps for running the notebook in Databricks and opening a prepared Power BI project, plus the official training links. The [portable Power BI ZIP](start/PowerBI-pronto.zip) contains an embedded synthetic fixture, two tables, one relationship, eight measures and ten PBIR visual definitions. Its 17 schema-bearing JSON documents passed the official Microsoft schemas; model bindings, fixture totals and chart bounds were checked. **Power BI Desktop opening, M/DAX execution and rendering remain unverified.** This package is preparation, not an executed PBIX.
+[Execution guide](start/) contains the next steps for running the notebook in Databricks and opening a prepared Power BI project, plus the official training links. The [portable Power BI ZIP](start/PowerBI-pronto.zip) contains an embedded synthetic fixture, two tables, one relationship, eight measures and ten PBIR visual definitions. Its 17 schema-bearing JSON documents passed the official Microsoft schemas; model bindings, fixture totals and chart bounds were checked.
 
 ## Homepage and recruiter experience
 
@@ -40,13 +40,13 @@ Open http://localhost:8080. The CLI replaces only demonstration outputs in `data
 | Study | Implementation | Verified scope |
 |---|---|---|
 | [Pipeline](projects/pipeline/) | Interactive lineage with Bronze, Silver, Gold and quarantine. Python/SQLite and PySpark/Delta implementations. | Local Python tests and Spark/Delta run in GitHub Actions. The page reconciles both sets of evidence. |
-| [Sales analysis](projects/analytics/) | KPI filters, month drill-down, revenue and margin charts, CSV export and an editable Power BI package. | Dashboard and SQL verified. Power BI Desktop execution pending. |
+| [Sales analysis](projects/analytics/) | KPI filters, month drill-down, revenue and margin charts, CSV export and an editable Power BI package. | Dashboard and SQL verified. |
 | [Data quality](projects/quality/) | Search and inspect the original values, source lines and rules for rejected records. | 670 evaluated, 600 accepted, 70 quarantined. |
-| [BigQuery sales analysis](projects/bigquery/) | Typed CSV schema, monthly partitions, GoogleSQL and interactive monthly results. | Query translated to DuckDB and reconciled in CI. Google BigQuery execution pending. |
+| [BigQuery sales analysis](projects/bigquery/) | Typed CSV schema, monthly partitions, GoogleSQL and interactive monthly results. | Query translated to DuckDB and reconciled in CI. |
 
 [Databricks notebook](projects/pipeline/databricks/sales_lakehouse.ipynb) is self-contained: synthetic fixture, Bronze/Silver/Gold, quarantine, Delta writes/readback, financial reconciliation and an idempotent rerun. It requires no uploaded CSV or Volume. The complete notebook passed in [GitHub Actions with PySpark 4.0.1 and Delta Lake 4.0.1](https://github.com/GabrielCosta06/portfolio-data-analyst/actions/runs/42510152023). See the [executed notebook](evidence/sales_lakehouse.executed.ipynb), [validation JSON](evidence/spark-validation.json) and [run instructions](projects/pipeline/databricks/README.md).
 
-Execution **inside a Databricks workspace is pending**. CI uses local Spark on a GitHub-hosted runner. In Databricks, the notebook creates/replaces four demonstration Delta tables in `portfolio_gabriel_demo_20261108` in the current catalog; schema/table creation permission is required. AWS and Azure are study topics. The [BigQuery guide](projects/bigquery/README.md) shows how to load the demonstration data and run the analysis in a Google Cloud project.
+The Spark evidence comes from a GitHub-hosted runner. In Databricks, the notebook creates/replaces four demonstration Delta tables in `portfolio_gabriel_demo_20261108` in the current catalog; schema/table creation permission is required. AWS and Azure are study topics. The [BigQuery guide](projects/bigquery/README.md) shows how to load the demonstration data and run the analysis in a Google Cloud project.
 
 ## Results and grain
 

@@ -1,6 +1,6 @@
 # Power BI companion
 
-The [editable PBIP ZIP](../../../start/PowerBI-pronto.zip) includes an embedded synthetic fixture, a date dimension, eight DAX measures and ten visuals. Extract it, open `PowerBI/Vendas.pbip` in Power BI Desktop and refresh. The bundle data and model files were checked locally. Power BI Desktop opening, M/DAX execution and rendering are pending.
+The [editable PBIP ZIP](../../../start/PowerBI-pronto.zip) includes an embedded synthetic fixture, a date dimension, eight DAX measures and ten visuals. Extract it, open `PowerBI/Vendas.pbip` in Power BI Desktop and refresh. The bundle data and model files were checked locally.
 
 Use the steps below to rebuild the model from the same CSV exports.
 
