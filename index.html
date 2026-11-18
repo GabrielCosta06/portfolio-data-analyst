@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f7f2">
-  <title>Gabriel Costa | Data Analyst &amp; Data Engineer</title>
+  <meta name="theme-color" content="#f4f6f1">
+  <title>Gabriel Costa | Data Engineer &amp; Data Analyst</title>
   <meta name="description" content="Portfólio de Gabriel Costa em análise e engenharia de dados. Projetos com Python, SQL, Power BI, PySpark, Delta Lake e Google BigQuery.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://gabrielcosta06.github.io/portfolio-data-analyst/">
-  <meta property="og:title" content="Gabriel Costa | Data Analyst &amp; Data Engineer">
+  <meta property="og:title" content="Gabriel Costa | Data Engineer &amp; Data Analyst">
   <meta property="og:description" content="Estudos de caso de BI, pipelines, qualidade de dados e Google BigQuery com código e dados sintéticos.">
   <meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/social.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,23 +26,23 @@
   <div class="wrap" id="topo">
     <header class="site-header">
       <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
-      <div class="language-switch" role="group" aria-label="Idioma">
-        <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>
-        <a href="en/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a>
-      </div>
       <nav aria-label="Navegação principal">
         <a href="#projetos">Projetos</a>
         <a href="#competencias">Stack</a>
         <a href="#experiencia">Experiência</a>
         <a href="#curriculo">Currículo</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Idioma">
+        <a href="./?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt" aria-current="true">PT</a>
+        <a href="en/?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en">EN</a>
+      </div>
     </header>
 
     <main id="conteudo" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <h1 id="hero-title" lang="en">Data Analyst <span>&amp; Data Engineer</span></h1>
-          <p class="lede">Sou Gabriel Costa. Desenvolvo pipelines com Python e SQL e transformo dados financeiros em indicadores com Power BI.</p>
+          <h1 id="hero-title" lang="en">Data Engineer <span class="role-slash" aria-hidden="true">/</span><br>Data Analyst</h1>
+          <p class="lede">Desenvolvo pipelines com Python e SQL e transformo dados financeiros em indicadores com Power BI.</p>
           <div class="actions">
             <a class="button" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
             <a class="button secondary" href="#curriculo">Currículo</a>
@@ -51,37 +51,19 @@
 
         <div class="workflow">
           <h2>Do dado ao indicador</h2>
-          <ul class="workflow-list">
+          <ol class="workflow-list" role="list">
             <li>
-              <span class="workflow-icon database-icon" aria-hidden="true"></span>
-              <div><strong>Ingestão e ETL</strong><span>Python, SQL e automação</span></div>
+              <div><strong>Ingestão e ETL</strong><span>Python / SQL</span></div>
             </li>
             <li>
-              <span class="workflow-icon layers-icon" aria-hidden="true"></span>
-              <div><strong>Modelagem e qualidade</strong><span>PySpark, Delta Lake e validações</span></div>
+              <div><strong>Modelagem e qualidade</strong><span>PySpark / Delta Lake</span></div>
             </li>
             <li>
-              <span class="workflow-icon chart-icon" aria-hidden="true"></span>
-              <div><strong>Análise e BI</strong><span>Power BI, DAX e GoogleSQL</span></div>
+              <div><strong>Análise e BI</strong><span>Power BI / DAX</span></div>
             </li>
-          </ul>
+          </ol>
         </div>
       </section>
-
-      <dl class="cloud-list" aria-label="Plataformas de nuvem">
-        <div>
-          <dt>AWS</dt>
-          <dd>Estudos em EC2, S3 e RDS</dd>
-        </div>
-        <div>
-          <dt>Microsoft Azure</dt>
-          <dd>Estudos em Azure SQL e Azure Data Lake</dd>
-        </div>
-        <div>
-          <dt><a href="projects/bigquery/">Google BigQuery <span class="arrow-up-right" aria-hidden="true"></span></a></dt>
-          <dd>Projeto com GoogleSQL e particionamento</dd>
-        </div>
-      </dl>
 
       <section class="project-section" id="projetos" aria-labelledby="projects-title">
         <div class="section-heading">
@@ -90,28 +72,40 @@
         </div>
         <div class="project-grid">
           <article class="project-card">
-            <p class="project-category">Business Intelligence</p>
-            <h3>Análise de vendas e margem</h3>
-            <p class="project-summary">Dashboard interativo com receita, lucro bruto e margem, consultas SQL e materiais para Power BI.</p>
-            <a class="project-link" href="projects/analytics/" aria-label="Ver dashboard de vendas e margem">Ver dashboard <span class="arrow-up-right" aria-hidden="true"></span></a>
+            <a class="project-link" href="projects/pipeline/" aria-labelledby="pipeline-title" aria-describedby="pipeline-summary">
+              <p class="project-category">Engenharia de dados</p>
+              <h3 id="pipeline-title">Pipeline Lakehouse</h3>
+              <p class="project-summary" id="pipeline-summary">Camadas Bronze, Silver e Gold com PySpark e Delta Lake, da ingestão à validação. Notebook executado no CI.</p>
+              <ul class="project-stack" role="list"><li>Python</li><li>PySpark</li><li>Delta Lake</li><li>SQL</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
           </article>
           <article class="project-card">
-            <p class="project-category">Engenharia de dados</p>
-            <h3>Pipeline Lakehouse</h3>
-            <p class="project-summary">Ingestão, validação e camadas Bronze, Silver e Gold com PySpark e Delta Lake. Notebook executado no CI.</p>
-            <a class="project-link" href="projects/pipeline/">Ver pipeline <span class="arrow-up-right" aria-hidden="true"></span></a>
+            <a class="project-link" href="projects/analytics/" aria-labelledby="analytics-title" aria-describedby="analytics-summary">
+              <p class="project-category">Análise de dados</p>
+              <h3 id="analytics-title">Análise de vendas e margem</h3>
+              <p class="project-summary" id="analytics-summary">Dashboard interativo de receita, lucro bruto e margem, com consultas SQL e materiais para Power BI.</p>
+              <ul class="project-stack" role="list"><li>Power BI</li><li>DAX</li><li>SQL</li><li>Power Query</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
           </article>
           <article class="project-card">
-            <p class="project-category">Qualidade e validação</p>
-            <h3>Qualidade de dados</h3>
-            <p class="project-summary">Regras em Python e SQL, conciliação de indicadores e quarentena com o motivo de cada rejeição.</p>
-            <a class="project-link" href="projects/quality/">Ver validações <span class="arrow-up-right" aria-hidden="true"></span></a>
+            <a class="project-link" href="projects/quality/" aria-labelledby="quality-title" aria-describedby="quality-summary">
+              <p class="project-category">Validação e quarentena</p>
+              <h3 id="quality-title">Qualidade de dados</h3>
+              <p class="project-summary" id="quality-summary">Regras de qualidade em Python e SQL, conciliação de indicadores e registro do motivo de cada rejeição.</p>
+              <ul class="project-stack" role="list"><li>Python</li><li>SQL</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
           </article>
           <article class="project-card">
-            <p class="project-category">Analytics na nuvem</p>
-            <h3>Vendas com BigQuery</h3>
-            <p class="project-summary">Modelo particionado e consulta GoogleSQL para calcular margem e variação mensal de receita.</p>
-            <a class="project-link" href="projects/bigquery/">Ver estudo BigQuery <span class="arrow-up-right" aria-hidden="true"></span></a>
+            <a class="project-link" href="projects/bigquery/" aria-labelledby="bigquery-title" aria-describedby="bigquery-summary">
+              <p class="project-category">Analytics na nuvem</p>
+              <h3 id="bigquery-title">Vendas com BigQuery</h3>
+              <p class="project-summary" id="bigquery-summary">Modelo particionado e consulta GoogleSQL para calcular margem e variação mensal de receita.</p>
+              <ul class="project-stack" role="list"><li>BigQuery</li><li>GoogleSQL</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
           </article>
         </div>
       </section>
@@ -123,6 +117,21 @@
             <div><dt>Análise e BI</dt><dd>SQL, Power BI, DAX, Power Query, Excel</dd></div>
             <div><dt>Engenharia</dt><dd>Python, ETL, PySpark, Delta Lake, modelagem dimensional</dd></div>
             <div><dt>Plataformas e CI</dt><dd>Databricks, Azure DevOps, GitHub Actions</dd></div>
+          </dl>
+          <h3 class="platform-title">Plataformas de nuvem</h3>
+          <dl class="cloud-list">
+            <div>
+              <dt>AWS</dt>
+              <dd>Estudos em EC2, S3 e RDS</dd>
+            </div>
+            <div>
+              <dt>Microsoft Azure</dt>
+              <dd>Estudos em Azure SQL e Azure Data Lake</dd>
+            </div>
+            <div>
+              <dt><a href="projects/bigquery/">Google BigQuery <span class="arrow-up-right" aria-hidden="true"></span></a></dt>
+              <dd>Projeto com GoogleSQL e particionamento</dd>
+            </div>
           </dl>
         </section>
         <section id="experiencia" aria-labelledby="experience-title">
@@ -164,7 +173,7 @@
       </section>
     </main>
     <footer class="site-footer">
-      <span>Gabriel Costa</span>
+      <span class="footer-brand"><strong aria-hidden="true">GC</strong> Gabriel Costa</span>
       <a href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
     </footer>
   </div>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f7f2">
-  <title>Gabriel Costa | Data Analyst &amp; Data Engineer</title>
+  <meta name="theme-color" content="#f4f6f1">
+  <title>Gabriel Costa | Data Engineer &amp; Data Analyst</title>
   <meta name="description" content="Gabriel Costa’s data analytics and engineering portfolio. Projects with Python, SQL, Power BI, PySpark, Delta Lake and Google BigQuery.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://gabrielcosta06.github.io/portfolio-data-analyst/en/">
-  <meta property="og:title" content="Gabriel Costa | Data Analyst &amp; Data Engineer">
+  <meta property="og:title" content="Gabriel Costa | Data Engineer &amp; Data Analyst">
   <meta property="og:description" content="Case studies in BI, pipelines, data quality and Google BigQuery with code and synthetic data.">
   <meta property="og:image" content="https://gabrielcosta06.github.io/portfolio-data-analyst/assets/social.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -26,23 +26,23 @@
   <div class="wrap" id="topo">
     <header class="site-header">
       <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">GC</span> Gabriel Costa</a>
-      <div class="language-switch" role="group" aria-label="Language">
-        <a href="../?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>
-        <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
-      </div>
       <nav aria-label="Main navigation">
         <a href="#projetos">Projects</a>
         <a href="#competencias">Stack</a>
         <a href="#experiencia">Experience</a>
         <a href="#curriculo">Résumé</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Language">
+        <a href="../?lang=pt" hreflang="pt-BR" lang="pt-BR" aria-label="Português" data-language="pt">PT</a>
+        <a href="./?lang=en" hreflang="en" lang="en" aria-label="English" data-language="en" aria-current="true">EN</a>
+      </div>
     </header>
 
     <main id="conteudo" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <h1 id="hero-title" lang="en">Data Analyst <span>&amp; Data Engineer</span></h1>
-          <p class="lede">I’m Gabriel Costa. I build data pipelines with Python and SQL and turn financial data into KPIs with Power BI.</p>
+          <h1 id="hero-title" lang="en">Data Engineer <span class="role-slash" aria-hidden="true">/</span><br>Data Analyst</h1>
+          <p class="lede">I build data pipelines with Python and SQL and turn financial data into KPIs with Power BI.</p>
           <div class="actions">
             <a class="button" href="#projetos">View projects <span aria-hidden="true">↓</span></a>
             <a class="button secondary" href="#curriculo">Résumé</a>
@@ -51,37 +51,19 @@
 
         <div class="workflow">
           <h2>From data to KPIs</h2>
-          <ul class="workflow-list">
+          <ol class="workflow-list" role="list">
             <li>
-              <span class="workflow-icon database-icon" aria-hidden="true"></span>
-              <div><strong>Ingestion and ETL</strong><span>Python, SQL and automation</span></div>
+              <div><strong>Ingestion and ETL</strong><span>Python / SQL</span></div>
             </li>
             <li>
-              <span class="workflow-icon layers-icon" aria-hidden="true"></span>
-              <div><strong>Modeling and data quality</strong><span>PySpark, Delta Lake and validation</span></div>
+              <div><strong>Modeling and data quality</strong><span>PySpark / Delta Lake</span></div>
             </li>
             <li>
-              <span class="workflow-icon chart-icon" aria-hidden="true"></span>
-              <div><strong>Analytics and BI</strong><span>Power BI, DAX and GoogleSQL</span></div>
+              <div><strong>Analytics and BI</strong><span>Power BI / DAX</span></div>
             </li>
-          </ul>
+          </ol>
         </div>
       </section>
-
-      <dl class="cloud-list" aria-label="Cloud platforms">
-        <div>
-          <dt>AWS</dt>
-          <dd>Learning EC2, S3 and RDS</dd>
-        </div>
-        <div>
-          <dt>Microsoft Azure</dt>
-          <dd>Learning Azure SQL and Azure Data Lake</dd>
-        </div>
-        <div>
-          <dt><a href="projects/bigquery/">Google BigQuery <span class="arrow-up-right" aria-hidden="true"></span></a></dt>
-          <dd>Project with GoogleSQL and partitioning</dd>
-        </div>
-      </dl>
 
       <section class="project-section" id="projetos" aria-labelledby="projects-title">
         <div class="section-heading">
@@ -90,28 +72,40 @@
         </div>
         <div class="project-grid">
           <article class="project-card">
-            <p class="project-category">Business Intelligence</p>
-            <h3>Sales and margin analysis</h3>
-            <p class="project-summary">Interactive dashboard for revenue, gross profit and margin, with SQL queries and Power BI resources.</p>
-            <a class="project-link" href="projects/analytics/" aria-label="View sales and margin dashboard">View dashboard <span class="arrow-up-right" aria-hidden="true"></span></a>
+            <a class="project-link" href="projects/pipeline/" aria-labelledby="pipeline-title" aria-describedby="pipeline-summary">
+              <p class="project-category">Data engineering</p>
+              <h3 id="pipeline-title">Lakehouse pipeline</h3>
+              <p class="project-summary" id="pipeline-summary">Bronze, Silver and Gold layers with PySpark and Delta Lake, from ingestion to validation. The notebook runs in CI.</p>
+              <ul class="project-stack" role="list"><li>Python</li><li>PySpark</li><li>Delta Lake</li><li>SQL</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
           </article>
           <article class="project-card">
-            <p class="project-category">Data engineering</p>
-            <h3>Lakehouse pipeline</h3>
-            <p class="project-summary">Ingestion, validation and Bronze, Silver and Gold layers with PySpark and Delta Lake. The notebook runs in CI.</p>
-            <a class="project-link" href="projects/pipeline/">View pipeline <span class="arrow-up-right" aria-hidden="true"></span></a>
+            <a class="project-link" href="projects/analytics/" aria-labelledby="analytics-title" aria-describedby="analytics-summary">
+              <p class="project-category">Data analysis</p>
+              <h3 id="analytics-title">Sales and margin analysis</h3>
+              <p class="project-summary" id="analytics-summary">Interactive dashboard for revenue, gross profit and margin, with SQL queries and Power BI resources.</p>
+              <ul class="project-stack" role="list"><li>Power BI</li><li>DAX</li><li>SQL</li><li>Power Query</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
           </article>
           <article class="project-card">
-            <p class="project-category">Quality and validation</p>
-            <h3>Data quality</h3>
-            <p class="project-summary">Python and SQL checks, KPI reconciliation and a quarantine log with a reason for each rejection.</p>
-            <a class="project-link" href="projects/quality/">View validation checks <span class="arrow-up-right" aria-hidden="true"></span></a>
+            <a class="project-link" href="projects/quality/" aria-labelledby="quality-title" aria-describedby="quality-summary">
+              <p class="project-category">Validation and quarantine</p>
+              <h3 id="quality-title">Data quality</h3>
+              <p class="project-summary" id="quality-summary">Python and SQL quality checks, KPI reconciliation and a quarantine log with a reason for each rejection.</p>
+              <ul class="project-stack" role="list"><li>Python</li><li>SQL</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
           </article>
           <article class="project-card">
-            <p class="project-category">Cloud analytics</p>
-            <h3>Sales with BigQuery</h3>
-            <p class="project-summary">Partitioned table and a GoogleSQL query for gross margin and month-over-month revenue growth.</p>
-            <a class="project-link" href="projects/bigquery/">View BigQuery study <span class="arrow-up-right" aria-hidden="true"></span></a>
+            <a class="project-link" href="projects/bigquery/" aria-labelledby="bigquery-title" aria-describedby="bigquery-summary">
+              <p class="project-category">Cloud analytics</p>
+              <h3 id="bigquery-title">Sales with BigQuery</h3>
+              <p class="project-summary" id="bigquery-summary">Partitioned table and a GoogleSQL query for gross margin and month-over-month revenue growth.</p>
+              <ul class="project-stack" role="list"><li>BigQuery</li><li>GoogleSQL</li></ul>
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
           </article>
         </div>
       </section>
@@ -123,6 +117,21 @@
             <div><dt>Analytics and BI</dt><dd>SQL, Power BI, DAX, Power Query, Excel</dd></div>
             <div><dt>Engineering</dt><dd>Python, ETL, PySpark, Delta Lake, dimensional modeling</dd></div>
             <div><dt>Platforms and CI</dt><dd>Databricks, Azure DevOps, GitHub Actions</dd></div>
+          </dl>
+          <h3 class="platform-title">Cloud platforms</h3>
+          <dl class="cloud-list">
+            <div>
+              <dt>AWS</dt>
+              <dd>Learning EC2, S3 and RDS</dd>
+            </div>
+            <div>
+              <dt>Microsoft Azure</dt>
+              <dd>Learning Azure SQL and Azure Data Lake</dd>
+            </div>
+            <div>
+              <dt><a href="projects/bigquery/">Google BigQuery <span class="arrow-up-right" aria-hidden="true"></span></a></dt>
+              <dd>Project with GoogleSQL and partitioning</dd>
+            </div>
           </dl>
         </section>
         <section id="experiencia" aria-labelledby="experience-title">
@@ -150,21 +159,21 @@
           </div>
         </div>
         <div class="resume-options">
-          <div class="resume-row" role="group" aria-labelledby="cv-pt">
-            <strong id="cv-pt">Portuguese</strong>
-            <a class="button" href="../assets/cv/pt/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf" aria-label="Download Portuguese résumé as PDF">PDF <span aria-hidden="true">↓</span></a>
-            <a class="button secondary" href="../assets/cv/pt/jose_gabriel_cv.docx" download="jose_gabriel_cv.docx" aria-label="Download Portuguese résumé as Word">Word</a>
-          </div>
           <div class="resume-row" role="group" aria-labelledby="cv-en">
             <strong id="cv-en">English</strong>
             <a class="button" href="../assets/cv/en/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf" aria-label="Download English résumé as PDF">PDF <span aria-hidden="true">↓</span></a>
             <a class="button secondary" href="../assets/cv/en/jose_gabriel_cv.docx" download="jose_gabriel_cv.docx" aria-label="Download English résumé as Word">Word</a>
           </div>
+          <div class="resume-row" role="group" aria-labelledby="cv-pt">
+            <strong id="cv-pt">Portuguese</strong>
+            <a class="button" href="../assets/cv/pt/jose_gabriel_cv.pdf" download="jose_gabriel_cv.pdf" aria-label="Download Portuguese résumé as PDF">PDF <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="../assets/cv/pt/jose_gabriel_cv.docx" download="jose_gabriel_cv.docx" aria-label="Download Portuguese résumé as Word">Word</a>
+          </div>
         </div>
       </section>
     </main>
     <footer class="site-footer">
-      <span>Gabriel Costa</span>
+      <span class="footer-brand"><strong aria-hidden="true">GC</strong> Gabriel Costa</span>
       <a href="#topo">Back to top <span aria-hidden="true">↑</span></a>
     </footer>
   </div>
